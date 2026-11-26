@@ -1,0 +1,32 @@
+# Factory build spec. The package under agents/packages/research.brief_render is generated from this folder:
+# edit here and run `aos-agent.py build research.brief_render`; never edit the package.
+# Revisit: when the research.synthesise output or the brief layout changes. · Last touched: 2026-11-14.
+[agent]
+name = "research.brief_render"
+version = "0.1.0"
+kind = "tool"
+summary = "Render a verified research synthesis as a one-page Markdown brief with numbered citations, and file it when asked."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[capabilities]
+grants = ["artifact.write"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 0
+model_calls = 0
+seconds = 5
+max_steps = 1
+
+[compose]
+callable_by = ["research.*", "shared.planner"]
+calls = []
+
+[factory]
+requirement = "Last step of the research.brief plan. Turns the findings research.synthesise returned into the brief Casey reads: question, summary, numbered findings each with its quote and source number, where sources disagree, gaps, and the source list. Layout is code so it is the same every time and costs nothing. A finding whose source is not in the source list fails the step."
+source = "blueprint section 7: Research department plan research.brief"

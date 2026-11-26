@@ -1,0 +1,30 @@
+# TAP 0.1 manifest. Revisit: when the offer ladder or the brief layout changes. Last touched: 2026-11-14.
+[agent]
+name = "crm.fit_call_brief_render"
+version = "0.1.0"
+kind = "tool"
+summary = "Render verified Fit Call working material as the one-page Markdown brief artifact."
+tap = "0.1"
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[capabilities]
+grants = ["artifact.write"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 0
+model_calls = 0
+seconds = 5
+max_steps = 1
+
+[compose]
+callable_by = ["crm.*"]
+calls = []
+
+[acceptance]
+level = "none"

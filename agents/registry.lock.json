@@ -1,0 +1,593 @@
+{
+ "agents": {
+  "crm.followup_draft": {
+   "archive": {
+    "bytes": 14583,
+    "format": "tar.gz",
+    "path": "agents/dist/crm.followup_draft-0.1.0.tar.gz",
+    "sha256": "50389bb821db2e57fd1172a21b35bdd015785fbd36b92b2bc7065680cd3d71b2"
+   },
+   "binding": "gpt-6-luna.low.codex-cli",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {
+     "effort": "low",
+     "model": "gpt-6-luna",
+     "prompt": "prompts/main.md"
+    },
+    "spec": "agents/factory/specs/crm.followup_draft",
+    "spec_sha256": "2f99caa6b1468459513f4e363a9992edfe9f120fc1773d7ace7ec7bae88c97f5",
+    "work_order": "FACTORY-2026-0002"
+   },
+   "evaluated_at": "2026-11-26T18:23:28+00:00",
+   "evidence": "agents/packages/crm.followup_draft/evidence/gpt-6-luna.low.codex-cli.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "8b38af984fcf49e034a751074515aaf0e94159077cc5ada15584390fdf2e3222",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "adv-inject-other-clients",
+     "core-roofing-debrief",
+     "edge-accented-name",
+     "needs-empty-record"
+    ],
+    "pass": true
+   },
+   "kind": "oneshot",
+   "level": "silver",
+   "package_sha256": "8b38af984fcf49e034a751074515aaf0e94159077cc5ada15584390fdf2e3222",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "crm.meeting_extract": {
+   "archive": {
+    "bytes": 18457,
+    "format": "tar.gz",
+    "path": "agents/dist/crm.meeting_extract-0.1.0.tar.gz",
+    "sha256": "a8fabd3f8604fd2a9b3e6411bd7130d03ebb8ab9d2a881f0f7f1d0a8148600c4"
+   },
+   "binding": "gpt-6-luna.low.codex-cli",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {
+     "effort": "low",
+     "model": "gpt-6-luna",
+     "prompt": "prompts/main.md"
+    },
+    "spec": "agents/factory/specs/crm.meeting_extract",
+    "spec_sha256": "3532190db398e26de5ca508a394c61704f2c29e7e993b09950d6f72043dca7cb",
+    "work_order": ""
+   },
+   "evaluated_at": "2026-11-26T18:23:29+00:00",
+   "evidence": "agents/packages/crm.meeting_extract/evidence/gpt-6-luna.low.codex-cli.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "5854318357dafe76814e5794ebb69ccc5f25c8e4007a2d43f1733b7c706800a5",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "adv-inject-task",
+     "core-accounting-brainref",
+     "core-dental-transcript",
+     "edge-two-line-note",
+     "needs-agenda-only"
+    ],
+    "pass": true
+   },
+   "kind": "oneshot",
+   "level": "silver",
+   "package_sha256": "5854318357dafe76814e5794ebb69ccc5f25c8e4007a2d43f1733b7c706800a5",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "knowledge.filing_proposal": {
+   "archive": {
+    "bytes": 6605,
+    "format": "tar.gz",
+    "path": "agents/dist/knowledge.filing_proposal-0.1.0.tar.gz",
+    "sha256": "af6a4ed738f37ef21144f38f679197e5548e1b3f99c66deae5c1489e848d1e09"
+   },
+   "binding": "tool",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {},
+    "spec": "agents/factory/specs/knowledge.filing_proposal",
+    "spec_sha256": "c48bb8abe73476566d13dde63e2d89716daaa23d6832de0d8983f1042b1342a4",
+    "work_order": ""
+   },
+   "evaluated_at": "2026-11-26T18:23:29+00:00",
+   "evidence": "agents/packages/knowledge.filing_proposal/evidence/tool.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "842b4c650a1a77acdf6734d11a558e810dacdf7cd057300d0c1e1751c6621b75",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "core-client-email",
+     "core-client-proposal",
+     "core-hold-unrelated",
+     "edge-prospect-scope",
+     "needs-no-summary",
+     "safety-example-dealership-entity"
+    ],
+    "pass": true
+   },
+   "kind": "tool",
+   "level": "silver",
+   "package_sha256": "842b4c650a1a77acdf6734d11a558e810dacdf7cd057300d0c1e1751c6621b75",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "knowledge.source_classify": {
+   "archive": {
+    "bytes": 13202,
+    "format": "tar.gz",
+    "path": "agents/dist/knowledge.source_classify-0.1.0.tar.gz",
+    "sha256": "3219046ba05ac889d5502b73c9b7c13c742e12e1b84364b1ea8d5e8f709e82e5"
+   },
+   "binding": "gpt-6-luna.low.codex-cli",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {
+     "effort": "low",
+     "model": "gpt-6-luna",
+     "prompt": "prompts/main.md"
+    },
+    "spec": "agents/factory/specs/knowledge.source_classify",
+    "spec_sha256": "292f33f5d95f933b379671a749ee40d57ddcb1b1d87292435a32ac8926ffb69d",
+    "work_order": "FACTORY-2026-0005"
+   },
+   "evaluated_at": "2026-11-26T18:23:30+00:00",
+   "evidence": "agents/packages/knowledge.source_classify/evidence/gpt-6-luna.low.codex-cli.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "0a6d51b4f3380d59ebbdfe0656459ac039f457f9c143bbbf2249c1dbb7d2e24e",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "core-call-transcript",
+     "core-email",
+     "core-proposal",
+     "edge-unknown-company",
+     "needs-too-short"
+    ],
+    "pass": true
+   },
+   "kind": "oneshot",
+   "level": "silver",
+   "package_sha256": "0a6d51b4f3380d59ebbdfe0656459ac039f457f9c143bbbf2249c1dbb7d2e24e",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "marketing.landing_brief": {
+   "archive": {
+    "bytes": 6422,
+    "format": "tar.gz",
+    "path": "agents/dist/marketing.landing_brief-0.1.0.tar.gz",
+    "sha256": "016454a2a76ef61e5aefd6d938c286f1ca6abdeb7430129b1ce94cee39e96968"
+   },
+   "binding": "tool",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {},
+    "spec": "agents/factory/specs/marketing.landing_brief",
+    "spec_sha256": "c71568c2701f5dcc1979c854939f85e8eeee18cb361b7c05f9c1d9ab313115aa",
+    "work_order": "AOS-2026-10022"
+   },
+   "evaluated_at": "2026-11-26T18:23:31+00:00",
+   "evidence": "agents/packages/marketing.landing_brief/evidence/tool.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "2ca9a093880d9be6f0ae2f7fd6e24d1ebc182437d2dc9532337e03ba01ceb118",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "proof-needs-verification",
+     "refuse-two-profiles",
+     "trim-cta"
+    ],
+    "pass": true
+   },
+   "kind": "tool",
+   "level": "silver",
+   "package_sha256": "2ca9a093880d9be6f0ae2f7fd6e24d1ebc182437d2dc9532337e03ba01ceb118",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "marketing.linkedin_post": {
+   "archive": {
+    "bytes": 15646,
+    "format": "tar.gz",
+    "path": "agents/dist/marketing.linkedin_post-0.1.0.tar.gz",
+    "sha256": "7cb5b60c96b066fb398bde45f091ea8c663130e921e79268ce5eafbb18f07f94"
+   },
+   "binding": "gpt-6-luna.low.codex-cli",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {
+     "effort": "low",
+     "model": "gpt-6-luna",
+     "prompt": "prompts/main.md"
+    },
+    "spec": "agents/factory/specs/marketing.linkedin_post",
+    "spec_sha256": "4ccbddc067c20193419d189488a3421280f31ffb95bd379b295f963c992ec085",
+    "work_order": ""
+   },
+   "evaluated_at": "2026-11-26T18:23:32+00:00",
+   "evidence": "agents/packages/marketing.linkedin_post/evidence/gpt-6-luna.low.codex-cli.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "bb0dd504120acaa484c2c009979a4c19af2b2f1d930f9b914010adb1d436db34",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "adv-inject-publish",
+     "core-brainref-with-voice",
+     "edge-audience-trades",
+     "edge-two-line-note",
+     "needs-no-notes"
+    ],
+    "pass": true
+   },
+   "kind": "oneshot",
+   "level": "silver",
+   "package_sha256": "bb0dd504120acaa484c2c009979a4c19af2b2f1d930f9b914010adb1d436db34",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "marketing.post_check": {
+   "archive": {
+    "bytes": 6508,
+    "format": "tar.gz",
+    "path": "agents/dist/marketing.post_check-0.1.0.tar.gz",
+    "sha256": "e541f7aae07f2210dd3aff0cca99c6ea53928ac6b8ae75562cb7aeab09d5d9f5"
+   },
+   "binding": "tool",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {},
+    "spec": "agents/factory/specs/marketing.post_check",
+    "spec_sha256": "764f51744ddb3613a736cc648018e34642d4438683537d066741ce0dd6e5ce43",
+    "work_order": ""
+   },
+   "evaluated_at": "2026-11-26T18:23:32+00:00",
+   "evidence": "agents/packages/marketing.post_check/evidence/tool.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "e76ef123e9dd3ef27e48fbe0d90ae5f412d4ee5c328e121b7775f58d12d00072",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "adv-confidential-in-hashtag",
+     "adv-confidential-spaced-case",
+     "core-warn-no-hashtag",
+     "edge-four-hashtags",
+     "edge-one-block",
+     "needs-blank-post"
+    ],
+    "pass": true
+   },
+   "kind": "tool",
+   "level": "silver",
+   "package_sha256": "e76ef123e9dd3ef27e48fbe0d90ae5f412d4ee5c328e121b7775f58d12d00072",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "research.brief_render": {
+   "archive": {
+    "bytes": 6459,
+    "format": "tar.gz",
+    "path": "agents/dist/research.brief_render-0.1.0.tar.gz",
+    "sha256": "eb23d9e6b8dbd907f4774e301d9ab20d09bf6570ecb38d84fd4afeb7f189b2e5"
+   },
+   "binding": "tool",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {},
+    "spec": "agents/factory/specs/research.brief_render",
+    "spec_sha256": "37cdd2658887017ffce8585d3f106601652fc00fcfe88a167193ff6a6c64db82",
+    "work_order": ""
+   },
+   "evaluated_at": "2026-11-26T18:23:32+00:00",
+   "evidence": "agents/packages/research.brief_render/evidence/tool.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "651dfd5cb960fe38550f721dc30a85707e48cd40b14311f2484c8a2f449ebcc9",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "core-full-brief",
+     "core-numbering-by-first-use",
+     "core-uncited-finding-fails",
+     "edge-blank-claim-skipped",
+     "needs-no-question"
+    ],
+    "pass": true
+   },
+   "kind": "tool",
+   "level": "silver",
+   "package_sha256": "651dfd5cb960fe38550f721dc30a85707e48cd40b14311f2484c8a2f449ebcc9",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "research.synthesise": {
+   "archive": {
+    "bytes": 15533,
+    "format": "tar.gz",
+    "path": "agents/dist/research.synthesise-0.1.0.tar.gz",
+    "sha256": "8b76c59972a54a987be76a2ffe60617fc9d612010f63efcebe76b87c2c058ff4"
+   },
+   "binding": "gpt-6-luna.low.codex-cli",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {
+     "effort": "low",
+     "model": "gpt-6-luna",
+     "prompt": "prompts/main.md"
+    },
+    "spec": "agents/factory/specs/research.synthesise",
+    "spec_sha256": "4185c47ba3e94a22acd18412b731ad681b53e9576135c0bb6a05203afd723354",
+    "work_order": "FACTORY-2026-0006"
+   },
+   "evaluated_at": "2026-11-26T18:23:33+00:00",
+   "evidence": "agents/packages/research.synthesise/evidence/gpt-6-luna.low.codex-cli.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "bronze",
+     "package_sha256": "a12cb8e49d2f20d42c07c544e96b1e69aa2c63be9e1112051c26de1d12a59891",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "adv-inject-fake-source",
+     "core-ai-adoption",
+     "core-recall-evidence-quality",
+     "edge-single-source",
+     "needs-unrelated-sources"
+    ],
+    "pass": true
+   },
+   "kind": "oneshot",
+   "level": "bronze",
+   "package_sha256": "a12cb8e49d2f20d42c07c544e96b1e69aa2c63be9e1112051c26de1d12a59891",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "shared.brain_retrieve": {
+   "archive": {
+    "bytes": 6004,
+    "format": "tar.gz",
+    "path": "agents/dist/shared.brain_retrieve-0.1.0.tar.gz",
+    "sha256": "b33fdb95bb6b04cabbe9185a4f6cb344c410b3073c32bc7db21b661648f7bd3d"
+   },
+   "binding": "tool",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {},
+    "spec": "agents/factory/specs/shared.brain_retrieve",
+    "spec_sha256": "b7bd7ad2c5960d866797f827c8bf04138822f99b457a08bc5b37d1e394c2029c",
+    "work_order": ""
+   },
+   "evaluated_at": "2026-11-26T18:23:34+00:00",
+   "evidence": "agents/packages/shared.brain_retrieve/evidence/tool.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "e861c2e705192e64b0d5d9c167f1e570d8158d2fe8387734a764c9c778ffb141",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "adv-secret-in-note",
+     "core-hash-reported",
+     "core-order-kept",
+     "core-two-notes",
+     "edge-twelve-refs"
+    ],
+    "pass": true
+   },
+   "kind": "tool",
+   "level": "silver",
+   "package_sha256": "e861c2e705192e64b0d5d9c167f1e570d8158d2fe8387734a764c9c778ffb141",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "shared.github_profile": {
+   "archive": {
+    "bytes": 3096,
+    "format": "tar.gz",
+    "path": "agents/dist/shared.github_profile-0.1.0.tar.gz",
+    "sha256": "0ac9b231de87ca22607ff57bd520d333e4eb8dc6a2d345a706daf5e398e9ab79"
+   },
+   "binding": "tool",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {},
+    "spec": "agents/factory/specs/shared.github_profile",
+    "spec_sha256": "b34ff01ac5a9a517afb225a71756e711e8e2c92e130797c1d74750bc9df4d75a",
+    "work_order": ""
+   },
+   "evaluated_at": "2026-11-26T18:23:34+00:00",
+   "evidence": "agents/packages/shared.github_profile/evidence/tool.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "fd05830d1b29c0ca26c23b7c73a5185dde4c488d86524a5e13f438da029caa90",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "deny-unscoped-4",
+     "describe-0",
+     "describe-1",
+     "describe-8",
+     "unscoped-grant"
+    ],
+    "pass": true
+   },
+   "kind": "tool",
+   "level": "silver",
+   "package_sha256": "fd05830d1b29c0ca26c23b7c73a5185dde4c488d86524a5e13f438da029caa90",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "shared.planner": {
+   "archive": {
+    "bytes": 14887,
+    "format": "tar.gz",
+    "path": "agents/dist/shared.planner-0.1.0.tar.gz",
+    "sha256": "cf563e6f6145b1bd3e89b912bf5f101de05053e8c52d6bf0f886fe008731b188"
+   },
+   "binding": "gpt-6-luna.low.codex-cli",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {
+     "effort": "low",
+     "model": "gpt-6-luna",
+     "prompt": "prompts/main.md"
+    },
+    "spec": "agents/factory/specs/shared.planner",
+    "spec_sha256": "5bc095d76e81873b8001fae72f24dcdaa08d620833ae697d1da32190ed18c02f",
+    "work_order": "FACTORY-2026-0004"
+   },
+   "evaluated_at": "2026-11-26T18:23:35+00:00",
+   "evidence": "agents/packages/shared.planner/evidence/gpt-6-luna.low.codex-cli.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "bca23bd8ef7105b8fd48d6a66a4d31c2c980e57b1789d18a83dd4d61bf2ec819",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "adv-inject-in-record-about",
+     "adv-unlisted-recipient",
+     "core-post-only",
+     "edge-send-becomes-draft",
+     "edge-unsupported-flight"
+    ],
+    "pass": true
+   },
+   "kind": "planner",
+   "level": "silver",
+   "package_sha256": "bca23bd8ef7105b8fd48d6a66a4d31c2c980e57b1789d18a83dd4d61bf2ec819",
+   "state": "candidate",
+   "version": "0.1.0"
+  },
+  "website.manager": {
+   "archive": {
+    "bytes": 15296,
+    "format": "tar.gz",
+    "path": "agents/dist/website.manager-0.1.0.tar.gz",
+    "sha256": "2b6cad064c9dc173c8f8e4df0026a0ef8db39a94cc18ada9d77b1bed9e4a33bb"
+   },
+   "binding": "gpt-6-luna.low.codex-cli",
+   "built": {
+    "by": "factory@0.1.0",
+    "candidate": {
+     "effort": "low",
+     "model": "gpt-6-luna",
+     "prompt": "prompts/main.md"
+    },
+    "spec": "agents/factory/specs/website.manager",
+    "spec_sha256": "9e29fc704e22e33dd34c3237a70ffa9d8299838e6f1f74017c57318069ab28c4",
+    "work_order": ""
+   },
+   "evaluated_at": "2026-11-26T18:23:36+00:00",
+   "evidence": "agents/packages/website.manager/evidence/gpt-6-luna.low.codex-cli.json",
+   "history": [
+    {
+     "at": "2026-11-25T00:00:00+00:00",
+     "event": "registered",
+     "level": "silver",
+     "package_sha256": "d0aa041f7830db6476ceeb54b14a2d2c0eeb4a3436f0db1c1384fdf15a03fd6e",
+     "state": "candidate",
+     "version": "0.1.0"
+    }
+   ],
+   "holdout": {
+    "ids": [
+     "brand-colours-button",
+     "button-breathing-room",
+     "header-hide-phones",
+     "javascript-link",
+     "link-without-destination",
+     "text-run-bold"
+    ],
+    "pass": true
+   },
+   "kind": "oneshot",
+   "level": "silver",
+   "package_sha256": "d0aa041f7830db6476ceeb54b14a2d2c0eeb4a3436f0db1c1384fdf15a03fd6e",
+   "state": "candidate",
+   "version": "0.1.0"
+  }
+ },
+ "registry": "ttros-agents",
+ "version": 1
+}

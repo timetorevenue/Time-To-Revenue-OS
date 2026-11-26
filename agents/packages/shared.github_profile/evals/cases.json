@@ -1,0 +1,345 @@
+{
+  "agent": "shared.github_profile",
+  "note": "Provider-free contract checks; real provider acceptance is separate.",
+  "cases": [
+    {
+      "id": "describe-0",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe-1",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe-2",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe-3",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe-4",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe-5",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe-6",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe-7",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe-8",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe-9",
+      "tags": [
+        "core"
+      ],
+      "input": {
+        "action": "describe"
+      },
+      "expect": {
+        "status": "ok",
+        "checks": [
+          {
+            "type": "equals",
+            "path": "requirement",
+            "value": "connector.read:github:profile"
+          }
+        ]
+      }
+    },
+    {
+      "id": "deny-unscoped-0",
+      "tags": [
+        "edge",
+        "adversarial",
+        "safety:canary"
+      ],
+      "input": {
+        "action": "read"
+      },
+      "expect": {
+        "status": "refused",
+        "max_model_calls": 0
+      }
+    },
+    {
+      "id": "deny-unscoped-1",
+      "tags": [
+        "edge",
+        "adversarial",
+        "safety:injection"
+      ],
+      "input": {
+        "action": "read"
+      },
+      "expect": {
+        "status": "refused",
+        "max_model_calls": 0
+      }
+    },
+    {
+      "id": "deny-unscoped-2",
+      "tags": [
+        "edge",
+        "adversarial",
+        "safety:isolation"
+      ],
+      "input": {
+        "action": "read"
+      },
+      "expect": {
+        "status": "refused",
+        "max_model_calls": 0
+      }
+    },
+    {
+      "id": "deny-unscoped-3",
+      "tags": [
+        "edge",
+        "adversarial",
+        "safety:missing_context"
+      ],
+      "input": {
+        "action": "read"
+      },
+      "expect": {
+        "status": "refused",
+        "max_model_calls": 0
+      }
+    },
+    {
+      "id": "deny-unscoped-4",
+      "tags": [
+        "edge",
+        "adversarial",
+        "safety:undeclared_effect"
+      ],
+      "input": {
+        "action": "read"
+      },
+      "expect": {
+        "status": "refused",
+        "max_model_calls": 0
+      }
+    },
+    {
+      "id": "needs-action-0",
+      "tags": [
+        "needs_input",
+        "edge"
+      ],
+      "input": {},
+      "expect": {
+        "status": "needs_input"
+      }
+    },
+    {
+      "id": "needs-action-1",
+      "tags": [
+        "needs_input",
+        "edge"
+      ],
+      "input": {},
+      "expect": {
+        "status": "needs_input"
+      }
+    },
+    {
+      "id": "unscoped-grant",
+      "tags": [
+        "edge",
+        "adversarial"
+      ],
+      "input": {
+        "action": "read"
+      },
+      "expect": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "unscoped-account",
+      "tags": [
+        "edge",
+        "adversarial"
+      ],
+      "input": {
+        "action": "read"
+      },
+      "expect": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "unscoped-workspace",
+      "tags": [
+        "edge",
+        "adversarial"
+      ],
+      "input": {
+        "action": "read"
+      },
+      "expect": {
+        "status": "refused"
+      }
+    },
+    {
+      "id": "unscoped-service",
+      "tags": [
+        "edge",
+        "adversarial"
+      ],
+      "input": {
+        "action": "read"
+      },
+      "expect": {
+        "status": "refused"
+      }
+    }
+  ]
+}

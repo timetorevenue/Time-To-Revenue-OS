@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Native operator workbench entry. Install only during the controlled cutover.
+# Output/session behavior is Codex's native contract, not the retired HTTP JSON API.
+set -euo pipefail
+cd "${AOS_ROOT:-/opt/ttros-core}"
+export TTROS_CODEX_NO_PUSH=1 TTROS_BRAIN_AUTOPUSH=0
+exec codex "$@"

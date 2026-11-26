@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "description": "The three TTROS layers. First match wins in the order private, universal, software; a path that matches nothing is private. Only software and universal paths can ever be considered for the public Core, and only through the reviewed export (see context/LAYERS.md).",
+  "default": "private",
+  "private": [
+    "company/**",
+    "workspaces/**",
+    "proofs/**",
+    "archive/**",
+    "pilots/**",
+    "queue/receipts/**",
+    "queue/jobs/**",
+    "queue/david*/**",
+    "workflows/queue_artifacts/**",
+    "workflows/*/receipts/**",
+    "workflows/*/output/**",
+    "workflows/*/drafts/**",
+    "context/current_site/**",
+    "universal/_pending/**"
+  ],
+  "universal": [
+    "universal/**"
+  ],
+  "software": [
+    "tools/**",
+    "agents/**",
+    "connectors/**",
+    "dashboard/backend/**",
+    "dashboard/frontend/**",
+    "search/**",
+    "systemd/**",
+    "rules/**",
+    "scripts/**",
+    "tests/**",
+    "skills/**",
+    "workflows/*/workflow.md",
+    "workflows/prompt_templates/**",
+    "context/*.md",
+    "context/layers.json"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "marketing.post_check output",
+  "description": "Returned only for a post that broke no rule. Warnings are for Casey's eye and do not block.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["pass", "status", "char_count", "word_count", "hashtags", "warnings", "artifact"],
+  "properties": {
+    "pass": {"const": true},
+    "status": {"const": "draft_for_approval"},
+    "char_count": {"type": "integer", "minimum": 1},
+    "word_count": {"type": "integer", "minimum": 1},
+    "hashtags": {"type": "array", "maxItems": 3, "items": {"type": "string", "pattern": "^#[A-Za-z][A-Za-z0-9]*$"}},
+    "warnings": {"type": "array", "maxItems": 12, "items": {"type": "string", "maxLength": 200}},
+    "artifact": {"description": "artifact: reference of the filed draft, or empty when none was asked for.", "type": "string"}
+  }
+}

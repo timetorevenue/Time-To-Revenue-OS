@@ -1,0 +1,1872 @@
+{
+ "02043e99462917f72220d51020b61d944d3a840a2a0d6a2d61e2f58776f43c14": {
+  "detail": "",
+  "json": {
+   "business_summary": "Marsh & Tolland is a family law firm. Customers can request an initial consultation through a 28-field intake form, after which the site says a paralegal will respond within three business days.",
+   "caveats": [
+    "Confirm whether the three-business-day response window reflects actual practice and whether the intake form is completed before or during a consultation request.",
+    "Verify how clients currently receive file status updates and whether the two review comments reflect a recurring issue."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Initial consultation requests use a 28-field intake form.",
+     "hypothesis": "Some prospective clients may abandon or delay submitting a consultation request because the intake form has 28 fields.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "The site says a paralegal will respond within three business days.",
+     "hypothesis": "The stated response window may mean some consultation leads wait longer than they expect before hearing back.",
+     "lever": "quality",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Two reviews mention difficulty getting file status updates without calling repeatedly.",
+     "hypothesis": "The team may spend time handling avoidable status-update calls when clients cannot get updates another way.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the intake or client-status-update workflow is the most grounded next step given the limited observations available.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "How does a prospective client go from the 28-field consultation form to a retained matter, and what tools do you use at each step?",
+    "Where do consultation requests or calls tend to slow down between submission and a response from the paralegal?",
+    "What repeated admin work around intake or file status updates is the team most tired of?",
+    "Where do client enquiries or file updates most often break down or get dropped?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The firm practices family law.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Initial consultation requests use a 28-field intake form.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The site says a paralegal will respond to consultation requests within three business days.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Two reviews mention difficulty getting file status updates without repeated calls.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.202,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8384,
+   "event_count": 1,
+   "input_tokens": 7894,
+   "output_tokens": 490,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "22cfae6fdda39fce0078597f5028c542c197cb4994c806ba1b237d131b8a773e": {
+  "detail": "",
+  "json": {
+   "business_summary": "Kowalski Insurance Brokers is an independent insurance brokerage. Customers can submit quote requests through the website form; requests are printed and placed in a tray for the next available broker.",
+   "caveats": [
+    "The source is a brief note from a chamber-event conversation; verify whether the enquiry and renewal workflows are still handled this way.",
+    "The source does not describe how customers reach the brokerage beyond the website quote form."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Quote requests are printed and placed in a tray for the next available broker.",
+     "hypothesis": "Website quote requests may wait in the tray before a broker responds, which is worth checking for missed or delayed opportunities.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "E1"
+     ]
+    },
+    {
+     "basis": "Renewal reminders are tracked in a spreadsheet and sent by hand.",
+     "hypothesis": "Hand-sending renewal reminders may create avoidable manual work or chasing.",
+     "lever": "efficiency",
+     "source_ids": [
+      "E1"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the quote-request or renewal-reminder workflow can clarify where a practical improvement is most useful before considering a larger assessment or build.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When a website quote request comes in, what happens next through to a customer receiving a quote, and what tools are used along the way?",
+    "Where do website quote requests or customer calls tend to slow down before a broker responds?",
+    "How much time does the team spend tracking and sending renewal reminders, and what other repeated work feels tiring?",
+    "What tends to break or get dropped between a quote request arriving in the tray and a broker following up?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The brokerage is independent and has seven staff.",
+     "source_ids": [
+      "E1"
+     ]
+    },
+    {
+     "claim": "Irene said renewal reminders are tracked in a spreadsheet and sent by hand.",
+     "source_ids": [
+      "E1"
+     ]
+    },
+    {
+     "claim": "Website quote requests are printed and placed in a tray for the next available broker.",
+     "source_ids": [
+      "E1"
+     ]
+    },
+    {
+     "claim": "Irene met Casey at a chamber event on 2026-10-30.",
+     "source_ids": [
+      "E1"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 10.237,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8341,
+   "event_count": 1,
+   "input_tokens": 7881,
+   "output_tokens": 460,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "33511e5b2622ad343d773c389d6b504ae694914f2ca4dc632df11a54b0cb8a3d": {
+  "detail": "",
+  "json": {
+   "business_summary": "Wu Realty Group is a residential real estate team. Customers reach the team through listing portals, a website form, open-house sign-in, and social comments about listings; portal and website enquiries go to a shared inbox, while open-house sign-in is on paper.",
+   "caveats": [
+    "The observations are dated 2026-11-10; verify that the channels and handling practices are still current.",
+    "The sources do not describe lead tracking, assignment, follow-up outcomes, or the tools used beyond the shared inbox and paper sign-in."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Social comments asking about listings are answered a day or two later.",
+     "hypothesis": "Social listing enquiries may lose potential buyers if responses take a day or two.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "basis": "Listing enquiries from two portals and the website are forwarded to a shared inbox.",
+     "hypothesis": "The shared inbox may make it harder to route or track portal and website leads promptly.",
+     "lever": "quality",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Open-house sign-in is on paper.",
+     "hypothesis": "Paper open-house sign-in may create manual follow-up or data-entry work worth checking.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of one enquiry workflow can clarify where the observed response delays or manual handling are most addressable.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When someone enquires about a listing through a portal, your website, social media, or an open house, what happens next, and which tools do you use to track and respond?",
+    "Where do responses or calls tend to slow down between an enquiry arriving and someone following up?",
+    "What repeated work around the shared inbox, social enquiries, or open-house sign-ins is the team most tired of?",
+    "What tends to break or get dropped when a lead moves from an enquiry or paper sign-in to follow-up?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "Listing enquiries come from two listing portals and a website form, and are forwarded to a shared inbox.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Open-house sign-in is paper-based.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The group actively posts on social media.",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "claim": "Comments asking about listings are answered a day or two later.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.537,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8405,
+   "event_count": 1,
+   "input_tokens": 7887,
+   "output_tokens": 518,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "3a5fb28fd358b4027ec900b5d68c2db9ba11592da171dd0cc0c9aa419ddd3476": {
+  "detail": "",
+  "json": {
+   "business_summary": "Tse Family Optometry is an optometry clinic. Customers book appointments by phone, and the website’s voicemail greeting says calls are returned within 48 hours.",
+   "caveats": [
+    "The observations are dated 2026-11-10; verify that the phone-only booking process, 48-hour voicemail message, and paper binder are still current."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Appointments are phone-only and the voicemail greeting says calls are returned within 48 hours.",
+     "hypothesis": "Some prospective patients may not complete booking if they need to wait for a returned call.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Frame orders are tracked in a paper binder.",
+     "hypothesis": "Tracking frame orders in a paper binder may create manual lookup or follow-up work.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of phone booking or frame-order tracking can clarify whether one workflow is a practical first opportunity.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "How do new patients go from calling to a booked appointment, and what tools do you use to manage that path today?",
+    "When a patient calls and reaches voicemail, where does the process slow down before they get a response or appointment?",
+    "What repeated work around appointments or frame orders is the team most tired of doing?",
+    "What tends to break or get dropped when calls need returning or frame orders are tracked?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The clinic has two optometrists.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Appointments are booked by phone only.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The voicemail greeting says calls are returned within 48 hours.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Frame orders are tracked in a paper binder, according to a staff blog post.",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 9.345,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8267,
+   "event_count": 1,
+   "input_tokens": 7855,
+   "output_tokens": 412,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "41a0918c22ea1fc390642b13ace31d0384c14a6f8dc158e2075839b50fffdeb7": {
+  "detail": "",
+  "json": {
+   "business_summary": "Lang Veterinary Hospital is a veterinary hospital. Customers request appointments by phone or email, while prescription refills must be requested by phone during opening hours.",
+   "caveats": [
+    "The observations are from 2026-11-10; verify that the phone, email, and refill processes and review themes still reflect current practice.",
+    "The sources do not identify current tools, enquiry volumes, staffing beyond the hospital description, or the scale of any delays or repeated work."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Reviews report the phone line being busy at opening time.",
+     "hypothesis": "Appointment enquiries may be missed or delayed when the phone line is busy at opening time.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "basis": "Refills must be requested by phone during opening hours; reviews mention several calls.",
+     "hypothesis": "Refill handling likely involves extra staff or customer effort because requests reportedly take several calls and are phone-only during opening hours.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of appointment enquiries or refill requests can clarify where repeated calls and busy phone periods create avoidable work.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When a pet owner needs an appointment, what happens from their first call or email through booking, and which tools do you use along the way?",
+    "Where do appointment calls or emails tend to slow down, especially when the phone line is busy at opening time?",
+    "Which repeated tasks around prescription refills are the team most tired of handling?",
+    "What information or requests are most likely to get lost or need follow-up between the first call and the appointment or refill?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The hospital provides veterinary care and has pages about pet nutrition, seasonal allergies, dental care, and travel tips.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Appointments are requested by phone or email.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Prescription refills must be requested by phone during opening hours.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Reviews mention that the phone line is busy at opening time.",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "claim": "Reviews mention refill requests taking several calls.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.154,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8532,
+   "event_count": 1,
+   "input_tokens": 8046,
+   "output_tokens": 486,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "5d021d9a92279bc01e4b88c00b695f66a4b64480754064b518c6a9a7b46bf457": {
+  "detail": "",
+  "json": {
+   "business_summary": "",
+   "caveats": [],
+   "leak_hypotheses": [],
+   "missing": [
+    "What Okafor Holdings does.",
+    "How customers reach the business and how it receives or handles enquiries, leads, bookings, or repeated admin."
+   ],
+   "next_step": {
+    "rationale": "",
+    "recommended": "starter_scan"
+   },
+   "question_script": [],
+   "research": [],
+   "sufficient": false
+  },
+  "latency_seconds": 3.444,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7905,
+   "event_count": 1,
+   "input_tokens": 7821,
+   "output_tokens": 84,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "80281a5ecfe2b1ae5ccc53e086aab08403eba751b1ffda184654ea27a297d8c1": {
+  "detail": "",
+  "json": {
+   "business_summary": "",
+   "caveats": [],
+   "leak_hypotheses": [],
+   "missing": [
+    "What Fischer Consulting does or what services it provides.",
+    "How customers contact Fischer Consulting, and how it receives or handles enquiries, leads, bookings, or repeated admin."
+   ],
+   "next_step": {
+    "rationale": "",
+    "recommended": "starter_scan"
+   },
+   "question_script": [],
+   "research": [],
+   "sufficient": false
+  },
+  "latency_seconds": 3.68,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7907,
+   "event_count": 1,
+   "input_tokens": 7819,
+   "output_tokens": 88,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "8f1ac9061760d11f5ca2d2b33a581244b9059c0e978ebc990c2fc3ede3229d5e": {
+  "detail": "",
+  "json": {
+   "business_summary": "Marsh & Tolland is a family law firm. Customers can reach it through consultation requests submitted on a 28-field intake form; a paralegal responds within three business days.",
+   "caveats": [
+    "Verify whether the form, response timeline, and process observed on 2026-11-10 are still current."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Consultation requests use a 28-field intake form.",
+     "hypothesis": "Some prospective clients may abandon or leave gaps in the consultation request because the intake form is long.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "A paralegal responds to consultation requests within three business days.",
+     "hypothesis": "The response process may leave prospective clients waiting or require manual follow-up during the three-business-day response window.",
+     "lever": "quality",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A scan of the intake-to-response workflow is a focused way to understand the concrete form and response process before considering broader changes.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "How does a consultation request move from the 28-field form to a booked consultation, and what tools do you use at each step?",
+    "Where do requests or calls tend to slow down between submission and the paralegal’s response?",
+    "What repeated work around reviewing intake forms or responding to prospective clients is the team tired of?",
+    "What information or handoffs between the form, paralegal, and lawyers most often breaks down or gets dropped?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The firm practices family law.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Consultation requests use a 28-field intake form.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "A paralegal responds to consultation requests within three business days.",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 9.178,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8302,
+   "event_count": 1,
+   "input_tokens": 7901,
+   "output_tokens": 401,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "8f8bfe01982a9aaeaa6284a72f8af12a6b8aa173e85281679b464d0a6ea8d57b": {
+  "detail": "",
+  "json": {
+   "business_summary": "Haddad Home Cleaning is a home cleaning service. Its home page advertises instant online booking, but its booking page asks customers to email for availability and wait for a reply.",
+   "caveats": [
+    "Verify whether instant online booking is currently available or whether customers must email for availability.",
+    "Confirm the current opening hours, since the directory listing is older than the company-site observation and the hours conflict."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "The home page advertises instant online booking, while the booking page asks customers to email and wait for a reply.",
+     "hypothesis": "The gap between advertised instant booking and email-based availability may cause prospective customers to abandon or delay booking.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Customers are asked to email for availability and wait for a reply.",
+     "hypothesis": "Checking availability and replying to booking emails may involve repeated manual admin or customer chasing; worth checking how this works today.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "The directory lists daily 7am–7pm hours, while the company site lists weekdays 9am–5pm.",
+     "hypothesis": "Conflicting opening hours may create uncertainty about when customers can reach the business or expect a response.",
+     "lever": "quality",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the booking and availability workflow is the most appropriate next step given the concrete booking-process mismatch and limited context.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When someone wants to book a home cleaning, how do they go from finding you to a confirmed appointment, and what tools do you use along the way?",
+    "Where do enquiries or calls tend to slow down, especially when someone emails to check availability?",
+    "What repeated booking or availability work are you and your team most tired of doing?",
+    "What tends to break or get dropped between a customer asking about availability and their booking being confirmed?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The company provides home cleaning services.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The home page advertises instant online booking.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The booking page asks customers to email for availability and wait for a reply.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "A directory listing gives daily hours of 7am–7pm, while the company site lists 9am–5pm weekdays.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.469,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8423,
+   "event_count": 1,
+   "input_tokens": 7898,
+   "output_tokens": 525,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "9733827881e341613a54d53c496b4fa22549a1e3776c91d2b37948e7d9506aac": {
+  "detail": "",
+  "json": {
+   "business_summary": "Pellow & Associates CPA is a six-person accounting practice. Clients are asked to email tax documents, and the site asks them to resend if they have not heard back in a week.",
+   "caveats": [
+    "The observations are from 2026-11-10; verify whether the document, reminder, and follow-up processes are still current.",
+    "The sources do not describe enquiry volume, booking flow, tools, response times, or how work is handed off; establish these on the call."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "The site asks clients to resend if they have not heard back in a week.",
+     "hypothesis": "The resend request may mean some client follow-up is delayed or unclear.",
+     "lever": "quality",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Deadline reminders go out by individual email.",
+     "hypothesis": "Individual deadline reminder emails may create avoidable manual admin.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Two reviews mention being asked for the same document twice.",
+     "hypothesis": "Repeated document requests may add client and staff rework, and are worth checking for handoff or tracking gaps.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A small scan of document collection or deadline reminders is the most grounded next step given the specific repeated-admin observations, while the best workflow to address needs validation on the call.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "How do prospective clients typically find and contact you, what happens from first enquiry through booking and engagement, and what tools support that path today?",
+    "Where, if anywhere, do new enquiries or client calls slow down before someone responds or books?",
+    "What repeated work around collecting tax documents or sending deadline reminders is the team most tired of?",
+    "What tends to break or get dropped as documents and client work move between people?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The practice asks clients to send tax documents by email.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The site asks clients to resend if they have not heard from the practice in a week.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Deadline reminders are sent by individual email.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Reviews are positive about the advice.",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "claim": "Two reviews mention being asked for the same document twice.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.701,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8408,
+   "event_count": 1,
+   "input_tokens": 7893,
+   "output_tokens": 515,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "a934da45e31d7c8b5c47e085a238d7d247c2937c3c151706d7c02c92c039ac85": {
+  "detail": "",
+  "json": {
+   "business_summary": "Harbourline Physio is a two-clinic physiotherapy practice. Customers can request an appointment by phone or web form; the form says the practice will call back within two business days, and there is no online booking.",
+   "caveats": [
+    "The observations are dated 2026-11-10; verify that the booking process, staffing plans, and reported review issues are still current.",
+    "Confirm how calls and web forms are handled in practice, which booking tools are used, and whether delayed responses or double-bookings remain a concern."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "The form promises a callback within two business days, and recent reviews mention delayed voicemail returns.",
+     "hypothesis": "Some prospective patients may not get booked if enquiries wait for a callback or voicemails are returned days later.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    },
+    {
+     "basis": "The front-desk coordinator role includes re-entering web form requests into the booking system.",
+     "hypothesis": "Re-entering web form requests into the booking system may create avoidable manual admin.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S3"
+     ]
+    },
+    {
+     "basis": "A recent review mentions a double-booking; the coordinator role includes confirming next-day appointments.",
+     "hypothesis": "Appointment confirmations and booking changes may be worth checking for handoff or scheduling errors, given the reported double-booking.",
+     "lever": "quality",
+     "source_ids": [
+      "S2",
+      "S3"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of enquiry handling or booking administration is the most grounded next step because the sources identify specific workflows but do not establish which is the priority or how they currently operate.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When someone contacts Harbourline by phone or web form, what steps take them from enquiry to booked appointment, and which tools are used at each step?",
+    "Where do phone calls, voicemails, or web form requests tend to slow down before a patient gets a response or appointment?",
+    "Which repeated front-desk tasks—such as re-entering form requests or confirming next-day appointments—is the team most tired of?",
+    "What tends to break or get dropped between taking a request, booking it, and confirming the appointment?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The practice has two clinics and six practitioners.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Appointments are requested by phone or a web form, with no online booking.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The web form sets an expected callback time of up to two business days.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Recent reviews mention voicemails returned days later and one double-booking.",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "claim": "The practice is hiring a second front-desk coordinator to answer phones, re-enter web form requests into the booking system, and confirm next-day appointments.",
+     "source_ids": [
+      "S3"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 13.536,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8593,
+   "event_count": 1,
+   "input_tokens": 7977,
+   "output_tokens": 616,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "af3b3f27f39cc93356c3e2c211c7cf52d3dbfa224826f2573b6acf3f30379b1e": {
+  "detail": "",
+  "json": {
+   "business_summary": "Bellini Plumbing & Drain is a family plumbing company with a 24/7 emergency line. Customers can also submit quote requests through an email form.",
+   "caveats": [
+    "The observations are dated 2026-11-10; verify whether the quote-response delays are still occurring.",
+    "The sources do not explain the current process, tools, or whether the reviews reflect a recurring issue."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Three recent reviews report no reply to quote requests for over a week.",
+     "hypothesis": "Quote requests submitted through the email form may be going unanswered long enough to lose prospective work.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "basis": "Quote requests go through an email form, and reviews report prolonged waits for replies.",
+     "hypothesis": "The email-form quote process may involve manual follow-up or chasing that is worth checking.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    },
+    {
+     "basis": "Three recent reviews say quote requests received no reply for over a week.",
+     "hypothesis": "There may be a slow handoff from receiving a quote request to responding to it.",
+     "lever": "quality",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the quote-request workflow is the most likely next step given the reports of delayed replies and the limited information available.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When someone submits the quote form or calls the 24/7 emergency line, what happens next, and which tools do you use to track and respond to each enquiry?",
+    "Where do quote requests or emergency calls tend to slow down between first contact and booking or dispatch?",
+    "What repeated admin or follow-up work around quote requests and emergency calls is the team most tired of?",
+    "What tends to break or get dropped when a quote request arrives by email or an emergency call comes in?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "Bellini Plumbing & Drain is described as a family plumbing company.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The company has an emergency line available 24/7.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Quote requests are submitted through an email form.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Three recent reviews say quote requests received no reply for over a week.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 10.949,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8410,
+   "event_count": 1,
+   "input_tokens": 7910,
+   "output_tokens": 500,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "b891e7ca91914b4804ff3f250e051660d90d5e490a9371b1feb1faa9e8b85f78": {
+  "detail": "",
+  "json": {
+   "business_summary": "Northgate Auto Repair is an independent auto repair shop with five bays. Customers book by phone, and the site has no booking tool; estimates are written by hand and photographed.",
+   "caveats": [
+    "Confirm whether phone-only booking and handwritten, photographed estimates are still the current process; the observations are dated 2026-11-10.",
+    "Confirm how often customers are not notified when their cars are ready and whether the review reports reflect a current issue."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Customers book by phone and the site has no booking tool.",
+     "hypothesis": "Phone-only booking and no online booking tool may mean some prospective customers do not complete a booking.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Estimates are written by hand and photographed.",
+     "hypothesis": "Handwriting and photographing estimates may create repeated manual admin worth checking.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Reviews mention customers were not told when cars were ready and had to call.",
+     "hypothesis": "Customers having to call to learn their car is ready may point to a status-update or handoff gap.",
+     "lever": "quality",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of one workflow is the most proportionate next step given the concrete observations about phone booking, manual estimates, and customer status updates.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "How does a customer go from calling to book through getting an estimate and approving the repair, and what tools do you use at each step?",
+    "When customers call to book or ask about a repair, where do calls or enquiries tend to slow down?",
+    "How much work goes into writing and photographing estimates, and what repeated tasks is the team tired of?",
+    "What tends to break or get dropped between booking, estimate approval, repair completion, and telling customers their cars are ready?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "Northgate Auto Repair is an independent auto repair shop with five bays.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Customers book by phone, and the website has no booking tool.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Estimates are written by hand and photographed, according to a blog post.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Reviews mention customers were not told when their cars were ready and had to call to find out.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.264,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8410,
+   "event_count": 1,
+   "input_tokens": 7892,
+   "output_tokens": 518,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "cf4533a7715c5f221e4da417f84794f8f31d4515186d29bd577a50a4a35379be": {
+  "detail": "",
+  "json": {
+   "business_summary": "Ortega Heating & Cooling is an HVAC installer and service company. Customers reach it by phone; after 5 p.m., an answering service takes messages.",
+   "caveats": [
+    "The observations are dated 2026-11-10; verify whether after-hours call handling and paper renewals are still current.",
+    "The sources do not describe current tools, callback ownership or timing, booking outcomes, or the scale of these workflows."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "After 5 p.m., the answering service takes a message; winter reviews mention next-afternoon callbacks about no-heat calls.",
+     "hypothesis": "Some after-hours no-heat callers may wait too long for a response, which may affect whether they book service.",
+     "lever": "quality",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    },
+    {
+     "basis": "Maintenance-plan renewals are mailed as paper letters.",
+     "hypothesis": "Paper renewal letters may create manual work or leave room for renewal follow-up to be missed.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of after-hours call handling or maintenance-plan renewals can clarify one practical workflow opportunity before considering a broader assessment or build.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "How does a customer move from calling about heating or cooling service to a booked job, and what tools do you use along the way?",
+    "When do service calls slow down most—especially after 5 p.m. or during winter no-heat calls—and what happens before someone calls back?",
+    "What repeated work around service calls or mailed maintenance-plan renewals is the team most tired of?",
+    "Where do messages, callbacks, or renewal follow-ups most often break down or get dropped?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The company installs and services HVAC systems.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Service calls come in by phone.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "After 5 p.m., an answering service takes a message.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Winter reviews mention customers waiting until the next afternoon for a callback about a no-heat call.",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "claim": "Maintenance-plan renewals are mailed as paper letters.",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 10.985,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8390,
+   "event_count": 1,
+   "input_tokens": 7898,
+   "output_tokens": 492,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "d1498bfbbd4358bd0e0a3586fe69187748abfc0980d0962ccba6c5e9d7f8954e": {
+  "detail": "",
+  "json": {
+   "business_summary": "Boulangerie Roy is an artisan bakery with two points of sale. Customers place custom cake orders by phone or private message; the page says responses can take three days, and orders are recorded in a notebook.",
+   "caveats": [
+    "Verify whether the three-day response time and notebook-based process are still current.",
+    "Ask how often messages go unanswered and whether the reported cases reflect a recurring issue.",
+    "Confirm whether phone and private-message enquiries are handled the same way at both points of sale."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Several reviews mention messages about wedding orders that received no response.",
+     "hypothesis": "Some wedding or custom-cake enquiries may go unanswered, reducing the number of leads that book.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "basis": "Orders are noted in a cahier (notebook).",
+     "hypothesis": "Recording orders in a notebook may create repeated manual work or follow-up effort.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "The page indicates a three-day response time for enquiries.",
+     "hypothesis": "A stated response time of three days may slow customer handoffs and confirmations.",
+     "lever": "quality",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the custom-order enquiry workflow is the most suitable next step given the observed response delay, unanswered messages, and notebook-based order recording.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "For a custom cake, from the first phone call or private message through booking and order recording, what steps and tools do you use today?",
+    "Where do phone calls or private messages tend to slow down before someone gets an answer?",
+    "What repeated work around custom cake or wedding orders is the team most tired of doing?",
+    "What information or follow-up for an order most often gets missed between the enquiry and the notebook entry?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The bakery has two points of sale.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Custom cake orders arrive by phone or private message.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The page indicates a three-day response time.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Orders are recorded in a notebook.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Several reviews mention unanswered messages about wedding orders.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.044,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8411,
+   "event_count": 1,
+   "input_tokens": 7910,
+   "output_tokens": 501,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "d15d36898e12078fec6be05ca944abe3b4272a7f3059e9de03412c05b1a90315": {
+  "detail": "",
+  "json": {
+   "business_summary": "Bellini Plumbing & Drain is a family plumbing company serving two suburbs. Customers can call its advertised 24/7 emergency line or send quote requests through an email form.",
+   "caveats": [
+    "Confirm whether the reported email reply delays are ongoing, how quote requests are monitored, and who owns responding to them.",
+    "Verify how the advertised 24/7 emergency line is handled and whether it uses a separate workflow from quote requests.",
+    "The source observations are dated 2026-11-10; confirm whether the website and review patterns still reflect current operations."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Three reviews in the last two months report no reply to email quote requests for over a week.",
+     "hypothesis": "Some quote leads may be lost or delayed because email requests may go unanswered for days.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "basis": "Quote requests come through an email form, and reviews describe prolonged waits for replies.",
+     "hypothesis": "The team may spend time chasing or sorting quote requests submitted through the email form.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    },
+    {
+     "basis": "Three recent reviews say email quote requests received no reply for over a week.",
+     "hypothesis": "There may be a response-time or handoff gap between incoming quote requests and a customer reply.",
+     "lever": "quality",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the quote-request workflow is the most proportionate next step given the specific reported reply delays and limited information about other operations.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When someone needs plumbing, how do they go from calling the 24/7 emergency line or submitting the quote form to a booked job, and what tools do you use at each step?",
+    "Where do calls or email quote requests most often slow down before someone responds or books?",
+    "What repeated admin around emergency calls, quote requests, or dispatch is the team most tired of?",
+    "What tends to break or get dropped when a request is handed from the person receiving it to whoever handles the quote or job?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The company serves two suburbs and describes itself as a family plumbing company.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "An emergency line is advertised as available 24/7.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Quote requests are submitted through an email form.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Four vans are pictured on the company site.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Three recent reviews report that email quote requests went unanswered for over a week; other reviews praise workmanship.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 12.388,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8465,
+   "event_count": 1,
+   "input_tokens": 7894,
+   "output_tokens": 571,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "dadccd9594effc2d0bf04419913d6a276cadbe82797cdc25d5fbc719c72438de": {
+  "detail": "",
+  "json": {
+   "business_summary": "Cedar Grove Dental is a general dental clinic. Customers can request appointments by phone Monday through Thursday, 9–5; new-patient forms are downloadable PDFs to print and bring in.",
+   "caveats": [
+    "The observations are dated 2026-11-10; verify that the hours, phone-only booking, PDF form, and unanswered comments are still current.",
+    "Confirm whether the clinic is currently accepting new patients and how it handles enquiries through channels not covered by the sources."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Several social comments asking about new-patient availability are unanswered.",
+     "hypothesis": "Some prospective patients may not get an answer to whether the clinic accepts new patients.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "basis": "Appointment requests are by phone only, Monday through Thursday, 9–5.",
+     "hypothesis": "The phone-only appointment process may make booking harder for people who cannot call during the listed hours.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "The new-patient form is a downloadable PDF patients print and bring in.",
+     "hypothesis": "The print-and-bring form may create extra manual work for new patients or staff.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A small scan of one workflow, such as handling new-patient enquiries or appointment requests, is the most proportionate next step given the limited call context.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "How does a new patient go from finding Cedar Grove Dental to booking and completing the PDF form, and what tools do you use at each step?",
+    "Where do appointment calls or questions about accepting new patients tend to slow down, especially outside the listed phone hours?",
+    "What repeated work around phone requests, new-patient forms, or social comments is the team most tired of?",
+    "What information or follow-up is most likely to break or get dropped between an enquiry, booking, and the visit?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The clinic is a general dental practice.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Appointment requests are by phone only, Monday through Thursday, 9–5.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The new-patient form is a downloadable PDF that patients print and bring in.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Social posts appear every few weeks.",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "claim": "Several social comments asking whether the clinic accepts new patients have gone unanswered.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.648,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8444,
+   "event_count": 1,
+   "input_tokens": 7899,
+   "output_tokens": 545,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "db9044dd8108b6ca1228ed796ef2c28125c467b44b625bec365bd43b091646e1": {
+  "detail": "",
+  "json": {
+   "business_summary": "Marin Pilates Studio is a Pilates studio. Customers book classes through a third-party app, while private sessions are arranged by emailing the owner, who replies in the evenings.",
+   "caveats": [
+    "The observations are dated 2026-11-10; verify whether booking and email processes have changed.",
+    "The two sources repeat the same observations, so they do not independently confirm the details."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "The owner replies to private-session emails in the evenings.",
+     "hypothesis": "Private-session enquiries may wait for a reply until evening, potentially slowing booking.",
+     "lever": "quality",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    },
+    {
+     "basis": "Private sessions are arranged by emailing the owner.",
+     "hypothesis": "Arranging private sessions by email may involve manual coordination worth checking.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the private-session enquiry workflow is a sensible starting point given the limited information available.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "How do people go from finding the studio to booking a class or private session, and what tools do you use at each step?",
+    "Where do private-session enquiries or calls tend to slow down before a booking is confirmed?",
+    "What repeated work around class bookings or private-session emails is the team most tired of?",
+    "What tends to break or get dropped when coordinating private sessions by email?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The studio has eight instructors.",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    },
+    {
+     "claim": "Class bookings are handled through a third-party app.",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    },
+    {
+     "claim": "Private sessions are arranged by emailing the owner.",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    },
+    {
+     "claim": "The owner replies to private-session emails in the evenings.",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 9.406,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8311,
+   "event_count": 1,
+   "input_tokens": 7899,
+   "output_tokens": 412,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "dc8552d29f26e5c4299cbf25627b5f8bbc9c4a183324fada7005dcee5fe23001": {
+  "detail": "",
+  "json": {
+   "business_summary": "Harbourline Physio is a physiotherapy practice with two clinics. Customers can request bookings by phone or web form; there is no online booking, and web-form enquiries receive a callback within two business days.",
+   "caveats": [
+    "Confirm whether the two-business-day callback process and lack of online booking are still current.",
+    "Ask how often voicemails are returned days later and whether that issue is current."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Bookings are by phone or web form, with a two-business-day callback and no online booking.",
+     "hypothesis": "Some prospective patients may not complete a booking if they must wait for a callback instead of booking online.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Reviews mention voicemails returned days later.",
+     "hypothesis": "Phone enquiries may be lost or delayed when voicemails are returned days later.",
+     "lever": "quality",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the enquiry and callback workflow is the most proportionate next step given the specific response delays observed and the limited context available.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When someone contacts either clinic by phone or web form, what happens from first enquiry through to a booked appointment, and which tools do you use at each step?",
+    "Where do phone calls or web-form enquiries tend to slow down, especially between the first contact and the callback?",
+    "What repeated admin work around enquiries, callbacks, or booking appointments is the team most tired of?",
+    "What tends to break or get dropped when handling voicemails and web-form enquiries across the two clinics?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "Harbourline Physio operates two clinics.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "It has six practitioners.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Bookings are requested by phone or web form, with a two-business-day callback for web-form enquiries.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The practice does not offer online booking.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Reviews mention voicemails returned days later.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 10.391,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8393,
+   "event_count": 1,
+   "input_tokens": 7927,
+   "output_tokens": 466,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "dd9ae1caaf8eec98aff47d5736a85a3ea05b7fdd0aea53902f7c3522936e89fb": {
+  "detail": "",
+  "json": {
+   "business_summary": "Greenline Landscaping provides residential landscaping and snow removal. Customers request quotes through a contact form or by texting the owner’s mobile.",
+   "caveats": [
+    "Confirm whether the spring quote delays are current, typical, and representative of both landscaping and snow-removal work.",
+    "Verify how requests from the contact form and owner’s mobile are tracked and handed off."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Spring reviews mention quotes arriving two to three weeks after site visits.",
+     "hypothesis": "Some prospective customers may disengage while waiting weeks for a quote after a site visit.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "basis": "Quote requests come through two channels, including text to the owner’s mobile.",
+     "hypothesis": "Managing quote requests across the contact form and the owner’s mobile may create manual tracking or follow-up work worth checking.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Spring reviews mention quotes arriving two to three weeks after site visits.",
+     "hypothesis": "The time between site visits and quote delivery may indicate a slow handoff or preparation workflow worth checking.",
+     "lever": "quality",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the enquiry-to-quote workflow is the most proportionate next step given the observed quote delays and limited context.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "How does a request from the contact form or a text become a site visit and then a quote, and what tools do you use at each step?",
+    "Where do new landscaping or snow-removal enquiries, site visits, or quotes tend to slow down?",
+    "What repeated admin or follow-up work around enquiries and quotes is the team most tired of?",
+    "What most often gets missed or dropped as a request moves from the owner to the crew or from a site visit to a quote?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "Greenline provides residential landscaping and snow removal.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Quote requests arrive through a contact form or text to the owner’s mobile.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Spring reviews mention quotes arriving two to three weeks after a site visit.",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "claim": "The About page describes a seasonal crew of about ten.",
+     "source_ids": [
+      "S1"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.317,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8380,
+   "event_count": 1,
+   "input_tokens": 7885,
+   "output_tokens": 495,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "f3a1c3f4feeeb8afd3a7735f86d4b5ae3c520ab4036037001e83529b40182c89": {
+  "detail": "",
+  "json": {
+   "business_summary": "Vance Print Shop is a commercial print shop. Customers place orders by emailing artwork and waiting for a manual proof and quote; the quote is described as usually taking two days.",
+   "caveats": [
+    "The observations are from 2019; verify whether the ordering, proofing, quoting, and reorder processes still work this way.",
+    "Confirm how often quotes take two days and whether customers still need to resend files for reorders."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Orders wait for a manual proof and quote, usually two days.",
+     "hypothesis": "Quote requests may be delayed while artwork is reviewed and quotes are prepared manually.",
+     "lever": "quality",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Older reviews mention reorders requiring the customer to resend the same files.",
+     "hypothesis": "Reorders may create avoidable admin because customers resend files already supplied before.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the quote or reorder workflow is the most proportionate next step given the specific observations and limited context.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When a customer emails artwork, what steps take it from enquiry to proof, quote, and confirmed order, and which tools do you use at each step?",
+    "Where do artwork submissions, proofing, or quoting most often slow down or leave customers waiting?",
+    "What repeated work around preparing proofs, quotes, or handling reorders is the team most tired of?",
+    "What tends to break or get dropped between receiving artwork, sending a proof and quote, and confirming the order?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The business is a commercial print shop.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Customers email artwork to place orders.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The shop provides a manual proof and quote.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "The quote turnaround is described as usually two days.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Older reviews say customers had to resend the same files for reorders.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 10.118,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8341,
+   "event_count": 1,
+   "input_tokens": 7887,
+   "output_tokens": 454,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "f871faa32f7a087fcf68d4e47ce8e2e54a8df2f9af376e5a3ce4cd467abde05e": {
+  "detail": "",
+  "json": {
+   "business_summary": "Kowalski Insurance Brokers is an independent insurance brokerage. The source says website quote requests are printed and placed in a tray for the next available broker; it does not describe other customer contact routes.",
+   "caveats": [
+    "Confirm whether the spreadsheet, hand-sent reminders, and printed-request tray are still the current process; the source records Irene's comments from 2026-10-30.",
+    "Ask about other enquiry channels, current tools, assignment ownership, response times, and whether any requests are missed."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "Requests are printed and placed in a tray for the next available broker.",
+     "hypothesis": "Website quote requests may wait before a broker responds, making some prospects less likely to book.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "E1"
+     ]
+    },
+    {
+     "basis": "Renewal reminders are tracked in a spreadsheet and sent by hand.",
+     "hypothesis": "Manually tracking and sending renewal reminders may take staff time and create follow-up work.",
+     "lever": "efficiency",
+     "source_ids": [
+      "E1"
+     ]
+    },
+    {
+     "basis": "Website quote requests are printed and placed in a tray for the next available broker.",
+     "hypothesis": "The tray-based handoff may lead to slower response or dropped requests; worth checking how requests are assigned and tracked.",
+     "lever": "quality",
+     "source_ids": [
+      "E1"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the website quote-request handoff or renewal-reminder workflow can identify where a small improvement is most practical.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "When a website quote request comes in, what happens next through to a customer receiving a quote, and which tools do you use along the way?",
+    "Where do quote requests or customer calls tend to slow down between arrival and broker follow-up?",
+    "What repeated work around renewal reminders or quote requests is the team most tired of doing?",
+    "What tends to break or get dropped when quote requests are printed and queued for the next available broker?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The business is an independent insurance brokerage.",
+     "source_ids": [
+      "E1"
+     ]
+    },
+    {
+     "claim": "Irene said renewal reminders are tracked in a spreadsheet and sent by hand.",
+     "source_ids": [
+      "E1"
+     ]
+    },
+    {
+     "claim": "Website quote requests are printed and placed in a tray for the next available broker.",
+     "source_ids": [
+      "E1"
+     ]
+    },
+    {
+     "claim": "Irene met Casey at a chamber event on 2026-10-30.",
+     "source_ids": [
+      "E1"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.414,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8433,
+   "event_count": 1,
+   "input_tokens": 7909,
+   "output_tokens": 524,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "fc8a7d16823163533c86a07ac07b4abd5f95493c5d69e6ef6e5dec43e97ca233": {
+  "detail": "",
+  "json": {
+   "business_summary": "Saffron Table Catering caters weddings and corporate lunches. Customers send enquiries through a form asking for the date, headcount and budget range; quotes are prepared manually and sent within five days.",
+   "caveats": [
+    "Verify whether the five-day quote window and enquiry process observed on 2026-11-10 are still current.",
+    "Ask how common quote delays or lost bookings are; the review describes one couple, not a broader pattern.",
+    "Confirm whether enquiries also arrive through channels other than the form."
+   ],
+   "leak_hypotheses": [
+    {
+     "basis": "A reviewer said the couple booked another caterer because the quote arrived too late.",
+     "hypothesis": "Some prospective customers may book elsewhere while waiting for a quote.",
+     "lever": "effectiveness",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "basis": "Quotes are prepared manually.",
+     "hypothesis": "Preparing quotes manually may take repeated staff time worth checking.",
+     "lever": "efficiency",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "basis": "Quotes are sent within five days, and a review reports a quote arrived too late.",
+     "hypothesis": "The stated five-day quote window may create a response delay worth checking.",
+     "lever": "quality",
+     "source_ids": [
+      "S1",
+      "S2"
+     ]
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "rationale": "A focused scan of the enquiry-to-quote workflow is the most fitting next step given the manual quoting process and reported delay.",
+    "recommended": "starter_scan"
+   },
+   "question_script": [
+    "After someone submits the enquiry form with a date, headcount and budget range, what happens through to booking, and what tools do you use at each step?",
+    "Where do enquiries or calls tend to slow down between form submission and sending a quote?",
+    "What repeated work involved in preparing wedding or corporate-lunch quotes is the team most tired of?",
+    "What information or follow-up tends to get missed or dropped between an enquiry, quote and booking?",
+    "If you could fix one workflow first, which would it be?"
+   ],
+   "research": [
+    {
+     "claim": "The business caters weddings and corporate lunches.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Its enquiry form asks for date, headcount and budget range.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Quotes are prepared manually and sent within five days.",
+     "source_ids": [
+      "S1"
+     ]
+    },
+    {
+     "claim": "Reviews praise the food.",
+     "source_ids": [
+      "S2"
+     ]
+    },
+    {
+     "claim": "One reviewer said the couple booked another caterer because the quote arrived too late.",
+     "source_ids": [
+      "S2"
+     ]
+    }
+   ],
+   "sufficient": true
+  },
+  "latency_seconds": 11.051,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8407,
+   "event_count": 1,
+   "input_tokens": 7901,
+   "output_tokens": 506,
+   "reasoning_output_tokens": 0
+  }
+ }
+}

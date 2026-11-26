@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "default_deny": true,
+  "global_scope_id": "global",
+  "denied_brain_pointers": [
+    "business_brain:memory/example_dealership_sales_coach.md",
+    "business_brain:operating_context/old_vault_archive_plan.md"
+  ],
+  "scopes": {
+    "global": {
+      "kind": "global",
+      "enabled": true,
+      "brain_pointers": [
+        "business_brain:README.md",
+        "business_brain:decisions/DECISIONS.md",
+        "business_brain:inbox/contradictions.md",
+        "business_brain:inbox/README.md",
+        "business_brain:index/MEMORY_INDEX.md",
+        "business_brain:memory/agentic_os.md",
+        "business_brain:memory/clients.md",
+        "business_brain:memory/company.md",
+        "business_brain:memory/delivery_model.md",
+        "business_brain:memory/marketing_voice.md",
+        "business_brain:memory/offers.md",
+        "business_brain:memory/positioning.md",
+        "business_brain:memory/sales_and_revenue.md",
+        "business_brain:memory/website_and_content.md",
+        "business_brain:operating_context/active_projects.md",
+        "business_brain:operating_context/current_priorities.md",
+        "business_brain:operating_context/executive_view.md",
+        "business_brain:operating_context/open_loops.md",
+        "business_brain:operating_context/protected_paths.md",
+        "business_brain:HOME.md",
+        "business_brain:index/NOW.md",
+        "business_brain:index/WORK.md",
+        "business_brain:index/KNOWLEDGE.md",
+        "business_brain:index/EVIDENCE.md",
+        "business_brain:index/HISTORY.md"
+      ],
+      "brain_pointer_prefixes": [
+        "business_brain:sources/historical_calls/",
+        "business_brain:sources/intake/",
+        "business_brain:inbox/distilled_packets/",
+        "business_brain:people/",
+        "business_brain:entities/",
+        "business_brain:prospects/",
+        "business_brain:memory/",
+        "business_brain:index/"
+      ],
+      "search_source_identities": [
+        {
+          "source": "agentic_os_live",
+          "path_prefix": "agentic_os_live:"
+        },
+        {
+          "source": "capture_metadata",
+          "path_prefix": "capture:global:"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:inbox/distilled_packets/"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:sources/intake/records/"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:sources/historical_calls/"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:people/"
+        },
+        {
+          "source": "business_brain",
+          "paths": [
+            "business_brain:README.md",
+            "business_brain:decisions/DECISIONS.md",
+            "business_brain:inbox/contradictions.md",
+            "business_brain:inbox/README.md",
+            "business_brain:index/MEMORY_INDEX.md",
+            "business_brain:memory/agentic_os.md",
+            "business_brain:memory/clients.md",
+            "business_brain:memory/company.md",
+            "business_brain:memory/delivery_model.md",
+            "business_brain:memory/marketing_voice.md",
+            "business_brain:memory/offers.md",
+            "business_brain:memory/positioning.md",
+            "business_brain:memory/sales_and_revenue.md",
+            "business_brain:memory/website_and_content.md",
+            "business_brain:operating_context/active_projects.md",
+            "business_brain:operating_context/current_priorities.md",
+            "business_brain:operating_context/executive_view.md",
+            "business_brain:operating_context/open_loops.md",
+            "business_brain:operating_context/protected_paths.md",
+            "business_brain:sources/intake/INDEX.md",
+            "business_brain:HOME.md",
+            "business_brain:index/NOW.md",
+            "business_brain:index/WORK.md",
+            "business_brain:index/KNOWLEDGE.md",
+            "business_brain:index/EVIDENCE.md",
+            "business_brain:index/HISTORY.md"
+          ]
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:sources/historical_calls/cards/"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:sources/intake/cards/"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:sources/intake/"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:entities/"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:prospects/"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:memory/"
+        },
+        {
+          "source": "business_brain",
+          "path_prefix": "business_brain:index/"
+        }
+      ],
+      "graphify_targets": [
+        {
+          "namespace": "ttros-business-brain",
+          "paths": [
+            "business_brain:README.md",
+            "business_brain:decisions/DECISIONS.md",
+            "business_brain:inbox/contradictions.md",
+            "business_brain:inbox/README.md",
+            "business_brain:index/MEMORY_INDEX.md",
+            "business_brain:memory/agentic_os.md",
+            "business_brain:memory/clients.md",
+            "business_brain:memory/company.md",
+            "business_brain:memory/delivery_model.md",
+            "business_brain:memory/marketing_voice.md",
+            "business_brain:memory/offers.md",
+            "business_brain:memory/positioning.md",
+            "business_brain:memory/sales_and_revenue.md",
+            "business_brain:memory/website_and_content.md",
+            "business_brain:operating_context/active_projects.md",
+            "business_brain:operating_context/current_priorities.md",
+            "business_brain:operating_context/executive_view.md",
+            "business_brain:operating_context/open_loops.md",
+            "business_brain:operating_context/protected_paths.md",
+            "business_brain:sources/intake/INDEX.md",
+            "business_brain:HOME.md",
+            "business_brain:index/NOW.md",
+            "business_brain:index/WORK.md",
+            "business_brain:index/KNOWLEDGE.md",
+            "business_brain:index/EVIDENCE.md",
+            "business_brain:index/HISTORY.md"
+          ],
+          "path_prefixes": [
+            "business_brain:sources/historical_calls/",
+            "business_brain:sources/intake/",
+            "business_brain:inbox/distilled_packets/",
+            "business_brain:people/",
+            "business_brain:entities/",
+            "business_brain:prospects/",
+            "business_brain:memory/",
+            "business_brain:index/"
+          ]
+        }
+      ],
+      "evidence_identities": [],
+      "capture_identities": [
+        {
+          "match_type": "sender",
+          "value_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "capture_evidence_prefixes": [
+        "capture:global:"
+      ],
+      "evidence_index_entries": []
+    },
+    "client:example-dealership": {
+      "kind": "client",
+      "enabled": false,
+      "brain_pointers": [],
+      "search_source_identities": [],
+      "graphify_targets": [],
+      "evidence_identities": [],
+      "capture_identities": [
+        {
+          "match_type": "sender",
+          "value_sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+        }
+      ],
+      "capture_evidence_prefixes": []
+    },
+    "client:block-3-fixture-a": {
+      "kind": "client",
+      "enabled": true,
+      "brain_pointers": [],
+      "search_source_identities": [
+        {
+          "source": "capture_metadata",
+          "path_prefix": "capture:client:block-3-fixture-a:"
+        }
+      ],
+      "graphify_targets": [],
+      "evidence_identities": [],
+      "capture_identities": [
+        {
+          "match_type": "sender",
+          "value_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        {
+          "match_type": "thread",
+          "value_sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+        }
+      ],
+      "capture_evidence_prefixes": [
+        "capture:client:block-3-fixture-a:"
+      ]
+    }
+  }
+}

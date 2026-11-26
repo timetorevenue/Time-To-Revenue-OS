@@ -1,0 +1,288 @@
+{
+  "version": 5,
+  "comment": "Deterministic Studio draft migration to schema v5 (website 215679e) from v1-v4 drafts pinned to c58e641. Shared by migrate.js and website_studio_migrate.py. Untouched source text takes the new source text; owner-edited text is carried to the field with the same meaning; values with no destination in the new source are retained in root.props.unsupported, never rendered and never dropped. Types listed in unchanged must snapshot identically (hash of html and texts). Generated once from the c58e641 and 215679e snapshots; edit only with a new schema version. Last touched: 2026-11-21.",
+  "from": {
+    "versions": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "commit": "c58e64139af19feab78aca7cbcfbd725d1828e7d",
+    "manifests": {
+      "source-manifest.json": {
+        "commit": "c58e64139af19feab78aca7cbcfbd725d1828e7d",
+        "files": {
+          "app/page.tsx": "7f7c4450f64c600627ada87ba894184f708f85cff31982814761a020b933d50d",
+          "app/layout.tsx": "c9587c9878ec571f4895619be6a7e3aaaaf8076b6efe36d2e1d1ae490b0619f5",
+          "app/globals.css": "9a3c7bafe750ee910a891f0a930efc80f2ac26413554962b9e1a175216f95e68",
+          "components/Editorial.tsx": "86d690d6fba839c9b381189907bbb75403d36427a7647572b08266a123a1d38a",
+          "components/WorkflowFigure.tsx": "bedcfb3187340c50e1bed7c53c18f07cf55eb954be53a5407bb77922ffe3f057",
+          "components/SiteArrow.tsx": "5c20fd134bc878baadba6a5ac2db7fdab1964c5aecee270b02a5f42e3d4a2adc",
+          "components/Header.tsx": "f7d2723787ae29a8c1b1e8bf97000c7e87014972c9cc8afd00d1946f748647eb",
+          "components/Footer.tsx": "a4db4b3128cfeb227ac4002d1702187ddc2917c92570af541252ae92af9eeace",
+          "components/JsonLd.tsx": "1534540256b3d24c20a7dcb7129245ec28a3435a8e9344108ab97680493c2ccb",
+          "content/services.ts": "75b23a474f466a87d338a3ce2922dbcf2e5d6e6696765febc9eb49cfec2e2a16",
+          "lib/commercial.ts": "648390f8e8517a7f5b5fc5037e0b9b190e3736025e50c8443b428c1afefdce7f",
+          "lib/config.ts": "3ae5680d61026285613142df4ecdb5342717d54a85a7c26a2961c4e43377929b"
+        }
+      },
+      "service-manifest.json": {
+        "commit": "c58e64139af19feab78aca7cbcfbd725d1828e7d",
+        "files": {
+          "app/page.tsx": "7f7c4450f64c600627ada87ba894184f708f85cff31982814761a020b933d50d",
+          "components/ServicePage.tsx": "ad3a52d9c7bb5d3184a563af449f5316c94fd3f1c594d6fbff7b605599c36cc7",
+          "components/Editorial.tsx": "86d690d6fba839c9b381189907bbb75403d36427a7647572b08266a123a1d38a",
+          "components/JsonLd.tsx": "1534540256b3d24c20a7dcb7129245ec28a3435a8e9344108ab97680493c2ccb",
+          "components/SiteArrow.tsx": "5c20fd134bc878baadba6a5ac2db7fdab1964c5aecee270b02a5f42e3d4a2adc",
+          "components/Header.tsx": "f7d2723787ae29a8c1b1e8bf97000c7e87014972c9cc8afd00d1946f748647eb",
+          "components/Footer.tsx": "a4db4b3128cfeb227ac4002d1702187ddc2917c92570af541252ae92af9eeace",
+          "content/services.ts": "75b23a474f466a87d338a3ce2922dbcf2e5d6e6696765febc9eb49cfec2e2a16",
+          "lib/commercial.ts": "648390f8e8517a7f5b5fc5037e0b9b190e3736025e50c8443b428c1afefdce7f",
+          "lib/config.ts": "3ae5680d61026285613142df4ecdb5342717d54a85a7c26a2961c4e43377929b",
+          "app/layout.tsx": "c9587c9878ec571f4895619be6a7e3aaaaf8076b6efe36d2e1d1ae490b0619f5",
+          "app/globals.css": "9a3c7bafe750ee910a891f0a930efc80f2ac26413554962b9e1a175216f95e68",
+          "app/services/business-process-automation/page.tsx": "e04b308b7c9008e934dffe051b9c569d9baa90c9e8c88c18c14a2fbfa53a40cb",
+          "app/services/systems-integration/page.tsx": "13f7d743469446ac907244eede1f54011619208d5f47f3c9e62772dba1249c4d",
+          "app/services/ai-implementation/page.tsx": "5f07c7686dfa15664707eb3e9f6427592db44534e81fefbd98a9b3b4038907fc"
+        }
+      }
+    }
+  },
+  "to": {
+    "commit": "215679e81711553cf572acff71b60f42f2b2181d"
+  },
+  "flatWorkflow": {
+    "slot": "workflow",
+    "type": "WorkflowFigure",
+    "styleTarget": "figure-0",
+    "fields": {
+      "text5": "eyebrow",
+      "text6": "caption",
+      "text7": "step1",
+      "text8": "step2",
+      "text9": "step3"
+    },
+    "graphicDefault": {
+      "source": "workflow",
+      "asset": null,
+      "alt": "",
+      "width": 100,
+      "horizontal": "center",
+      "vertical": "center",
+      "fit": "contain",
+      "signal": null
+    }
+  },
+  "types": {
+    "Section0": {
+      "texts": {
+        "text0": "junip",
+        "text1": "indig",
+        "text2": "willo",
+        "text3": "fjord",
+        "text4": "cedar"
+      },
+      "links": {
+        "link0": "link0",
+        "link1": "link1"
+      },
+      "styles": {
+        "section": "section",
+        "h1-0": "h1-0",
+        "p-0": "p-1",
+        "a-0": "a-0",
+        "a-1": "a-1"
+      },
+      "originals": {
+        "text0": "Velvet basil iris n ",
+        "text1": "Willow grove ember",
+        "text2": "Coral amber alpha velvet willow summit timber bravo orchid xenon basil summit bravo ember dune zephyr ember grove coral orchid umber basil iris pebble",
+        "text3": "Juniper orchid quartz ",
+        "text4": "Grove yonder ba "
+      }
+    },
+    "ServiceProcess0": {
+      "texts": {
+        "text0": "zephy",
+        "text1": "junip",
+        "text2": "indig"
+      },
+      "links": {},
+      "styles": {
+        "section": "section",
+        "p-0": "p-0",
+        "h1-0": "h1-0",
+        "p-1": "p-1"
+      },
+      "originals": {
+        "text0": "Velvet xenon timber heron basil bravoa",
+        "text1": "Yonder xenon iris a",
+        "text2": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg"
+      }
+    },
+    "ServiceIntegration0": {
+      "texts": {
+        "text0": "zephy",
+        "text1": "junip",
+        "text2": "indig"
+      },
+      "links": {},
+      "styles": {
+        "section": "section",
+        "p-0": "p-0",
+        "h1-0": "h1-0",
+        "p-1": "p-1"
+      },
+      "originals": {
+        "text0": "Xenon ember indigo dune fjord delta",
+        "text1": "Harbor yonder glade coral timb",
+        "text2": "Lumen willow meadow bravo delta nectar summit lumen juniper iris pebble orchid juniper orchid basil grove willow orchid pebble quartz cedar"
+      }
+    },
+    "ServiceAi0": {
+      "texts": {
+        "text0": "zephy",
+        "text1": "junip",
+        "text2": "indig"
+      },
+      "links": {},
+      "styles": {
+        "section": "section",
+        "p-0": "p-0",
+        "h1-0": "h1-0",
+        "p-1": "p-1"
+      },
+      "originals": {
+        "text0": "Timber kelp velvet timber indigo meado",
+        "text1": "Ridge amber xenon quartz kelpa",
+        "text2": "Ember indigo timber xenon lumen indigo pebble glade ridge juniper ridge xenon dune umber juniper orchid coral zephyr ve"
+      }
+    },
+    "TestOffer0": {
+      "texts": {
+        "text0": "zephy",
+        "text1": "junip",
+        "text2": "indig"
+      },
+      "links": {},
+      "styles": {
+        "section": "section",
+        "p-0": "p-0",
+        "h1-0": "h1-0",
+        "p-1": "p-1"
+      },
+      "originals": {
+        "text0": "Velvet xenon timber heron basil bravoa",
+        "text1": "Yonder xenon iris a",
+        "text2": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg"
+      }
+    }
+  },
+  "components": {
+    "WorkflowFigure": {
+      "texts": {
+        "eyebrow": [
+          "pebblea"
+        ],
+        "caption": [
+          "jade fjord",
+          "indigo bas"
+        ],
+        "step1": [
+          "jade heron"
+        ],
+        "step2": [
+          "dune necta"
+        ],
+        "step3": [
+          "xenon kelp"
+        ]
+      },
+      "originals": {
+        "eyebrow": "Glade indigo glade gl",
+        "caption": "Delta dune yonder cedar g",
+        "step1": "Indigo junipera",
+        "step2": "Glade fjord dun",
+        "step3": "Umber fjo"
+      },
+      "styles": {
+        "section": "section"
+      },
+      "graphic": {
+        "carry": [
+          "width",
+          "horizontal",
+          "vertical"
+        ],
+        "retire": [
+          "source",
+          "asset",
+          "alt",
+          "fit",
+          "signal"
+        ],
+        "reason": "The 215679e WorkflowFigure is a text workflow story with no SVG map or image slot; this version 1 graphic property has no destination."
+      }
+    }
+  },
+  "unchanged": {
+    "Section1": "d676e696dfe645aee8a159bbb5930a73aa25b17d870cfb6c4b3ef5b2d9b89fbf",
+    "Section2": "de5d9beb77695a261ffe5ca60b3b1ee31672b405ff603e4c487b975ba3fdc44d",
+    "Section3": "2c29f4da7c6710c604a8c93edbb72c235e094ab45fce6fec201e38876af9c541",
+    "Section4": "fb851418069109d99865cbd28daadf1462243f6a360cb296f52fb7e596c153b6",
+    "Section5": "a258aa5a03ab1a4d9b46484a8754e7ffdab7134801fbb2979142757713d49580",
+    "Section6": "94a71fbba0dbafddebe4453b08c81ec0217c2dc9367d60cf2af0640ed95fc3a1",
+    "Section7": "d6d6fae4c2a3a629e48b1f7fcb7043f77e489217f6201d16b5fffbfb8fb31a23",
+    "Section8": "55a27ca226e7cf9e40b9d2b03df3d80a821f90ab03cd9a94a9766269efa211d2",
+    "ServiceProcess1": "67936525595bbd6b0ff4a2a2ff5cfe4bb2318f09bc94432cb5246d52716d191c",
+    "ServiceProcess2": "caedcea849f481e20a49415c33a1eb646b94d2137184fba05c20739d1a7fd36a",
+    "ServiceProcess3": "ce2cc28894fbcee196d5c80ebc4c4a9233b4d853f24e146e73c238136ba89d93",
+    "ServiceProcess4": "fd2a13b4cc80596750ebebeced6a0d6987fc0c5cbbd7c9e424d45f8d1d3b6189",
+    "ServiceIntegration1": "873c79e7a1c652e780a70b71a0383fa52beb5abd48f337e2538750c7ff0fa1bc",
+    "ServiceIntegration2": "46d3bccf6adac45076cd95772cb788e9f41aa4074b23b1f8962f667360f63070",
+    "ServiceIntegration3": "c9d846a1dc0dd33ca4bcac41ade3654fb904f74fb98d4d27fdcf4fe0efa02365",
+    "ServiceIntegration4": "fd2a13b4cc80596750ebebeced6a0d6987fc0c5cbbd7c9e424d45f8d1d3b6189",
+    "ServiceAi1": "fc2382d1b2b726b2fdb04b55e25841474ac6a54dff4a882ba12d45606ae82298",
+    "ServiceAi2": "7d10c8b3661c57762bab69e377b200fc628bcbd85cce154452e103a94fafd1dd",
+    "ServiceAi3": "92570f8e27ebed601544a87603b9b09bfaf497480f42f505b1ab19fbe6175617",
+    "ServiceAi4": "fd2a13b4cc80596750ebebeced6a0d6987fc0c5cbbd7c9e424d45f8d1d3b6189",
+    "TestOffer1": "67936525595bbd6b0ff4a2a2ff5cfe4bb2318f09bc94432cb5246d52716d191c",
+    "TestOffer2": "caedcea849f481e20a49415c33a1eb646b94d2137184fba05c20739d1a7fd36a",
+    "TestOffer3": "ce2cc28894fbcee196d5c80ebc4c4a9233b4d853f24e146e73c238136ba89d93",
+    "TestOffer4": "fd2a13b4cc80596750ebebeced6a0d6987fc0c5cbbd7c9e424d45f8d1d3b6189",
+    "SharedHeader": "80b0f155637518bbbb00cef222088aab1acb94ef8e387b1821710e606dbc6965",
+    "SharedFooter": "3d2ff30c7bb22ef357925b29874d5f0cdd359278d651da4a70dc11fdb6f76127"
+  },
+  "insert": [
+    {
+      "page": "home",
+      "type": "HeroSignature",
+      "after": "Section0"
+    },
+    {
+      "page": "service-process",
+      "type": "ServiceProcess5",
+      "before": "ServiceProcess4",
+      "after": "ServiceProcess3"
+    },
+    {
+      "page": "service-integration",
+      "type": "ServiceIntegration5",
+      "before": "ServiceIntegration4",
+      "after": "ServiceIntegration3"
+    },
+    {
+      "page": "service-ai",
+      "type": "ServiceAi5",
+      "before": "ServiceAi4",
+      "after": "ServiceAi3"
+    },
+    {
+      "page": "test-offer",
+      "type": "TestOffer5",
+      "before": "TestOffer4",
+      "after": "TestOffer3"
+    }
+  ]
+}

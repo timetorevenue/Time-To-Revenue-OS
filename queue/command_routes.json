@@ -1,0 +1,155 @@
+{
+  "$comment": "TTROS command routes. Slash commands and the frozen literal fast-path table are resolved before this file; unmatched natural language goes to Ask David. Additive edits only. Last touched: 2026-11-12.",
+  "version": 1,
+  "match": "case_insensitive_substring_any",
+  "routes": [
+    {
+      "id": "prospecting_daily_run",
+      "patterns": [
+        "prospecting daily",
+        "daily prospecting",
+        "today's prospecting",
+        "run prospecting"
+      ],
+      "workflow": "prospecting_daily_run",
+      "skill": "prospecting_daily_run_SKILL",
+      "owner": "revenue",
+      "workbench": "lane",
+      "priority": "high"
+    },
+    {
+      "id": "prospecting_week_review",
+      "patterns": [
+        "prospecting week review",
+        "prospecting weekly review",
+        "review prospect ledger"
+      ],
+      "workflow": "prospecting_week_review",
+      "skill": "prospecting_week_review_SKILL",
+      "owner": "revenue",
+      "workbench": "lane",
+      "priority": "normal"
+    },
+    {
+      "id": "linkedin_carousel",
+      "patterns": [
+        "carousel",
+        "linkedin slides",
+        "slide deck from this"
+      ],
+      "workflow": "linkedin_carousel_from_md",
+      "skill": "linkedin_carousel_from_md_SKILL",
+      "owner": "marketing",
+      "workbench": "lane",
+      "priority": "normal"
+    },
+    {
+      "id": "internal_outreach_daily",
+      "patterns": [
+        "daily outreach",
+        "outreach run",
+        "today's outreach",
+        "outreach batch"
+      ],
+      "workflow": "internal_outreach_daily",
+      "skill": "internal_outreach_daily_SKILL",
+      "owner": "revenue",
+      "workbench": "lane",
+      "priority": "high"
+    },
+    {
+      "id": "fit_call_prep",
+      "patterns": [
+        "fit call",
+        "prep the call",
+        "call prep",
+        "discovery call prep"
+      ],
+      "workflow": "fit_call_prep",
+      "skill": "fit_call_prep_SKILL",
+      "owner": "revenue",
+      "workbench": "lane",
+      "priority": "high"
+    },
+    {
+      "id": "starter_scan",
+      "patterns": [
+        "quick win",
+        "starter scan",
+        "quick wins for"
+      ],
+      "workflow": "starter_scan",
+      "skill": "starter_scan_SKILL",
+      "owner": "delivery",
+      "workbench": "lane",
+      "priority": "normal"
+    },
+    {
+      "id": "business_operations_assessment",
+      "patterns": [
+        "operations assessment",
+        "business assessment",
+        "efficiency audit"
+      ],
+      "workflow": "business_operations_assessment",
+      "skill": "business_operations_assessment_SKILL",
+      "owner": "delivery",
+      "workbench": "lane",
+      "priority": "normal"
+    },
+    {
+      "id": "inbound_reply",
+      "patterns": [
+        "speed to lead",
+        "inbound-reply",
+        "lead response system"
+      ],
+      "workflow": "inbound_reply",
+      "skill": "build_inbound_reply_SKILL",
+      "owner": "delivery",
+      "workbench": "lane",
+      "priority": "normal"
+    },
+    {
+      "id": "voice_assistant_setup",
+      "patterns": [
+        "voice agent",
+        "phone agent",
+        "voice bot"
+      ],
+      "workflow": "voice_assistant_setup",
+      "skill": "build_voice_agent_SKILL",
+      "owner": "delivery",
+      "workbench": "lane",
+      "priority": "normal"
+    },
+    {
+      "id": "marketing_content",
+      "patterns": [
+        "linkedin post",
+        "write a post",
+        "content draft",
+        "blog",
+        "article"
+      ],
+      "workflow": "marketing_content",
+      "skill": "content_draft_SKILL",
+      "owner": "marketing",
+      "workbench": "lane",
+      "priority": "normal"
+    },
+    {
+      "id": "weekly_review",
+      "patterns": [
+        "weekly review",
+        "week in review",
+        "review the week"
+      ],
+      "workflow": "weekly_review",
+      "skill": "weekly_review_SKILL",
+      "owner": "operations",
+      "workbench": "lane",
+      "priority": "low"
+    }
+  ]
+}

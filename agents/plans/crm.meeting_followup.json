@@ -1,0 +1,58 @@
+{
+  "plan": "crm.meeting_followup",
+  "version": "0.1.0",
+  "summary": "Meeting follow-up for one named meeting: open the notes, extract the verified record, draft the follow-up email from it, check its citations.",
+  "source_workflow": "blueprint section 7: CRM / Sales plan crm.meeting_followup",
+  "input_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["title", "evidence_refs", "recipient"],
+    "properties": {
+      "title": {"type": "string"},
+      "date": {"type": "string"},
+      "attendees": {"type": "array", "items": {"type": "string"}},
+      "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+      "recipient": {"type": "object", "required": ["name"]},
+      "sender_name": {"type": "string"},
+      "steer": {"type": "string"}
+    }
+  },
+  "budget": {"tokens": 24000, "model_calls": 4, "seconds": 240},
+  "steps": [
+    {"id": "retrieve", "agent": "shared.brain_retrieve@0.1.0", "input": {"evidence_refs": "$input.evidence_refs"}},
+    {
+      "id": "extract",
+      "agent": "crm.meeting_extract@0.1.0",
+      "needs": ["retrieve"],
+      "input": {
+        "title": "$input.title",
+        "date": "$input.date",
+        "attendees": "$input.attendees",
+        "evidence_refs": "$steps.retrieve.output.refs"
+      }
+    },
+    {
+      "id": "draft",
+      "agent": "crm.followup_draft@0.1.0",
+      "needs": ["extract"],
+      "input": {
+        "recipient": "$input.recipient",
+        "meeting": "$steps.extract.output",
+        "sender_name": "$input.sender_name",
+        "steer": "$input.steer",
+        "artifact_name": "followup_email.md"
+      }
+    },
+    {
+      "id": "verify",
+      "agent": "shared.cite_verify@0.1.0",
+      "needs": ["retrieve", "draft"],
+      "input": {"claim_sets": ["$steps.draft.output.points"], "allowed_refs": "$steps.retrieve.output.refs"}
+    }
+  ],
+  "output": {
+    "meeting": "$steps.extract.output",
+    "draft": "$steps.draft.output",
+    "verification": "$steps.verify.output"
+  }
+}

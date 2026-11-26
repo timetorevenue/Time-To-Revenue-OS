@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "shared.brain_retrieve output",
+  "description": "Every reference listed was opened under the granted scope and has content.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["refs", "sources", "total_tokens"],
+  "properties": {
+    "refs": {"type": "array", "minItems": 1, "maxItems": 12, "uniqueItems": true, "items": {"type": "string"}},
+    "sources": {
+      "type": "array", "minItems": 1, "maxItems": 12,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["id", "ref", "tokens", "sha256"],
+        "properties": {
+          "id": {"type": "string"}, "ref": {"type": "string"},
+          "tokens": {"type": "integer", "minimum": 1}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "total_tokens": {"type": "integer", "minimum": 1}
+  }
+}

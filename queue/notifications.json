@@ -1,0 +1,33 @@
+{
+  "$comment": "TTROS notification config: destinations and delivery wiring only; it grants nothing. Authority is rules/runtime_permission_policy.md (automatic internal notifications clause): only declared system notification kinds (tools/aos_orchestration.py STANDING_NOTIFICATION_KINDS) may go to these allowlisted destinations; anything else needs Casey's exact command. Bridge FILES frozen; sends use the existing bridge send path only. Last touched: 2026-11-13.",
+  "version": 2,
+  "operator_controls": {
+    "cost_dial": "standard",
+    "allowed_values": ["light", "standard", "heavy"],
+    "precedence": ["work_item_or_session_override", "global_config", "documented_default"],
+    "documented_default": "standard"
+  },
+  "escalation": {
+    "channels_immediate": ["originating_channel", "needs_me_rail"],
+    "unanswered_minutes": 10,
+    "escalate_to": "telegram_operator",
+    "send_path": "existing_bridge_send_path_only"
+  },
+  "allowlist": {
+    "telegram": ["1320777128"],
+    "agentmail_internal": [
+      "account-owner@example.invalid",
+      "automation@core-site.example",
+      "revenue-agent@internal",
+      "marketing-agent@internal",
+      "delivery-agent@internal",
+      "operations-agent@internal"
+    ]
+  },
+  "agentmail": {
+    "provider": "composio",
+    "toolkit": "agent_mail",
+    "action": "AGENT_MAIL_SEND_EMAIL",
+    "inbox_id": "agent-inbox@core-site.example"
+  }
+}

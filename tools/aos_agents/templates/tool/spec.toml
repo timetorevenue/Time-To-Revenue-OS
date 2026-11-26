@@ -1,0 +1,33 @@
+# Factory build spec. The package under agents/packages/@@NAME@@ is generated from this folder:
+# edit here and run `aos-agent.py build @@NAME@@`; never edit the package.
+# Revisit: when the agent's contract changes.
+[agent]
+name = "@@NAME@@"
+version = "0.1.0"
+kind = "tool"
+summary = @@SUMMARY@@
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[capabilities]
+grants = []
+proposes = []
+tools = []
+
+[budget]
+tokens = 0
+model_calls = 0
+seconds = 5
+max_steps = 1
+
+[compose]
+callable_by = ["*"]
+calls = []
+
+[factory]
+requirement = @@REQUIREMENT@@
+# Build-time assessment and review share this subscription budget.
+token_budget = 40000

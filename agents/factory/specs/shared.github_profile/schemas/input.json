@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "action": {
+      "enum": [
+        "describe",
+        "read"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

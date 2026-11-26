@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "shared.planner output",
+  "description": "A plan assembled in code from fixed fragments. The plan runner checks it again before it runs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "summary", "tasks", "plan", "plan_input"],
+  "properties": {
+    "decision": {"const": "plan"},
+    "summary": {"type": "string", "minLength": 10, "maxLength": 400},
+    "tasks": {
+      "type": "array", "minItems": 1, "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["task", "records", "steps"],
+        "properties": {
+          "task": {"enum": ["meeting_followup", "linkedin_post", "research_brief", "file_source"]},
+          "records": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "steps": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+        }
+      }
+    },
+    "plan": {
+      "type": "object",
+      "required": ["plan", "version", "steps", "input_schema", "budget", "output"],
+      "properties": {
+        "plan": {"const": "shared.planner"},
+        "steps": {"type": "array", "minItems": 2, "maxItems": 12}
+      }
+    },
+    "plan_input": {"type": "object"}
+  }
+}

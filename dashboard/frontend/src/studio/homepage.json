@@ -1,0 +1,171 @@
+{
+  "source": "/home/operator/ttros-projects/default-site",
+  "commit": "215679e81711553cf572acff71b60f42f2b2181d",
+  "sections": [
+    {
+      "type": "Section0",
+      "label": "Hero",
+      "html": "<section class=\"home-hero\" aria-labelledby=\"home-title\"><div class=\"editorial-shell home-hero-grid\"><div class=\"home-hero-copy\"><p class=\"hero-eyebrow\"><studio-text data-field=\"text0\"></studio-text></p><h1 id=\"home-title\"><studio-text data-field=\"text1\"></studio-text><span><studio-text data-field=\"text2\"></studio-text></span></h1><p><studio-text data-field=\"text3\"></studio-text></p><div class=\"editorial-actions\"><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a><a class=\"editorial-link\" href=\"/how-we-work\"><studio-text data-field=\"text5\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div><figure class=\"workflow-figure\" aria-labelledby=\"workflow-caption\"><figcaption id=\"workflow-caption\"><span><studio-text data-field=\"text6\"></studio-text></span><strong><studio-text data-field=\"text7\"></studio-text><br><studio-text data-field=\"text8\"></studio-text></strong></figcaption><p class=\"workflow-before\"><studio-text data-field=\"text9\"></studio-text></p><ol class=\"workflow-story\"><li><span aria-hidden=\"true\"><studio-text data-field=\"text10\"></studio-text></span><div><strong><studio-text data-field=\"text11\"></studio-text></strong><p><studio-text data-field=\"text12\"></studio-text></p></div></li><li><span aria-hidden=\"true\"><studio-text data-field=\"text13\"></studio-text></span><div><strong><studio-text data-field=\"text14\"></studio-text></strong><p><studio-text data-field=\"text15\"></studio-text></p></div></li><li><span aria-hidden=\"true\"><studio-text data-field=\"text16\"></studio-text></span><div><strong><studio-text data-field=\"text17\"></studio-text></strong><p><studio-text data-field=\"text18\"></studio-text></p></div></li></ol><p class=\"workflow-after\"><studio-text data-field=\"text19\"></studio-text></p><p class=\"workflow-disclaimer\"><studio-text data-field=\"text20\"></studio-text></p></figure></div></section>",
+      "texts": {
+        "text0": "Orchid basil indigo quartz summit kelp dune yonder jade",
+        "text1": "Velvet basil iris n ",
+        "text2": "Willow grove ember",
+        "text3": "Coral amber alpha velvet willow summit timber bravo orchid xenon basil summit bravo ember dune zephyr ember grove coral orchid umber basil iris pebble",
+        "text4": "Juniper orchid quartz ",
+        "text5": "Grove yonder ba ",
+        "text6": "Amber juniper amber bravo willow velve",
+        "text7": "Velvet fjord f",
+        "text8": "Dune quartz meadow",
+        "text9": "Willow delta bravo cedar summit harbor timber jade nectar juniper kelp kelp",
+        "text10": "01",
+        "text11": "Yonder indigo delta yon",
+        "text12": "Ridge lumen jade iris velvet basil bravo basil jun",
+        "text13": "02",
+        "text14": "Alpha fjord summ",
+        "text15": "Cedar bravo indigo jade yonder alpha coral har",
+        "text16": "03",
+        "text17": "Grove indigo i",
+        "text18": "Summit kelp glade heron delta zephyr kelp bravo amber ne",
+        "text19": "Indigo delta indigo quartz ridge zephyr n",
+        "text20": "Delta indigo pebble amber pebble quartz qu"
+      }
+    },
+    {
+      "type": "HeroSignature",
+      "label": "Hero signature",
+      "html": "<div class=\"hero-signature editorial-shell\"><p><studio-text data-field=\"text0\"></studio-text></p><a href=\"#solutions\"><studio-text data-field=\"text1\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div>",
+      "texts": {
+        "text0": "Basil summit summit coral zephyr yonder ridge heron jade grove",
+        "text1": "Velvet alpha junip "
+      }
+    },
+    {
+      "type": "Section1",
+      "label": "Where work gets stuck",
+      "html": "<section class=\"editorial-section section-bordered\"><div class=\"editorial-shell editorial-split\"><div><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h2><studio-text data-field=\"text1\"></studio-text></h2></div><div class=\"editorial-rows\"><div class=\"editorial-row\"><h3><studio-text data-field=\"text2\"></studio-text></h3><p><studio-text data-field=\"text3\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text4\"></studio-text></h3><p><studio-text data-field=\"text5\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text6\"></studio-text></h3><p><studio-text data-field=\"text7\"></studio-text></p></div></div></div></section>",
+      "texts": {
+        "text0": "Delta bravo jade embe",
+        "text1": "Kelp zephyr pebble ridge pebble fjord timbe",
+        "text2": "Alpha umber iris iri",
+        "text3": "Fjord iris nectar delta meadow lumen timber summit yonder indigo juniper ir",
+        "text4": "Heron alpha amber ze",
+        "text5": "Fern coral glade yonder amber delta glade meadow grove meadow indigo velvet bravo alpha dune yonder ambera",
+        "text6": "Umber quartz kelp jadea",
+        "text7": "Basil harbor bravo jade lumen yonder amber harbor juniper orchid timber velvet fjord quartz velvet orchid ember"
+      }
+    },
+    {
+      "type": "Section2",
+      "label": "Outcomes",
+      "html": "<section class=\"editorial-section dark-section\"><div class=\"editorial-shell editorial-split\"><div><h2><studio-text data-field=\"text0\"></studio-text><br><studio-text data-field=\"text1\"></studio-text></h2><p class=\"section-intro\"><studio-text data-field=\"text2\"></studio-text></p></div><ul class=\"outcome-list\"><li><span aria-hidden=\"true\"><studio-text data-field=\"text3\"></studio-text></span><studio-text data-field=\"text4\"></studio-text></li><li><span aria-hidden=\"true\"><studio-text data-field=\"text5\"></studio-text></span><studio-text data-field=\"text6\"></studio-text></li><li><span aria-hidden=\"true\"><studio-text data-field=\"text7\"></studio-text></span><studio-text data-field=\"text8\"></studio-text></li><li><span aria-hidden=\"true\"><studio-text data-field=\"text9\"></studio-text></span><studio-text data-field=\"text10\"></studio-text></li><li><span aria-hidden=\"true\"><studio-text data-field=\"text11\"></studio-text></span><studio-text data-field=\"text12\"></studio-text></li></ul></div></section>",
+      "texts": {
+        "text0": "Coral bravo l",
+        "text1": "Harbor jun",
+        "text2": "Ridge kelp lumen fjord willow indigo zephyr timber nectar fjord xenon xenon delta quartz yonder or",
+        "text3": "↗",
+        "text4": "Grove pebble dune umber glade fjord meadow iris willow umbe",
+        "text5": "↗",
+        "text6": "Velvet umber ember summit amber summit",
+        "text7": "↗",
+        "text8": "Harbor glade nectar umber yonder dune coral harbor dun",
+        "text9": "↗",
+        "text10": "Quartz amber amber basil pebble kelp jadea",
+        "text11": "↗",
+        "text12": "Dune harbor bravo coral alpha xenon summit iris d"
+      }
+    },
+    {
+      "type": "Section3",
+      "label": "Solutions",
+      "html": "<section id=\"solutions\" class=\"editorial-section\"><div class=\"editorial-shell\"><div class=\"editorial-split section-heading\"><h2><studio-text data-field=\"text0\"></studio-text></h2><p><studio-text data-field=\"text1\"></studio-text></p></div><div class=\"two-up\"><div><h3><studio-text data-field=\"text2\"></studio-text></h3><p><studio-text data-field=\"text3\"></studio-text></p></div><div><h3><studio-text data-field=\"text4\"></studio-text></h3><p><studio-text data-field=\"text5\"></studio-text></p></div></div><div class=\"service-rows\"><div class=\"service-row\"><h3><a href=\"/services/business-process-automation\"><studio-text data-field=\"text6\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></h3><p><studio-text data-field=\"text7\"></studio-text></p></div><div class=\"service-row\"><h3><a href=\"/services/systems-integration\"><studio-text data-field=\"text8\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></h3><p><studio-text data-field=\"text9\"></studio-text></p></div><div class=\"service-row\"><h3><a href=\"/services/ai-implementation\"><studio-text data-field=\"text10\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></h3><p><studio-text data-field=\"text11\"></studio-text></p></div></div></div></section>",
+      "texts": {
+        "text0": "Amber umber fjord cedar umber harbor dune grove quart",
+        "text1": "Iris willow zephyr delta bravo grove basil glade umber harbor yonder basil ember ridge pebble lumen alphaa",
+        "text2": "Quartz harbora",
+        "text3": "Heron ember glade juniper fjord fern cedar umber bravo yonder cedar fern nectar juniper alpha timber alpha willow harbor xenon orchid alpha velvet xenon delt",
+        "text4": "Delta willow dune f",
+        "text5": "Ember alpha bravo yonder fern velvet amber fern velvet bravo glade harbor harbor delta fjord kelp heron grove grove lumen jade coral quartz bravoa",
+        "text6": "Coral dune yonder fjord ridge kelp gro ",
+        "text7": "Ridge grove orchid zephyr fern delta amber alpha delta timber meadow kelp alpha meadow glade delta ember dune meadow",
+        "text8": "Umber indigo orchid xenon fern umbe ",
+        "text9": "Grove ridge cedar willow amber amber lumen alpha amber amber meadow coral ember ember fern fjord amber xenon meadow",
+        "text10": "Umber jade alpha iris orchid alpha zep ",
+        "text11": "Ridge ridge lumen basil heron nectar timber timber meadow indigo orchid fjord amber zephyr xenon xenon bravo pebb"
+      }
+    },
+    {
+      "type": "Section4",
+      "label": "How we work",
+      "html": "<section id=\"how-it-works\" class=\"editorial-section stone-section\"><div class=\"editorial-shell\"><div class=\"editorial-split section-heading\"><div><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h2><studio-text data-field=\"text1\"></studio-text></h2></div><p><studio-text data-field=\"text2\"></studio-text></p></div><ol class=\"process-line\"><li><h3><studio-text data-field=\"text3\"></studio-text></h3><p><studio-text data-field=\"text4\"></studio-text></p></li><li><h3><studio-text data-field=\"text5\"></studio-text></h3><p><studio-text data-field=\"text6\"></studio-text></p></li><li><h3><studio-text data-field=\"text7\"></studio-text></h3><p><studio-text data-field=\"text8\"></studio-text></p></li><li><h3><studio-text data-field=\"text9\"></studio-text></h3><p><studio-text data-field=\"text10\"></studio-text></p></li><li><h3><studio-text data-field=\"text11\"></studio-text></h3><p><studio-text data-field=\"text12\"></studio-text></p></li></ol><a class=\"editorial-link\" href=\"/how-we-work\"><studio-text data-field=\"text13\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></section>",
+      "texts": {
+        "text0": "Iris bravoa",
+        "text1": "Orchid iris kelp ember basil zephy",
+        "text2": "Timber dune fern yonder xenon alpha harbor amber ember xenon grove bravo kelp umber dune yonder cedar amber iris j",
+        "text3": "Nectar qua",
+        "text4": "Grove kelp zephyr glade basil ember amber coral lumen glade zephyr alpha summit timber alpha jade j",
+        "text5": "Bravo du",
+        "text6": "Umber zephyr delta ember grove fjord coral umber indigo timber basil zephyr orchid amber meadow meadow",
+        "text7": "Orchi",
+        "text8": "Umber meadow ridge quartz yonder velvet juniper bravo nectar lumen cedar basil cedar harbor kelp fjord alpha",
+        "text9": "Yonder wi",
+        "text10": "Grove cedar cedar xenon cedar orchid jade fern indigo willow umber cedar cedar timber heron yond",
+        "text11": "Alpha x",
+        "text12": "Lumen orchid dune pebble bravo yonder xenon indigo juniper heron ember basil basil jade ember basil bravo peb",
+        "text13": "Grove yonder ba "
+      }
+    },
+    {
+      "type": "Section5",
+      "label": "Our work",
+      "html": "<section class=\"editorial-section\"><div class=\"editorial-shell editorial-split\"><div><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h2><studio-text data-field=\"text1\"></studio-text></h2></div><div class=\"feature-link\"><h3><studio-text data-field=\"text2\"></studio-text></h3><p><studio-text data-field=\"text3\"></studio-text></p><a class=\"editorial-link\" href=\"/our-work\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+      "texts": {
+        "text0": "Harbor k",
+        "text1": "Amber summit harbor yonder cedar ridge gro",
+        "text2": "Timber alpha meadow coral gla",
+        "text3": "Heron lumen jade willow xenon basil kelp yonder nectar fjord ridge bravo bravo nectar summit ridge meadow juniper juniper bravo jade j",
+        "text4": "Delta kelp pebbl "
+      }
+    },
+    {
+      "type": "Section6",
+      "label": "Founder",
+      "html": "<section id=\"about\" class=\"editorial-section section-bordered\"><div class=\"editorial-shell founder-home\"><div class=\"portrait-frame\"><img src=\"/studio/casey-profile-transparent.webp\" alt=\"Casey Linden\"></div><div><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h2><studio-text data-field=\"text1\"></studio-text></h2><p class=\"section-intro\"><studio-text data-field=\"text2\"></studio-text></p><a class=\"editorial-link\" href=\"/about\"><studio-text data-field=\"text3\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+      "texts": {
+        "text0": "Alpha j",
+        "text1": "Jade meadow fjorda",
+        "text2": "Willow amber cedar cedar basil umber cedar timber bravo fjord ember juniper summit juniper pebble ember ridge alpha kelp grove amber orchid meadow orchid cedar jade amber ember alpha bravo pebble alpha timber",
+        "text3": "Indigo nectar harbor "
+      }
+    },
+    {
+      "type": "Section7",
+      "label": "Common questions",
+      "html": "<section class=\"editorial-section stone-section\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div class=\"editorial-faq\"><details><summary><studio-text data-field=\"text1\"></studio-text></summary><p><studio-text data-field=\"text2\"></studio-text></p></details><details><summary><studio-text data-field=\"text3\"></studio-text></summary><p><studio-text data-field=\"text4\"></studio-text></p></details><details><summary><studio-text data-field=\"text5\"></studio-text></summary><p><studio-text data-field=\"text6\"></studio-text></p></details><details><summary><studio-text data-field=\"text7\"></studio-text></summary><p><studio-text data-field=\"text8\"></studio-text></p></details><details><summary><studio-text data-field=\"text9\"></studio-text></summary><p><studio-text data-field=\"text10\"></studio-text></p></details><details><summary><studio-text data-field=\"text11\"></studio-text></summary><p><studio-text data-field=\"text12\"></studio-text></p></details></div></div></section>",
+      "texts": {
+        "text0": "Cedar summit dune",
+        "text1": "Timber juniper ridge orchid w",
+        "text2": "Bravo harbor heron timber timber dune xenon ridge jade umber basil fjord willow pebble xenon harbor fern glade indigo grove yonder fjord timber kelp umber iris glade umber harbor nectar ridge juniper iris fjord glade timber umber glade ambera",
+        "text3": "Delta nectar amber orchid zeph",
+        "text4": "Lumen basil jade grove velvet willow timber jade summit timber pebble kelp zephyr orchid quartz cedar xenon dune fern iris umber yonder dune dune summit zep",
+        "text5": "Lumen summit kelp lumen delta amber delta y",
+        "text6": "Xenon basil delta umber timber iris cedar orchid kelp grove orchid iris ridge delta umber summit yonder orchid grove pebble indigo grovea",
+        "text7": "Alpha xenon timber coral fjord fern gr",
+        "text8": "Cedar iris delta jade umber meadow bravo zephyr fjord xenon alpha timber ridge yonder zephyr zephyr delta fjord alpha juniper ridge meadowa",
+        "text9": "Indigo ember amber willow meadow zephyr velvet ve",
+        "text10": "Harbor glade coral dune ridge orchid fern amber harbor summit harbor umber heron meadow meadow kelp fjord basila",
+        "text11": "Meadow jade yonder meadow del",
+        "text12": "Meadow alpha delta grove bravo basil zephyr xenon harbor jade quartz willow basil fjord nectar glade grove delta pebble grove kelp meadow fjord grove jade fjord lumen kelp ambera"
+      }
+    },
+    {
+      "type": "Section8",
+      "label": "Contact",
+      "html": "<section class=\"contact-band\" id=\"final-cta\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div><p><studio-text data-field=\"text1\"></studio-text></p><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text2\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+      "texts": {
+        "text0": "Indigo grove iris quartz glade fjo",
+        "text1": "Timber yonder delta orchid meadow basil dune ember alpha pebble glade alpha velvet harbor fjord nectar iris ridge zephy",
+        "text2": "Juniper orchid quartz "
+      }
+    }
+  ]
+}

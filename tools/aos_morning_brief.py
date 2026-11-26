@@ -1,0 +1,230 @@
+"""Deterministic morning-brief foundation, reusable by a future M1/M5 agent.
+
+Uses the existing detector, job records, artifact and notification contracts.
+No Ask David call, model invocation, queue writer or new specialist package.
+Revisit: on changes to the detector or scheduled delivery contract. · 2026-11-15.
+"""
+from __future__ import annotations
+import argparse
+import datetime as dt
+import fcntl
+import hashlib
+import json
+import os
+import sys
+from pathlib import Path
+from typing import Any
+from zoneinfo import ZoneInfo
+
+ROOT = Path(os.environ.get('AOS_ROOT', Path(__file__).resolve().parents[1])).resolve()
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from aos_queue_storage import durable_replace_text
+from morning_brief_detector import detect
+from brain_memory import VAULT_ROOT
+
+OUTPUT_REL = Path('context/DAVID_MORNING_BRIEF.md')
+FINDINGS_REL = Path('context/MORNING_BRIEF_FINDINGS.json')
+DELIVERY_LOG_REL = Path('logs/david_morning_brief_delivery.jsonl')
+EMAIL_RECIPIENT = 'account-owner@example.invalid'
+AGENTMAIL_INBOX_ID = 'agent-inbox@core-site.example'
+LOCAL_TIMEZONE = ZoneInfo('America/Vancouver')
+
+class MorningBriefRunError(RuntimeError):
+    pass
+
+def _message_id(value: Any) -> str | None:
+    if not isinstance(value, dict):
+        return None
+    for key in ("message_id", "messageId", "id"):
+        candidate = value.get(key)
+        if isinstance(candidate, (str, int)) and str(candidate).strip():
+            return str(candidate)
+    for key in ("data", "response", "result", "message"):
+        candidate = _message_id(value.get(key))
+        if candidate:
+            return candidate
+    return None
+
+def _agentmail_send(root: Path, recipient: str, subject: str, body: str) -> dict[str, Any]:
+    """Send through the AgentMail connection on Composio Platform (Settings → Connections).
+
+    Declared kind under the runtime policy's automatic internal notifications clause; the
+    recipient must be on the internal AgentMail allowlist (queue/notifications.json).
+    """
+    tools = str(Path(__file__).resolve().parent)
+    if tools not in sys.path:
+        sys.path.insert(0, tools)              # the Hub and policy modules import flat, as in the backend
+    from ttros_connections import ConnectionError as HubError, perform_operator
+
+    try:
+        receipt = perform_operator(
+            root, "AGENT_MAIL_SEND_EMAIL",
+            {"inbox_id": AGENTMAIL_INBOX_ID, "to": [recipient], "subject": subject, "text": body},
+            target=recipient, notification_kind="operational_notification",
+            idempotency_key="morning-brief:" + hashlib.sha256((subject + "\n" + body).encode()).hexdigest()[:16])
+    except HubError as exc:
+        raise MorningBriefRunError(f"AgentMail send was not performed: {exc}") from None
+    provider = receipt.get("result") if isinstance(receipt.get("result"), dict) else {}
+    return {
+        "provider": "agentmail_via_composio_platform",
+        "provider_message_id": _message_id(provider) or "unavailable",
+        "receipt": receipt["id"],
+        "acknowledged": True,
+    }
+
+def _telegram_send(root: Path, body: str) -> dict[str, Any]:
+    from tools.aos_orchestration import default_bridge_send, load_notifications
+
+    recipients = load_notifications(root).get("telegram") or []
+    if not recipients:
+        raise MorningBriefRunError("Telegram operator allowlist has no exposed recipient")
+    response = default_bridge_send(str(recipients[0]), body)
+    return {
+        "provider": "telegram_via_existing_aos_bridge",
+        "provider_message_id": _message_id(response) or "unavailable",
+        "acknowledged": True,
+    }
+
+
+def render(findings: dict) -> str:
+    """Bounded evidence rendering; replaceable by a measured M1/M5 interpretation later."""
+    rows = findings['findings'][:3]
+    lines = ['# David Morning Brief', '> Generated evidence; not organisational authority.',
+             '> Observed: ' + findings['observed_at'] + ' · Source digest: ' + findings['source_state_sha256'], '',
+             '## What matters today']
+    lines.extend('- ' + row['title'][:140] for row in rows)
+    if not rows:
+        lines.append('No attention findings in the scoped snapshot.')
+    lines += ['', '## Why it matters and current evidence']
+    for row in rows:
+        lines.append('- ' + row['reason'][:220] + ' Source: `' + row['entity_path'] + '`.')
+    lines += ['', '## Casey decisions / next focus']
+    for row in rows:
+        lines.append('- ' + row['next_permitted_action'][:220])
+    if not rows:
+        lines.append('Review Company Home and current jobs for the next focus.')
+    proposals = [row for row in findings['findings'] if row['rule'] == 'agent_improvement_proposal'][:3]
+    if proposals:
+        # M6 proposals have their own short section so a busy day's top three never hides them.
+        lines += ['', '## Agent Factory proposals (propose-only)',
+                  '> Generated by M6 from recorded evidence; review material, not authoritative.']
+        for row in proposals:
+            state = row['current_state']
+            freshness = ('STALE, re-run M6 before acting: ' + '; '.join(state.get('stale_reasons') or [])
+                         if state.get('report_freshness') == 'stale' else 'fresh')
+            lines.append('- ' + row['title'][:140] + ' — ' + str(state.get('evaluation'))
+                         + ' (' + freshness[:200] + '). Review: `' + row['entity_path'] + '`.')
+    lines += ['', 'Token usage: no agent invocation', '']
+    return '\n'.join(lines)
+
+
+def _send_once(path: Path, run_id: str, channel: str, digest: str, send, now: dt.datetime) -> dict:
+    """Caller holds the daily lock. Any prior intent blocks automatic resend."""
+    rows = [json.loads(line) for line in path.read_text().splitlines() if line.strip()] if path.exists() else []
+    prior = [r for r in rows if r.get('run_id') == run_id and r.get('channel') == channel]
+    if prior:
+        if any(row.get('artifact_sha256') != digest for row in prior):
+            raise MorningBriefRunError('delivery hash does not match the retained artifact')
+        sent = next((r for r in reversed(prior) if r.get('status') == 'sent'), None)
+        return dict(channel=channel, status='already_sent' if sent else 'ambiguous_not_retried',
+                    acknowledged=bool(sent), artifact_sha256=prior[-1].get('artifact_sha256'))
+    def append(row):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open('a') as handle:
+            handle.write(json.dumps(row, sort_keys=True) + '\n')
+            handle.flush()
+            os.fsync(handle.fileno())
+        from aos_queue_storage import fsync_directory
+        fsync_directory(path.parent)
+    row = dict(run_id=run_id, channel=channel, artifact_sha256=digest, created_at=now.isoformat(), status='intent')
+    append(row)
+    try:
+        response = send()
+        if response.get('acknowledged') is not True:
+            raise MorningBriefRunError('delivery was not acknowledged')
+    except Exception:
+        # Transport failures can follow a successful send; never infer retry safety.
+        append(dict(row, status='uncertain'))
+        return dict(channel=channel, status='ambiguous_not_retried', acknowledged=False)
+    append(dict(row, **response, status='sent'))
+    return dict(channel=channel, status='sent', **response)
+
+
+def run(*, root: Path = ROOT, brain_root: Path = VAULT_ROOT, registry=None,
+        now: dt.datetime | None = None, dry_run: bool = False, deliver: bool = False,
+        telegram_send=None, agentmail_send=None) -> dict:
+    if deliver and dry_run:
+        raise MorningBriefRunError('dry-run and deliver are mutually exclusive')
+    root = Path(root)
+    now = now or dt.datetime.now(dt.timezone.utc)
+    day = now.astimezone(LOCAL_TIMEZONE).date().isoformat()
+    def build():
+        return detect(root=root, brain_root=brain_root, client_scope='global',
+                      registry=registry, now=now).to_dict()
+    if dry_run:
+        findings = build()
+        return dict(status='dry_run', artifact=render(findings), findings=findings, model_invocations=0)
+    lock = root / 'logs' / 'david_morning_brief.lock'
+    lock.parent.mkdir(parents=True, exist_ok=True)
+    with lock.open('a') as handle:
+        fcntl.flock(handle, fcntl.LOCK_EX)
+        receipt = root / 'queue/receipts' / f'david-morning-brief-{day}.md'
+        day_artifact = root / 'workflows/queue_artifacts/david_morning_brief' / (day + '.md')
+        log = root / DELIVERY_LOG_REL
+        rows = [json.loads(line) for line in log.read_text().splitlines() if line.strip()] if log.exists() else []
+        prior = [r for r in rows if r.get('run_id') == day]
+        if not day_artifact.exists():
+            if prior:
+                # Legacy receipts are delivery metadata, never the brief body.
+                # Resume only with the exact original artifact retained on disk.
+                target = root / OUTPUT_REL
+                if not target.exists():
+                    raise MorningBriefRunError('prior delivery has no retained artifact')
+                body = target.read_text()
+                digest = hashlib.sha256(body.encode()).hexdigest()
+                if any(r.get('artifact_sha256') != digest for r in prior):
+                    raise MorningBriefRunError('prior delivery artifact hash mismatch; no retry')
+            else:
+                if receipt.exists():
+                    raise MorningBriefRunError('existing receipt has no delivery log; reconcile before retry')
+                findings = build()
+                body = render(findings)
+                durable_replace_text(root / FINDINGS_REL, json.dumps(findings, sort_keys=True) + '\n')
+                durable_replace_text(root / OUTPUT_REL, body)
+            durable_replace_text(day_artifact, body)
+        else:
+            body = day_artifact.read_text()
+        digest = hashlib.sha256(body.encode()).hexdigest()
+        notices = []
+        if deliver:
+            for channel, send in [('email', agentmail_send or (lambda: _agentmail_send(root, EMAIL_RECIPIENT,
+                    'David Morning Brief — ' + day, body))),
+                    ('telegram', telegram_send or (lambda: _telegram_send(root, body)))]:
+                notices.append(_send_once(root / DELIVERY_LOG_REL, day, channel, digest, send, now))
+        success = all(row.get('acknowledged') for row in notices)
+        if deliver and not receipt.exists():
+            durable_replace_text(receipt, '\n'.join(('# David morning brief delivery receipt',
+                'PASS' if success else 'NEEDS ATTENTION', 'Artifact: ' + day_artifact.relative_to(root).as_posix(),
+                'Artifact SHA-256: ' + digest, 'Token usage: no agent invocation',
+                json.dumps(notices, sort_keys=True), '')))
+        return dict(status='complete' if success else 'delivery_uncertain', artifact_sha256=digest,
+                    artifact=body, artifact_path=day_artifact.relative_to(root).as_posix(),
+                    receipt=receipt.relative_to(root).as_posix() if receipt.exists() else None,
+                    deliveries=notices, model_invocations=0)
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', type=Path, default=ROOT)
+    parser.add_argument('--dry-run', action='store_true')
+    parser.add_argument('--deliver', action='store_true')
+    parser.add_argument('--format', choices=('json', 'markdown', 'quiet'), default='json')
+    args = parser.parse_args(argv)
+    result = run(root=args.root, dry_run=args.dry_run, deliver=args.deliver)
+    if args.format != 'quiet':
+        print(result['artifact'] if args.format == 'markdown' else json.dumps(result))
+    return 0 if result['status'] in {'complete', 'dry_run'} else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

@@ -1,0 +1,32 @@
+# Factory build spec. The package under agents/packages/knowledge.filing_proposal is generated from this folder:
+# edit here and run `aos-agent.py build knowledge.filing_proposal`; never edit the package.
+# Revisit: when the Brain's areas or the knowledge.source_classify output change. · Last touched: 2026-11-14.
+[agent]
+name = "knowledge.filing_proposal"
+version = "0.1.0"
+kind = "tool"
+summary = "Turn a source classification into a filing proposal for the Business Brain, or hold the source for Casey's review."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[capabilities]
+grants = []
+proposes = ["brain.write_proposal"]
+tools = []
+
+[budget]
+tokens = 0
+model_calls = 0
+seconds = 5
+max_steps = 1
+
+[compose]
+callable_by = ["knowledge.*", "shared.planner"]
+calls = []
+
+[factory]
+requirement = "Second step of the knowledge.ingest plan, in shadow beside the existing ingestion. Applies fixed filing rules to what knowledge.source_classify returned: which area a source belongs in, its slug and front matter. It writes nothing; a filing is a brain.write_proposal for the validated writers. Sources with credentials, money records, more than one client, low confidence or anything about Example Dealership are held for review and propose no write."
+source = "blueprint section 7: Knowledge department plan knowledge.ingest; section 10: ingestion untouched, classification added in shadow"

@@ -1,0 +1,37 @@
+{
+ "about": "TAS gate 7 verdict declarations, read by tools/aos_agents/verdicts.py. Each agent names the output fields that ARE its decision; repeats agree only when every declared value is exactly equal. Free text (summaries, caveats, reasons) is never part of a verdict. Kept outside the package directories so declaring a verdict does not change any package identity; reliability evidence pins the declaration it used (spec_sha256). An agent without a declaration cannot pass gate 7.",
+ "version": 1,
+ "agents": {
+  "shared.planner": {
+   "rationale": "The plan is assembled in code from these choices: which task(s), on which named records. The summary sentence is free text.",
+   "fields": [
+    {"pointer": "/decision", "kind": "enum"},
+    {"pointer": "/tasks/*/task", "kind": "enum"},
+    {"pointer": "/tasks/*/records/*", "kind": "label"}
+   ]
+  },
+  "knowledge.source_classify": {
+   "rationale": "What the source is, how sensitive it is, its stated date and whose scope it belongs to drive filing. Summary, caveats, confidence and the entity list are descriptive, not the decision.",
+   "fields": [
+    {"pointer": "/kind", "kind": "enum"},
+    {"pointer": "/sensitivity", "kind": "enum"},
+    {"pointer": "/date", "kind": "pattern"},
+    {"pointer": "/scope_hint", "kind": "label"}
+   ]
+  },
+  "shared.brain_retrieve": {
+   "rationale": "Which Brain references were opened. Order is not a decision (the schema makes refs unique).",
+   "fields": [
+    {"pointer": "/refs/*", "kind": "label", "unordered": true}
+   ]
+  },
+  "knowledge.filing_proposal": {
+   "rationale": "File or hold, where, and whether a write is proposed. Reasons and frontmatter wording are descriptive.",
+   "fields": [
+    {"pointer": "/action", "kind": "enum"},
+    {"pointer": "/target", "kind": "pattern"},
+    {"pointer": "/proposes_write", "kind": "boolean"}
+   ]
+  }
+ }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "run_ledger.schema.json",
+  "title": "Run Ledger Line",
+  "description": "One line per queue item's full run — the master record that token_ledger.jsonl and skill_trust.jsonl entries hang off of. Written by the coordinator at done-transition, same as the other three ledgers (LOOP_POLICY.md).",
+  "$comment": "Reconciled 2026-07-07: item_id now accepts the live AOS- id scheme (tools/aos-queue.py) alongside the legacy Q- scheme; lane/profile enums widened to the real owner-derived set (lane_profiles.json owners + workbench/unassigned + default route). Numbers still come from harness/API usage only.",
+  "type": "object",
+  "required": ["item_id", "lane", "profile", "skill", "created", "status", "escalated", "budget_class"],
+  "properties": {
+    "item_id": {"type": "string", "pattern": "^(AOS|Q)-[0-9]{4}-[0-9]{4}$"},
+    "lane": {"type": "string", "enum": ["revenue", "marketing", "delivery", "operations", "ops", "orchestrator", "hermes", "codex", "claude", "unassigned"]},
+    "profile": {"type": "string", "enum": ["aos-orchestrator", "aos-revenue", "aos-marketing", "aos-delivery", "aos-ops", "default"]},
+    "skill": {"type": "string"},
+    "created": {"type": "string", "format": "date-time"},
+    "done": {"type": "string", "format": "date-time"},
+    "status": {"type": "string", "enum": ["inbox", "agent_todo", "agent_working", "needs_input", "human_review", "done", "blocked", "cancelled"]},
+    "escalated": {"type": "boolean"},
+    "review": {"type": "string", "enum": ["ACCEPT", "REVISE", "pending"]},
+    "budget_class": {"type": "string", "enum": ["light", "standard", "heavy"]},
+    "receipt": {"type": "string"},
+    "memory_promotion": {"type": "array", "items": {"type": "string"}, "description": "Durable proposal/receipt/write-record references only; outcome state lives in the referenced promotion receipt."},
+    "brain_context_status": {"type": "string", "enum": ["used", "not_applicable", "degraded", "missing"]},
+    "brain_context_used": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["note_id", "path", "client_scope", "retrieval_route"],
+        "properties": {
+          "note_id": {"type": "string"},
+          "path": {"type": "string", "pattern": "^business_brain:"},
+          "client_scope": {"type": "string"},
+          "retrieval_route": {"enum": ["pointer", "graphify", "search", "direct_fallback"]},
+          "content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "degraded_context": {"type": "object"}
+  }
+}

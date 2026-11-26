@@ -1,0 +1,17 @@
+{
+  "commit": "215679e81711553cf572acff71b60f42f2b2181d",
+  "files": {
+    "app/page.tsx": "b07d3f753417028e77ed42701521217ef4b18ff3c174688e9f6b3e052122ef7a",
+    "app/layout.tsx": "c9587c9878ec571f4895619be6a7e3aaaaf8076b6efe36d2e1d1ae490b0619f5",
+    "app/globals.css": "1d3e70ace8176478b261a6b957484ec244476c00d9c5898ab7169d225d0842a5",
+    "components/Editorial.tsx": "86d690d6fba839c9b381189907bbb75403d36427a7647572b08266a123a1d38a",
+    "components/WorkflowFigure.tsx": "b8fdcb548518f4cd6d1e1e61cc7ec6f7dad6736ed144f85949c8f75e3ca3ac16",
+    "components/SiteArrow.tsx": "5c20fd134bc878baadba6a5ac2db7fdab1964c5aecee270b02a5f42e3d4a2adc",
+    "components/Header.tsx": "f7d2723787ae29a8c1b1e8bf97000c7e87014972c9cc8afd00d1946f748647eb",
+    "components/Footer.tsx": "a4db4b3128cfeb227ac4002d1702187ddc2917c92570af541252ae92af9eeace",
+    "components/JsonLd.tsx": "1534540256b3d24c20a7dcb7129245ec28a3435a8e9344108ab97680493c2ccb",
+    "content/services.ts": "bbb7e49ab85dd31b002cd11cd7f520a76ad86c1f842909d188eebb3399799004",
+    "lib/commercial.ts": "648390f8e8517a7f5b5fc5037e0b9b190e3736025e50c8443b428c1afefdce7f",
+    "lib/config.ts": "3ae5680d61026285613142df4ecdb5342717d54a85a7c26a2961c4e43377929b"
+  }
+}

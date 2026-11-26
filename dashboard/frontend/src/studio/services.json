@@ -1,0 +1,880 @@
+{
+  "source": "/home/operator/ttros-projects/default-site",
+  "commit": "215679e81711553cf572acff71b60f42f2b2181d",
+  "homeSeo": {
+    "title": {
+      "absolute": "Yonder grove harbor yonder timber pebble umber velvet glade jade glade sum"
+    },
+    "description": "Pebble yonder jade alpha umber orchid fjord fern delta pebble summit delta amber nectar summit grove amber coral nectar harbor fern zephyr pebble meadow",
+    "canonical": "https://www.core-site.example",
+    "openGraph": {
+      "url": "https://www.core-site.example",
+      "title": "Velvet ember yonder umber dune jade summit alpha summita",
+      "description": "Pebble yonder jade alpha umber orchid fjord fern delta pebble summit delta amber nectar summit grove amber coral nectar harbor fern zephyr pebble meadow"
+    },
+    "twitter": {
+      "title": "Velvet ember yonder umber dune jade summit alpha summita",
+      "description": "Pebble yonder jade alpha umber orchid fjord fern delta pebble summit delta amber nectar summit grove amber coral nectar harbor fern zephyr pebble meadow"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://www.core-site.example/#webpage",
+          "url": "https://www.core-site.example",
+          "name": "Velvet ember yonder umber dune jade summit alpha summita",
+          "description": "Pebble yonder jade alpha umber orchid fjord fern delta pebble summit delta amber nectar summit grove amber coral nectar harbor fern zephyr pebble meadow",
+          "isPartOf": {
+            "@id": "https://www.core-site.example/#website"
+          },
+          "about": {
+            "@id": "https://www.core-site.example/#organization"
+          }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.core-site.example/#professional-service",
+          "name": "Glade nectar ne",
+          "url": "https://www.core-site.example",
+          "email": "hello@core-site.example",
+          "description": "Pebble yonder jade alpha umber orchid fjord fern delta pebble summit delta amber nectar summit grove amber coral nectar harbor fern zephyr pebble meadow",
+          "image": "https://www.core-site.example/images/site-og-consultancy.jpg",
+          "founder": {
+            "@type": "Person",
+            "name": "Harbor grove"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Basil alphaa",
+            "addressRegion": "BC",
+            "addressCountry": "CA"
+          },
+          "areaServed": [
+            "Amber orchid nectar br",
+            "Pebble"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/company/time-to-revenue-ai",
+            "https://share.google/1vhd6wcEgXsj6wyfZ"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Bravo cedar cedar nectar zephyr delta h",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "@id": "https://www.core-site.example/services/business-process-automation#service",
+                  "url": "https://www.core-site.example/services/business-process-automation",
+                  "name": "Velvet xenon timber heron basil bravoa",
+                  "serviceType": "Velvet xenon timber heron basil bravoa"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "@id": "https://www.core-site.example/services/systems-integration#service",
+                  "url": "https://www.core-site.example/services/systems-integration",
+                  "name": "Xenon ember indigo dune fjord delta",
+                  "serviceType": "Xenon ember indigo dune fjord delta"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "@id": "https://www.core-site.example/services/ai-implementation#service",
+                  "url": "https://www.core-site.example/services/ai-implementation",
+                  "name": "Timber kelp velvet timber indigo meado",
+                  "serviceType": "Timber kelp velvet timber indigo meado"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Timber juniper ridge orchid w",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bravo harbor heron timber timber dune xenon ridge jade umber basil fjord willow pebble xenon harbor fern glade indigo grove yonder fjord timber kelp umber iris glade umber harbor nectar ridge juniper iris fjord glade timber umber glade ambera"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Delta nectar amber orchid zeph",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Lumen basil jade grove velvet willow timber jade summit timber pebble kelp zephyr orchid quartz cedar xenon dune fern iris umber yonder dune dune summit zep"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Lumen summit kelp lumen delta amber delta y",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Xenon basil delta umber timber iris cedar orchid kelp grove orchid iris ridge delta umber summit yonder orchid grove pebble indigo grovea"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Alpha xenon timber coral fjord fern gr",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cedar iris delta jade umber meadow bravo zephyr fjord xenon alpha timber ridge yonder zephyr zephyr delta fjord alpha juniper ridge meadowa"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Indigo ember amber willow meadow zephyr velvet ve",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Harbor glade coral dune ridge orchid fern amber harbor summit harbor umber heron meadow meadow kelp fjord basila"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Meadow jade yonder meadow del",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Meadow alpha delta grove bravo basil zephyr xenon harbor jade quartz willow basil fjord nectar glade grove delta pebble grove kelp meadow fjord grove jade fjord lumen kelp ambera"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "pages": {
+    "service-process": {
+      "route": "/services/business-process-automation",
+      "content": "process",
+      "sections": [
+        {
+          "type": "ServiceProcess0",
+          "label": "Intro",
+          "description": "Service name, promise (the only H1) and description. Name and description also set the page title, meta description and structured data.",
+          "html": "<section class=\"page-intro\"><div class=\"editorial-shell\"><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h1><studio-text data-field=\"text1\"></studio-text></h1><div class=\"page-lead\"><p><studio-text data-field=\"text2\"></studio-text></p><p><studio-text data-field=\"text3\"></studio-text></p><div class=\"editorial-actions\"><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a><a class=\"editorial-link\" href=\"#starting-point\"><studio-text data-field=\"text5\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></div></section>",
+          "texts": {
+            "text0": "Velvet xenon timber heron basil bravoa",
+            "text1": "Yonder xenon iris a",
+            "text2": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg",
+            "text3": "Willow jade amber fjord orchid dune iris dune alpha delta nectar heron grove bravo amber basil cedar bravo ember delta zephyr juniper ridge kelp pebble heron lumen zeph",
+            "text4": "Juniper orchid quartz ",
+            "text5": "Iris heron xen "
+          }
+        },
+        {
+          "type": "ServiceProcess1",
+          "label": "When this can help",
+          "description": "When this can help: the service’s signals list.",
+          "html": "<section class=\"editorial-section\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><ul class=\"bullet-list\"><li><studio-text data-field=\"text1\"></studio-text></li><li><studio-text data-field=\"text2\"></studio-text></li><li><studio-text data-field=\"text3\"></studio-text></li><li><studio-text data-field=\"text4\"></studio-text></li></ul></div></section>",
+          "texts": {
+            "text0": "Ridge pebble grovea",
+            "text1": "Ember velvet alpha basil bravo kelp umber ceda",
+            "text2": "Velvet summit bravo dune meadow fjord fern umber willow iris s",
+            "text3": "Kelp indigo glade kelp amber orchid lumen cedar umbe",
+            "text4": "Basil fern timber grove timber heron fjord juniper jun"
+          }
+        },
+        {
+          "type": "ServiceProcess2",
+          "label": "What we can build",
+          "description": "What we can build with you: capability rows.",
+          "html": "<section class=\"editorial-section stone-section\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div class=\"editorial-rows\"><div class=\"editorial-row\"><h3><studio-text data-field=\"text1\"></studio-text></h3><p><studio-text data-field=\"text2\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text3\"></studio-text></h3><p><studio-text data-field=\"text4\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text5\"></studio-text></h3><p><studio-text data-field=\"text6\"></studio-text></p></div></div></div></section>",
+          "texts": {
+            "text0": "Harbor glade amber fjord wi",
+            "text1": "Glade lumen jade nectar indig",
+            "text2": "Pebble fern umber kelp harbor zephyr dune quartz alpha fjord willow xenon indigo indigo coral fjord pebble timber yonder yondera",
+            "text3": "Ember meadow kelp indig",
+            "text4": "Alpha fern velvet xenon orchid orchid fern kelp umber dune bravo willow xenon basil harbor summit summit ce",
+            "text5": "Iris kelp bravo orchid corala",
+            "text6": "Glade fjord nectar coral fern lumen ember kelp basil orchid indigo juniper quartz grove pebble ember summit juniper cedar indigo grovea"
+          }
+        },
+        {
+          "type": "ServiceProcess3",
+          "label": "Measure progress & related",
+          "description": "How we measure progress, with related-service links and a link to all services.",
+          "html": "<section class=\"editorial-section\"><div class=\"editorial-shell editorial-split\"><div class=\"editorial-copy\"><h2><studio-text data-field=\"text0\"></studio-text></h2><p><studio-text data-field=\"text1\"></studio-text></p><a class=\"editorial-link\" href=\"/how-we-work\"><studio-text data-field=\"text2\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div><div><h3 class=\"mb-3\"><studio-text data-field=\"text3\"></studio-text></h3><ul class=\"link-list\"><li><a class=\"editorial-link\" href=\"/inbound-reply-system\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li><li><a class=\"editorial-link\" href=\"/lead-generation-agent\"><studio-text data-field=\"text5\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li><li><a class=\"editorial-link\" href=\"/ai-voice-agent-setup\"><studio-text data-field=\"text6\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li></ul><a class=\"editorial-link mt-3\" href=\"/services\"><studio-text data-field=\"text7\"></studio-text></a></div></div></section>",
+          "texts": {
+            "text0": "Jade quartz fjord meadow",
+            "text1": "Cedar indigo amber zephyr harbor kelp timber jade basil fjord cedar willow juniper coral xenon heron cedar dune fjorda",
+            "text2": "Grove yonder ba ",
+            "text3": "Grove pebble xen",
+            "text4": "Zephyr pebble fjord q ",
+            "text5": "Lumen fjord kelp yonder basil ",
+            "text6": "Indigo orchid orchid ",
+            "text7": "Grove juniper pe"
+          }
+        },
+        {
+          "type": "ServiceProcess5",
+          "label": "A practical first step",
+          "description": "The service’s practical starting point, scope note and call to action (the Intro “Where to start” anchor).",
+          "html": "<section id=\"starting-point\" class=\"editorial-section stone-section\"><div class=\"editorial-shell editorial-split\"><div><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h2><studio-text data-field=\"text1\"></studio-text></h2></div><div class=\"editorial-copy\"><p><studio-text data-field=\"text2\"></studio-text></p><p><studio-text data-field=\"text3\"></studio-text></p><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+          "texts": {
+            "text0": "Dune cedar xenon yonde",
+            "text1": "Kelp jade fjord zephyr jade lumen ze",
+            "text2": "Alpha harbor fern amber ember lumen orchid meadow juniper kelp nectar nectar fern amber nectar delta yonder velvet glade zephyr willow pebble nectar indigo nectar grove harbor ridge harbor coral am",
+            "text3": "Coral heron basil delta pebble kelp grove ember zephyr yonder ember zephyr kelp indigo indigo fjord orchi",
+            "text4": "Juniper orchid quartz "
+          }
+        },
+        {
+          "type": "ServiceProcess4",
+          "label": "Contact",
+          "description": "Closing call to action.",
+          "html": "<section class=\"contact-band\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div><p><studio-text data-field=\"text1\"></studio-text></p><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text2\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+          "texts": {
+            "text0": "Indigo grove iris quartz glade fjo",
+            "text1": "Timber yonder delta orchid meadow basil dune ember alpha pebble glade alpha velvet harbor fjord nectar iris ridge zephy",
+            "text2": "Juniper orchid quartz "
+          }
+        }
+      ],
+      "seoFields": {
+        "name": {
+          "section": "ServiceProcess0",
+          "field": "text0"
+        },
+        "promise": {
+          "section": "ServiceProcess0",
+          "field": "text1"
+        },
+        "description": {
+          "section": "ServiceProcess0",
+          "field": "text2"
+        }
+      },
+      "related": [
+        "/inbound-reply-system",
+        "/lead-generation-agent",
+        "/ai-voice-agent-setup"
+      ],
+      "titleSuffix": " rchid indigo xenona",
+      "seo": {
+        "title": "Timber delta quartz bravo glade meadow jade meadow lumen c",
+        "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg",
+        "canonical": "https://www.core-site.example/services/business-process-automation",
+        "openGraph": {
+          "url": "https://www.core-site.example/services/business-process-automation",
+          "title": "Timber delta quartz bravo glade meadow jade meadow lumen c",
+          "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg"
+        },
+        "twitter": {
+          "title": "Timber delta quartz bravo glade meadow jade meadow lumen c",
+          "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg"
+        },
+        "jsonLd": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.core-site.example/services/business-process-automation#webpage",
+              "url": "https://www.core-site.example/services/business-process-automation",
+              "name": "Velvet xenon timber heron basil bravoa",
+              "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg",
+              "isPartOf": {
+                "@id": "https://www.core-site.example/#website"
+              },
+              "about": {
+                "@id": "https://www.core-site.example/#organization"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Xeno",
+                  "item": "https://www.core-site.example"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Amber ha",
+                  "item": "https://www.core-site.example/services"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Velvet xenon timber heron basil bravoa",
+                  "item": "https://www.core-site.example/services/business-process-automation"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "@id": "https://www.core-site.example/services/business-process-automation#service",
+              "url": "https://www.core-site.example/services/business-process-automation",
+              "name": "Velvet xenon timber heron basil bravoa",
+              "serviceType": "Velvet xenon timber heron basil bravoa",
+              "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.core-site.example/#organization",
+                "name": "Glade nectar ne",
+                "url": "https://www.core-site.example"
+              },
+              "areaServed": [
+                "Amber orchid nectar br",
+                "Pebble"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "service-integration": {
+      "route": "/services/systems-integration",
+      "content": "integration",
+      "sections": [
+        {
+          "type": "ServiceIntegration0",
+          "label": "Intro",
+          "description": "Service name, promise (the only H1) and description. Name and description also set the page title, meta description and structured data.",
+          "html": "<section class=\"page-intro\"><div class=\"editorial-shell\"><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h1><studio-text data-field=\"text1\"></studio-text></h1><div class=\"page-lead\"><p><studio-text data-field=\"text2\"></studio-text></p><p><studio-text data-field=\"text3\"></studio-text></p><div class=\"editorial-actions\"><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a><a class=\"editorial-link\" href=\"#starting-point\"><studio-text data-field=\"text5\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></div></section>",
+          "texts": {
+            "text0": "Xenon ember indigo dune fjord delta",
+            "text1": "Harbor yonder glade coral timb",
+            "text2": "Lumen willow meadow bravo delta nectar summit lumen juniper iris pebble orchid juniper orchid basil grove willow orchid pebble quartz cedar",
+            "text3": "Willow jade amber fjord orchid dune iris dune alpha delta nectar heron grove bravo amber basil cedar bravo ember delta zephyr juniper ridge kelp pebble heron lumen zeph",
+            "text4": "Juniper orchid quartz ",
+            "text5": "Iris heron xen "
+          }
+        },
+        {
+          "type": "ServiceIntegration1",
+          "label": "When this can help",
+          "description": "When this can help: the service’s signals list.",
+          "html": "<section class=\"editorial-section\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><ul class=\"bullet-list\"><li><studio-text data-field=\"text1\"></studio-text></li><li><studio-text data-field=\"text2\"></studio-text></li><li><studio-text data-field=\"text3\"></studio-text></li><li><studio-text data-field=\"text4\"></studio-text></li></ul></div></section>",
+          "texts": {
+            "text0": "Ridge pebble grovea",
+            "text1": "Fjord timber xenon indigo lumen lumen timber yondera",
+            "text2": "Glade delta quartz dune quartz quartz ember grove harbor embe",
+            "text3": "Quartz iris heron fern glade fjord glade coral ember juniper grove umbe",
+            "text4": "Fjord nectar delta xenon grove bravo kelp cedar delta dune summi"
+          }
+        },
+        {
+          "type": "ServiceIntegration2",
+          "label": "What we can build",
+          "description": "What we can build with you: capability rows.",
+          "html": "<section class=\"editorial-section stone-section\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div class=\"editorial-rows\"><div class=\"editorial-row\"><h3><studio-text data-field=\"text1\"></studio-text></h3><p><studio-text data-field=\"text2\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text3\"></studio-text></h3><p><studio-text data-field=\"text4\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text5\"></studio-text></h3><p><studio-text data-field=\"text6\"></studio-text></p></div></div></div></section>",
+          "texts": {
+            "text0": "Harbor glade amber fjord wi",
+            "text1": "Coral kelp timber summit dune",
+            "text2": "Fern nectar harbor bravo fjord iris velvet orchid alpha ember dune velvet glade timber kelp grove kelp delta orchid harbor basil p",
+            "text3": "Xenon juniper delta harbor velvet xeno",
+            "text4": "Lumen basil orchid lumen jade indigo bravo harbor dune quartz nectar coral iris amber umber velvet jade yonder h",
+            "text5": "Amber harbor dune lumen lumena",
+            "text6": "Bravo indigo cedar coral dune yonder quartz nectar timber coral zephyr indigo zephyr dune umber iris heron fern indigo coral kelp lumen grove iris xenon embe"
+          }
+        },
+        {
+          "type": "ServiceIntegration3",
+          "label": "Measure progress & related",
+          "description": "How we measure progress, with related-service links and a link to all services.",
+          "html": "<section class=\"editorial-section\"><div class=\"editorial-shell editorial-split\"><div class=\"editorial-copy\"><h2><studio-text data-field=\"text0\"></studio-text></h2><p><studio-text data-field=\"text1\"></studio-text></p><a class=\"editorial-link\" href=\"/how-we-work\"><studio-text data-field=\"text2\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div><div><h3 class=\"mb-3\"><studio-text data-field=\"text3\"></studio-text></h3><ul class=\"link-list\"><li><a class=\"editorial-link\" href=\"/client-memory-system\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li><li><a class=\"editorial-link\" href=\"/agentic-management-system\"><studio-text data-field=\"text5\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li></ul><a class=\"editorial-link mt-3\" href=\"/services\"><studio-text data-field=\"text6\"></studio-text></a></div></div></section>",
+          "texts": {
+            "text0": "Jade quartz fjord meadow",
+            "text1": "Indigo kelp basil lumen coral pebble nectar bravo jade ember quartz ridge xenon ember indigo grove ember lumen coral timbe",
+            "text2": "Grove yonder ba ",
+            "text3": "Grove pebble xen",
+            "text4": "Orchid orchid umber iris lumen pebble har ",
+            "text5": "Quartz heron harbor grove velvet glade ",
+            "text6": "Grove juniper pe"
+          }
+        },
+        {
+          "type": "ServiceIntegration5",
+          "label": "A practical first step",
+          "description": "The service’s practical starting point, scope note and call to action (the Intro “Where to start” anchor).",
+          "html": "<section id=\"starting-point\" class=\"editorial-section stone-section\"><div class=\"editorial-shell editorial-split\"><div><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h2><studio-text data-field=\"text1\"></studio-text></h2></div><div class=\"editorial-copy\"><p><studio-text data-field=\"text2\"></studio-text></p><p><studio-text data-field=\"text3\"></studio-text></p><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+          "texts": {
+            "text0": "Dune cedar xenon yonde",
+            "text1": "Kelp jade fjord zephyr jade lumen ze",
+            "text2": "Summit cedar alpha ridge indigo iris heron basil ember juniper fern umber nectar basil delta yonder umber meadow alpha zephyr ember fjord juniper quartz basil cedar bravo basil summit coral iris kelp pe",
+            "text3": "Coral heron basil delta pebble kelp grove ember zephyr yonder ember zephyr kelp indigo indigo fjord orchi",
+            "text4": "Juniper orchid quartz "
+          }
+        },
+        {
+          "type": "ServiceIntegration4",
+          "label": "Contact",
+          "description": "Closing call to action.",
+          "html": "<section class=\"contact-band\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div><p><studio-text data-field=\"text1\"></studio-text></p><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text2\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+          "texts": {
+            "text0": "Indigo grove iris quartz glade fjo",
+            "text1": "Timber yonder delta orchid meadow basil dune ember alpha pebble glade alpha velvet harbor fjord nectar iris ridge zephy",
+            "text2": "Juniper orchid quartz "
+          }
+        }
+      ],
+      "seoFields": {
+        "name": {
+          "section": "ServiceIntegration0",
+          "field": "text0"
+        },
+        "promise": {
+          "section": "ServiceIntegration0",
+          "field": "text1"
+        },
+        "description": {
+          "section": "ServiceIntegration0",
+          "field": "text2"
+        }
+      },
+      "related": [
+        "/client-memory-system",
+        "/agentic-management-system"
+      ],
+      "titleSuffix": " rchid indigo xenona",
+      "seo": {
+        "title": "Ridge kelp willow glade delta indigo harbor glade orchi",
+        "description": "Lumen willow meadow bravo delta nectar summit lumen juniper iris pebble orchid juniper orchid basil grove willow orchid pebble quartz cedar",
+        "canonical": "https://www.core-site.example/services/systems-integration",
+        "openGraph": {
+          "url": "https://www.core-site.example/services/systems-integration",
+          "title": "Ridge kelp willow glade delta indigo harbor glade orchi",
+          "description": "Lumen willow meadow bravo delta nectar summit lumen juniper iris pebble orchid juniper orchid basil grove willow orchid pebble quartz cedar"
+        },
+        "twitter": {
+          "title": "Ridge kelp willow glade delta indigo harbor glade orchi",
+          "description": "Lumen willow meadow bravo delta nectar summit lumen juniper iris pebble orchid juniper orchid basil grove willow orchid pebble quartz cedar"
+        },
+        "jsonLd": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.core-site.example/services/systems-integration#webpage",
+              "url": "https://www.core-site.example/services/systems-integration",
+              "name": "Xenon ember indigo dune fjord delta",
+              "description": "Lumen willow meadow bravo delta nectar summit lumen juniper iris pebble orchid juniper orchid basil grove willow orchid pebble quartz cedar",
+              "isPartOf": {
+                "@id": "https://www.core-site.example/#website"
+              },
+              "about": {
+                "@id": "https://www.core-site.example/#organization"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Xeno",
+                  "item": "https://www.core-site.example"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Amber ha",
+                  "item": "https://www.core-site.example/services"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Xenon ember indigo dune fjord delta",
+                  "item": "https://www.core-site.example/services/systems-integration"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "@id": "https://www.core-site.example/services/systems-integration#service",
+              "url": "https://www.core-site.example/services/systems-integration",
+              "name": "Xenon ember indigo dune fjord delta",
+              "serviceType": "Xenon ember indigo dune fjord delta",
+              "description": "Lumen willow meadow bravo delta nectar summit lumen juniper iris pebble orchid juniper orchid basil grove willow orchid pebble quartz cedar",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.core-site.example/#organization",
+                "name": "Glade nectar ne",
+                "url": "https://www.core-site.example"
+              },
+              "areaServed": [
+                "Amber orchid nectar br",
+                "Pebble"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "service-ai": {
+      "route": "/services/ai-implementation",
+      "content": "ai",
+      "sections": [
+        {
+          "type": "ServiceAi0",
+          "label": "Intro",
+          "description": "Service name, promise (the only H1) and description. Name and description also set the page title, meta description and structured data.",
+          "html": "<section class=\"page-intro\"><div class=\"editorial-shell\"><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h1><studio-text data-field=\"text1\"></studio-text></h1><div class=\"page-lead\"><p><studio-text data-field=\"text2\"></studio-text></p><p><studio-text data-field=\"text3\"></studio-text></p><div class=\"editorial-actions\"><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a><a class=\"editorial-link\" href=\"#starting-point\"><studio-text data-field=\"text5\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></div></section>",
+          "texts": {
+            "text0": "Timber kelp velvet timber indigo meado",
+            "text1": "Ridge amber xenon quartz kelpa",
+            "text2": "Ember indigo timber xenon lumen indigo pebble glade ridge juniper ridge xenon dune umber juniper orchid coral zephyr ve",
+            "text3": "Willow jade amber fjord orchid dune iris dune alpha delta nectar heron grove bravo amber basil cedar bravo ember delta zephyr juniper ridge kelp pebble heron lumen zeph",
+            "text4": "Juniper orchid quartz ",
+            "text5": "Iris heron xen "
+          }
+        },
+        {
+          "type": "ServiceAi1",
+          "label": "When this can help",
+          "description": "When this can help: the service’s signals list.",
+          "html": "<section class=\"editorial-section\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><ul class=\"bullet-list\"><li><studio-text data-field=\"text1\"></studio-text></li><li><studio-text data-field=\"text2\"></studio-text></li><li><studio-text data-field=\"text3\"></studio-text></li><li><studio-text data-field=\"text4\"></studio-text></li></ul></div></section>",
+          "texts": {
+            "text0": "Ridge pebble grovea",
+            "text1": "Xenon grove amber timber meadow indigo cedar willow nectar quartza",
+            "text2": "Umber jade zephyr meadow willow dune timber glade indigo cedar summit",
+            "text3": "Dune amber willow xenon cedar grove amber meadow dune ember cedara",
+            "text4": "Dune meadow alpha coral ember pebble dune ridge juniper kelp alpha iri"
+          }
+        },
+        {
+          "type": "ServiceAi2",
+          "label": "What we can build",
+          "description": "What we can build with you: capability rows.",
+          "html": "<section class=\"editorial-section stone-section\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div class=\"editorial-rows\"><div class=\"editorial-row\"><h3><studio-text data-field=\"text1\"></studio-text></h3><p><studio-text data-field=\"text2\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text3\"></studio-text></h3><p><studio-text data-field=\"text4\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text5\"></studio-text></h3><p><studio-text data-field=\"text6\"></studio-text></p></div></div></div></section>",
+          "texts": {
+            "text0": "Harbor glade amber fjord wi",
+            "text1": "Kelp amber glade bravo g",
+            "text2": "Ember coral nectar harbor cedar velvet pebble summit summit ember lumen velvet juniper bravo harbor bravo cedar indigo cedar d",
+            "text3": "Lumen juniper indigo nectar pe",
+            "text4": "Bravo ridge quartz orchid grove coral harbor delta amber fern alpha harbor fjord umber dune bravo xenon umber pebble delta amber delta heron heron am",
+            "text5": "Timber pebble fjord umber basi",
+            "text6": "Bravo orchid heron cedar summit iris glade lumen iris harbor willow indigo harbor alpha delta nectar delta jade juniper kel"
+          }
+        },
+        {
+          "type": "ServiceAi3",
+          "label": "Measure progress & related",
+          "description": "How we measure progress, with related-service links and a link to all services.",
+          "html": "<section class=\"editorial-section\"><div class=\"editorial-shell editorial-split\"><div class=\"editorial-copy\"><h2><studio-text data-field=\"text0\"></studio-text></h2><p><studio-text data-field=\"text1\"></studio-text></p><a class=\"editorial-link\" href=\"/how-we-work\"><studio-text data-field=\"text2\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div><div><h3 class=\"mb-3\"><studio-text data-field=\"text3\"></studio-text></h3><ul class=\"link-list\"><li><a class=\"editorial-link\" href=\"/ai-employees\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li><li><a class=\"editorial-link\" href=\"/training\"><studio-text data-field=\"text5\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li><li><a class=\"editorial-link\" href=\"/ai-workflow-training-bc\"><studio-text data-field=\"text6\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li><li><a class=\"editorial-link\" href=\"/ai-business-efficiency-assessment\"><studio-text data-field=\"text7\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li></ul><a class=\"editorial-link mt-3\" href=\"/services\"><studio-text data-field=\"text8\"></studio-text></a></div></div></section>",
+          "texts": {
+            "text0": "Jade quartz fjord meadow",
+            "text1": "Fjord orchid fjord timber amber meadow nectar iris delta indigo harbor ridge bravo xenon heron fern cedar quartz orchid bravo meadow kelp delta ember orchid basil",
+            "text2": "Grove yonder ba ",
+            "text3": "Grove pebble xen",
+            "text4": "Orchid juniper quartz quart ",
+            "text5": "Glade summit amber ",
+            "text6": "Meadow indigo glade iris meadow nec ",
+            "text7": "Heron amber yonder indig ",
+            "text8": "Grove juniper pe"
+          }
+        },
+        {
+          "type": "ServiceAi5",
+          "label": "A practical first step",
+          "description": "The service’s practical starting point, scope note and call to action (the Intro “Where to start” anchor).",
+          "html": "<section id=\"starting-point\" class=\"editorial-section stone-section\"><div class=\"editorial-shell editorial-split\"><div><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h2><studio-text data-field=\"text1\"></studio-text></h2></div><div class=\"editorial-copy\"><p><studio-text data-field=\"text2\"></studio-text></p><p><studio-text data-field=\"text3\"></studio-text></p><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+          "texts": {
+            "text0": "Dune cedar xenon yonde",
+            "text1": "Kelp jade fjord zephyr jade lumen ze",
+            "text2": "Meadow delta alpha meadow yonder meadow zephyr lumen iris dune heron orchid yonder timber umber yonder indigo lumen meadow amber bravo nectar kelp amber jade heron nectar willow kelp delta umber her",
+            "text3": "Coral heron basil delta pebble kelp grove ember zephyr yonder ember zephyr kelp indigo indigo fjord orchi",
+            "text4": "Juniper orchid quartz "
+          }
+        },
+        {
+          "type": "ServiceAi4",
+          "label": "Contact",
+          "description": "Closing call to action.",
+          "html": "<section class=\"contact-band\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div><p><studio-text data-field=\"text1\"></studio-text></p><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text2\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+          "texts": {
+            "text0": "Indigo grove iris quartz glade fjo",
+            "text1": "Timber yonder delta orchid meadow basil dune ember alpha pebble glade alpha velvet harbor fjord nectar iris ridge zephy",
+            "text2": "Juniper orchid quartz "
+          }
+        }
+      ],
+      "seoFields": {
+        "name": {
+          "section": "ServiceAi0",
+          "field": "text0"
+        },
+        "promise": {
+          "section": "ServiceAi0",
+          "field": "text1"
+        },
+        "description": {
+          "section": "ServiceAi0",
+          "field": "text2"
+        }
+      },
+      "related": [
+        "/ai-employees",
+        "/training",
+        "/ai-workflow-training-bc",
+        "/ai-business-efficiency-assessment"
+      ],
+      "titleSuffix": " rchid indigo xenona",
+      "seo": {
+        "title": "Cedar lumen quartz fjord iris velvet indigo grove kelp sum",
+        "description": "Ember indigo timber xenon lumen indigo pebble glade ridge juniper ridge xenon dune umber juniper orchid coral zephyr ve",
+        "canonical": "https://www.core-site.example/services/ai-implementation",
+        "openGraph": {
+          "url": "https://www.core-site.example/services/ai-implementation",
+          "title": "Cedar lumen quartz fjord iris velvet indigo grove kelp sum",
+          "description": "Ember indigo timber xenon lumen indigo pebble glade ridge juniper ridge xenon dune umber juniper orchid coral zephyr ve"
+        },
+        "twitter": {
+          "title": "Cedar lumen quartz fjord iris velvet indigo grove kelp sum",
+          "description": "Ember indigo timber xenon lumen indigo pebble glade ridge juniper ridge xenon dune umber juniper orchid coral zephyr ve"
+        },
+        "jsonLd": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.core-site.example/services/ai-implementation#webpage",
+              "url": "https://www.core-site.example/services/ai-implementation",
+              "name": "Timber kelp velvet timber indigo meado",
+              "description": "Ember indigo timber xenon lumen indigo pebble glade ridge juniper ridge xenon dune umber juniper orchid coral zephyr ve",
+              "isPartOf": {
+                "@id": "https://www.core-site.example/#website"
+              },
+              "about": {
+                "@id": "https://www.core-site.example/#organization"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Xeno",
+                  "item": "https://www.core-site.example"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Amber ha",
+                  "item": "https://www.core-site.example/services"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Timber kelp velvet timber indigo meado",
+                  "item": "https://www.core-site.example/services/ai-implementation"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "@id": "https://www.core-site.example/services/ai-implementation#service",
+              "url": "https://www.core-site.example/services/ai-implementation",
+              "name": "Timber kelp velvet timber indigo meado",
+              "serviceType": "Timber kelp velvet timber indigo meado",
+              "description": "Ember indigo timber xenon lumen indigo pebble glade ridge juniper ridge xenon dune umber juniper orchid coral zephyr ve",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.core-site.example/#organization",
+                "name": "Glade nectar ne",
+                "url": "https://www.core-site.example"
+              },
+              "areaServed": [
+                "Amber orchid nectar br",
+                "Pebble"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "test-offer": {
+      "route": "/offers/test-workflow-audit",
+      "content": "process",
+      "sections": [
+        {
+          "type": "TestOffer0",
+          "label": "Intro",
+          "description": "Service name, promise (the only H1) and description. Name and description also set the page title, meta description and structured data.",
+          "html": "<section class=\"page-intro\"><div class=\"editorial-shell\"><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h1><studio-text data-field=\"text1\"></studio-text></h1><div class=\"page-lead\"><p><studio-text data-field=\"text2\"></studio-text></p><p><studio-text data-field=\"text3\"></studio-text></p><div class=\"editorial-actions\"><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a><a class=\"editorial-link\" href=\"#starting-point\"><studio-text data-field=\"text5\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></div></section>",
+          "texts": {
+            "text0": "Velvet xenon timber heron basil bravoa",
+            "text1": "Yonder xenon iris a",
+            "text2": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg",
+            "text3": "Willow jade amber fjord orchid dune iris dune alpha delta nectar heron grove bravo amber basil cedar bravo ember delta zephyr juniper ridge kelp pebble heron lumen zeph",
+            "text4": "Juniper orchid quartz ",
+            "text5": "Iris heron xen "
+          }
+        },
+        {
+          "type": "TestOffer1",
+          "label": "When this can help",
+          "description": "When this can help: the service’s signals list.",
+          "html": "<section class=\"editorial-section\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><ul class=\"bullet-list\"><li><studio-text data-field=\"text1\"></studio-text></li><li><studio-text data-field=\"text2\"></studio-text></li><li><studio-text data-field=\"text3\"></studio-text></li><li><studio-text data-field=\"text4\"></studio-text></li></ul></div></section>",
+          "texts": {
+            "text0": "Ridge pebble grovea",
+            "text1": "Ember velvet alpha basil bravo kelp umber ceda",
+            "text2": "Velvet summit bravo dune meadow fjord fern umber willow iris s",
+            "text3": "Kelp indigo glade kelp amber orchid lumen cedar umbe",
+            "text4": "Basil fern timber grove timber heron fjord juniper jun"
+          }
+        },
+        {
+          "type": "TestOffer2",
+          "label": "What we can build",
+          "description": "What we can build with you: capability rows.",
+          "html": "<section class=\"editorial-section stone-section\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div class=\"editorial-rows\"><div class=\"editorial-row\"><h3><studio-text data-field=\"text1\"></studio-text></h3><p><studio-text data-field=\"text2\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text3\"></studio-text></h3><p><studio-text data-field=\"text4\"></studio-text></p></div><div class=\"editorial-row\"><h3><studio-text data-field=\"text5\"></studio-text></h3><p><studio-text data-field=\"text6\"></studio-text></p></div></div></div></section>",
+          "texts": {
+            "text0": "Harbor glade amber fjord wi",
+            "text1": "Glade lumen jade nectar indig",
+            "text2": "Pebble fern umber kelp harbor zephyr dune quartz alpha fjord willow xenon indigo indigo coral fjord pebble timber yonder yondera",
+            "text3": "Ember meadow kelp indig",
+            "text4": "Alpha fern velvet xenon orchid orchid fern kelp umber dune bravo willow xenon basil harbor summit summit ce",
+            "text5": "Iris kelp bravo orchid corala",
+            "text6": "Glade fjord nectar coral fern lumen ember kelp basil orchid indigo juniper quartz grove pebble ember summit juniper cedar indigo grovea"
+          }
+        },
+        {
+          "type": "TestOffer3",
+          "label": "Measure progress & related",
+          "description": "How we measure progress, with related-service links and a link to all services.",
+          "html": "<section class=\"editorial-section\"><div class=\"editorial-shell editorial-split\"><div class=\"editorial-copy\"><h2><studio-text data-field=\"text0\"></studio-text></h2><p><studio-text data-field=\"text1\"></studio-text></p><a class=\"editorial-link\" href=\"/how-we-work\"><studio-text data-field=\"text2\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div><div><h3 class=\"mb-3\"><studio-text data-field=\"text3\"></studio-text></h3><ul class=\"link-list\"><li><a class=\"editorial-link\" href=\"/inbound-reply-system\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li><li><a class=\"editorial-link\" href=\"/lead-generation-agent\"><studio-text data-field=\"text5\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li><li><a class=\"editorial-link\" href=\"/ai-voice-agent-setup\"><studio-text data-field=\"text6\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M5 15 15 5M5 5h10v10\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></li></ul><a class=\"editorial-link mt-3\" href=\"/services\"><studio-text data-field=\"text7\"></studio-text></a></div></div></section>",
+          "texts": {
+            "text0": "Jade quartz fjord meadow",
+            "text1": "Cedar indigo amber zephyr harbor kelp timber jade basil fjord cedar willow juniper coral xenon heron cedar dune fjorda",
+            "text2": "Grove yonder ba ",
+            "text3": "Grove pebble xen",
+            "text4": "Zephyr pebble fjord q ",
+            "text5": "Lumen fjord kelp yonder basil ",
+            "text6": "Indigo orchid orchid ",
+            "text7": "Grove juniper pe"
+          }
+        },
+        {
+          "type": "TestOffer5",
+          "label": "A practical first step",
+          "description": "The service’s practical starting point, scope note and call to action (the Intro “Where to start” anchor).",
+          "html": "<section id=\"starting-point\" class=\"editorial-section stone-section\"><div class=\"editorial-shell editorial-split\"><div><p class=\"section-label\"><studio-text data-field=\"text0\"></studio-text></p><h2><studio-text data-field=\"text1\"></studio-text></h2></div><div class=\"editorial-copy\"><p><studio-text data-field=\"text2\"></studio-text></p><p><studio-text data-field=\"text3\"></studio-text></p><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text4\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+          "texts": {
+            "text0": "Dune cedar xenon yonde",
+            "text1": "Kelp jade fjord zephyr jade lumen ze",
+            "text2": "Alpha harbor fern amber ember lumen orchid meadow juniper kelp nectar nectar fern amber nectar delta yonder velvet glade zephyr willow pebble nectar indigo nectar grove harbor ridge harbor coral am",
+            "text3": "Coral heron basil delta pebble kelp grove ember zephyr yonder ember zephyr kelp indigo indigo fjord orchi",
+            "text4": "Juniper orchid quartz "
+          }
+        },
+        {
+          "type": "TestOffer4",
+          "label": "Contact",
+          "description": "Closing call to action.",
+          "html": "<section class=\"contact-band\"><div class=\"editorial-shell editorial-split\"><h2><studio-text data-field=\"text0\"></studio-text></h2><div><p><studio-text data-field=\"text1\"></studio-text></p><a class=\"site-button\" href=\"/free-assessment\"><studio-text data-field=\"text2\"></studio-text><svg class=\"site-arrow\" viewBox=\"0 0 20 20\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 10h13m-5-5 5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></a></div></div></section>",
+          "texts": {
+            "text0": "Indigo grove iris quartz glade fjo",
+            "text1": "Timber yonder delta orchid meadow basil dune ember alpha pebble glade alpha velvet harbor fjord nectar iris ridge zephy",
+            "text2": "Juniper orchid quartz "
+          }
+        }
+      ],
+      "seoFields": {
+        "name": {
+          "section": "TestOffer0",
+          "field": "text0"
+        },
+        "promise": {
+          "section": "TestOffer0",
+          "field": "text1"
+        },
+        "description": {
+          "section": "TestOffer0",
+          "field": "text2"
+        }
+      },
+      "related": [
+        "/inbound-reply-system",
+        "/lead-generation-agent",
+        "/ai-voice-agent-setup"
+      ],
+      "titleSuffix": " rchid indigo xenona",
+      "seo": {
+        "title": "Timber delta quartz bravo glade meadow jade meadow lumen c",
+        "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg",
+        "canonical": "https://www.core-site.example/offers/test-workflow-audit",
+        "openGraph": {
+          "url": "https://www.core-site.example/offers/test-workflow-audit",
+          "title": "Timber delta quartz bravo glade meadow jade meadow lumen c",
+          "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg"
+        },
+        "twitter": {
+          "title": "Timber delta quartz bravo glade meadow jade meadow lumen c",
+          "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg"
+        },
+        "jsonLd": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://www.core-site.example/offers/test-workflow-audit#webpage",
+              "url": "https://www.core-site.example/offers/test-workflow-audit",
+              "name": "Velvet xenon timber heron basil bravoa",
+              "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg",
+              "isPartOf": {
+                "@id": "https://www.core-site.example/#website"
+              },
+              "about": {
+                "@id": "https://www.core-site.example/#organization"
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Xeno",
+                  "item": "https://www.core-site.example"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Amber ha",
+                  "item": "https://www.core-site.example/services"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Velvet xenon timber heron basil bravoa",
+                  "item": "https://www.core-site.example/offers/test-workflow-audit"
+                }
+              ]
+            },
+            {
+              "@type": "Service",
+              "@id": "https://www.core-site.example/offers/test-workflow-audit#service",
+              "url": "https://www.core-site.example/offers/test-workflow-audit",
+              "name": "Velvet xenon timber heron basil bravoa",
+              "serviceType": "Velvet xenon timber heron basil bravoa",
+              "description": "Orchid meadow orchid bravo cedar velvet velvet fjord orchid coral cedar yonder cedar harbor indigo harbor willow summit meadow glade dune ridg",
+              "provider": {
+                "@type": "Organization",
+                "@id": "https://www.core-site.example/#organization",
+                "name": "Glade nectar ne",
+                "url": "https://www.core-site.example"
+              },
+              "areaServed": [
+                "Amber orchid nectar br",
+                "Pebble"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

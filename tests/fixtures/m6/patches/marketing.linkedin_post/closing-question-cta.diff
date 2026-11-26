@@ -1,0 +1,15 @@
+--- a/agents/factory/specs/marketing.linkedin_post/handler.py
++++ b/agents/factory/specs/marketing.linkedin_post/handler.py
+@@ -91,6 +91,12 @@ def run(input, ctx):
+         if HASHTAG.match(tag) and tag not in hashtags:
+             hashtags.append(tag)
+     hashtags = hashtags[:3]
++    if not cta and not str(input.get("cta") or "").strip() and body:
++        # No call to action was given, so the prompt asks the post to end on a question; the model
++        # often ends the body with it and leaves cta empty. Use that closing question as the cta.
++        lines = body.splitlines()
++        if lines and lines[-1].strip().endswith("?"):
++            cta, body = lines[-1].strip(), "\n".join(lines[:-1]).strip()
+     if not hook or not body or not cta or not hashtags:
+         return stop("the draft lacks a hook, a body, a call to action or a usable hashtag")
+     post = f"{hook}\n\n{body}\n\n{cta}\n\n{' '.join(hashtags)}"

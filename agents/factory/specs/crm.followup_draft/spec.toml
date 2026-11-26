@@ -1,0 +1,49 @@
+# Factory build spec. The package under agents/packages/crm.followup_draft is generated from this folder:
+# edit here and run `aos-agent.py build crm.followup_draft`; never edit the package.
+# Revisit: when the meeting record shape, the prompt or the pinned model changes. · Last touched: 2026-11-14.
+[agent]
+name = "crm.followup_draft"
+version = "0.1.0"
+kind = "oneshot"
+summary = "Draft the follow-up email after a meeting from its verified record: what was agreed, who does what, and the next step."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[context]
+needs = ["input.style_refs"]
+max_tokens = 1200
+
+[capabilities]
+grants = ["brain.read:global", "artifact.write"]
+proposes = ["gmail.draft"]
+tools = []
+
+[budget]
+tokens = 12000
+model_calls = 2
+seconds = 90
+max_steps = 1
+
+[compose]
+callable_by = ["crm.*", "shared.planner"]
+calls = []
+
+[factory]
+requirement = "After crm.meeting_extract has turned a meeting into a verified record, write the follow-up email Casey would send: short, plain, built only from the record's decisions, action items and next step. No figure, date or promise that is not in the record. The result is a draft for Casey: it may propose a Gmail draft, never a send. Called by the crm.meeting_followup plan and by planner-built plans."
+token_budget = 220000
+holdout_share = 0.2
+source = "blueprint section 7: CRM / Sales specialist crm.followup_draft; second step of the cross-department example"
+
+# Cheapest first. The first candidate that passes the training cases is pinned.
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "low"
+
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "medium"

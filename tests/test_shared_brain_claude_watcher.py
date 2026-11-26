@@ -1,0 +1,282 @@
+"""Claude handoff watcher: selection, at-most-once runs per note version, and the run shape.
+
+Runs against a temporary Brain root and a stub `claude` binary; no model call, live Brain untouched.
+Revisit: when tools/shared_brain_claude_watcher.py changes. Last touched: 2026-10-05.
+"""
+import datetime as dt
+import json
+import os
+import sys
+import tempfile
+import textwrap
+import unittest
+from pathlib import Path
+from unittest import mock
+
+from tools import shared_brain_checkpoint as store
+from tools import shared_brain_claude_watcher as watcher
+
+REPO = Path(__file__).resolve().parents[1]
+STAMP = {"chatgpt": {"authenticated_identity": "casey-drive-channel", "surface": "chatgpt",
+                     "actor_class": "authorised_client", "surface_source": "address"},
+         "claude": {"authenticated_identity": "casey", "surface": "claude",
+                    "actor_class": "authorised_client", "surface_source": "address"}}
+STUB = textwrap.dedent("""\
+    #!{python}
+    import json, os, sys
+    sys.path.insert(0, {repo!r})
+    from tools import shared_brain_checkpoint as store
+    prompt = sys.stdin.read()
+    probe = "--model" in sys.argv and sys.argv[sys.argv.index("--model") + 1] == {probe_model!r}
+    with open(os.environ["STUB_CALLS"] + (".probe" if probe else ""), "a") as handle:
+        handle.write(json.dumps({{"argv": sys.argv[1:], "prompt": prompt,
+                                  "nonblocking": os.environ.get("MCP_CONNECTION_NONBLOCKING")}}) + "\\n")
+    status = os.environ.get("STUB_CONNECTOR", "connected")
+    servers = [{{"name": "claude.ai Claude Docs", "status": "connected"}},
+               {{"name": "claude.ai TTROS Shared Brain", "status": status}}]
+    tools = ["mcp__claude_ai_TTROS_Shared_Brain__resume"] if status == "connected" else []
+    print(json.dumps({{"type": "system", "subtype": "init", "mcp_servers": servers, "tools": tools}}), flush=True)
+    if probe:
+        print(json.dumps({{"type": "result", "is_error": True, "total_cost_usd": 0}}))
+        sys.exit(1)
+    if os.environ.get("STUB_MODE") == "checkpoint":
+        ws, version = os.environ["STUB_WS"], int(os.environ["STUB_VERSION"])
+        fields = dict(goal="g", done="reviewed", decisions="PASS", work_product_reference="",
+                      next_action="ChatGPT should construct the offer.", open_questions="")
+        stamp = {{"authenticated_identity": "casey", "surface": "claude",
+                  "actor_class": "authorised_client", "surface_source": "address"}}
+        store.checkpoint(ws, fields, version, attribution=stamp, root=__import__("pathlib").Path(os.environ["STUB_ROOT"]))
+    print(json.dumps({{"type": "result", "is_error": False, "num_turns": 3, "total_cost_usd": 0.0,
+                      "permission_denials": [], "result": "v2, next owner ChatGPT"}}))
+""")
+
+
+def note(root, ws, next_action, surface="chatgpt", versions=1):
+    for version in range(versions):
+        fields = dict(goal="g", done="d", decisions="x", work_product_reference="", next_action=next_action,
+                      open_questions="")
+        result = store.checkpoint(ws, fields, version, attribution=STAMP[surface], root=root)
+        assert result["success"], result
+
+
+class Fixture(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        base = Path(self.temp.name)
+        self.root = base / "brain"
+        (self.root / ".git").mkdir(parents=True)
+        self.log = base / "watcher.log"
+        self.calls = base / "calls.jsonl"
+        self.stub = base / "claude"
+        self.stub.write_text(STUB.format(python=sys.executable, repo=str(REPO), probe_model=watcher.PROBE_MODEL), encoding="utf-8")
+        self.stub.chmod(0o755)
+        os.environ.update(STUB_CALLS=str(self.calls), STUB_ROOT=str(self.root), STUB_MODE="checkpoint")
+        patch = mock.patch.object(watcher, "RUN_DIR", base / "run")
+        patch.start()
+        self.addCleanup(patch.stop)
+
+    def tearDown(self):
+        for key in ("STUB_CALLS", "STUB_ROOT", "STUB_MODE", "STUB_WS", "STUB_VERSION", "STUB_CONNECTOR"):
+            os.environ.pop(key, None)
+        self.temp.cleanup()
+
+    def tick(self, *extra):
+        return watcher.main(["--log", str(self.log), "--claude", str(self.stub), *extra], root=self.root)
+
+    def runs(self):
+        return [json.loads(line) for line in self.calls.read_text().splitlines()] if self.calls.exists() else []
+
+    def events(self):
+        return [entry["event"] for entry in watcher._read_log(self.log)]
+
+
+
+class WatcherTest(Fixture):
+    def setUp(self):
+        super().setUp()
+        patch = mock.patch.object(watcher, "_preflight", return_value=None)
+        patch.start()
+        self.addCleanup(patch.stop)
+
+    def test_assignment_wording(self):
+        yes = ["Claude should resume x", "Claude: review", "claude resumes x", "Claude Code reviews", "**Claude** should"]
+        no = ["Casey confirms", "ChatGPT should then Claude", "Claude or ChatGPT should", "Claude/ChatGPT",
+              "Claudette", "Review the report", ""]
+        self.assertEqual([watcher.assigned_to_claude({"next_action": s}) for s in yes], [True] * len(yes))
+        self.assertEqual([watcher.assigned_to_claude({"next_action": s}) for s in no], [False] * len(no))
+
+    def test_nothing_assigned_to_claude_does_nothing(self):
+        note(self.root, "casey-stream", "Casey confirms the defaults.")
+        note(self.root, "own-stream", "Claude should continue.", surface="claude")
+        self.assertEqual(self.tick(), 0)
+        self.assertEqual((self.runs(), self.events()), ([], []))
+
+    def test_stale_note_is_not_current(self):
+        note(self.root, "old-stream", "Claude should review it.")
+        later = watcher._now() + dt.timedelta(hours=watcher.FRESH_HOURS + 1)
+        with mock.patch.object(watcher, "_now", return_value=later):
+            self.assertEqual(self.tick(), 0)
+        self.assertEqual(self.runs(), [])
+
+    def test_one_handoff_runs_once_and_never_again_for_that_version(self):
+        note(self.root, "dp-stage4", "Claude should resume dp-stage4 and review the package.", versions=3)
+        os.environ.update(STUB_WS="dp-stage4", STUB_VERSION="3")
+        self.assertEqual(self.tick(), 0)
+        self.assertEqual(self.tick(), 0)
+        self.assertEqual(self.tick(), 0)
+        runs = self.runs()
+        self.assertEqual(len(runs), 1)
+        self.assertEqual(self.events(), ["claimed", "finished"])
+        finished = watcher._read_log(self.log)[-1]
+        self.assertEqual((finished["note_id"], finished["new_version"], finished["checkpointed"], finished["new_surface"]),
+                         ("workstream:dp-stage4:v3", 4, True, "claude"))
+        self.assertEqual((finished["model_calls"], finished["max_model_calls"]), (1, 1))
+        argv, prompt = runs[0]["argv"], runs[0]["prompt"]
+        self.assertEqual(argv[argv.index("--tools") + 1], "")
+        self.assertEqual(argv[argv.index("--permission-mode") + 1], "dontAsk")
+        self.assertEqual(argv[argv.index("--allowedTools") + 1:], watcher.ALLOWED_TOOLS)
+        self.assertEqual(runs[0]["nonblocking"], "false")
+        self.assertTrue(all(tool.startswith(watcher.TOOL_PREFIX) for tool in watcher.ALLOWED_TOOLS))
+        self.assertIn("workstream_id `dp-stage4`", prompt)
+        self.assertIn("expected_version 3", prompt)
+        self.assertEqual(store.resume("dp-stage4", root=self.root)["note"]["version"], 4)
+
+    def test_failed_run_is_not_retried(self):
+        note(self.root, "dp-stage4", "Claude should review it.")
+        os.environ["STUB_MODE"] = "no-checkpoint"
+        self.assertEqual(self.tick(), 1)
+        self.assertEqual(self.tick(), 0)
+        self.assertEqual(len(self.runs()), 1)
+        self.assertEqual(watcher._read_log(self.log)[-1]["checkpointed"], False)
+
+    def test_run_without_the_connector_stops_at_init_and_is_not_retried(self):
+        note(self.root, "dp-stage4", "Claude should review it.")
+        os.environ.update(STUB_WS="dp-stage4", STUB_VERSION="1", STUB_CONNECTOR="needs-auth")
+        self.assertEqual(self.tick(), 1)
+        self.assertEqual(self.tick(), 0)
+        self.assertEqual(len(self.runs()), 1)
+        finished = watcher._read_log(self.log)[-1]
+        self.assertEqual((finished["aborted"], finished["checkpointed"], finished["new_version"]),
+                         ("connector_needs-auth", False, 1))
+
+    def test_new_version_handed_back_to_claude_runs_again(self):
+        note(self.root, "dp-stage4", "Claude should review it.")
+        os.environ.update(STUB_WS="dp-stage4", STUB_VERSION="1")
+        self.tick()
+        note_v3 = dict(goal="g", done="d", decisions="x", work_product_reference="",
+                       next_action="Claude should review the revision.", open_questions="")
+        store.checkpoint("dp-stage4", note_v3, 2, attribution=STAMP["chatgpt"], root=self.root)
+        os.environ["STUB_VERSION"] = "3"
+        self.tick()
+        self.assertEqual([entry.get("note_id") for entry in watcher._read_log(self.log) if entry["event"] == "claimed"],
+                         ["workstream:dp-stage4:v1", "workstream:dp-stage4:v3"])
+
+    def test_two_handoffs_run_oldest_first_one_per_tick(self):
+        note(self.root, "stream-b", "Claude should do b.")  # older, although its id sorts later
+        note(self.root, "stream-a", "Claude should do a.")
+        os.environ["STUB_MODE"] = "no-checkpoint"
+        self.tick()
+        self.assertEqual(len(self.runs()), 1)
+        self.assertIn("Workstream `stream-b` version 1", self.runs()[0]["prompt"])
+        self.assertNotIn("stream-a", self.runs()[0]["prompt"])
+        self.tick()
+        self.assertEqual(len(self.runs()), 2)
+        self.assertIn("Workstream `stream-a` version 1", self.runs()[1]["prompt"])
+        self.tick()
+        self.assertEqual(len(self.runs()), 2)
+        self.assertEqual([entry.get("note_id") for entry in watcher._read_log(self.log) if entry["event"] == "claimed"],
+                         ["workstream:stream-b:v1", "workstream:stream-a:v1"])
+        self.assertNotIn("ambiguous", self.events())
+        # Neither run moved the other workstream's note.
+        self.assertEqual([store.resume(ws, root=self.root)["note"]["version"] for ws in ("stream-a", "stream-b")], [1, 1])
+
+    def test_one_run_writes_only_its_own_workstream(self):
+        note(self.root, "stream-a", "Claude should do a.")
+        note(self.root, "stream-b", "Claude should do b.")
+        os.environ.update(STUB_WS="stream-a", STUB_VERSION="1")
+        self.tick()
+        self.assertEqual([store.resume(ws, root=self.root)["note"]["version"] for ws in ("stream-a", "stream-b")], [2, 1])
+        self.assertEqual(store.resume("stream-b", root=self.root)["note"]["next_action"], "Claude should do b.")
+        os.environ.update(STUB_WS="stream-b", STUB_VERSION="1")
+        self.tick()
+        self.assertEqual([store.resume(ws, root=self.root)["note"]["version"] for ws in ("stream-a", "stream-b")], [2, 2])
+
+    def test_equal_timestamps_tie_break_by_workstream_id(self):
+        pending = [{"id": f"workstream:{ws}:v1", "workstream_id": ws, "updated": "2026-10-05T00:00:00Z"}
+                   for ws in ("stream-c", "stream-a", "stream-b")]
+        self.assertEqual(watcher.select(pending)["workstream_id"], "stream-a")
+        pending[2]["updated"] = "2026-10-04T23:59:59Z"
+        self.assertEqual(watcher.select(pending)["workstream_id"], "stream-b")
+
+    def test_version_moved_before_run_is_not_executed(self):
+        note(self.root, "dp-stage4", "Claude should review it.")
+        real = store.resume
+
+        def racing(workstream_id=None, version=None, *, root=None):
+            if workstream_id and racing.calls == 1:
+                fields = dict(goal="g", done="d", decisions="x", work_product_reference="",
+                              next_action="Claude should review the newer version.", open_questions="")
+                store.checkpoint(workstream_id, fields, 1, attribution=STAMP["chatgpt"], root=root)
+            racing.calls += bool(workstream_id)
+            return real(workstream_id, version, root=root)
+        racing.calls = 0
+        with mock.patch.object(watcher.checkpoint_store, "resume", side_effect=racing):
+            self.tick()
+        self.assertEqual((self.runs(), self.events()), ([], ["changed_before_run"]))
+        os.environ.update(STUB_WS="dp-stage4", STUB_VERSION="2")
+        self.tick()
+        self.assertEqual([entry.get("note_id") for entry in watcher._read_log(self.log) if entry["event"] == "claimed"],
+                         ["workstream:dp-stage4:v2"])
+
+    def test_blocked_preflight_waits_without_claiming(self):
+        note(self.root, "dp-stage4", "Claude should review it.")
+        os.environ.update(STUB_WS="dp-stage4", STUB_VERSION="1")
+        with mock.patch.object(watcher, "_preflight", return_value="claude_connector_not_connected"):
+            self.tick()
+            self.tick()
+        self.assertEqual((self.runs(), self.events()), ([], ["waiting"]))
+        self.tick()
+        self.assertEqual(len(self.runs()), 1)
+
+    def test_dry_run_neither_claims_nor_calls(self):
+        note(self.root, "dp-stage4", "Claude should review it.")
+        self.tick("--dry-run")
+        self.assertEqual((self.runs(), self.events()), ([], []))
+
+
+class PreflightTest(Fixture):
+    """The gate is the headless session's own connector status, read by a no-cost probe."""
+
+    def check(self, connector, health_status=200):
+        os.environ["STUB_CONNECTOR"] = connector
+        response = mock.MagicMock(status=health_status)
+        response.__enter__.return_value = response
+        with mock.patch.object(watcher.urllib.request, "urlopen", return_value=response):
+            return watcher._preflight(str(self.stub))
+
+    def test_connector_state_gates_the_run(self):
+        self.assertIsNone(self.check("connected"))
+        self.assertEqual(self.check("needs-auth"), "connector_needs-auth")
+        self.assertEqual(self.check("connected", health_status=503), "brain_backend_unhealthy")
+        probes = [json.loads(line) for line in Path(str(self.calls) + ".probe").read_text().splitlines()]
+        self.assertEqual(len(probes), 2)
+        argv = probes[0]["argv"]
+        self.assertEqual(argv[argv.index("--model") + 1], watcher.PROBE_MODEL)
+        self.assertNotIn("--allowedTools", argv)
+        self.assertEqual({probe["nonblocking"] for probe in probes}, {"false"})
+        self.assertEqual(self.runs(), [])
+
+    def test_unauthenticated_connector_waits_without_claiming(self):
+        note(self.root, "dp-stage4", "Claude should review it.")
+        os.environ["STUB_CONNECTOR"] = "needs-auth"
+        response = mock.MagicMock(status=200)
+        response.__enter__.return_value = response
+        with mock.patch.object(watcher.urllib.request, "urlopen", return_value=response):
+            self.tick()
+            self.tick()
+        self.assertEqual((self.runs(), self.events()), ([], ["waiting"]))
+        self.assertEqual(watcher._read_log(self.log)[-1]["reason"], "connector_needs-auth")
+
+
+if __name__ == "__main__":
+    unittest.main()

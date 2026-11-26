@@ -1,0 +1,32 @@
+# Factory build spec. The package under agents/packages/marketing.post_check is generated from this folder:
+# edit here and run `aos-agent.py build marketing.post_check`; never edit the package.
+# Revisit: when the publishing rules in workflows/linkedin_content change. · Last touched: 2026-11-14.
+[agent]
+name = "marketing.post_check"
+version = "0.1.0"
+kind = "tool"
+summary = "Check a LinkedIn post draft against the publishing rules in code and, when it passes, file it as a draft for Casey's approval."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[capabilities]
+grants = ["artifact.write"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 0
+model_calls = 0
+seconds = 5
+max_steps = 1
+
+[compose]
+callable_by = ["marketing.*", "shared.planner"]
+calls = []
+
+[factory]
+requirement = "Last marketing step before a draft reaches Casey. Rules a person should not have to check by eye: length, hashtags, placeholders, credentials, guarantee wording and any client name that must stay out. A draft that breaks a rule fails the step with the reasons; softer points come back as warnings. It never publishes: the workflow rule is drafts only, Casey posts by hand."
+source = "workflows/linkedin_content/workflow.md (approval rules: no automated posting, no unsupported claims, client lessons anonymised until approved)"

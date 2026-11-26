@@ -1,0 +1,31 @@
+# Factory build spec. The package under agents/packages/shared.github_profile is generated from this folder:
+# edit here and run `aos-agent.py build shared.github_profile`; never edit the package.
+# Revisit: when the agent's contract changes.
+[agent]
+name = "shared.github_profile"
+version = "0.1.0"
+kind = "tool"
+summary = "Read the authenticated GitHub profile through a scoped existing connection."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[capabilities]
+grants = ["connector.read:github:profile"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 0
+model_calls = 0
+seconds = 5
+max_steps = 1
+
+[compose]
+callable_by = ["*"]
+calls = []
+
+[factory]
+requirement = "Discover a member-owned existing GitHub connection and read only its authenticated profile under current runtime and task permissions."

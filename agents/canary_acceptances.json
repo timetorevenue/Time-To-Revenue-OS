@@ -1,0 +1,5 @@
+{
+  "about": "The Account Owner's recorded decisions on real canary runs, read by tools/aos_agents/release.py (M7). Append only: never edit or delete a record; a changed decision is a new record. A record names the job, the receipt sha256 and the exact package binding of each agent it evidences. M7 re-verifies every claim against the job record, receipt, registry history and token ledger before crediting anything; a record alone credits nothing. A record also names a provenance commit: the commit production ran when the job started. M7 counts the run only if that commit holds the pinned package bytes and a registry entry releasing that exact hash, and is the newest commit before the run; otherwise the run is reported as unverified.",
+  "version": 1,
+  "records": []
+}

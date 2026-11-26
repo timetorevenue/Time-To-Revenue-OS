@@ -1,0 +1,58 @@
+# Prospect Status Vocabulary
+> Revisit: if the touch cadence or funnel stages change. · Last touched: 2026-07-23
+> Governs the `status` field in `queue/prospects.jsonl` (schema: `queue/prospects_schema.json`).
+
+## Lifecycle
+```text
+identified → drafted → sent → touch_2 → touch_3 →
+replied_positive | replied_negative | no_response →
+call_booked → fit_call_done → offer_sent → won | lost | nurture
+```
+Side states (enter from anywhere): `rejected` (failed gates pre-send),
+`do_not_contact` (requested or CASL-required — permanent unless Casey
+overrides with a new lawful basis), `withdrawn` (connection request
+pulled after 7 days pending).
+
+## Definitions and transition rules
+| Status | Means | Set by | Rule |
+|---|---|---|---|
+| identified | Evidenced, scored, ledger row exists | daily run | Duplicate + do-not-contact check passed first |
+| drafted | Outreach drafts exist, awaiting Casey | daily run | Normal initial state for a completed daily-run candidate; never auto-advances |
+| sent | Casey sent touch 1 | Casey log | `next_touch_due = +4 days` |
+| touch_2 | Follow-up 1 sent | Casey log | `next_touch_due = +5 days` (day 9) |
+| touch_3 | Final touch sent (InMail variant allowed for A-tier) | Casey log | `next_touch_due = null`; no touch 4, ever |
+| replied_positive | Any reply worth a conversation | Casey log | Route to `/fit-call-prep` |
+| replied_negative | Decline / not now | Casey log | If "stop contacting" → `do_not_contact` |
+| no_response | 7+ days after touch_3 | weekly review | Terminal for cycle; eligible for future re-signal only |
+| call_booked / fit_call_done / offer_sent | Self-evident | Casey log | Existing fit_call_prep / proposal_prep skills take over |
+| won / lost / nurture | Outcome | Casey log | `nurture` = real future potential with a stated reason |
+| withdrawn | Pending request pulled at 7 days | daily run flags, Casey acts | Protects account health |
+
+## Cadence constants (cycle 1)
+Touch days: 0 / +4 / +9. Pending-request withdrawal: 7 days. Hard cap:
+3 touches (V4.1). First-touch default: `noted_request` (Premium active);
+flip config to `blank_request` + post-acceptance DM if Premium lapses.
+
+## Logging discipline
+Every line is a full snapshot. The normal daily workflow atomically accepts
+and drafts a candidate, so its initial line is `drafted`; `identified` is
+reserved for discovery-only imports. Append one new snapshot per later state
+change on the same day as the event. Never rewrite history. The weekly review
+flags stale statuses; analytics are only as honest as the log.
+
+## Outreach Pilot v1 event overlay
+
+Records with `record_type: outreach_pilot_v1` use the same append-only ledger
+and retain the legacy `status` roll-up for analytics, while
+`outreach_stage`, `latest_event`, and `outreach_history` hold the exact
+event-driven state. Stored copy and Gmail draft creation never count as sent.
+
+- `invitation_sent` waits for `connection_accepted`; it does not activate a
+  LinkedIn message by itself.
+- `connection_accepted` activates only the prepared first LinkedIn message.
+- `email_1_sent` and `linkedin_message_sent` calculate one next conditional
+  reminder using the handoff's deterministic business-day delay.
+- Stop events cancel the reminder and all inactive copy. `opt_out` and
+  `do_not_contact` are preserved as authoritative true values in every later
+  projection, including the GoHighLevel dry run.
+- A repeated `event_id` is an idempotent replay, not a second history row.

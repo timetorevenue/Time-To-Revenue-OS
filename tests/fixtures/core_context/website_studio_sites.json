@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "description": "Websites registered for TTROS Website Studio and their explicitly registered sources. The local checkout, base and edit limits come from context/website_projects.json; this file adds only reference checkouts, verified Google Drive IDs, Business Brain pointers, site guidance files and brand assets. Studio reads nothing outside these entries and writes nothing to any website checkout or Drive.",
+  "revisit": "When a site's brand kit, Drive folders, Brain records or release targets change.",
+  "sites": {
+    "default-site": {
+      "project": "default-site",
+      "label": "Glade nectar ne",
+      "default": true,
+      "page": "home",
+      "edition": "unpublished_release_candidate",
+      "published_site": {
+        "identity_reference": "context/account_connections.json#website",
+        "capture_directory": "context/current_site",
+        "mode": "published_page_capture",
+        "source_adapter_status": "blocked_pending_exact_deployed_source_access",
+        "note": "Fictional demo capture. Replace with the real published-page capture."
+      },
+      "reference_checkouts": [],
+      "drive": {
+        "brand_kit": {
+          "id": "EXAMPLE_DRIVE_ID_0001_000000000000",
+          "label": "Example brand kit (PDF)",
+          "local_copy": "brand/example-brand-kit.pdf"
+        },
+        "brand_assets": [
+          {
+            "id": "EXAMPLE_DRIVE_ID_0002_000000000000",
+            "label": "Logo, light"
+          },
+          {
+            "id": "EXAMPLE_DRIVE_ID_0003_000000000000",
+            "label": "Logo, dark"
+          }
+        ],
+        "folders": [
+          {
+            "id": "EXAMPLE_DRIVE_ID_0004_000000000000",
+            "role": "project_context",
+            "label": "Example project context"
+          }
+        ],
+        "excluded_folders": [
+          {
+            "id": "EXAMPLE_DRIVE_ID_0005_000000000000",
+            "reason": "Fictional example of an excluded parent folder."
+          }
+        ]
+      },
+      "brain": [
+        "business_brain:memory/website_and_content.md",
+        "business_brain:memory/positioning.md"
+      ],
+      "site_guidance": [
+        "CONTENT_GUIDELINES.md",
+        "design-system/README.md"
+      ],
+      "local_brand_assets": [
+        {
+          "id": "header-logo",
+          "path": "public/images/site-logo-dark.svg",
+          "label": "Header logo"
+        },
+        {
+          "id": "logo-light",
+          "path": "public/images/site-logo-light.png",
+          "label": "Logo, light"
+        }
+      ],
+      "freshness_hours": 24,
+      "release_targets": {
+        "vercel-production": {
+          "provider": "vercel",
+          "label": "example.com production (Vercel)",
+          "project": "prj_EXAMPLE0000000000000000000000",
+          "team": "team_EXAMPLE0000000000000000000",
+          "production_domains": [
+            "www.example.com",
+            "example.com"
+          ],
+          "identity_reference": "context/account_connections.json#website",
+          "note": "Fictional target. Credential: a private token file (TTROS_VERCEL_TOKEN_FILE), never in Git."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+import test from 'node:test'
+import assert from 'node:assert/strict'
+import { memoryRecordPath, normalizeRecordPointer, DESTINATIONS, MAX_SESSION_TABS, closeSessionTab, destinationForView, initialSessionTabs, laneName, laneRoutePath, needsMeCollapseKey, openSessionTab, pinSessionTab, restoreShellSession, shellPathForView, shellRouteFromPath, shellSessionSnapshot, shellViewForNavigation, workbenchColor } from '../src/shellState.js'
+
+test('Cockpit stays pinned first and cannot close', () => {
+  const tabs = initialSessionTabs()
+  assert.equal(tabs[0].id, 'cockpit')
+  assert.equal(tabs[0].pinned, true)
+  assert.deepEqual(closeSessionTab(tabs, 'cockpit'), tabs)
+})
+
+test('preview navigation reuses the single preview tab', () => {
+  const initial = initialSessionTabs()
+  const queue = openSessionTab(initial, 'work-queue')
+  assert.equal(queue.length, 2)
+  assert.equal(queue[1].id, 'work-queue')
+  const artifacts = openSessionTab(queue, 'artifacts')
+  assert.equal(artifacts.length, 2)
+  assert.equal(artifacts[1].id, 'artifacts')
+})
+
+test('pinned tabs persist, close, and enforce the eight-tab cap', () => {
+  let tabs = pinSessionTab(openSessionTab(initialSessionTabs(), 'work-queue'), 'work-queue')
+  for (const id of ['workflow-bench', 'skills-board', 'memory-board', 'prompt-library', 'graphify', 'repo-ingest', 'results-receipts', 'tokens-roi', 'artifacts']) {
+    tabs = pinSessionTab(openSessionTab(tabs, id), id)
+  }
+  assert.equal(tabs.length, MAX_SESSION_TABS)
+  assert.equal(tabs[0].id, 'cockpit')
+  tabs = closeSessionTab(tabs, 'work-queue')
+  assert.equal(tabs.some(tab => tab.id === 'work-queue'), false)
+})
+
+test('two-axis helpers keep lane separate and review amber overrides workbench', () => {
+  assert.equal(laneName({ tags: ['dashboard', 'lane:revenue'] }), 'revenue')
+  assert.equal(workbenchColor('codex', 'agent_working'), 'var(--wb-codex-working)')
+  assert.equal(workbenchColor('claude', 'done'), 'var(--wb-claude-done)')
+  assert.equal(workbenchColor('codex', 'human_review'), 'var(--needs-review)')
+  assert.equal(workbenchColor(null, 'done'), 'var(--hairline)')
+})
+
+test('session restoration preserves a routed Work Queue selection across refresh and tab return', () => {
+  const tabs = openSessionTab(initialSessionTabs(), 'work-queue', { selectedId: 'AOS-2026-0078' })
+  const restored = restoreShellSession(shellSessionSnapshot('work-queue', { selectedId: 'AOS-2026-0078' }, tabs))
+  assert.equal(restored.view, 'work-queue')
+  assert.equal(restored.viewParams.selectedId, 'AOS-2026-0078')
+  assert.equal(restored.sessionTabs.find(tab => tab.id === 'work-queue').params.selectedId, 'AOS-2026-0078')
+})
+
+test('lane paths route into the dedicated lane workspace and override stored view state', () => {
+  assert.equal(laneRoutePath('Revenue'), '/lane/revenue')
+  assert.equal(shellPathForView('lane-workspace', { lane: 'delivery' }), '/lane/delivery')
+  assert.equal(shellViewForNavigation('work-queue', { lane: 'delivery' }), 'lane-workspace')
+  assert.equal(shellViewForNavigation('work-queue', { needsMe: true }), 'work-queue')
+  assert.deepEqual(shellRouteFromPath('/lane/operations/'), { view: 'lane-workspace', viewParams: { lane: 'operations' } })
+  assert.equal(shellRouteFromPath('/lane/not-a-lane'), null)
+
+  const restored = restoreShellSession(shellSessionSnapshot('cockpit', {}, initialSessionTabs()), '/lane/marketing')
+  assert.equal(restored.view, 'lane-workspace')
+  assert.deepEqual(restored.viewParams, { lane: 'marketing' })
+  assert.deepEqual(restored.sessionTabs.find(tab => tab.id === 'lane-workspace').params, { lane: 'marketing' })
+})
+
+test('Needs Me auto-collapse is keyed only to a selected Work Queue item', () => {
+  assert.equal(needsMeCollapseKey('work-queue', { selectedId: 'AOS-2026-0087' }), 'AOS-2026-0087')
+  assert.equal(needsMeCollapseKey('work-queue', {}), null)
+  assert.equal(needsMeCollapseKey('cockpit', { selectedId: 'AOS-2026-0087' }), null)
+})
+
+test('invalid stored shell state falls back safely', () => {
+  // David-first default (BUILD_SPECIFICATION "David dominates the first
+  // viewport"): an unreadable or missing shell session lands on David
+  // (technical id `cockpit`), not the retired Message Board destination.
+  assert.equal(restoreShellSession('{bad json').view, 'cockpit')
+  assert.equal(restoreShellSession({ view: 'not-a-view', sessionTabs: [] }).sessionTabs[0].id, 'cockpit')
+})
+
+test('destinationForView resolves every routable id to one of the five global destinations', () => {
+  assert.equal(destinationForView('cockpit'), 'cockpit')
+  assert.equal(destinationForView('message-board'), 'cockpit')
+  assert.equal(destinationForView('work-queue'), 'work-queue')
+  assert.equal(destinationForView('lane-workspace'), 'work-queue')
+  assert.equal(destinationForView('results'), 'results')
+  assert.equal(destinationForView('results-receipts'), 'results')
+  assert.equal(destinationForView('artifacts'), 'results')
+  assert.equal(destinationForView('search'), 'search')
+  assert.equal(destinationForView('memory-board'), 'search')
+  assert.equal(destinationForView('memory-intake'), 'search')
+  assert.equal(destinationForView('graphify'), 'search')
+  assert.equal(destinationForView('repo-ingest'), 'search')
+  assert.equal(destinationForView('system'), 'system')
+  assert.equal(destinationForView('mission-control'), 'system')
+  assert.equal(destinationForView('connections-spine'), 'system')
+  assert.equal(destinationForView('workflow-bench'), 'system')
+  assert.equal(destinationForView('skills-board'), 'system')
+  assert.equal(destinationForView('tokens-roi'), 'system')
+  assert.equal(destinationForView('settings'), 'system')
+  assert.equal(destinationForView('prompt-library'), 'system')
+  assert.equal(destinationForView('unknown-view'), 'cockpit')
+})
+
+test('DESTINATIONS names exactly the global destinations in order', () => {
+  assert.deepEqual(DESTINATIONS.map(destination => destination.id), ['cockpit', 'work-queue', 'results', 'search', 'system', 'remote-pc'])
+  assert.deepEqual(DESTINATIONS.map(destination => destination.label), ['David', 'Work Queue', 'Results', 'Search', 'System', 'Remote PC'])
+})
+
+test('Remote PC is its own destination with a stable route', () => {
+  assert.equal(destinationForView('remote-pc'), 'remote-pc')
+  assert.equal(shellPathForView('remote-pc'), '/remote-pc')
+  assert.deepEqual(shellRouteFromPath('/remote-pc'), { view: 'remote-pc', viewParams: {} })
+})
+
+test('Brain record deep link round-trips through the Memory tab URL', () => {
+  const pointer = 'business_brain:clients/Acme Co/notes & plan.md'
+  const path = shellPathForView('search', { tab: 'memory', record: pointer })
+  assert.equal(path, `/memory?record=${encodeURIComponent(pointer)}`)
+  const [pathname, search] = path.split('?')
+  assert.deepEqual(shellRouteFromPath(pathname, `?${search}`), { view: 'search', viewParams: { tab: 'memory', record: pointer } })
+  // refresh: the URL wins over stale session storage and opens Search > Memory
+  const restored = restoreShellSession(shellSessionSnapshot('cockpit', {}, initialSessionTabs()), pathname, `?${search}`)
+  assert.equal(restored.view, 'search')
+  assert.equal(restored.viewParams.record, pointer)
+  assert.equal(destinationForView(restored.view), 'search')
+})
+
+test('Brain record routes reject anything that is not a Business Brain pointer', () => {
+  for (const bad of ['/etc/passwd', 'business_brain:../secrets.md', 'business_brain:a/./b.md', 'business_brain:a\\b.md', 'business_brain:', 'business_brain:a\u0000.md', 'file:///etc/passwd', 'x'.repeat(600), '']) {
+    assert.equal(normalizeRecordPointer(bad), '', JSON.stringify(bad))
+    assert.deepEqual(shellRouteFromPath('/memory', `?record=${encodeURIComponent(bad)}`), { view: 'search', viewParams: { tab: 'memory' } })
+  }
+  assert.equal(memoryRecordPath('/etc/passwd'), null)
+  assert.equal(shellPathForView('search', { tab: 'memory', record: '/etc/passwd' }), '/search')
+  assert.equal(shellPathForView('search', { tab: 'memory' }), '/search')
+})

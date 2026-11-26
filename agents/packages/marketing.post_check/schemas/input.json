@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "marketing.post_check input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["post"],
+  "properties": {
+    "post": {"description": "The full post text as it would be published.", "type": "string", "maxLength": 6000},
+    "hashtags": {"description": "Hashtags kept apart from the text, if the drafter returned them separately.", "type": ["array", "null"], "maxItems": 10, "items": {"type": "string", "maxLength": 60}},
+    "confidential_terms": {"description": "Names that must not appear, such as a client that has not approved being named.", "type": ["array", "null"], "maxItems": 12, "items": {"type": "string", "minLength": 2, "maxLength": 80}},
+    "max_chars": {"type": "integer", "minimum": 200, "maximum": 3000},
+    "artifact_name": {"description": "When given and the post passes, the draft is written as this job artifact.", "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{0,59}\\.md$"}
+  }
+}

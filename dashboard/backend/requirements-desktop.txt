@@ -1,0 +1,2 @@
+# Optional isolated Linux graphical preview. The host also needs Xvfb and xauth.
+python-xlib==0.33

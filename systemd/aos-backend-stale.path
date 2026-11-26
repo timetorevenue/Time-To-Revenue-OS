@@ -1,0 +1,12 @@
+# Revisit: when the Dashboard backend unit or the repo location changes. Last touched: 2026-11-07.
+# Fires whenever git moves HEAD in the runtime repo (commit, pull, checkout, reset). The service
+# restarts aos-backend only if the running backend reports stale code (tools/runtime_code_staleness.py).
+[Unit]
+Description=TTROS: restart the Dashboard backend after runtime commits if it is running stale code
+
+[Path]
+PathChanged=/opt/ttros-core/.git/logs/HEAD
+Unit=aos-backend-stale.service
+
+[Install]
+WantedBy=default.target

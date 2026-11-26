@@ -1,0 +1,40 @@
+# TAP 0.1 manifest. Revisit: when the Fit Call script, offer ladder or pinned model changes. Last touched: 2026-11-14.
+[agent]
+name = "crm.fit_call_prep"
+version = "0.1.0"
+kind = "oneshot"
+summary = "Draft the working material for a one-page System Fit Call brief from evidence in hand."
+tap = "0.1"
+author = "Time to Revenue"
+
+[model]
+id = "gpt-6-luna"
+effort = "low"
+prompt_sha256 = "c7eb1cb1fa1dd25d4ef4fa131bbbf7565aa0fc28208b7b407e67e7246d2d7329"
+escalate_to = ""
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[context]
+needs = ["input.evidence_refs"]
+max_tokens = 4000
+
+[capabilities]
+grants = ["brain.read:global"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 12000
+model_calls = 2
+seconds = 90
+max_steps = 1
+
+[compose]
+callable_by = ["crm.*"]
+calls = []
+
+[acceptance]
+level = "none"

@@ -1,0 +1,195 @@
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node dependencies and build outputs
+node_modules/
+dist/
+build/
+.vite/
+
+# Local environment and secrets
+.env
+.env.*
+*.secret
+*.secrets
+secrets/
+
+# Local agent/editor state
+.agents/
+.codex/
+.claude/
+.vscode/
+
+# Telegram bridge secrets/runtime
+connectors/telegram_bridge/.env
+connectors/telegram_bridge/allowed_chats.json
+
+# Local identity/state files
+workspaces/example_dealership_sales_coach/config/roles.json
+context/*CONNECTION_MEMORY*.md
+
+# Example Dealership runtime secrets
+workspaces/example_dealership_sales_coach/.runtime/
+workspaces/example_dealership_sales_coach/.env
+workspaces/example_dealership_sales_coach/.env.*
+
+# Local logs and runtime noise
+*.log
+logs/*.log
+logs/*.jsonl
+logs/*token*
+dashboard/backend/*.log
+queue/receipts/*.md
+queue/receipts/*.json
+queue/receipts/*.patch
+!queue/receipts/.gitkeep
+
+# Local intake receipts, validation captures, and upload staging
+queue/receipts/memory_intake/
+# Remote PC receipts carry Windows command output; private runtime data.
+queue/receipts/remote_pc/
+queue/receipts/source_intake/claims/*.claims.yaml
+queue/receipts/*.png
+queue/uploads/
+# Drive Memory Intake copies and normalized source material are private runtime data.
+queue/inbox/staging/
+
+# Generated handoff/output archives
+archive/
+packets/
+results/
+
+# Runtime logs and local app data
+logs/
+*.jsonl
+workspaces/example_dealership_sales_coach/data/
+pilots/*/sales_reports.jsonl
+
+# Local/generated status snapshots
+dashboard/data/tracker.json
+connectors/*status*.json
+connectors/composio_live_connections.txt
+
+# Local DB/state/cache
+*.db
+*.sqlite
+.cache/
+cache/
+
+# Local backup artifacts
+*.bak_*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Broken Git backup created during repair
+.git.invalid-empty-*
+.venv/
+.venv-pdf/
+venv/
+dashboard/backend/.venv/
+
+# Legacy harvested archive/quarantine material; not live Agentic OS source.
+legacy_harvest/
+
+# Local token usage receipt artifacts
+queue/receipts/*.token_usage.json
+
+dashboard/data/
+
+# Dark capture runtime: raw communications and cursor state never enter Git.
+capture/runtime/
+# Dated Gmail evidence is private runtime data and never enters Git.
+capture/gmail/
+
+# Runtime orchestration locks
+queue/locks/*.lock
+queue/locks/.work_items.write.lock.release-*/
+queue/token_ledger.jsonl.lock
+
+# Queue prompts and routine worker output stay local by default. Durable proof
+# is promoted explicitly through a narrow negation or `git add -f`.
+queue/run_prompts/
+workflows/queue_artifacts/AOS-2026-*.md
+# Runtime context manifests and worker packs are local audit artifacts. They
+# can contain task-scoped Business Brain material and must not enter code Git.
+queue/context_assemblies/*.json
+context/packs/*.md
+!workflows/queue_artifacts/AOS-2026-0134_approval_routing_self_test_closeout.md
+!workflows/queue_artifacts/AOS-2026-0152_route_repair_codex_pass.md
+!workflows/queue_artifacts/AOS-2026-0157_work_claude_BOUNDED_CANONICAL_CLAUDE_PRODUCTION.md
+!workflows/queue_artifacts/AOS-2026-0158_work_claude_FINAL_BOUNDED_CANONICAL_CLAUDE_PRODU.md
+!workflows/queue_artifacts/AOS-2026-0159_work_claude_FINAL_GREEN_CANONICAL_CLAUDE_PROOF_W.md
+!workflows/queue_artifacts/AOS-2026-0160_work_claude_CANONICAL_CLAUDE_AND_TELEGRAM_ATTACH.md
+!workflows/queue_artifacts/AOS-2026-0164_token_evidence.md
+!workflows/queue_artifacts/AOS-2026-0164_work_codex_PERMISSION_MODE_SCOPED_LOCAL_TASK_APP.md
+!workflows/queue_artifacts/AOS-2026-0165_Recover_AOS-2026-0161_dashboard_and_Telegram_UX.md
+!workflows/queue_artifacts/AOS-2026-0168_work_hermes_PERMISSION_MODE_SCOPED_LOCAL_TASK_AP.md
+!workflows/queue_artifacts/AOS-2026-0170_lane_route_receipt.md
+!workflows/queue_artifacts/AOS-2026-0171_lane_workspace_receipt.md
+!workflows/queue_artifacts/AOS-2026-0172_correction_1.md
+!workflows/queue_artifacts/AOS-2026-0172_lane_actions_receipt.md
+!workflows/queue_artifacts/AOS-2026-0173_validation_browser_receipt.md
+
+# Private Gmail draft recovery/review state; never Git/search/preview content.
+queue/draft_runtime/
+
+# Prospecting handoff inbox is operator-supplied runtime input, not generated source.
+workflows/prospecting_daily_run/input/
+
+# Per-question B7/harness token-usage receipts are transient run evidence
+# (hundreds per pass); the pass's .raw/.scored.json and .transcript.txt/.md
+# report stay tracked as the durable record. STEP 0164 stabilization.
+scripts/*.usage.json
+
+# David Morning Brief is a non-authoritative, per-run local delivery artifact
+# (self-labelled in its own header); EXECUTIVE_BRIEF.md/MORNING_BRIEF_FINDINGS.json
+# remain tracked periodic snapshots by existing convention. STEP 0164 stabilization.
+context/DAVID_MORNING_BRIEF.md
+
+# Runtime-generated executive context
+context/EXECUTIVE_BRIEF.md
+context/MORNING_BRIEF_FINDINGS.json
+
+# Fast David per-conversation advisory locks contain no durable state.
+queue/david_locks/
+# Preserve main's runtime canary tombstones/provenance; never commit their data.
+queue/david_canary_tests.jsonl
+queue/david_telegram_origins.jsonl
+
+# Codex account quota snapshots (non-secret; tools/aos_codex_policy.py)
+queue/codex_accounts/
+
+.stage4-runtime/
+
+.studio-preview/
+
+.launch-local/
+
+# Local integration dependency links and isolated validation state
+/.venv
+/dashboard/frontend/node_modules
+/queue/dashboard_identity/
+
+# Runtime stores written by the live backend, David, Jobs and Search (data, not source).
+queue/david/
+queue/david_jobs/
+queue/jobs/
+queue/semantic_state/
+search/.os_index.db.*.candidate*
+search/os_embeddings.db.lock
+
+# Core additions
+*.pem
+*.key
+*.sqlite
+*.sqlite3
+*.db
+.venv/
+venv/
+!agents/dist/
+agents/dist/*.tmp
+.core-overlay/

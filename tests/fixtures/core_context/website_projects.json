@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "description": "Website projects David and the Dashboard may route a change request to (tools/aos_website.py). A project takes changes only when its local Linux checkout is registered here and a coding worker is configured. Changes run in an isolated worktree and branch; nothing is pushed, deployed or published by the workflow. Publishing needs the Account Owner's explicit command naming the action and target (rules/runtime_permission_policy.md).",
+  "revisit": "When a site's local checkout is registered.",
+  "projects": {
+    "default-site": {
+      "name": "Example Company website",
+      "aliases": [
+        "example site",
+        "our website",
+        "example company website"
+      ],
+      "client_scope": "global",
+      "repository": "/opt/ttros-core/examples/example-site",
+      "base_ref": "0000000000000000000000000000000000000000",
+      "worker": "codex",
+      "icm_files": [
+        "CLAUDE.md",
+        "CONTENT_GUIDELINES.md",
+        "SEO_GUARDRAILS.md"
+      ],
+      "icm_brain": [],
+      "allowed_paths": [
+        "public/guides/example-guide/index.html"
+      ],
+      "forbidden_paths": [
+        "vercel.json",
+        ".vercel/*",
+        "netlify.toml",
+        "next.config.*",
+        "package-lock.json"
+      ],
+      "test_command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "preview": {
+        "dir": "public/guides/example-guide",
+        "entry": "index.html",
+        "command": [
+          "npm",
+          "run",
+          "build"
+        ],
+        "url_prefix": "/guides/example-guide/",
+        "max_file_bytes": 8000000
+      },
+      "publish": {
+        "target": "example.com production"
+      },
+      "notes": "Fictional demo project. Register a real local checkout here. No automatic synchronization or publishing.",
+      "test_timeout": 300,
+      "dependency_cache": {
+        "path": "/opt/ttros-core/examples/example-site/node_modules",
+        "lock_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "required_assets": [
+        "public/fonts/Geist_wght_.woff2",
+        "public/fonts/InterVariable.woff2"
+      ],
+      "external_requirements": [
+        "Replace this demo registration before use.",
+        "Publishing is never automatic."
+      ]
+    }
+  }
+}

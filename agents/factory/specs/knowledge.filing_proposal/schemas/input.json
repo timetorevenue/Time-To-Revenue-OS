@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "knowledge.filing_proposal input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["classification"],
+  "properties": {
+    "title": {"description": "The source's own title, used for the slug.", "type": "string", "maxLength": 200},
+    "classification": {
+      "description": "The output of knowledge.source_classify.",
+      "type": "object",
+      "required": ["kind", "summary", "entities", "date", "sensitivity", "scope_hint", "confidence", "source"],
+      "properties": {
+        "kind": {"enum": ["meeting_notes", "call_transcript", "email", "proposal_or_contract", "procedure", "research_or_article", "financial_record", "marketing_content", "personal_or_unrelated", "other"]},
+        "summary": {"type": "string", "maxLength": 300},
+        "entities": {"type": "array", "maxItems": 8, "items": {"type": "object", "required": ["name", "type"], "properties": {"name": {"type": "string", "maxLength": 120}, "type": {"enum": ["client", "prospect", "person", "vendor", "internal"]}}}},
+        "date": {"type": "string", "maxLength": 40},
+        "sensitivity": {"enum": ["normal", "confidential", "contains_credentials"]},
+        "scope_hint": {"type": "string", "maxLength": 140},
+        "confidence": {"enum": ["high", "medium", "low"]},
+        "source": {"type": "object", "required": ["ref"], "properties": {"ref": {"type": "string", "maxLength": 300}}}
+      }
+    }
+  }
+}

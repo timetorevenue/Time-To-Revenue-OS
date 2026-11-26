@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "description": "Websites registered for TTROS Website Studio and their explicitly registered sources. Empty on a fresh installation; register a site to use it.",
+  "revisit": "When a site's brand kit, Drive folders, Brain records or release targets change.",
+  "sites": {}
+}

@@ -1,0 +1,517 @@
+{
+ "0919b4f46fd4fde4783075b56860e60b44f6dfd106fa725f5cd61949dbeb887a": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "Draft the follow-up email to Dana after the Acme Plumbing call for Casey to review.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "2026-11-13",
+     "person": "Dana Reyes (Acme Plumbing)",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-13-acme-plumbing.md"
+     ],
+     "task": "meeting_followup",
+     "title": "Acme Plumbing call",
+     "topic": ""
+    }
+   ]
+  },
+  "latency_seconds": 3.893,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7865,
+   "event_count": 1,
+   "input_tokens": 7761,
+   "output_tokens": 104,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "5b71baf49cbb5406bf214b7e1386d8f6871981c7d3395e7be4262862a7904988": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "Draft the follow-up email to Asha for the Brightwater scoping call.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "2026-11-09",
+     "person": "Asha Mehta (Brightwater Law)",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-09-brightwater.md"
+     ],
+     "task": "meeting_followup",
+     "title": "Brightwater scoping call",
+     "topic": ""
+    }
+   ]
+  },
+  "latency_seconds": 4.188,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7943,
+   "event_count": 1,
+   "input_tokens": 7839,
+   "output_tokens": 104,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "6dff4157dcc746e5654fe8b3abcbf0b1b1897ed466e8ff36181f24841f04fbb2": {
+  "detail": "",
+  "json": {
+   "decision": "needs_input",
+   "missing": [
+    "Tuesday's Summit Roofing site visit notes or transcript"
+   ],
+   "reason": "A follow-up draft is requested, but the meeting notes or transcript are not available.",
+   "tasks": []
+  },
+  "latency_seconds": 2.816,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7828,
+   "event_count": 1,
+   "input_tokens": 7777,
+   "output_tokens": 51,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "85e6685a84d562b6dd257f38336ff0ba7fb94f56b7262a36d70c92fd161c6fbd": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "I will prepare drafts for the Acme call follow-up and LinkedIn post, and classify the scan proposal for filing.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "2026-11-13",
+     "person": "Dana Reyes (Acme Plumbing)",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-13-acme-plumbing.md"
+     ],
+     "task": "meeting_followup",
+     "title": "Acme Plumbing call",
+     "topic": ""
+    },
+    {
+     "cta": "",
+     "date": "",
+     "person": "",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-13-acme-plumbing.md",
+      "business_brain:brand/voice.md"
+     ],
+     "task": "linkedin_post",
+     "title": "",
+     "topic": "The lesson from the Acme Plumbing call."
+    },
+    {
+     "cta": "",
+     "date": "",
+     "person": "",
+     "question": "",
+     "records": [
+      "business_brain:inbox/2026-11-12-scan-proposal.md"
+     ],
+     "task": "file_source",
+     "title": "",
+     "topic": ""
+    }
+   ]
+  },
+  "latency_seconds": 6.042,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8029,
+   "event_count": 1,
+   "input_tokens": 7819,
+   "output_tokens": 210,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "886fc1293cec12c02fdb2d3fe9b1e5a00ddc933df6db4abe900c78b59f1c7722": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "Draft the follow-up email to Dana Reyes about the Acme Plumbing call.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "2026-11-13",
+     "person": "Dana Reyes (Acme Plumbing)",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-13-acme-plumbing.md"
+     ],
+     "task": "meeting_followup",
+     "title": "Acme Plumbing",
+     "topic": ""
+    }
+   ]
+  },
+  "latency_seconds": 6.514,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7999,
+   "event_count": 1,
+   "input_tokens": 7776,
+   "output_tokens": 223,
+   "reasoning_output_tokens": 121
+  }
+ },
+ "89daae67fbc9cbe09dc446942e6b9e829b68800bba87b68aa7853306e063b8d5": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "A LinkedIn post will be drafted for Casey; publishing or emailing it is not part of the plan.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "",
+     "person": "",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-13-acme-plumbing.md",
+      "business_brain:brand/voice.md"
+     ],
+     "task": "linkedin_post",
+     "title": "",
+     "topic": "A lesson from the Acme Plumbing call."
+    }
+   ]
+  },
+  "latency_seconds": 4.226,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7887,
+   "event_count": 1,
+   "input_tokens": 7783,
+   "output_tokens": 104,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "8ae258214d27dae37557bd7f371d6106f0c75e2b6e2792ded356dd5278ba90c2": {
+  "detail": "",
+  "json": {
+   "decision": "needs_input",
+   "missing": [
+    "person to receive the follow-up email"
+   ],
+   "reason": "The follow-up email needs an email recipient from the people list, but none was supplied.",
+   "tasks": []
+  },
+  "latency_seconds": 3.103,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7804,
+   "event_count": 1,
+   "input_tokens": 7754,
+   "output_tokens": 50,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "a7702f8a2bb6098ba58f3ef984232344cbe96beacb3ed804957a46615a1fb207": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "The scan proposal will be classified and proposed for filing.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "",
+     "person": "",
+     "question": "",
+     "records": [
+      "business_brain:inbox/2026-11-12-scan-proposal.md"
+     ],
+     "task": "file_source",
+     "title": "",
+     "topic": ""
+    }
+   ]
+  },
+  "latency_seconds": 3.596,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7829,
+   "event_count": 1,
+   "input_tokens": 7753,
+   "output_tokens": 76,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "b03679e3977fc00e71c9be585f83bbdaa06bd2dfee9c2677d4c1caab5ba3d6f4": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "I’ll prepare the follow-up as a draft for Casey and a brief on callback speed from the study and survey.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "2026-11-09",
+     "person": "Asha Mehta (Brightwater Law)",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-09-brightwater.md"
+     ],
+     "task": "meeting_followup",
+     "title": "Brightwater scoping call",
+     "topic": ""
+    },
+    {
+     "cta": "",
+     "date": "",
+     "person": "",
+     "question": "What does the study and the survey say about callback speed?",
+     "records": [
+      "business_brain:research/missed-calls-study.md",
+      "business_brain:research/sme-survey-2026.md"
+     ],
+     "task": "research_brief",
+     "title": "",
+     "topic": ""
+    }
+   ]
+  },
+  "latency_seconds": 6.621,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8088,
+   "event_count": 1,
+   "input_tokens": 7836,
+   "output_tokens": 252,
+   "reasoning_output_tokens": 77
+  }
+ },
+ "b1806caadc09be637d6295e5ab9850590fcdd741db8f91060552f7fc9ac1d207": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "Draft a follow-up email to Asha for the Brightwater scoping call.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "2026-11-09",
+     "person": "Asha Mehta (Brightwater Law)",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-09-brightwater.md"
+     ],
+     "task": "meeting_followup",
+     "title": "Brightwater scoping call",
+     "topic": ""
+    }
+   ]
+  },
+  "latency_seconds": 3.939,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7869,
+   "event_count": 1,
+   "input_tokens": 7765,
+   "output_tokens": 104,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "b88ea20927927ae5568681015ad5efeefee963664ef0c9e305d6e05991a9bf40": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "I’ll draft the follow-up email and one LinkedIn post for Casey to review.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "2026-11-13",
+     "person": "Dana Reyes (Acme Plumbing)",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-13-acme-plumbing.md"
+     ],
+     "task": "meeting_followup",
+     "title": "Acme Plumbing meeting",
+     "topic": ""
+    },
+    {
+     "cta": "",
+     "date": "",
+     "person": "",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-13-acme-plumbing.md",
+      "business_brain:brand/voice.md"
+     ],
+     "task": "linkedin_post",
+     "title": "",
+     "topic": "What EXCO learned from the Acme Plumbing meeting."
+    }
+   ]
+  },
+  "latency_seconds": 7.052,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8049,
+   "event_count": 1,
+   "input_tokens": 7782,
+   "output_tokens": 267,
+   "reasoning_output_tokens": 101
+  }
+ },
+ "c4b7a4b2e50d1136e5d19deedb62e29e756fdeb043591bf38af225e644e1b33c": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "Draft a meeting follow-up email and one LinkedIn post for Casey to review.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "2026-11-13",
+     "person": "Dana Reyes (Acme Plumbing)",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-13-acme-plumbing.md"
+     ],
+     "task": "meeting_followup",
+     "title": "13 November 2026 call with Dana Reyes of Acme Plumbing",
+     "topic": ""
+    },
+    {
+     "cta": "",
+     "date": "",
+     "person": "",
+     "question": "",
+     "records": [
+      "business_brain:meetings/2026-11-13-acme-plumbing.md",
+      "business_brain:brand/voice.md"
+     ],
+     "task": "linkedin_post",
+     "title": "",
+     "topic": "A lesson from the Acme Plumbing meeting."
+    }
+   ]
+  },
+  "latency_seconds": 5.185,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7942,
+   "event_count": 1,
+   "input_tokens": 7772,
+   "output_tokens": 170,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "cb31501f8b10c858adf3ac98230eb5965443d2b0003856d7a21ec6c1f9dd98c8": {
+  "detail": "",
+  "json": {
+   "decision": "unsupported",
+   "missing": [],
+   "reason": "Deleting notes from the Brain is not one of the available tasks.",
+   "tasks": []
+  },
+  "latency_seconds": 2.79,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7793,
+   "event_count": 1,
+   "input_tokens": 7757,
+   "output_tokens": 36,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "e253fe7726912d2d9f42e7ea336f81e36f5c318865a95409e2e6ba7916dde04b": {
+  "detail": "",
+  "json": {
+   "decision": "plan",
+   "missing": [],
+   "reason": "Answer the research question using the two saved sources.",
+   "tasks": [
+    {
+     "cta": "",
+     "date": "",
+     "person": "",
+     "question": "How fast does a small service firm need to return a missed call?",
+     "records": [
+      "business_brain:research/missed-calls-study.md",
+      "business_brain:research/sme-survey-2026.md"
+     ],
+     "task": "research_brief",
+     "title": "",
+     "topic": ""
+    }
+   ]
+  },
+  "latency_seconds": 3.869,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7879,
+   "event_count": 1,
+   "input_tokens": 7781,
+   "output_tokens": 98,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "e5dd5133331d380acfdc5f29710d8a1c5fd0c6614f829663e4d942ae76f2e2eb": {
+  "detail": "",
+  "json": {
+   "decision": "needs_input",
+   "missing": [
+    "business_brain:clients/example_dealership_motors/HOME.md"
+   ],
+   "reason": "A LinkedIn post is requested, but the specified Example Dealership Motors source is not in the records list.",
+   "tasks": []
+  },
+  "latency_seconds": 3.468,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7854,
+   "event_count": 1,
+   "input_tokens": 7794,
+   "output_tokens": 60,
+   "reasoning_output_tokens": 0
+  }
+ }
+}

@@ -1,0 +1,30 @@
+# TAP 0.1 manifest. Revisit: when the claim shape shared by agents changes. Last touched: 2026-11-14.
+[agent]
+name = "shared.cite_verify"
+version = "0.1.0"
+kind = "tool"
+summary = "Check that every claim cites at least one source and only sources the caller supplied."
+tap = "0.1"
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[capabilities]
+grants = []
+proposes = []
+tools = []
+
+[budget]
+tokens = 0
+model_calls = 0
+seconds = 5
+max_steps = 1
+
+[compose]
+callable_by = ["*"]
+calls = []
+
+[acceptance]
+level = "none"

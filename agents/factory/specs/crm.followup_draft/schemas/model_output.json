@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["subject", "body", "used"],
+  "properties": {
+    "subject": {"type": "string"},
+    "body": {"type": "string"},
+    "used": {"type": "array", "items": {"type": "string"}}
+  }
+}

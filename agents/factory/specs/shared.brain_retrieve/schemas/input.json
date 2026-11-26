@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "shared.brain_retrieve input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evidence_refs"],
+  "properties": {
+    "evidence_refs": {
+      "description": "Exact Business Brain or artifact references. Never a search. Repeats are read once.",
+      "type": "array", "maxItems": 12,
+      "items": {"type": "string", "maxLength": 300, "pattern": "^(business_brain:|artifact:)[A-Za-z0-9_./#:-]+$"}
+    },
+    "purpose": {"description": "What the records are for; kept for the journal only.", "type": "string", "maxLength": 200}
+  }
+}

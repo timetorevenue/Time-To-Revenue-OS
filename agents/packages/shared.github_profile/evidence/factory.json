@@ -1,0 +1,193 @@
+{
+ "factory": "0.1.0",
+ "agent": "shared.github_profile@0.1.0",
+ "status": "candidate",
+ "failed_step": "",
+ "work_order": "",
+ "live": false,
+ "steps": [
+  {
+   "step": "spec",
+   "ok": true,
+   "candidates": 1
+  },
+  {
+   "step": "registry",
+   "ok": true,
+   "problems": [],
+   "similar": [],
+   "registered": true
+  },
+  {
+   "step": "cases",
+   "ok": true,
+   "problems": [],
+   "composition": {
+    "total": 21,
+    "edge": 11,
+    "adversarial": 9,
+    "needs_input": 2,
+    "critical": 0,
+    "safety": 5,
+    "short_of": {}
+   },
+   "probes": [
+    "canary",
+    "injection",
+    "isolation",
+    "missing_context",
+    "undeclared_effect"
+   ],
+   "holdout": [
+    "deny-unscoped-4",
+    "describe-0",
+    "describe-1",
+    "describe-8",
+    "unscoped-grant"
+   ],
+   "train": [
+    "deny-unscoped-0",
+    "deny-unscoped-1",
+    "deny-unscoped-2",
+    "deny-unscoped-3",
+    "describe-2",
+    "describe-3",
+    "describe-4",
+    "describe-5",
+    "describe-6",
+    "describe-7",
+    "describe-9",
+    "needs-action-0",
+    "needs-action-1",
+    "unscoped-account",
+    "unscoped-service",
+    "unscoped-workspace"
+   ]
+  },
+  {
+   "step": "scaffold",
+   "ok": true,
+   "package": "agents/packages/shared.github_profile",
+   "files": 6
+  },
+  {
+   "step": "check",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "step": "eval",
+   "ok": true,
+   "level": "silver",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+   },
+   "complete": true,
+   "stopped": "",
+   "failed_cases": {},
+   "holdout_pass": true
+  }
+ ],
+ "level": "silver",
+ "kind": "tool",
+ "spec": "agents/factory/specs/shared.github_profile",
+ "spec_sha256": "b34ff01ac5a9a517afb225a71756e711e8e2c92e130797c1d74750bc9df4d75a",
+ "connections": {
+  "resolved": {
+   "connector.read:github:profile": [
+    {
+     "connection": "cx_99c0d6b55d19917c9251609b",
+     "operations": [
+      "profile"
+     ],
+     "account": "github_sib-sao"
+    }
+   ]
+  },
+  "missing_required": [],
+  "authority": "rules/runtime_permission_policy.md",
+  "advisory": true
+ },
+ "optimise": {
+  "candidates": [],
+  "chosen": {},
+  "training_cases": 16,
+  "held_out_cases": [
+   "deny-unscoped-4",
+   "describe-0",
+   "describe-1",
+   "describe-8",
+   "unscoped-grant"
+  ],
+  "tokens": {
+   "limit": 0,
+   "spent": 0,
+   "live_calls": 0,
+   "refused_calls": 0,
+   "exact": true,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cached_input_tokens": 0
+  }
+ },
+ "chosen": {},
+ "tokens": {
+  "limit": 0,
+  "spent": 0,
+  "live_calls": 0,
+  "refused_calls": 0,
+  "exact": true,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cached_input_tokens": 0
+ },
+ "binding": "tool",
+ "holdout": {
+  "ids": [
+   "deny-unscoped-4",
+   "describe-0",
+   "describe-1",
+   "describe-8",
+   "unscoped-grant"
+  ],
+  "cases": 5,
+  "ran": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "not_recorded": [],
+  "failed": {},
+  "critical_failed": [],
+  "schema_invalid": [],
+  "repair_rate": 0.0,
+  "model_calls": 0,
+  "tokens": 0,
+  "pass": true
+ },
+ "package_sha256": "fd05830d1b29c0ca26c23b7c73a5185dde4c488d86524a5e13f438da029caa90",
+ "evidence": "agents/packages/shared.github_profile/evidence/tool.json",
+ "gates": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true
+ },
+ "totals": {
+  "cases": 21,
+  "ran": 21,
+  "passed": 21,
+  "model_calls": 0,
+  "tokens": 0,
+  "live_calls": 0
+ },
+ "supports": [
+  "shadow",
+  "canary"
+ ]
+}

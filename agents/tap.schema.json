@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ttros:agents/tap.schema.json",
+  "title": "TTROS Agent Package manifest (TAP) v0.1",
+  "description": "Schema for the parsed agent.toml of one agent package. Frozen 2026-11-14 as TAP 0.1. A manifest narrows rules/runtime_permission_policy.md and can never widen it. Changing model, effort, prompt, schemas or handler resets the acceptance level.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["agent", "io", "capabilities", "budget"],
+  "properties": {
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "kind", "summary", "tap"],
+      "properties": {
+        "name": {
+          "description": "department.capability, lower snake case. 'shared' is the department for cross-department specialists.",
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*$",
+          "maxLength": 64
+        },
+        "version": {
+          "description": "Semantic version. A change to the input or output schema bumps the major version.",
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+        },
+        "kind": {
+          "description": "tool: pure code. oneshot: one schema-constrained model call, no tools. loop: bounded tool loop. workbench: full coding session. planner: emits a plan.",
+          "enum": ["tool", "oneshot", "loop", "workbench", "planner"]
+        },
+        "summary": {"type": "string", "minLength": 10, "maxLength": 200},
+        "tap": {"const": "0.1"},
+        "license": {"type": "string", "maxLength": 64},
+        "author": {"type": "string", "maxLength": 120}
+      }
+    },
+    "model": {
+      "description": "Absent for kind=tool. One package version is pinned to exactly one model, effort and prompt.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "effort", "prompt_sha256"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9.-]{1,63}$"},
+        "effort": {"enum": ["low", "medium", "high"]},
+        "prompt_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "escalate_to": {
+          "description": "Empty means never. A named model is used only on an explicit, recorded escalation; there is no silent switching.",
+          "type": "string",
+          "pattern": "^$|^[a-z0-9][a-z0-9.-]{1,63}$",
+          "default": ""
+        }
+      }
+    },
+    "io": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input_schema", "output_schema"],
+      "properties": {
+        "input_schema": {"$ref": "#/$defs/package_path"},
+        "output_schema": {"$ref": "#/$defs/package_path"}
+      }
+    },
+    "context": {
+      "description": "What the runtime may fetch for this agent, by reference, at call time.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "needs": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^(icm:|brain:|input\\.)[A-Za-z0-9_./#:-]+$"},
+          "uniqueItems": true,
+          "maxItems": 24
+        },
+        "max_tokens": {"type": "integer", "minimum": 0, "maximum": 60000}
+      }
+    },
+    "capabilities": {
+      "description": "Enforced by the runtime, never by the prompt.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["grants"],
+      "properties": {
+        "grants": {
+          "description": "What the handler may do directly.",
+          "type": "array",
+          "items": {"$ref": "#/$defs/capability"},
+          "uniqueItems": true
+        },
+        "proposes": {
+          "description": "Effects that may appear in proposed_effects. The existing action_authorization decides whether each runs, parks for review or is refused.",
+          "type": "array",
+          "items": {"$ref": "#/$defs/effect"},
+          "uniqueItems": true,
+          "default": []
+        },
+        "tools": {
+          "description": "Tool whitelist. Must be empty unless kind is loop or workbench.",
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[a-z][a-z0-9_.]*$"},
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tokens", "model_calls", "seconds", "max_steps"],
+      "properties": {
+        "tokens": {"type": "integer", "minimum": 0, "maximum": 500000},
+        "model_calls": {"type": "integer", "minimum": 0, "maximum": 50},
+        "seconds": {"type": "integer", "minimum": 1, "maximum": 7800},
+        "max_steps": {"type": "integer", "minimum": 1, "maximum": 50}
+      }
+    },
+    "compose": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "callable_by": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^([a-z][a-z0-9_]*\\.(\\*|[a-z][a-z0-9_]*)|\\*)$"},
+          "uniqueItems": true
+        },
+        "calls": {
+          "description": "Agents this one may invoke. The runtime enforces a call depth of at most 2.",
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[a-z][a-z0-9_]*\\.[a-z][a-z0-9_]*(@[0-9]+(\\.[0-9]+){0,2})?$"},
+          "uniqueItems": true,
+          "maxItems": 12
+        }
+      }
+    },
+    "acceptance": {
+      "description": "Written by the Factory gate, never by hand.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "level": {"enum": ["none", "bronze", "silver", "gold"], "default": "none"},
+        "evidence": {"$ref": "#/$defs/package_path"}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"agent": {"properties": {"kind": {"const": "tool"}}}}},
+      "then": {
+        "not": {"required": ["model"]},
+        "properties": {"budget": {"properties": {"model_calls": {"const": 0}, "tokens": {"const": 0}}}}
+      },
+      "else": {"required": ["model"]}
+    },
+    {
+      "if": {"properties": {"agent": {"properties": {"kind": {"enum": ["tool", "oneshot", "planner"]}}}}},
+      "then": {"properties": {"capabilities": {"properties": {"tools": {"maxItems": 0}}}}}
+    },
+    {
+      "if": {"properties": {"agent": {"properties": {"kind": {"enum": ["oneshot", "planner"]}}}}},
+      "then": {"properties": {"budget": {"properties": {"model_calls": {"maximum": 2}, "max_steps": {"const": 1}}}}}
+    }
+  ],
+  "$defs": {
+    "package_path": {
+      "description": "A path inside the package; no absolute paths and no parent traversal.",
+      "type": "string",
+      "pattern": "^(?!/)(?!.*\\.\\.)[A-Za-z0-9_./-]+$",
+      "maxLength": 160
+    },
+    "capability": {
+      "type": "string",
+      "pattern": "^(brain\\.read:[a-z0-9_-]+|icm\\.read|search\\.read|entity\\.read|queue\\.read|artifact\\.read|artifact\\.write|connector\\.read:[a-z0-9_]+(?::[a-z][a-z0-9_]{0,79})?|web\\.fetch|web\\.search)$"
+    },
+    "effect": {
+      "type": "string",
+      "pattern": "^(brain\\.write_proposal|queue\\.create|gmail\\.draft|calendar\\.write|crm\\.write|drive\\.write|docs\\.write|sheets\\.write|telegram\\.notify_operator|email\\.send|publish|deploy)$"
+    }
+  }
+}

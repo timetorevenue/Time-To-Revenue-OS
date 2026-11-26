@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "offer": {"type": "string", "maxLength": 220},
+    "visitor_problem": {"type": "string", "maxLength": 220},
+    "outcome": {"type": "string", "maxLength": 160},
+    "cta": {"type": "string", "maxLength": 60, "pattern": "^[^<>\\r\\n]*$"},
+    "channel": {"type": "string", "maxLength": 80},
+    "proof": {"type": "string", "maxLength": 220},
+    "evidence_refs": {
+      "type": "array",
+      "maxItems": 1,
+      "items": {
+        "enum": ["business_brain:memory/ideal_clients_A.md", "business_brain:memory/ideal_clients_B.md"]
+      }
+    }
+  }
+}

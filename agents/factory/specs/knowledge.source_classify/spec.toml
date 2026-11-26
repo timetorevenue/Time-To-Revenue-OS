@@ -1,0 +1,49 @@
+# Factory build spec. The package under agents/packages/knowledge.source_classify is generated from this folder:
+# edit here and run `aos-agent.py build knowledge.source_classify`; never edit the package.
+# Revisit: when the source kinds, the filing rules that consume them, the prompt or the pinned model change. · Last touched: 2026-11-14.
+[agent]
+name = "knowledge.source_classify"
+version = "0.1.0"
+kind = "oneshot"
+summary = "Classify one incoming source: what kind of record it is, who it concerns, its date and how sensitive it is."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[context]
+needs = ["input.evidence_refs"]
+max_tokens = 3000
+
+[capabilities]
+grants = ["brain.read:global"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 12000
+model_calls = 2
+seconds = 60
+max_steps = 1
+
+[compose]
+callable_by = ["knowledge.*", "shared.planner"]
+calls = []
+
+[factory]
+requirement = "First step of the knowledge.ingest plan, run in shadow beside the existing ingestion, which stays as it is. For one source (a note, transcript, email, document) say what kind of record it is, which known clients or people it concerns, its date and its sensitivity, so knowledge.filing_proposal can apply the filing rules. Entities come only from the list the caller supplies; credentials are flagged in code, not left to the model. It files nothing and proposes no effect."
+token_budget = 220000
+holdout_share = 0.2
+source = "blueprint section 7: Knowledge specialist knowledge.source_classify (shadow beside ingestion, section 10)"
+
+# Cheapest first. The first candidate that passes the training cases is pinned.
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "low"
+
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "medium"

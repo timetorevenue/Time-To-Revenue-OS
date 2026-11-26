@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "knowledge.source_classify output",
+  "description": "Entities are only names from the caller's list that appear in the source. 'contains_credentials' is set in code.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "summary", "entities", "date", "sensitivity", "scope_hint", "confidence", "caveats", "source"],
+  "properties": {
+    "kind": {"enum": ["meeting_notes", "call_transcript", "email", "proposal_or_contract", "procedure", "research_or_article", "financial_record", "marketing_content", "personal_or_unrelated", "other"]},
+    "summary": {"type": "string", "minLength": 10, "maxLength": 300},
+    "entities": {
+      "type": "array", "maxItems": 8,
+      "items": {"type": "object", "additionalProperties": false, "required": ["name", "type"],
+                "properties": {"name": {"type": "string"}, "type": {"enum": ["client", "prospect", "person", "vendor", "internal"]}}}
+    },
+    "date": {"description": "The source's own date as YYYY-MM-DD when it states one, else empty.", "type": "string", "pattern": "^$|^\\d{4}-\\d{2}-\\d{2}$"},
+    "sensitivity": {"enum": ["normal", "confidential", "contains_credentials"]},
+    "scope_hint": {"description": "'global', 'client:<name>' when exactly one known client or prospect is concerned, or 'ambiguous'.", "type": "string", "maxLength": 140},
+    "confidence": {"enum": ["high", "medium", "low"]},
+    "caveats": {"type": "array", "maxItems": 6, "items": {"type": "string", "maxLength": 200}},
+    "source": {
+      "type": "object", "additionalProperties": false, "required": ["ref", "tokens"],
+      "properties": {"ref": {"type": "string"}, "tokens": {"type": "integer", "minimum": 1}}
+    }
+  }
+}

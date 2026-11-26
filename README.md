@@ -1,97 +1,55 @@
-# TTROS — Time to Revenue Operating System
+# TTROS Core
 
 > **Your business. Your intelligence. Your operating system.**
 
-TTROS is a customer-owned AI business operating system in development. Our goal is to give entrepreneurs and small businesses the capabilities of a larger organization without the complexity of disconnected software and AI tools.
+TTROS Core is the open-source foundation of TTROS, the Time to Revenue Operating System: a customer-owned AI business
+operating system. Deterministic software does the reliable work (jobs, permissions, records, retrieval, validation);
+AI models provide judgement, reasoning and drafting, behind explicit permission and evidence rules.
 
-**Enterprise capability. Entrepreneur simplicity.**
+**Status: v0.1.0-alpha.** It runs, it is tested, and it is early. Read [Alpha limitations](#alpha-limitations) before relying on it.
 
----
+## What is in Core
 
-## Why TTROS?
-
-Most businesses operate across separate systems for sales, marketing, websites, communication and operations.
-
-Adding an AI assistant to each application does not automatically make the business work together.
-
-TTROS is designed to connect business knowledge, operational data, repeatable methods and controlled execution through a single intelligent business operator.
-
-## What we are building
-
-| Capability | Purpose |
+| Area | What you get |
 |---|---|
-| **David** | Your intelligent business operator, coordinating work across your business. |
-| **Business Brain** | Persistent, source-grounded business knowledge and memory. |
-| **ICM** | Reusable business methodologies, context and operating procedures. |
-| **Agent Forge** | Build, evaluate and release specialist AI agents. |
-| **App Forge** | Discover, adapt and integrate software around your business needs. |
-| **Website Studio** | Create and manage websites and landing pages. |
-| **Marketing** | Strategy, content, campaigns, SEO and advertising workflows. |
-| **CRM** | Manage customer relationships, sales opportunities and follow-ups. |
-| **Jobs & Connections** | Reliable execution, scheduling, automation and application integrations. |
-| **Model Independence** | An architecture designed to support multiple qualified AI providers. |
+| **David** | Operator conversation and background Jobs on a model-neutral port (`tools/aos_david.py`, `tools/aos_jobs.py`). |
+| **Business Brain** | A Git-backed Markdown vault with scoped retrieval, source provenance and a validator. Starts empty. |
+| **Universal knowledge (ICM)** | Reusable, company-neutral methods with a rights register (`universal/`). One seed method ships: ideal-customer-profile definition. |
+| **Agent Forge** | Package, evaluate and register specialist agents (`tools/aos_agents`). Every shipped agent starts as `candidate`. |
+| **Website Studio** | Structured website editing, SEO checks and release model. Ships with a synthetic example site. |
+| **CRM and Jobs** | Pipeline, follow-ups, queue, automation and a Connections layer for third-party accounts. |
+| **Dashboard** | FastAPI backend and React frontend. |
 
-## Our philosophy
+Three layers are kept apart (`context/LAYERS.md`): **software** (this repository), **universal** knowledge (reusable methods)
+and **company** data (yours: never in Core, never shared by the tooling). Anything unclassified is treated as private.
 
-- **Own your data.**
-- **Own your business intelligence.**
-- **Own your software.**
-- **Choose your AI models.**
-- **Stay in control of your business.**
+## What is not in Core
 
-We believe deterministic software should handle reliable operations, while AI provides judgment, reasoning and creativity.
+No company data, Business Brain content, customer records, credentials, accounts, offers, prices or production agent
+release states. The originating company's website copy and service-delivery playbooks are not included. Core has no
+dependency on any private repository.
 
-Our goal is to build an operating system that grows with your business rather than locking you into another software ecosystem.
+## Quickstart
 
-## Project status
+See [QUICKSTART.md](QUICKSTART.md): install, create an empty company, start the dashboard, run the tests.
 
-**Early development — public source release pending.**
+## Alpha limitations
 
-An internal TTROS implementation exists and development is ongoing.
+- **Not production hardened.** Run it on your own machine or an isolated VM, bind it to localhost, and do not expose it to the internet.
+- **No live-provider verification.** Agent evidence was replayed from recorded replies; live model calls were not part of release testing. Connections to Gmail, Drive, Stripe and similar services are code paths exercised with mocks only.
+- **Tests:** the Python suite has known environment failures listed in `tests/core_known_failures.json` (they also fail in the originating deployment's tree); some tests are skipped with a stated reason in `tests/core_skips.json`. The required CI check is a focused smoke suite; the full suite is informational.
+- **Some tests assume paths** such as an install root of `/opt/ttros-core` or a registered website checkout, and are skipped otherwise.
+- **Defaults reflect a Linux/WSL operator machine.** Windows-host and Tailscale features are optional and unsupported in this alpha.
+- **Interfaces will change** before 1.0. Agent names such as `crm.fit_call_prep` and their offer vocabulary reflect the originating deployment's sales process and are examples to adapt.
+- **Single-operator model.** Multi-user roles, hosted deployment and a security audit are future work.
 
-A standalone, sanitized distribution is being prepared. This project is not yet available as an installable public release.
+## Contributing and security
 
-Installation instructions and supported features will be documented following validation.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) first; contributions are untrusted by default and pass a deterministic gate.
+Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md), not in public issues.
 
-## Roadmap
+## Licence
 
-- [ ] Release the sanitized, reusable TTROS foundation.
-- [ ] Provide reproducible installation instructions and demonstration data.
-- [ ] Expand integrated marketing, website and CRM workflows.
-- [ ] Expand model compatibility and application integrations.
-- [ ] Introduce early pilot deployments.
-- [ ] Expand Agent Forge and develop App Forge.
-- [ ] Introduce mobile and voice interfaces.
-- [ ] Expand financial management and business operations.
-- [ ] Develop accounting, payroll and taxation capabilities.
+MIT. See [LICENSE](LICENSE). Third-party components and their licences: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-Time to Revenue is the first operational customer of TTROS.
-
-## Help build TTROS
-
-We are building toward an open-source ecosystem where businesses and developers can contribute to the future of intelligent business operations.
-
-- ⭐ **Star this repository** to support the project.
-- Share feedback and ideas.
-- Follow our development roadmap.
-- Participate in future contributor and early pilot opportunities.
-
-Every genuine star helps us build visibility and grow the community.
-
-## Contributions and security
-
-Code contribution instructions and a private security reporting process will be published before the source release.
-
-Please do not include credentials, private business records, customer information or vulnerability details in public issues.
-
-## License
-
-TTROS intends to release its reusable software under a permissive open-source license, subject to ownership, dependency and redistribution review.
-
-A final code license will accompany the cleared source release.
-
----
-
-**Built by [Time to Revenue](https://timetorevenue.com).**
-
-*Building the future of customer-owned business intelligence.*
+Built by [Time to Revenue](https://timetorevenue.com), the first operational customer of TTROS.

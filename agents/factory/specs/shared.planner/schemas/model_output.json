@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["decision", "reason", "missing", "tasks"],
+  "properties": {
+    "decision": {"type": "string", "enum": ["plan", "needs_input", "unsupported"]},
+    "reason": {"type": "string"},
+    "missing": {"type": "array", "items": {"type": "string"}},
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["task", "records", "person", "title", "date", "topic", "question", "cta"],
+        "properties": {
+          "task": {"type": "string", "enum": ["meeting_followup", "linkedin_post", "research_brief", "file_source"]},
+          "records": {"type": "array", "items": {"type": "string"}},
+          "person": {"type": "string"},
+          "title": {"type": "string"},
+          "date": {"type": "string"},
+          "topic": {"type": "string"},
+          "question": {"type": "string"},
+          "cta": {"type": "string"}
+        }
+      }
+    }
+  }
+}

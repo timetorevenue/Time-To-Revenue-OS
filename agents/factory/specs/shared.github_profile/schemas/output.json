@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "requirement": {
+      "const": "connector.read:github:profile"
+    },
+    "profile": {
+      "type": "object"
+    },
+    "receipt": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "required": [
+        "requirement"
+      ]
+    },
+    {
+      "required": [
+        "profile",
+        "receipt"
+      ]
+    }
+  ]
+}

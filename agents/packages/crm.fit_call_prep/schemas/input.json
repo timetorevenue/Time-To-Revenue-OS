@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "crm.fit_call_prep input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["prospect", "company"],
+  "properties": {
+    "prospect": {"type": "string", "minLength": 2, "maxLength": 120},
+    "company": {"type": "string", "minLength": 2, "maxLength": 160},
+    "call_context": {"type": "string", "maxLength": 600},
+    "evidence_refs": {
+      "description": "Exact Business Brain or artifact references about this prospect. Never a search.",
+      "type": "array", "maxItems": 8, "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^(business_brain:|artifact:)[A-Za-z0-9_./#:-]+$"}
+    },
+    "public_signals": {
+      "description": "Public observations already gathered by the caller, each with the page it came from.",
+      "type": "array", "maxItems": 12,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["url", "note"],
+        "properties": {
+          "url": {"type": "string", "pattern": "^https?://[^\\s]+$", "maxLength": 400},
+          "note": {"type": "string", "minLength": 10, "maxLength": 1500},
+          "observed": {"type": "string", "maxLength": 40}
+        }
+      }
+    }
+  }
+}

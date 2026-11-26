@@ -1,0 +1,926 @@
+{
+ "052c8ecad99fb94f14bc47558ba9f604a2ed46aeee776a08f98b4295ca1277c9": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "Thursday",
+     "owner": "Sofia Marin",
+     "quote": "I'll get you read-only access to the booking system by Thursday.",
+     "source_id": "N1",
+     "task": "Provide read-only access to the booking system."
+    },
+    {
+     "due": "tomorrow",
+     "owner": "Casey",
+     "quote": "I'll send the scan outline tomorrow",
+     "source_id": "N1",
+     "task": "Send the scan outline."
+    },
+    {
+     "due": "",
+     "owner": "Casey",
+     "quote": "we can book the review once you've read it.",
+     "source_id": "N1",
+     "task": "Book the review once Sofia has read the outline."
+    }
+   ],
+   "decisions": [
+    {
+     "quote": "Would it help to see a short scan of the reminder process first? Yes, let's do that.",
+     "source_id": "N1",
+     "text": "Start with a short scan of the reminder process."
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "quote": "I'll send the scan outline tomorrow, and we can book the review once you've read it.",
+    "source_id": "N1",
+    "text": "Casey will send the scan outline tomorrow; after Sofia reads it, they can book the review."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "We lose four or five appointments a week because reminder calls are made by hand and often get skipped.",
+     "source_id": "N1",
+     "text": "The clinic loses four or five appointments a week to no-shows because reminder calls are manual and often skipped."
+    },
+    {
+     "quote": "She also copies new patient forms from paper into the system.",
+     "source_id": "N1",
+     "text": "The receptionist also has to copy new patient forms from paper into the system."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The call covered Brightside Dental’s no-show problem and the manual reminder process. Sofia agreed to provide read-only booking-system access by Thursday; Casey will send a scan outline tomorrow, then they can book a review after she reads it."
+  },
+  "latency_seconds": 9.09,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8261,
+   "event_count": 1,
+   "input_tokens": 7877,
+   "output_tokens": 384,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "213173e8d561e0d8fc5239e9e9fbd0519faa6d59da7571d6b2d5efbd7c9f8066": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "Monday",
+     "owner": "Helen Marsh",
+     "quote": "Helen will send the current intake form by Monday.",
+     "source_id": "N1",
+     "task": "Send the current intake form."
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "Helen will send the current intake form by Monday.",
+    "source_id": "N1",
+    "text": "Helen will send the current intake form by Monday."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "the paralegal still answers consultation requests three business days after they arrive",
+     "source_id": "N1",
+     "text": "Consultation requests are answered three business days after they arrive."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The call covered Marsh & Tolland Family Law’s consultation intake response time. Helen said the paralegal answers requests three business days after they arrive and agreed to send the current intake form by Monday."
+  },
+  "latency_seconds": 5.25,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7993,
+   "event_count": 1,
+   "input_tokens": 7807,
+   "output_tokens": 186,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "2afd546cae0dad2b83bf0c7ab9c7e919b1f2a23b2535f11f96fe14e14406a956": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "by the end of next week",
+     "owner": "Jonas Weber",
+     "quote": "Jonas will send the list of status questions customers ask most",
+     "source_id": "N1",
+     "task": "Send the list of status questions customers ask most."
+    },
+    {
+     "due": "in two weeks",
+     "owner": "Casey",
+     "quote": "Casey will share a sample status-text flow in two weeks",
+     "source_id": "N1",
+     "task": "Share a sample status-text flow."
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "Jonas will send the list of status questions customers ask most",
+    "source_id": "N1",
+    "text": "Jonas will send the list of status questions customers ask most by the end of next week."
+   },
+   "open_questions": [
+    "When will work start?"
+   ],
+   "pain_points": [
+    {
+     "quote": "customers call to ask if their car is ready eight or ten times a day",
+     "source_id": "N1",
+     "text": "Customers call repeatedly to ask whether their car is ready, pulling mechanics off the floor."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The call covered customer requests for repair-status updates and how they interrupt mechanics. Jonas will send the most common status questions, and Casey will share a sample status-text flow; no start date was set."
+  },
+  "latency_seconds": 7.788,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8061,
+   "event_count": 1,
+   "input_tokens": 7800,
+   "output_tokens": 261,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "2db254bfa1f8dd3a2d374603e2df78384ad7008e572e96243fe8c19f34719ebc": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "17 November",
+     "owner": "Tom Okafor",
+     "quote": "Tom Okafor to list the five slowest clients for document turnaround by 17 November.",
+     "source_id": "E1",
+     "task": "List the five slowest clients for document turnaround."
+    },
+    {
+     "due": "",
+     "owner": "Priya Nair",
+     "quote": "Priya Nair to introduce Casey to the firm's IT contractor.",
+     "source_id": "E1",
+     "task": "Introduce Casey to the firm's IT contractor."
+    },
+    {
+     "due": "Friday",
+     "owner": "Casey",
+     "quote": "Casey to send the interview schedule by Friday.",
+     "source_id": "E1",
+     "task": "Send the interview schedule."
+    }
+   ],
+   "decisions": [
+    {
+     "quote": "the assessment will cover document intake and client reminders only; payroll is out of scope.",
+     "source_id": "E1",
+     "text": "The assessment will cover document intake and client reminders only; payroll is out of scope."
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "quote": "Next meeting: findings review on 2026-11-24.",
+    "source_id": "E1",
+    "text": "Hold the findings review on 2026-11-24."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "month-end close takes nine working days because client documents arrive by email, text and paper.",
+     "source_id": "E1",
+     "text": "Month-end close takes nine working days because client documents arrive through email, text, and paper."
+    },
+    {
+     "quote": "staff spend about six hours a week chasing clients for missing receipts.",
+     "source_id": "E1",
+     "text": "Staff spend about six hours a week chasing clients for missing receipts."
+    }
+   ],
+   "sufficient": true,
+   "summary": "Ledgerwise's assessment kickoff covered document intake and client reminders, following discussion of month-end delays and the effort spent chasing missing receipts. The group excluded payroll from the assessment and ended with a findings review scheduled for 2026-11-24."
+  },
+  "latency_seconds": 9.122,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8297,
+   "event_count": 1,
+   "input_tokens": 7909,
+   "output_tokens": 388,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "3c9c76d7effa18e103679234ff90d25626b30d4153ffb00dcceb4520a443bae7": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "Wednesday",
+     "owner": "Carla",
+     "quote": "Carla will export the last 90 days of quote emails by Wednesday.",
+     "source_id": "N1",
+     "task": "Export the last 90 days of quote emails."
+    },
+    {
+     "due": "",
+     "owner": "Casey",
+     "quote": "Casey will draft the reply templates and send them to Marco for review.",
+     "source_id": "N1",
+     "task": "Draft the reply templates and send them to Marco for review."
+    },
+    {
+     "due": "28 November",
+     "owner": "Casey, Marco Bellini",
+     "quote": "We will meet again on 28 November to review the templates.",
+     "source_id": "N1",
+     "task": "Meet to review the templates."
+    }
+   ],
+   "decisions": [
+    {
+     "quote": "Marco approved the inbound-reply build for quote requests, starting 1 December.",
+     "source_id": "N1",
+     "text": "Marco approved the inbound-reply build for quote requests, starting 1 December."
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "quote": "We will meet again on 28 November to review the templates.",
+    "source_id": "N1",
+    "text": "Meet again on 28 November to review the templates."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "quote requests arrive by email and sit unanswered for up to a week",
+     "source_id": "N1",
+     "text": "Quote requests can go unanswered for up to a week while Marco is on jobs."
+    },
+    {
+     "quote": "is tired of chasing unpaid invoices by phone.",
+     "source_id": "N1",
+     "text": "Carla is tired of chasing unpaid invoices by phone."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The call covered delays in responding to quote requests and the burden of chasing unpaid invoices. Marco approved a inbound-reply build starting 1 December; Casey will draft reply templates for review, and they will meet again on 28 November."
+  },
+  "latency_seconds": 9.143,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8230,
+   "event_count": 1,
+   "input_tokens": 7854,
+   "output_tokens": 376,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "458e112d2f4746bfb3a756ccd7c0a6bbebdc63469c69025c44202301dd7563c5": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "by Thursday",
+     "owner": "Andre Silva",
+     "quote": "Andre will send a photo of the cancellation form and last month's chargeback list by Thursday.",
+     "source_id": "N1",
+     "task": "Send a photo of the cancellation form and last month's chargeback list."
+    },
+    {
+     "due": "next week",
+     "owner": "Casey",
+     "quote": "Casey will book the one-hour walkthrough for next week.",
+     "source_id": "N1",
+     "task": "Book the one-hour walkthrough."
+    }
+   ],
+   "decisions": [
+    {
+     "quote": "He agreed to a starter scan of the cancellation process.",
+     "source_id": "N1",
+     "text": "Andre agreed to a starter scan of the cancellation process."
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "quote": "Casey will book the one-hour walkthrough for next week.",
+    "source_id": "N1",
+    "text": "Casey will book the one-hour walkthrough for next week."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "about a third of them are never entered, so people keep getting billed and then dispute the charge.",
+     "source_id": "N1",
+     "text": "About a third of membership cancellations are never entered, so customers keep getting billed and dispute the charges."
+    },
+    {
+     "quote": "Chargebacks cost him roughly six hours a month to sort out.",
+     "source_id": "N1",
+     "text": "Chargebacks take roughly six hours a month to sort out."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The check-in covered Northgate Fitness’s paper-based membership cancellation process and the resulting billing disputes. Andre agreed to a starter scan; Casey will arrange a walkthrough for next week."
+  },
+  "latency_seconds": 8.17,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8162,
+   "event_count": 1,
+   "input_tokens": 7834,
+   "output_tokens": 328,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "59df695dd5df7504d10b7d98694fa8e540d3e2169cf9b652be9f04746e4ed246": {
+  "detail": "",
+  "json": {
+   "action_items": [],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "",
+    "source_id": "",
+    "text": ""
+   },
+   "open_questions": [],
+   "pain_points": [],
+   "sufficient": true,
+   "summary": "Maya said the reminder system is running without problems and had no new requests. They also talked about her office move in the spring; no decisions, tasks, or next meeting were agreed."
+  },
+  "latency_seconds": 4.052,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7882,
+   "event_count": 1,
+   "input_tokens": 7795,
+   "output_tokens": 87,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "71a97c4255bf7fa12d7ee6ad3668f743784e511c7712e0844e44786e0c01fdac": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "Friday",
+     "owner": "Dana Reyes",
+     "quote": "Dana will send the October missed-call log by Friday.",
+     "source_id": "N1",
+     "task": "Send the October missed-call log"
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "Dana will send the October missed-call log by Friday.",
+    "source_id": "N1",
+    "text": "Dana will send the October missed-call log by Friday."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "Dana said voicemail callbacks still take two days.",
+     "source_id": "N1",
+     "text": "Voicemail callbacks still take two days."
+    }
+   ],
+   "sufficient": true,
+   "summary": "Dana said Harbourline Physio’s voicemail callbacks still take two days. Dana will send the October missed-call log by Friday."
+  },
+  "latency_seconds": 5.24,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7985,
+   "event_count": 1,
+   "input_tokens": 7819,
+   "output_tokens": 166,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "793d6777b777455d3abb09ed2bcfd82b084a6ea2047a83a2dca3b05e8b233ab9": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "Tuesday",
+     "owner": "Nadia",
+     "quote": "Nadia will forward one week of enquiries to Casey by Tuesday",
+     "source_id": "N1",
+     "task": "Forward one week of enquiries to Casey, unedited."
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "will forward one week of enquiries to Casey by Tuesday – unedited",
+    "source_id": "N1",
+    "text": "Nadia will forward one week of enquiries to Casey by Tuesday, unedited."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "we lose about ten wholesale leads a week” because web enquiries get a reply in > 2 days",
+     "source_id": "N1",
+     "text": "The business loses about ten wholesale leads a week because web enquiries receive a reply in more than two days."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The call covered Petrov Physio Supplies’ slow response to web enquiries and Nadia’s target response time. It ended with Nadia agreeing to forward a week of enquiries to Casey by Tuesday."
+  },
+  "latency_seconds": 6.068,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8041,
+   "event_count": 1,
+   "input_tokens": 7827,
+   "output_tokens": 214,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "7da1c3159fe571e474ea54faacfee0f8acb288785bcb3744321170d1d76a7edc": {
+  "detail": "",
+  "json": {
+   "action_items": [],
+   "decisions": [],
+   "missing": [
+    "Notes or a transcript of the meeting that took place"
+   ],
+   "next_step": {
+    "quote": "",
+    "source_id": "",
+    "text": ""
+   },
+   "open_questions": [],
+   "pain_points": [],
+   "sufficient": false,
+   "summary": ""
+  },
+  "latency_seconds": 3.795,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7838,
+   "event_count": 1,
+   "input_tokens": 7778,
+   "output_tokens": 60,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "9c4ae38e0a8cdbfec279551fedf0ec16caa661cd096fd6f826345f4f0711af72": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "by Monday",
+     "owner": "Owen Clarke",
+     "quote": "Owen will pick the two crews by Monday",
+     "source_id": "N1",
+     "task": "Pick the two crews for the pilot."
+    },
+    {
+     "due": "by Tuesday",
+     "owner": "Owen Clarke",
+     "quote": "I'll send you our current quote template and three recent quotes by Tuesday",
+     "source_id": "N2",
+     "task": "Send the current quote template and three recent quotes."
+    }
+   ],
+   "decisions": [
+    {
+     "quote": "we will pilot a quote-intake form for crew leads on two crews",
+     "source_id": "N1",
+     "text": "Pilot a quote-intake form for two crews."
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "quote": "Owen will pick the two crews by Monday",
+    "source_id": "N1",
+    "text": "Owen will pick the two crews for the pilot by Monday."
+   },
+   "open_questions": [
+    "Who will pay for the tablet mounts in the trucks?"
+   ],
+   "pain_points": [
+    {
+     "quote": "builds quotes from them at night; quotes go out three to five days after the visit",
+     "source_id": "N1",
+     "text": "Crew leads send job photos by text, and Owen builds quotes at night; quotes are sent three to five days after the visit."
+    },
+    {
+     "quote": "two commercial jobs were lost last quarter because a competitor quoted first",
+     "source_id": "N1",
+     "text": "Two commercial jobs were lost because a competitor quoted first."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The meeting covered Clarke Roofing’s quote process and delays after site visits. They agreed to pilot a quote-intake form on two crews; Owen will select the crews, and payment for truck tablet mounts remained unsettled."
+  },
+  "latency_seconds": 8.339,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8231,
+   "event_count": 1,
+   "input_tokens": 7893,
+   "output_tokens": 338,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "9e46db38575323c73428de027ec48e86a4f719f30016cb4c652506777097c6ca": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "",
+     "owner": "Casey",
+     "quote": "Casey did not know and will find out.",
+     "source_id": "N1",
+     "task": "Find out whether the triage inbox can work with their current property software."
+    },
+    {
+     "due": "",
+     "owner": "Farah Aziz",
+     "quote": "Farah will come back with an answer on budget after she talks to her partner.",
+     "source_id": "N1",
+     "task": "Talk to her business partner about the budget and come back with an answer."
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "Farah will come back with an answer on budget after she talks to her partner.",
+    "source_id": "N1",
+    "text": "Farah will discuss the budget with her business partner and come back with an answer."
+   },
+   "open_questions": [
+    "Can the triage inbox work with their current property software?",
+    "Will Farah’s business partner approve the budget?"
+   ],
+   "pain_points": [],
+   "sufficient": true,
+   "summary": "Casey presented a tenant-request triage inbox and an after-hours maintenance voice agent. Farah liked the triage inbox but nothing was chosen; she will check the budget with her business partner and return with an answer."
+  },
+  "latency_seconds": 7.216,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8082,
+   "event_count": 1,
+   "input_tokens": 7835,
+   "output_tokens": 247,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "b833b192bcda2e3840f797b51821fdd9d4b89bb020451dee38f2584d4cc83d85": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "Friday",
+     "owner": "Dana Reyes",
+     "quote": "Dana will send last month's missed-call log by Friday",
+     "source_id": "N1",
+     "task": "Send last month's missed-call log."
+    },
+    {
+     "due": "Monday",
+     "owner": "Casey",
+     "quote": "Casey will send the scan agreement on Monday",
+     "source_id": "N1",
+     "task": "Send the scan agreement."
+    }
+   ],
+   "decisions": [
+    {
+     "quote": "agreed to start with a starter scan of the callback workflow",
+     "source_id": "N1",
+     "text": "Start with a starter scan of the callback workflow rather than a full assessment."
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "quote": "Next step: kickoff call for the scan on 20 November",
+    "source_id": "N1",
+    "text": "Kickoff call for the scan on 20 November."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "the front desk returns voicemails two or three days late",
+     "source_id": "N1",
+     "text": "The front desk returns voicemails two or three days late."
+    },
+    {
+     "quote": "web form requests are re-typed into the booking system by hand",
+     "source_id": "N1",
+     "text": "Web form requests are re-typed into the booking system by hand."
+    },
+    {
+     "quote": "lose about ten new patients a month because nobody calls back in time",
+     "source_id": "N1",
+     "text": "They estimate losing about ten new patients a month because callbacks are late."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The call covered Harbourline Physio’s delayed callback and manual web-form workflows, with Dana estimating lost new patients. They agreed to begin with a starter scan of the callback workflow, with a kickoff call scheduled as the next step."
+  },
+  "latency_seconds": 8.201,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8195,
+   "event_count": 1,
+   "input_tokens": 7848,
+   "output_tokens": 347,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "c587647ba8d79694d85e1ac4645a7fb78b95c7c1b8a4d66d715a49414a98abc8": {
+  "detail": "",
+  "json": {
+   "action_items": [],
+   "decisions": [],
+   "missing": [
+    "Meeting notes or transcript documenting what was discussed and agreed"
+   ],
+   "next_step": {
+    "quote": "",
+    "source_id": "",
+    "text": ""
+   },
+   "open_questions": [],
+   "pain_points": [],
+   "sufficient": false,
+   "summary": ""
+  },
+  "latency_seconds": 3.509,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7812,
+   "event_count": 1,
+   "input_tokens": 7752,
+   "output_tokens": 60,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "c5b63c7a7c2ca78535abe30f51304f8924eeac0cf60f4604a5ed82413c03793d": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "tomorrow",
+     "owner": "Marco Bellini",
+     "quote": "He'll send photos of the van signage tomorrow.",
+     "source_id": "N1",
+     "task": "Send photos of the van signage"
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "He'll send photos of the van signage tomorrow.",
+    "source_id": "N1",
+    "text": "Marco Bellini will send photos of the van signage tomorrow."
+   },
+   "open_questions": [],
+   "pain_points": [],
+   "sufficient": true,
+   "summary": "Quick call with Marco Bellini. Marco will send photos of the van signage tomorrow."
+  },
+  "latency_seconds": 4.602,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7880,
+   "event_count": 1,
+   "input_tokens": 7750,
+   "output_tokens": 130,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "c7a9104b86da9f55aa543c41ae45919b81257f31063db737cf1c4f7d8a3220a9": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "before the next call",
+     "owner": "",
+     "quote": "Someone needs to export last season's enquiry list before the next call",
+     "source_id": "N1",
+     "task": "Export last season's enquiry list before the next call."
+    },
+    {
+     "due": "",
+     "owner": "Rosa Diaz",
+     "quote": "Rosa will ask the event leads how long a quote takes them",
+     "source_id": "N1",
+     "task": "Ask the event leads how long a quote takes them."
+    }
+   ],
+   "decisions": [
+    {
+     "quote": "the next call will look only at weekend enquiries",
+     "source_id": "N1",
+     "text": "The next call will focus only on weekend enquiries."
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "quote": "the next call will look only at weekend enquiries",
+    "source_id": "N1",
+    "text": "The next call will look only at weekend enquiries."
+   },
+   "open_questions": [
+    "How long does a quote take the event leads?",
+    "Who will own the Instagram inbox on weekends?"
+   ],
+   "pain_points": [
+    {
+     "quote": "nobody owns the Instagram inbox on weekends",
+     "source_id": "N1",
+     "text": "Nobody owns the Instagram inbox on weekends."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The call covered Tidewater Catering’s enquiry channels and weekend inbox ownership. It ended with an agreement to focus the next call only on weekend enquiries."
+  },
+  "latency_seconds": 6.941,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 8079,
+   "event_count": 1,
+   "input_tokens": 7813,
+   "output_tokens": 266,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "c9f5dfe0a71ba955c3a7b2b94ce8de4c49bf8e76a3a4e9a5efc17d5465396906": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "by Wednesday",
+     "owner": "Irene Kowalski",
+     "quote": "Irene will share the renewal spreadsheet with Casey by Wednesday.",
+     "source_id": "E1",
+     "task": "Share the renewal spreadsheet with Casey."
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "Irene will share the renewal spreadsheet with Casey by Wednesday.",
+    "source_id": "E1",
+    "text": "Irene will share the renewal spreadsheet with Casey by Wednesday."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "about one in ten goes out late",
+     "source_id": "E1",
+     "text": "Renewal reminders are tracked in a spreadsheet and sent by hand, and about one in ten is late."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The call covered Kowalski Insurance Brokers’ renewal reminder process, which is managed manually in a spreadsheet. Irene agreed to share the renewal spreadsheet with Casey by Wednesday."
+  },
+  "latency_seconds": 5.753,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8026,
+   "event_count": 1,
+   "input_tokens": 7834,
+   "output_tokens": 192,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "e447ebb76b9eb9ed104bf4551f3566f93a0d4bd58f6f3131417e93e7af77a0e9": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "Friday",
+     "owner": "Andre Silva",
+     "quote": "Andre will send his vendor comparison sheet by Friday.",
+     "source_id": "N1",
+     "task": "Send the vendor comparison sheet."
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "Andre will send his vendor comparison sheet by Friday.",
+    "source_id": "N1",
+    "text": "Andre will send his vendor comparison sheet."
+   },
+   "open_questions": [
+    "Which vendor will Andre choose?"
+   ],
+   "pain_points": [],
+   "sufficient": true,
+   "summary": "Andre Silva said he is still comparing two vendors and will decide in December. The call ended with Andre agreeing to send his vendor comparison sheet by Friday."
+  },
+  "latency_seconds": 4.689,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7942,
+   "event_count": 1,
+   "input_tokens": 7800,
+   "output_tokens": 142,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "e9d15f1585d9fb0a9316431b69bc5e261527829f696e62116dacc15978c4391c": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "19 November",
+     "owner": "Helen Marsh",
+     "quote": "Helen will raise the intake form at the partners' meeting on 19 November.",
+     "source_id": "N1",
+     "task": "Raise the intake form at the partners' meeting."
+    },
+    {
+     "due": "before then",
+     "owner": "Casey",
+     "quote": "Casey will send two examples of short intake flows before then.",
+     "source_id": "N1",
+     "task": "Send two examples of short intake flows."
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "We will speak again after the partners' meeting.",
+    "source_id": "N1",
+    "text": "Speak again after the partners' meeting."
+   },
+   "open_questions": [
+    "Will the partners agree to change the intake form?"
+   ],
+   "pain_points": [
+    {
+     "quote": "She believes people give up on the form halfway.",
+     "source_id": "N1",
+     "text": "People may abandon the 28-field intake form before finishing."
+    }
+   ],
+   "sufficient": true,
+   "summary": "The call covered Marsh & Tolland’s consultation intake process and Helen’s concern that people abandon the 28-field form. Helen will raise the form with the partners, Casey will send short-flow examples beforehand, and they will speak again after that meeting."
+  },
+  "latency_seconds": 6.58,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8095,
+   "event_count": 1,
+   "input_tokens": 7842,
+   "output_tokens": 253,
+   "reasoning_output_tokens": 0
+  }
+ }
+}

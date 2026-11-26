@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["audience", "audience_focus", "audience_hypothesis", "positioning", "traffic_source", "primary_cta", "sections", "verify", "sources"],
+  "properties": {
+    "audience": {"type": "string"},
+    "audience_focus": {"type": "string"},
+    "audience_hypothesis": {"type": "string"},
+    "positioning": {"type": "string"},
+    "traffic_source": {"type": "string"},
+    "primary_cta": {"type": "string"},
+    "sections": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["section", "direction"],
+        "properties": {
+          "section": {"enum": ["Hero", "Problem", "Offer", "Proof", "Conversion"]},
+          "direction": {"type": "string"}
+        }
+      }
+    },
+    "verify": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "sources": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"type": "string"}}
+  }
+}

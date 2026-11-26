@@ -1,0 +1,30 @@
+{
+  "comment": "Text colour declarations for all Studio pages, including test-offer (website 215679e: light workflow story figure, hero eyebrow and signature). Cascade: public/studio/homepage.css then designCss. State adds pseudo-class specificity. Hover changes button backgrounds; focus-visible changes outlines, not text colours. Regenerate contrast-model.json after source changes and validate against computed browser colours.",
+  "vars": { "ink": "text", "paper": "background", "stone": "secondary", "gold": "accent", "muted": "muted", "rule": "borderColor", "studio-primary": "primary", "studio-secondary": "secondary" },
+  "root": { "selector": "main.editorial", "color": "var(--ink)", "background": "var(--paper)" },
+  "rules": [
+    { "source": "homepage.css", "selector": ".site-button", "color": "var(--paper)", "background": "var(--ink)" },
+    { "source": "homepage.css", "selector": ".site-button", "state": "hover", "background": "#343731" },
+    { "source": "homepage.css", "selector": ".editorial p", "color": "var(--muted)" },
+    { "source": "homepage.css", "selector": ".stone-section", "background": "var(--stone)" },
+    { "source": "homepage.css", "selector": ".dark-section", "color": "var(--paper)", "background": "var(--ink)" },
+    { "source": "homepage.css", "selector": ".dark-section p", "color": "#d5cec1" },
+    { "source": "homepage.css", "selector": ".contact-band p", "color": "#d5cec1" },
+    { "source": "homepage.css", "selector": ".home-hero h1 > span", "color": "#675638" },
+    { "source": "homepage.css", "selector": ".home-hero .hero-eyebrow", "color": "#57564f" },
+    { "source": "homepage.css", "selector": ".workflow-figure", "color": "var(--ink)", "background": "#e9e3d7" },
+    { "source": "homepage.css", "selector": ".workflow-figure figcaption span", "color": "#57564f" },
+    { "source": "homepage.css", "selector": ".workflow-figure .workflow-after", "color": "var(--ink)" },
+    { "source": "homepage.css", "selector": ".hero-signature", "color": "var(--muted)" },
+    { "source": "homepage.css", "selector": ".hero-signature a", "color": "var(--ink)" },
+    { "source": "homepage.css", "selector": ".outcome-list li > span", "color": "#d3b986" },
+    { "source": "homepage.css", "selector": ".two-up", "background": "var(--stone)" },
+    { "source": "homepage.css", "selector": ".contact-band", "color": "var(--paper)", "background": "#252821" },
+    { "source": "homepage.css", "selector": ".contact-band .site-button", "color": "var(--ink)", "background": "#e0c899" },
+    { "source": "homepage.css", "selector": ".contact-band .site-button", "state": "hover", "background": "#f0deba" },
+    { "source": "homepage.css", "selector": ".bullet-list", "color": "var(--muted)" },
+    { "source": "designCss", "selector": ".site-button", "color": "var(--paper)", "background": "var(--studio-primary)" },
+    { "source": "designCss", "selector": ".contact-band .site-button", "color": "var(--ink)", "background": "#e0c899" }
+  ],
+  "fixedSize": { ".workflow-figure figcaption span": 13.12, ".workflow-story li > span": 11.52, ".workflow-figure .workflow-disclaimer": 12, ".home-hero .hero-eyebrow": 13.12 }
+}

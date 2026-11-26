@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "marketing.linkedin_post output",
+  "description": "A draft for Casey's approval. Every claim carries a quote that was found word for word in the cited source.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["post", "hook", "body", "cta", "hashtags", "claims", "char_count", "status", "sources"],
+  "properties": {
+    "post": {"description": "The full text: hook, body, call to action and hashtags.", "type": "string", "minLength": 120, "maxLength": 1300},
+    "hook": {"type": "string", "minLength": 10, "maxLength": 200},
+    "body": {"type": "string", "minLength": 60},
+    "cta": {"type": "string", "minLength": 5, "maxLength": 240},
+    "hashtags": {"type": "array", "minItems": 1, "maxItems": 3, "items": {"type": "string", "pattern": "^#[A-Za-z][A-Za-z0-9]*$"}},
+    "claims": {
+      "type": "array", "minItems": 1, "maxItems": 6,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["text", "quote", "sources"],
+        "properties": {
+          "text": {"type": "string", "minLength": 3, "maxLength": 300},
+          "quote": {"type": "string", "minLength": 5, "maxLength": 400},
+          "sources": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"type": "string"}}
+        }
+      }
+    },
+    "char_count": {"type": "integer", "minimum": 120},
+    "status": {"const": "draft_for_approval"},
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "additionalProperties": false, "required": ["id", "ref"], "properties": {"id": {"type": "string"}, "ref": {"type": "string"}}}
+    }
+  }
+}

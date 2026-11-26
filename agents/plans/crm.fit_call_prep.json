@@ -1,0 +1,53 @@
+{
+  "plan": "crm.fit_call_prep",
+  "version": "0.1.0",
+  "summary": "Fit Call prep for one named prospect: draft from evidence in hand, verify citations in code, render the one-page brief.",
+  "source_workflow": "workflows/fit_call_prep/workflow.md",
+  "input_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["prospect", "company"],
+    "properties": {
+      "prospect": {"type": "string"},
+      "company": {"type": "string"},
+      "call_context": {"type": "string"},
+      "evidence_refs": {"type": "array", "items": {"type": "string"}},
+      "public_signals": {"type": "array", "items": {"type": "object"}}
+    }
+  },
+  "budget": {"tokens": 13000, "model_calls": 2, "seconds": 120},
+  "steps": [
+    {
+      "id": "draft",
+      "agent": "crm.fit_call_prep@0.1.0",
+      "input": {
+        "prospect": "$input.prospect",
+        "company": "$input.company",
+        "call_context": "$input.call_context",
+        "evidence_refs": "$input.evidence_refs",
+        "public_signals": "$input.public_signals"
+      }
+    },
+    {
+      "id": "verify",
+      "agent": "shared.cite_verify@0.1.0",
+      "needs": ["draft"],
+      "input": {
+        "claim_sets": ["$steps.draft.output.research", "$steps.draft.output.leak_hypotheses"],
+        "allowed_refs": "$input.evidence_refs",
+        "allowed_signals": "$input.public_signals"
+      }
+    },
+    {
+      "id": "render",
+      "agent": "crm.fit_call_brief_render@0.1.0",
+      "needs": ["draft", "verify"],
+      "input": {"brief": "$steps.draft.output", "verification": "$steps.verify.output"}
+    }
+  ],
+  "output": {
+    "brief": "$steps.draft.output",
+    "verification": "$steps.verify.output",
+    "artifact": "$steps.render.output"
+  }
+}

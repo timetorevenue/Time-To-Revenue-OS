@@ -1,0 +1,36 @@
+# Factory build spec. The package under agents/packages/shared.brain_retrieve is generated from this folder:
+# edit here and run `aos-agent.py build shared.brain_retrieve`; never edit the package.
+# Revisit: when the reference types or the scoped reader change. · Last touched: 2026-11-14.
+[agent]
+name = "shared.brain_retrieve"
+version = "0.1.0"
+kind = "tool"
+summary = "Resolve exact Business Brain and artifact references under the granted scope and return the readable set with sizes and hashes."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[context]
+needs = ["input.evidence_refs"]
+max_tokens = 0
+
+[capabilities]
+grants = ["brain.read:global", "artifact.read"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 0
+model_calls = 0
+seconds = 10
+max_steps = 1
+
+[compose]
+callable_by = ["*"]
+calls = []
+
+[factory]
+requirement = "First step of a plan that works from named records. Open every reference through the scoped reader before any model call is spent, so a missing, empty or out-of-scope record stops the job at zero tokens. Returns references and sizes, never the content: each specialist reads its own evidence. It does not search; the caller names exact references."
+source = "blueprint section 7: shared specialist shared.brain_retrieve; first step of the cross-department example"

@@ -1,0 +1,54 @@
+# Factory build spec. The package under agents/packages/research.synthesise is generated from this folder:
+# edit here and run `aos-agent.py build research.synthesise`; never edit the package.
+# Revisit: when the findings shape, the prompt or the pinned model changes. · Last touched: 2026-11-14.
+[agent]
+name = "research.synthesise"
+version = "0.1.0"
+kind = "oneshot"
+summary = "Answer one research question from supplied sources: quoted findings, where the sources disagree, and what they leave open."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[context]
+needs = ["input.evidence_refs"]
+max_tokens = 4000
+
+[capabilities]
+grants = ["brain.read:global"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 14000
+model_calls = 2
+seconds = 120
+max_steps = 1
+
+[compose]
+callable_by = ["research.*", "shared.planner"]
+calls = []
+
+[factory]
+requirement = "Judgment step of the research.brief plan. Given a question and the sources already gathered (Brain notes, transcripts, article excerpts), say what the sources establish, each finding backed by an exact quote, where they conflict, and what is still unknown. It weighs incomplete and conflicting evidence and never fills a gap from general knowledge. It gathers nothing itself: no web access, no tools, no effects."
+token_budget = 300000
+holdout_share = 0.2
+source = "blueprint section 7: Research specialist research.synthesise (guessed Terra-medium; the search tries the cheaper pins first)"
+
+# Cheapest first. The first candidate that passes the training cases is pinned.
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "low"
+
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "medium"
+
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6.1-terra"
+effort = "medium"

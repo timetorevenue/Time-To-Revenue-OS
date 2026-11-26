@@ -1,0 +1,139 @@
+{
+ "59784c624257990c888eb99a69d79df35f2a00393f38219848b76f58646fa8a6": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "Friday",
+     "owner": "Dana Reyes",
+     "quote": "Dana will send last month's missed-call log by Friday.",
+     "source_id": "N1",
+     "task": "Send last month's missed-call log."
+    },
+    {
+     "due": "Monday",
+     "owner": "Casey",
+     "quote": "Casey will send the scan agreement on Monday.",
+     "source_id": "N1",
+     "task": "Send the scan agreement."
+    }
+   ],
+   "decisions": [
+    {
+     "quote": "We agreed to start with a starter scan of the callback workflow",
+     "source_id": "N1",
+     "text": "Start with a starter scan of the callback workflow rather than a full assessment."
+    }
+   ],
+   "missing": [],
+   "next_step": {
+    "quote": "Next step: kickoff call for the scan on 20 November.",
+    "source_id": "N1",
+    "text": "Kickoff call for the scan on 20 November."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "the front desk returns voicemails two or three days late",
+     "source_id": "N1",
+     "text": "The front desk returns voicemails two or three days late."
+    },
+    {
+     "quote": "web form requests are re-typed into the booking system by hand",
+     "source_id": "N1",
+     "text": "Web form requests are manually re-typed into the booking system."
+    },
+    {
+     "quote": "they lose about ten new patients a month because nobody calls back in time",
+     "source_id": "N1",
+     "text": "The practice loses about ten new patients a month because callbacks are late."
+    }
+   ],
+   "sufficient": true,
+   "summary": "Dana described callback delays and manual re-entry of web requests, and estimated about ten new patients are lost each month. They agreed to start with a fast-start callback workflow scan; Dana will send a missed-call log, Casey will send the agreement, and the scan kickoff is set for 20 November."
+  },
+  "latency_seconds": 8.829,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8211,
+   "event_count": 1,
+   "input_tokens": 7848,
+   "output_tokens": 363,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "be0ab3c2316d70045d9bcfe62e919e8724d10b6eca554cee037728df9cf48195": {
+  "detail": "",
+  "json": {
+   "action_items": [
+    {
+     "due": "Friday",
+     "owner": "Dana Reyes",
+     "quote": "Dana will send the October missed-call log by Friday",
+     "source_id": "N1",
+     "task": "Send the October missed-call log."
+    }
+   ],
+   "decisions": [],
+   "missing": [],
+   "next_step": {
+    "quote": "Dana will send the October missed-call log by Friday",
+    "source_id": "N1",
+    "text": "Dana will send the October missed-call log by Friday."
+   },
+   "open_questions": [],
+   "pain_points": [
+    {
+     "quote": "voicemail callbacks still take two days",
+     "source_id": "N1",
+     "text": "Voicemail callbacks take two days."
+    }
+   ],
+   "sufficient": true,
+   "summary": "Dana described delays in voicemail callbacks at Harbourline Physio. The call ended with Dana agreeing to send the October missed-call log by Friday."
+  },
+  "latency_seconds": 7.749,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8143,
+   "event_count": 1,
+   "input_tokens": 7819,
+   "output_tokens": 324,
+   "reasoning_output_tokens": 158
+  }
+ },
+ "c52b71daeb8bc91adbfedeb72941526f557c0be845e0df7160660ba07427e6dd": {
+  "detail": "",
+  "json": {
+   "action_items": [],
+   "decisions": [],
+   "missing": [
+    "Meeting notes or transcript showing what was actually said and agreed; the provided source is only an agenda."
+   ],
+   "next_step": {
+    "quote": "",
+    "source_id": "",
+    "text": ""
+   },
+   "open_questions": [],
+   "pain_points": [],
+   "sufficient": false,
+   "summary": ""
+  },
+  "latency_seconds": 3.222,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7847,
+   "event_count": 1,
+   "input_tokens": 7778,
+   "output_tokens": 69,
+   "reasoning_output_tokens": 0
+  }
+ }
+}

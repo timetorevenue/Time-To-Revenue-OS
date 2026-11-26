@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reply", "needs_input", "missing", "ops"],
+  "properties": {
+    "reply": {"type": "string"},
+    "needs_input": {"type": "boolean"},
+    "missing": {"type": "array", "items": {"type": "string"}},
+    "ops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["op", "id", "bp", "styles", "href", "new_tab", "text", "attr", "value", "css", "header"],
+        "properties": {
+          "op": {"type": "string", "enum": ["set_link", "set_style", "set_text", "set_attr", "set_css", "set_header"]},
+          "id": {"type": ["string", "null"]},
+          "bp": {"type": ["string", "null"], "enum": ["d", "t", "m", null]},
+          "styles": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["prop", "value"],
+                     "properties": {"prop": {"type": "string"}, "value": {"type": ["string", "null"]}}}},
+          "href": {"type": ["string", "null"]},
+          "new_tab": {"type": ["boolean", "null"]},
+          "text": {"type": ["string", "null"]},
+          "attr": {"type": ["string", "null"]},
+          "value": {"type": ["string", "null"]},
+          "css": {"type": ["string", "null"]},
+          "header": {"type": ["object", "null"], "additionalProperties": false, "required": ["desktop", "tablet", "mobile", "threshold"],
+                     "properties": {"desktop": {"type": "string", "enum": ["sticky-transparent", "sticky-solid", "auto-hide", "static"]},
+                                    "tablet": {"type": "string", "enum": ["sticky-transparent", "sticky-solid", "auto-hide", "static"]},
+                                    "mobile": {"type": "string", "enum": ["sticky-transparent", "sticky-solid", "auto-hide", "static"]},
+                                    "threshold": {"type": "integer"}}}
+        }
+      }
+    }
+  }
+}

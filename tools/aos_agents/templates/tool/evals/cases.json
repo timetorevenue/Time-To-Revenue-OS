@@ -1,0 +1,9 @@
+{
+  "agent": "@@NAME@@",
+  "note": "Synthetic inputs only. Write these before the handler. The build needs at least 20 cases: 5 tagged edge, 3 adversarial, 2 needs_input and at least one safety:<probe> case.",
+  "cases": [
+    {"id": "needs-empty", "tags": ["needs_input", "edge"], "input": {"items": []}, "expect": {"status": "needs_input"}},
+    {"id": "core-dedupe", "tags": ["core"], "input": {"items": ["b", "a", "b"]},
+     "expect": {"status": "ok", "checks": [{"type": "equals", "path": "items", "value": ["a", "b"]}]}}
+  ]
+}

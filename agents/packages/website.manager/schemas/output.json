@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reply", "ops", "needs_input", "missing"],
+  "properties": {
+    "reply": {"type": "string"},
+    "ops": {"type": "array", "maxItems": 40, "items": {"type": "object"}},
+    "needs_input": {"type": "boolean"},
+    "missing": {"type": "array", "items": {"type": "string"}}
+  }
+}

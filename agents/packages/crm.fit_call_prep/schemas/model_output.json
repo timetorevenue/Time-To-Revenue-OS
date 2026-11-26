@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sufficient", "missing", "business_summary", "research", "leak_hypotheses", "question_script", "next_step", "caveats"],
+  "properties": {
+    "sufficient": {"type": "boolean"},
+    "missing": {"type": "array", "items": {"type": "string"}},
+    "business_summary": {"type": "string"},
+    "research": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["claim", "source_ids"],
+        "properties": {"claim": {"type": "string"}, "source_ids": {"type": "array", "items": {"type": "string"}}}
+      }
+    },
+    "leak_hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["hypothesis", "lever", "basis", "source_ids"],
+        "properties": {
+          "hypothesis": {"type": "string"},
+          "lever": {"type": "string", "enum": ["effectiveness", "efficiency", "quality"]},
+          "basis": {"type": "string"},
+          "source_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "question_script": {"type": "array", "items": {"type": "string"}},
+    "next_step": {
+      "type": "object", "additionalProperties": false, "required": ["recommended", "rationale"],
+      "properties": {
+        "recommended": {"type": "string", "enum": ["starter_scan", "operations_assessment", "scoped_build"]},
+        "rationale": {"type": "string"}
+      }
+    },
+    "caveats": {"type": "array", "items": {"type": "string"}}
+  }
+}

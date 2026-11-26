@@ -1,0 +1,7 @@
+{
+ "addresses": ["validation_failed"],
+ "summary": "Use a closing question in the body as the call to action when no cta was supplied.",
+ "root_cause": "With no cta supplied the prompt asks the post to end on a question; the model ends the body with that question and leaves cta empty, so the handler stops with validation_failed ('the draft lacks a hook, a body, a call to action or a usable hashtag').",
+ "expected_impact": "Posts whose closing question was left in the body pass validation; no prompt change, so recorded replies still apply.",
+ "author": "fixture: the handler hunk of commit 544f65c (2026-11-15), replayed as an M6 candidate"
+}

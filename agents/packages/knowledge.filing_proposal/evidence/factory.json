@@ -1,0 +1,187 @@
+{
+ "factory": "0.1.0",
+ "agent": "knowledge.filing_proposal@0.1.0",
+ "status": "candidate",
+ "failed_step": "",
+ "work_order": "",
+ "live": false,
+ "steps": [
+  {
+   "step": "spec",
+   "ok": true,
+   "candidates": 1
+  },
+  {
+   "step": "registry",
+   "ok": true,
+   "problems": [],
+   "similar": [],
+   "registered": false
+  },
+  {
+   "step": "cases",
+   "ok": true,
+   "problems": [],
+   "composition": {
+    "total": 30,
+    "edge": 7,
+    "adversarial": 5,
+    "needs_input": 2,
+    "critical": 9,
+    "safety": 6,
+    "short_of": {}
+   },
+   "probes": [
+    "canary",
+    "injection",
+    "isolation",
+    "undeclared_effect"
+   ],
+   "holdout": [
+    "core-client-email",
+    "core-client-proposal",
+    "core-hold-unrelated",
+    "edge-prospect-scope",
+    "needs-no-summary",
+    "safety-example-dealership-entity"
+   ],
+   "train": [
+    "adv-empty-client-scope",
+    "adv-instruction-in-summary",
+    "adv-invented-scope",
+    "adv-path-in-client-scope",
+    "adv-path-in-title",
+    "core-client-meeting",
+    "core-client-transcript",
+    "core-confidential-still-filed",
+    "core-global-meeting",
+    "core-hold-ambiguous-scope",
+    "core-hold-financial",
+    "core-hold-low-confidence",
+    "core-marketing",
+    "core-procedure",
+    "core-procedure-ignores-client",
+    "core-research",
+    "edge-accents-in-title",
+    "edge-date-in-words",
+    "edge-long-title",
+    "edge-no-date",
+    "edge-no-title",
+    "needs-no-source-ref",
+    "safety-credentials-held",
+    "safety-example-dealership-in-title"
+   ]
+  },
+  {
+   "step": "scaffold",
+   "ok": true,
+   "package": "agents/packages/knowledge.filing_proposal",
+   "files": 6
+  },
+  {
+   "step": "check",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "step": "eval",
+   "ok": true,
+   "level": "silver",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+   },
+   "complete": true,
+   "stopped": "",
+   "failed_cases": {},
+   "holdout_pass": true
+  }
+ ],
+ "level": "silver",
+ "kind": "tool",
+ "spec": "agents/factory/specs/knowledge.filing_proposal",
+ "spec_sha256": "c48bb8abe73476566d13dde63e2d89716daaa23d6832de0d8983f1042b1342a4",
+ "optimise": {
+  "candidates": [],
+  "chosen": {},
+  "training_cases": 24,
+  "held_out_cases": [
+   "core-client-email",
+   "core-client-proposal",
+   "core-hold-unrelated",
+   "edge-prospect-scope",
+   "needs-no-summary",
+   "safety-example-dealership-entity"
+  ],
+  "tokens": {
+   "limit": 0,
+   "spent": 0,
+   "live_calls": 0,
+   "refused_calls": 0,
+   "exact": true,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cached_input_tokens": 0
+  }
+ },
+ "chosen": {},
+ "tokens": {
+  "limit": 0,
+  "spent": 0,
+  "live_calls": 0,
+  "refused_calls": 0,
+  "exact": true,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cached_input_tokens": 0
+ },
+ "binding": "tool",
+ "holdout": {
+  "ids": [
+   "core-client-email",
+   "core-client-proposal",
+   "core-hold-unrelated",
+   "edge-prospect-scope",
+   "needs-no-summary",
+   "safety-example-dealership-entity"
+  ],
+  "cases": 6,
+  "ran": 6,
+  "passed": 6,
+  "pass_rate": 1.0,
+  "not_recorded": [],
+  "failed": {},
+  "critical_failed": [],
+  "schema_invalid": [],
+  "repair_rate": 0.0,
+  "model_calls": 0,
+  "tokens": 0,
+  "pass": true
+ },
+ "package_sha256": "842b4c650a1a77acdf6734d11a558e810dacdf7cd057300d0c1e1751c6621b75",
+ "evidence": "agents/packages/knowledge.filing_proposal/evidence/tool.json",
+ "gates": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true
+ },
+ "totals": {
+  "cases": 30,
+  "ran": 30,
+  "passed": 30,
+  "model_calls": 0,
+  "tokens": 0,
+  "live_calls": 0
+ },
+ "supports": [
+  "shadow",
+  "canary"
+ ]
+}

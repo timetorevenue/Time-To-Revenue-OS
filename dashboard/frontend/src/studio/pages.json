@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "comment": "Studio pages of the registered EXCO website (Stage 3), shared by the browser, the Python API and the site adapter. A page ID is permanent: drafts, server versions, proposals and exports are keyed by it. The homepage keeps its Stage 1 storage key and server draft folder. Service pages use the real ServicePage template with their content/services.ts entry. Routes, slugs and canonical URLs are the website's own and are never changed by Studio. Revisit when a page is added or the website's routes change. Last touched: 2026-11-18.",
+  "default": "home",
+  "pages": {
+    "home": {
+      "label": "Homepage",
+      "route": "/",
+      "template": "home",
+      "snapshot": "homepage.json",
+      "manifest": "source-manifest.json",
+      "storageKey": "ttros-studio:global:default-site:home:v1",
+      "draftFolder": "drafts"
+    },
+    "service-process": {
+      "label": "Business Process Automation",
+      "route": "/services/business-process-automation",
+      "template": "service",
+      "content": "process",
+      "typePrefix": "ServiceProcess",
+      "snapshot": "services.json",
+      "manifest": "service-manifest.json",
+      "storageKey": "ttros-studio:global:default-site:service-process:v1",
+      "draftFolder": "pages/service-process/drafts"
+    },
+    "service-integration": {
+      "label": "Systems Integration",
+      "route": "/services/systems-integration",
+      "template": "service",
+      "content": "integration",
+      "typePrefix": "ServiceIntegration",
+      "snapshot": "services.json",
+      "manifest": "service-manifest.json",
+      "storageKey": "ttros-studio:global:default-site:service-integration:v1",
+      "draftFolder": "pages/service-integration/drafts"
+    },
+    "service-ai": {
+      "label": "AI Implementation",
+      "route": "/services/ai-implementation",
+      "template": "service",
+      "content": "ai",
+      "typePrefix": "ServiceAi",
+      "snapshot": "services.json",
+      "manifest": "service-manifest.json",
+      "storageKey": "ttros-studio:global:default-site:service-ai:v1",
+      "draftFolder": "pages/service-ai/drafts"
+    },
+    "test-offer": {
+      "label": "TEST workflow audit offer",
+      "draftOnly": true,
+      "route": "/offers/test-workflow-audit",
+      "template": "service",
+      "content": "process",
+      "typePrefix": "TestOffer",
+      "snapshot": "services.json",
+      "manifest": "service-manifest.json",
+      "storageKey": "ttros-studio:global:default-site:test-offer:v1",
+      "draftFolder": "pages/test-offer/drafts"
+    }
+  },
+  "shared": {
+    "label": "Shared site",
+    "route": "All pages",
+    "template": "shared",
+    "snapshot": "shared.json",
+    "manifest": "source-manifest.json",
+    "storageKey": "ttros-studio:global:default-site:site:v1",
+    "draftFolder": "shared/drafts"
+  }
+}

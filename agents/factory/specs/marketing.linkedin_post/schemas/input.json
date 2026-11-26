@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "marketing.linkedin_post input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["topic"],
+  "properties": {
+    "topic": {"description": "What the post is about, in a sentence.", "type": "string", "minLength": 8, "maxLength": 300},
+    "angle": {"description": "The point of view or lesson to lead with.", "type": "string", "maxLength": 300},
+    "audience": {"type": "string", "maxLength": 200},
+    "cta": {"description": "The call to action to end on, in Casey's words. When absent the post ends on a question.", "type": "string", "maxLength": 200},
+    "confidential_terms": {"description": "Names that must not appear, such as the client the lesson came from.", "type": ["array", "null"], "maxItems": 12, "items": {"type": "string", "minLength": 2, "maxLength": 80}},
+    "evidence_refs": {
+      "description": "Exact Business Brain or artifact references to the notes. Never a search.",
+      "type": ["array", "null"], "maxItems": 4, "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^(business_brain:|artifact:)[A-Za-z0-9_./#:-]+$"}
+    },
+    "notes": {
+      "description": "Notes passed inline, each with the reference it should be cited by.",
+      "type": "array", "maxItems": 4,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["ref", "text"],
+        "properties": {
+          "ref": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$", "maxLength": 300},
+          "text": {"type": "string", "minLength": 10, "maxLength": 8000}
+        }
+      }
+    }
+  }
+}

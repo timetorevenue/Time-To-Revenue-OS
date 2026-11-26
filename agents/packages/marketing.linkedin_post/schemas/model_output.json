@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sufficient", "missing", "hook", "body", "cta", "hashtags", "claims"],
+  "properties": {
+    "sufficient": {"type": "boolean"},
+    "missing": {"type": "array", "items": {"type": "string"}},
+    "hook": {"type": "string"},
+    "body": {"type": "string"},
+    "cta": {"type": "string"},
+    "hashtags": {"type": "array", "items": {"type": "string"}},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["text", "source_id", "quote"],
+        "properties": {"text": {"type": "string"}, "source_id": {"type": "string"}, "quote": {"type": "string"}}
+      }
+    }
+  }
+}

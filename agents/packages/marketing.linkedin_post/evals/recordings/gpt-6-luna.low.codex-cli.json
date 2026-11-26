@@ -1,0 +1,704 @@
+{
+ "1da12d3792a18cf1b06f3cc3c92d4a187f624da632b195a718f094c6777ba0e2": {
+  "detail": "",
+  "json": {
+   "body": "",
+   "claims": [],
+   "cta": "",
+   "hashtags": [],
+   "hook": "",
+   "missing": [
+    "A real observation, lesson, or result from this week's client work"
+   ],
+   "sufficient": false
+  },
+  "latency_seconds": 2.709,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 7736,
+   "event_count": 1,
+   "input_tokens": 7691,
+   "output_tokens": 45,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "213934394aef25675dd0c0b36f842b48083ab2703d3fe1f79232605a0d432b70": {
+  "detail": "",
+  "json": {
+   "body": "At a clinic, voicemails were returned two or three days late.\nWeb form requests were also re-typed into the booking system by hand.\nThe practice manager estimated they lost about ten new patients a month because nobody called back in time.\nA useful first check: how long do callbacks take, and are web enquiries being copied manually?",
+   "claims": [
+    {
+     "quote": "returns voicemails two or three days late",
+     "source_id": "N1",
+     "text": "At a clinic, voicemails were returned two or three days late."
+    },
+    {
+     "quote": "web form requests are re-typed into the booking system by hand",
+     "source_id": "N1",
+     "text": "Web form requests were re-typed into the booking system by hand."
+    },
+    {
+     "quote": "lose about ten new patients a month because nobody calls back in time",
+     "source_id": "N1",
+     "text": "The practice manager estimated they lost about ten new patients a month because nobody called back in time."
+    }
+   ],
+   "cta": "Where do leads wait in your callback process?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#CustomerService"
+   ],
+   "hook": "Slow callbacks can cost more leads than missed calls.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.581,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8041,
+   "event_count": 1,
+   "input_tokens": 7794,
+   "output_tokens": 247,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "6275f3ea1c78be512c1f84d2ed8463af47c19088e25d389daf8a60a820fde1cf": {
+  "detail": "",
+  "json": {
+   "body": "A plumbing firm was taking four to six days to send quotes, written at night after jobs.\nTwo customers this month chose another firm before their quotes arrived.\nThe lesson: the delay can matter as much as the price.\nCheck how long customers wait for your quote, and when they usually receive it.\nA same-day quote template for bathroom jobs is being piloted.",
+   "claims": [
+    {
+     "quote": "Quotes take four to six days because Marco writes each one at night after jobs.",
+     "source_id": "N1",
+     "text": "A plumbing firm was taking four to six days to send quotes, written at night after jobs."
+    },
+    {
+     "quote": "two customers this month went with another firm before his quote arrived.",
+     "source_id": "N1",
+     "text": "Two customers this month chose another firm before their quotes arrived."
+    },
+    {
+     "quote": "pilot a same-day quote template on bathroom jobs.",
+     "source_id": "N1",
+     "text": "A same-day quote template for bathroom jobs is being piloted."
+    }
+   ],
+   "cta": "How long do your customers wait for a quote?",
+   "hashtags": [
+    "#Trades",
+    "#SmallBusiness"
+   ],
+   "hook": "Slow quotes can cost a trades business the job.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 7.011,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7985,
+   "event_count": 1,
+   "input_tokens": 7733,
+   "output_tokens": 252,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "6c7d64b312f93fcf8b633ea8e521b4bab52383c8478ac6367421f3900adf8dfa": {
+  "detail": "",
+  "json": {
+   "body": "At a service business, next-day changes arrived by text, and jobs were double-booked about twice a month.\nThe crews agreed to confirm next-day jobs by 4 pm in one shared sheet.\nIt’s a simple routine, but it gives everyone one place to check.\nWhere do last-minute changes get confirmed in your business?",
+   "claims": [
+    {
+     "quote": "Jobs are double-booked about twice a month because next-day changes travel by text message.",
+     "source_id": "N1",
+     "text": "Next-day changes arrived by text, and jobs were double-booked about twice a month."
+    },
+    {
+     "quote": "The crews agreed to confirm next-day jobs by 4 pm in one shared sheet.",
+     "source_id": "N1",
+     "text": "The crews agreed to confirm next-day jobs by 4 pm in one shared sheet."
+    }
+   ],
+   "cta": "Where do last-minute changes get confirmed in your business?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#Operations"
+   ],
+   "hook": "Boring fixes can stick when everyone knows where to check.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 7.555,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7989,
+   "event_count": 1,
+   "input_tokens": 7765,
+   "output_tokens": 224,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "6c91aaddf95a7358771cd201421feab5e7d181fe884f9215b5644e07343ebb08": {
+  "detail": "",
+  "json": {
+   "body": "At one roofing firm, next-day changes came by text, and jobs were double-booked about twice a month.\nThe crews agreed to confirm next-day jobs by 4 pm in one shared sheet.\nThe lesson: make the handoff clear before adding another tool.\nCheck how changes reach your team, and whether everyone confirms the same plan.",
+   "claims": [
+    {
+     "quote": "Jobs are double-booked about twice a month because next-day changes travel by text message.",
+     "source_id": "N1",
+     "text": "Next-day changes came by text, and jobs were double-booked about twice a month."
+    },
+    {
+     "quote": "The crews agreed to confirm next-day jobs by 4 pm in one shared sheet.",
+     "source_id": "N1",
+     "text": "The crews agreed to confirm next-day jobs by 4 pm in one shared sheet."
+    }
+   ],
+   "cta": "Where could a clearer handoff help in your business?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#Operations"
+   ],
+   "hook": "A shared sheet can solve a scheduling problem that new software won’t.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.154,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8049,
+   "event_count": 1,
+   "input_tokens": 7822,
+   "output_tokens": 227,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "78e00858fe9bbe06245b394e42fe4a220daec49e8795fb9ba861bd1a5f84daab": {
+  "detail": "",
+  "json": {
+   "body": "In one service business, intake details were entered in the web form, practice system and billing.\nA new matter took about forty minutes of admin before legal work started.\nThat’s time spent moving the same information, not serving the client.\nCheck how many times your team retypes client details, and where the same facts are entered.",
+   "claims": [
+    {
+     "quote": "Intake details are typed three times: the web form, the practice system and billing.",
+     "source_id": "N1",
+     "text": "Intake details were entered in the web form, practice system and billing."
+    },
+    {
+     "quote": "A new matter takes about forty minutes of admin before any legal work starts.",
+     "source_id": "N1",
+     "text": "A new matter took about forty minutes of admin before legal work started."
+    }
+   ],
+   "cta": "Where does your team retype the same client details?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#Admin"
+   ],
+   "hook": "Client details typed repeatedly can hide a costly admin step.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 5.852,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 7998,
+   "event_count": 1,
+   "input_tokens": 7784,
+   "output_tokens": 214,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "8f4611c71fde5061be7d197c4eb6cc22479e350aa416ef1fa6b949f3c3a1f579": {
+  "detail": "",
+  "json": {
+   "body": "",
+   "claims": [],
+   "cta": "",
+   "hashtags": [],
+   "hook": "",
+   "missing": [
+    "A source with an observation, lesson, or result about slow quotes and lost jobs."
+   ],
+   "sufficient": false
+  },
+  "latency_seconds": 5.291,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7750,
+   "event_count": 1,
+   "input_tokens": 7702,
+   "output_tokens": 48,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "9e1ee23798033361acf4c93945edc94ff3a879c5b3536c97ae327a1a0817e806": {
+  "detail": "",
+  "json": {
+   "body": "Next-day job changes were travelling by text, and jobs were double-booked about twice a month.\nThe crews agreed to confirm next-day jobs by 4 pm in one shared sheet.\nThat’s a simple process, but it makes the handoff clear.\nCheck where changes travel in your business, and whether everyone knows where to confirm them.",
+   "claims": [
+    {
+     "quote": "Jobs are double-booked about twice a month because next-day changes travel by text message.",
+     "source_id": "N1",
+     "text": "Next-day changes travelled by text, and jobs were double-booked about twice a month."
+    },
+    {
+     "quote": "The crews agreed to confirm next-day jobs by 4 pm in one shared sheet.",
+     "source_id": "N1",
+     "text": "The crews agreed to confirm next-day jobs by 4 pm in one shared sheet."
+    }
+   ],
+   "cta": "Where could one shared place make a handoff clearer in your business?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#Operations"
+   ],
+   "hook": "A boring fix can stick when it gives everyone one clear place to confirm changes.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.133,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7971,
+   "event_count": 1,
+   "input_tokens": 7739,
+   "output_tokens": 232,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "9fcafdbc0d0e214a09daba09221f998a75d5686838f5c56251b9d42362290225": {
+  "detail": "",
+  "json": {
+   "body": "Voicemails had been waiting two days.\nThen one person took ownership of the callback list.\nThey were returned the same day.\nCheck whether one person clearly owns callbacks in your business.",
+   "claims": [
+    {
+     "quote": "A clinic gave one person ownership of the callback list.",
+     "source_id": "N1",
+     "text": "A clinic gave one person ownership of the callback list."
+    },
+    {
+     "quote": "Voicemails that used to wait two days are now returned the same day.",
+     "source_id": "N1",
+     "text": "Voicemails that had waited two days were returned the same day."
+    }
+   ],
+   "cta": "Who owns your callback list?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#CustomerService"
+   ],
+   "hook": "A clinic returned callbacks the same day after giving one person ownership of the list.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 5.803,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7884,
+   "event_count": 1,
+   "input_tokens": 7708,
+   "output_tokens": 176,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "a40605e96678e80a232d5a1514cc20e6b0b347af44061157d9276fc8d4138e44": {
+  "detail": "",
+  "json": {
+   "body": "A plumbing firm took four to six days to send quotes, with the owner writing each one at night after jobs.\nTwo customers this month chose another firm before their quote arrived.\nThey agreed to pilot a same-day quote template for bathroom jobs.\nCheck how long customers wait for your quotes, and whether preparing them after the workday is causing delays.",
+   "claims": [
+    {
+     "quote": "Quotes take four to six days because Marco writes each one at night after jobs.",
+     "source_id": "N1",
+     "text": "A plumbing firm took four to six days to send quotes, with the owner writing each one at night after jobs."
+    },
+    {
+     "quote": "two customers this month went with another firm before his quote arrived.",
+     "source_id": "N1",
+     "text": "Two customers this month chose another firm before their quote arrived."
+    },
+    {
+     "quote": "agreed to pilot a same-day quote template on bathroom jobs.",
+     "source_id": "N1",
+     "text": "They agreed to pilot a same-day quote template for bathroom jobs."
+    }
+   ],
+   "cta": "If quotes are your bottleneck, send me a message and I will share the template.",
+   "hashtags": [
+    "#SmallBusiness",
+    "#ServiceBusiness"
+   ],
+   "hook": "Slow quotes can cost service businesses the job.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.764,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8005,
+   "event_count": 1,
+   "input_tokens": 7744,
+   "output_tokens": 261,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "a942ff2da8cda4acdbe0037421a50446b4aab5ba1d54df33ddd0aece7fadc58d": {
+  "detail": "",
+  "json": {
+   "body": "A gym used to send its re-activation message after 30 days without a visit.\nIts own attendance numbers showed most returning members came back within three weeks.\nSo the message moved to day 21.\nThe timing came from the business’s data, not a best-practice article.\nWhat do your own numbers say about when customers are most likely to respond?",
+   "claims": [
+    {
+     "quote": "most members who come back do so within three weeks",
+     "source_id": "N1",
+     "text": "Most returning members came back within three weeks."
+    },
+    {
+     "quote": "The re-activation message used to go out after 30 days of no visits",
+     "source_id": "N1",
+     "text": "The re-activation message used to go out after 30 days of no visits."
+    },
+    {
+     "quote": "so we moved the message to day 21",
+     "source_id": "N1",
+     "text": "The message moved to day 21."
+    },
+    {
+     "quote": "the timing came from the gym's attendance data, not from a best-practice article",
+     "source_id": "N1",
+     "text": "The timing came from the business’s data, not a best-practice article."
+    }
+   ],
+   "cta": "",
+   "hashtags": [
+    "#CustomerTiming",
+    "#SmallBusiness"
+   ],
+   "hook": "Most returning members came back within three weeks.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.773,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8033,
+   "event_count": 1,
+   "input_tokens": 7762,
+   "output_tokens": 271,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "ce0c4708c473b0b3457f077d6e85dd5f57d01fe9bab2860a19dd393836c02da6": {
+  "detail": "",
+  "json": {
+   "body": "But the better first question is which task makes the team wait.\nIn our last five assessments, the biggest delay was never the task the owner named first.\nThat’s a reminder to look beyond the obvious bottleneck.\nWhere does work sit waiting in your business?",
+   "claims": [
+    {
+     "quote": "most small firms ask which AI tool to buy",
+     "source_id": "N1",
+     "text": "Small firms often start by asking which AI tool to buy."
+    },
+    {
+     "quote": "The better first question is which task makes the team wait",
+     "source_id": "N1",
+     "text": "The better first question is which task makes the team wait."
+    },
+    {
+     "quote": "In our last five assessments the biggest delay was never the task the owner named first",
+     "source_id": "N1",
+     "text": "In our last five assessments, the biggest delay was never the task the owner named first."
+    }
+   ],
+   "cta": "Where does work sit waiting in your business?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#AI"
+   ],
+   "hook": "Small firms often start by asking which AI tool to buy.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.416,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7963,
+   "event_count": 1,
+   "input_tokens": 7736,
+   "output_tokens": 227,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "cfa6a16a91c87689b84908375b32d9b928b6fd72b9813635dcc75b4864a0258e": {
+  "detail": "",
+  "json": {
+   "body": "A clinic’s front desk was returning voicemails two or three days late.\nWeb form requests were also being re-typed into the booking system by hand.\nThe practice manager estimated about ten new patients a month were lost because nobody called back in time.\nCheck how quickly your team returns calls and whether web enquiries need to be entered manually.",
+   "claims": [
+    {
+     "quote": "returns voicemails two or three days late",
+     "source_id": "N1",
+     "text": "A clinic’s front desk was returning voicemails two or three days late."
+    },
+    {
+     "quote": "web form requests are re-typed into the booking system by hand",
+     "source_id": "N1",
+     "text": "Web form requests were being re-typed into the booking system by hand."
+    },
+    {
+     "quote": "lose about ten new patients a month because nobody calls back in time",
+     "source_id": "N1",
+     "text": "The practice manager estimated about ten new patients a month were lost because nobody called back in time."
+    }
+   ],
+   "cta": "Where does a new enquiry wait longest in your business?",
+   "hashtags": [
+    "#CustomerService",
+    "#SmallBusiness"
+   ],
+   "hook": "Slow callbacks can cost a clinic new patients.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.683,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8012,
+   "event_count": 1,
+   "input_tokens": 7763,
+   "output_tokens": 249,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "d1ee3fa96a1ff988fcb22683d4f0fc02bebbffefc1fac1f8d6672958f3a3110d": {
+  "detail": "",
+  "json": {
+   "body": "A plumbing firm was preparing quotes at night after jobs, with a four-to-six-day wait.\nTwo customers this month chose another firm before their quote arrived.\nThe lesson: quote speed can affect whether you get the chance to win the work.\nWe agreed to pilot a same-day quote template on bathroom jobs.\nCheck how long quotes take in your business, and when customers decide.",
+   "claims": [
+    {
+     "quote": "Quotes take four to six days because Marco writes each one",
+     "source_id": "N1",
+     "text": "Quotes took four to six days to arrive."
+    },
+    {
+     "quote": "two customers this month went with another firm before his quote arrived",
+     "source_id": "N1",
+     "text": "Two customers this month chose another firm before receiving the quote."
+    },
+    {
+     "quote": "pilot a same-day quote template on bathroom jobs",
+     "source_id": "N1",
+     "text": "A same-day quote template was planned for bathroom jobs."
+    }
+   ],
+   "cta": "How quickly do your customers need a quote?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#ServiceBusiness"
+   ],
+   "hook": "A quote that arrives four to six days later can arrive after the customer has chosen another firm.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.497,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7978,
+   "event_count": 1,
+   "input_tokens": 7734,
+   "output_tokens": 244,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "dffad1fd546ad3ed62f84fe87052a168e9988dc74078e5738a933ffe982c7540": {
+  "detail": "",
+  "json": {
+   "body": "At a clinic, voicemails were returned two or three days late.\nWeb form requests were re-typed into the booking system by hand.\nThe practice manager estimated about ten new patients a month were lost because callbacks came too late.\nCheck how long your team takes to return voicemails and follow up web forms.\nA simple first step is to map the callback workflow.",
+   "claims": [
+    {
+     "quote": "returns voicemails two or three days late",
+     "source_id": "E1",
+     "text": "A clinic returned voicemails two or three days late."
+    },
+    {
+     "quote": "web form requests are re-typed into the booking system by hand",
+     "source_id": "E1",
+     "text": "Web form requests were re-typed into the booking system by hand."
+    },
+    {
+     "quote": "lose about ten new patients a month because nobody calls back in time",
+     "source_id": "E1",
+     "text": "The practice manager estimated about ten new patients a month were lost because callbacks came too late."
+    },
+    {
+     "quote": "start with a starter scan of the callback workflow",
+     "source_id": "E1",
+     "text": "The first step agreed was a starter scan of the callback workflow."
+    }
+   ],
+   "cta": "How quickly does your team call back a new lead?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#CustomerService"
+   ],
+   "hook": "Slow callbacks can cost more leads than missed calls.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 7.729,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8122,
+   "event_count": 1,
+   "input_tokens": 7835,
+   "output_tokens": 287,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "e1f9a855688edb2bd10add918c43b92b39076fcd03c0cb20010c1d140ef5e113": {
+  "detail": "",
+  "json": {
+   "body": "In one service business, intake details were typed into the web form, practice system and billing.\nA new matter took about forty minutes of admin before any legal work started.\nThat points to a useful check: where are the same client details being entered more than once?\nMap the handoffs from enquiry to billing and see where duplicate typing happens.\nKeep important checks in place while looking for repeat entry.",
+   "claims": [
+    {
+     "quote": "Intake details are typed three times: the web form, the practice system and billing.",
+     "source_id": "N1",
+     "text": "Intake details were typed into the web form, practice system and billing."
+    },
+    {
+     "quote": "Asha said a new matter takes about forty minutes of admin before any legal work starts.",
+     "source_id": "N1",
+     "text": "A new matter took about forty minutes of admin before any legal work started."
+    }
+   ],
+   "cta": "Where does your team retype the same client details?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#Operations"
+   ],
+   "hook": "Client details entered three times can quietly add admin before the real work begins.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.154,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7980,
+   "event_count": 1,
+   "input_tokens": 7744,
+   "output_tokens": 236,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "efe51c485aa4f6ac7e95f043bedc5e50b9633ed670ce5e4e54e288bd8cbc14a3": {
+  "detail": "",
+  "json": {
+   "body": "In one service business, intake details went into a web form, a practice system and billing.\nA new matter took about forty minutes of admin before legal work started.\nThat makes repeated entry a cost worth checking, even when it is easy to overlook.\nMap where the same client details are entered across your own process.\nKeep essential checks in place when reviewing what could be simplified.",
+   "claims": [
+    {
+     "quote": "Intake details are typed three times: the web form, the practice system and billing.",
+     "source_id": "N1",
+     "text": "Intake details were entered in three places: a web form, a practice system and billing."
+    },
+    {
+     "quote": "A new matter takes about forty minutes of admin before any legal work starts.",
+     "source_id": "N1",
+     "text": "A new matter took about forty minutes of admin before legal work started."
+    },
+    {
+     "quote": "The partners want conflict checks left exactly as they are.",
+     "source_id": "N1",
+     "text": "Essential checks should be kept in place when reviewing the process."
+    }
+   ],
+   "cta": "Where are your client details being typed more than once?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#Operations"
+   ],
+   "hook": "Client details were typed three times before any legal work began.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 7.105,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8008,
+   "event_count": 1,
+   "input_tokens": 7745,
+   "output_tokens": 263,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "f8966d14ffc444b1322b92ab8bb204e0bc59b6175da5930158cd3e1798e76a4b": {
+  "detail": "",
+  "json": {
+   "body": "A plumbing firm’s owner wrote each quote at night after jobs, and quotes took four to six days.\nTwo customers this month chose another firm before the quote arrived.\nWe agreed to pilot a same-day quote template on bathroom jobs.\nCheck how long quotes take in your business, and whether customers are deciding before they arrive.",
+   "claims": [
+    {
+     "quote": "Quotes take four to six days because Marco writes each one at night",
+     "source_id": "N1",
+     "text": "Quotes took four to six days because the owner wrote each one at night after jobs."
+    },
+    {
+     "quote": "two customers this month went with another firm before his quote arrived",
+     "source_id": "N1",
+     "text": "Two customers this month chose another firm before the quote arrived."
+    },
+    {
+     "quote": "agreed to pilot a same-day quote template on bathroom jobs",
+     "source_id": "N1",
+     "text": "We agreed to pilot a same-day quote template on bathroom jobs."
+    }
+   ],
+   "cta": "How quickly do your quotes reach customers?",
+   "hashtags": [
+    "#SmallBusiness",
+    "#ServiceBusiness"
+   ],
+   "hook": "Quotes taking four to six days can arrive after the customer has chosen someone else.",
+   "missing": [],
+   "sufficient": true
+  },
+  "latency_seconds": 6.588,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8013,
+   "event_count": 1,
+   "input_tokens": 7770,
+   "output_tokens": 243,
+   "reasoning_output_tokens": 0
+  }
+ }
+}

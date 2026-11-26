@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "description": "Rights register for universal knowledge. A file is exportable only when redistribution is 'cleared', authorship is 'original' with a licence, and owner_review holds a date (a human decision). Everything else stays private.",
+  "entries": {
+    "universal/marketing/icp-definition/METHOD.md": {
+      "authorship": "original",
+      "licence": "MIT",
+      "redistribution": "cleared",
+      "owner_review": "2026-11-26",
+      "note": "Independently authored 2026-11-26 for TTROS; contains no third-party text and no company, client or Brain material (checked by the Brain leak gate). Rights review recorded 2026-11-26 under the owner's release instruction of that date; the owner may withdraw it."
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# Revisit: when the Dashboard backend unit or the repo location changes. Last touched: 2026-11-07.
+# Triggered by aos-backend-stale.path. No-op unless /api/health reports code.stale = true.
+[Unit]
+Description=TTROS: restart aos-backend if it is running older code than is on disk
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/ttros-core
+Environment=PYTHONDONTWRITEBYTECODE=1
+# Let a burst of git operations (commit then push, rebase) settle before checking.
+ExecStartPre=/bin/sleep 3
+ExecStart=/opt/ttros-core/.venv/bin/python /opt/ttros-core/tools/runtime_code_staleness.py --restart-if-stale
+TimeoutStartSec=120

@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "comment": "Version 2 (schema v5, website 215679e): WorkflowFigure is the candidate's text workflow story (no SVG). legacy.fields maps the hero snapshot's flat text keys onto the native child's named fields. Drafts from version 1 (c58e641) migrate through migrations.json. Last touched: 2026-11-21.",
+  "maxDepth": 4,
+  "maxComponents": 80,
+  "slots": {
+    "Section0": {
+      "workflow": {
+        "allow": ["WorkflowFigure"], "min": 1, "max": 1,
+        "legacy": {"type":"WorkflowFigure", "styleTarget":"figure-0", "fields":{"text6":"eyebrow","text7":"titleLine1","text8":"titleLine2","text9":"before","text10":"step1Number","text11":"step1Title","text12":"step1Text","text13":"step2Number","text14":"step2Title","text15":"step2Text","text16":"step3Number","text17":"step3Title","text18":"step3Text","text19":"after","text20":"disclaimer"}}
+      }
+    }
+  },
+  "components": {
+    "WorkflowFigure": {
+      "label":"Workflow graphic", "sourceType":"Section0", "sourceTag":"figure", "sourceClass":"workflow-figure",
+      "description":"The actual website WorkflowFigure (inquiry-to-next-step story), required inside the Hero workflow slot.",
+      "textFields":{"eyebrow":"Graphic eyebrow","titleLine1":"Title line 1","titleLine2":"Title line 2","before":"Before statement","step1Number":"Step 1 marker","step1Title":"Step 1 title","step1Text":"Step 1 description","step2Number":"Step 2 marker","step2Title":"Step 2 title","step2Text":"Step 2 description","step3Number":"Step 3 marker","step3Title":"Step 3 title","step3Text":"Step 3 description","after":"Outcome statement","disclaimer":"Disclaimer"},
+      "graphic":true,
+      "targets":[{"id":"section","label":"Whole workflow graphic","tag":"figure"}]
+    }
+  }
+}

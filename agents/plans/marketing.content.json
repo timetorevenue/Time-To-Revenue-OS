@@ -1,0 +1,58 @@
+{
+  "plan": "marketing.content",
+  "version": "0.1.0",
+  "summary": "One LinkedIn post from named notes: open the notes, draft the post, check its citations, then check the publishing rules and file the draft for approval.",
+  "source_workflow": "workflows/linkedin_content/workflow.md",
+  "input_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["topic", "evidence_refs"],
+    "properties": {
+      "topic": {"type": "string"},
+      "angle": {"type": "string"},
+      "audience": {"type": "string"},
+      "cta": {"type": "string"},
+      "confidential_terms": {"type": "array", "items": {"type": "string"}},
+      "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+    }
+  },
+  "budget": {"tokens": 12000, "model_calls": 2, "seconds": 150},
+  "steps": [
+    {"id": "retrieve", "agent": "shared.brain_retrieve@0.1.0", "input": {"evidence_refs": "$input.evidence_refs"}},
+    {
+      "id": "post",
+      "agent": "marketing.linkedin_post@0.1.0",
+      "needs": ["retrieve"],
+      "input": {
+        "topic": "$input.topic",
+        "angle": "$input.angle",
+        "audience": "$input.audience",
+        "cta": "$input.cta",
+        "confidential_terms": "$input.confidential_terms",
+        "evidence_refs": "$steps.retrieve.output.refs"
+      }
+    },
+    {
+      "id": "verify",
+      "agent": "shared.cite_verify@0.1.0",
+      "needs": ["retrieve", "post"],
+      "input": {"claim_sets": ["$steps.post.output.claims"], "allowed_refs": "$steps.retrieve.output.refs"}
+    },
+    {
+      "id": "check",
+      "agent": "marketing.post_check@0.1.0",
+      "needs": ["post", "verify"],
+      "input": {
+        "post": "$steps.post.output.post",
+        "hashtags": "$steps.post.output.hashtags",
+        "confidential_terms": "$input.confidential_terms",
+        "artifact_name": "linkedin_post.md"
+      }
+    }
+  ],
+  "output": {
+    "post": "$steps.post.output",
+    "verification": "$steps.verify.output",
+    "check": "$steps.check.output"
+  }
+}

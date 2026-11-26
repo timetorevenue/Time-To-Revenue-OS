@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "research.synthesise input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["question"],
+  "properties": {
+    "question": {"type": "string", "minLength": 10, "maxLength": 400},
+    "audience": {"description": "Who the answer is for; shapes emphasis only.", "type": "string", "maxLength": 200},
+    "evidence_refs": {
+      "description": "Exact Business Brain or artifact references. Never a search.",
+      "type": ["array", "null"], "maxItems": 6, "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^(business_brain:|artifact:)[A-Za-z0-9_./#:-]+$"}
+    },
+    "sources": {
+      "description": "Source text passed inline (an excerpt, a transcript, a note), each with the reference or URL it should be cited by.",
+      "type": "array", "maxItems": 6,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["ref", "text"],
+        "properties": {
+          "ref": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$", "maxLength": 300},
+          "title": {"type": "string", "maxLength": 200},
+          "text": {"type": "string", "minLength": 10, "maxLength": 8000}
+        }
+      }
+    }
+  }
+}

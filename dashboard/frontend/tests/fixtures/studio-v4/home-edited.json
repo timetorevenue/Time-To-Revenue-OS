@@ -1,0 +1,275 @@
+{
+  "version": 4,
+  "project": "default-site",
+  "source": {
+    "commit": "c58e64139af19feab78aca7cbcfbd725d1828e7d",
+    "files": {
+      "app/page.tsx": "7f7c4450f64c600627ada87ba894184f708f85cff31982814761a020b933d50d",
+      "app/layout.tsx": "c9587c9878ec571f4895619be6a7e3aaaaf8076b6efe36d2e1d1ae490b0619f5",
+      "app/globals.css": "9a3c7bafe750ee910a891f0a930efc80f2ac26413554962b9e1a175216f95e68",
+      "components/Editorial.tsx": "86d690d6fba839c9b381189907bbb75403d36427a7647572b08266a123a1d38a",
+      "components/WorkflowFigure.tsx": "bedcfb3187340c50e1bed7c53c18f07cf55eb954be53a5407bb77922ffe3f057",
+      "components/SiteArrow.tsx": "5c20fd134bc878baadba6a5ac2db7fdab1964c5aecee270b02a5f42e3d4a2adc",
+      "components/Header.tsx": "f7d2723787ae29a8c1b1e8bf97000c7e87014972c9cc8afd00d1946f748647eb",
+      "components/Footer.tsx": "a4db4b3128cfeb227ac4002d1702187ddc2917c92570af541252ae92af9eeace",
+      "components/JsonLd.tsx": "1534540256b3d24c20a7dcb7129245ec28a3435a8e9344108ab97680493c2ccb",
+      "content/services.ts": "75b23a474f466a87d338a3ce2922dbcf2e5d6e6696765febc9eb49cfec2e2a16",
+      "lib/commercial.ts": "648390f8e8517a7f5b5fc5037e0b9b190e3736025e50c8443b428c1afefdce7f",
+      "lib/config.ts": "3ae5680d61026285613142df4ecdb5342717d54a85a7c26a2961c4e43377929b"
+    }
+  },
+  "data": {
+    "root": {
+      "props": {
+        "design": {
+          "headingFont": "Geist",
+          "bodyFamily": "Inter",
+          "primary": "#111315",
+          "secondary": "#ece7dc",
+          "accent": "#b89b63",
+          "background": "#f7f3ea",
+          "text": "#111315",
+          "muted": "#57564f",
+          "h1Font": "inherit",
+          "h1Size": 106,
+          "h1Weight": 570,
+          "h1LineHeight": 0.99,
+          "h1Tracking": -0.06,
+          "h2Font": "inherit",
+          "h2Size": 70,
+          "h2Weight": 570,
+          "h2LineHeight": 1.035,
+          "h2Tracking": -0.06,
+          "h3Font": "inherit",
+          "h3Size": 27,
+          "h3Weight": 570,
+          "h3LineHeight": 1.18,
+          "h3Tracking": -0.04,
+          "bodyFont": "inherit",
+          "bodySize": 16,
+          "bodyWeight": 400,
+          "bodyLineHeight": 1.65,
+          "bodyTracking": -0.005,
+          "buttonFont": "inherit",
+          "buttonSize": 15,
+          "buttonWeight": 600,
+          "buttonLineHeight": 1.35,
+          "buttonTracking": 0,
+          "buttonRadius": 3,
+          "buttonPaddingBlock": 12,
+          "buttonPaddingInline": 18,
+          "borderWidth": 1,
+          "borderStyle": "solid",
+          "borderColor": "#cfc7b8",
+          "sectionSpacing": 122,
+          "layoutGap": 64,
+          "contentWidth": 1248,
+          "alignment": "left"
+        }
+      }
+    },
+    "content": [
+      {
+        "type": "Section0",
+        "props": {
+          "id": "Section0",
+          "workflow": [
+            {
+              "type": "WorkflowFigure",
+              "props": {
+                "id": "Section0-workflow",
+                "eyebrow": "Illustrative workflow",
+                "caption": "From first call to signed quote",
+                "step1": "Capture inquiry",
+                "step2": "Name the owner",
+                "step3": "Follow up",
+                "graphic": {
+                  "source": "workflow",
+                  "asset": null,
+                  "alt": "",
+                  "width": 80,
+                  "horizontal": "end",
+                  "vertical": "center",
+                  "fit": "contain",
+                  "signal": "#527a65"
+                },
+                "styles": {
+                  "section": {
+                    "paddingBlock": 40
+                  }
+                }
+              }
+            }
+          ],
+          "text0": "Grow your business. ",
+          "text1": "Not your overtime.",
+          "text2": "We get inside your business, find what's holding it back, and build the systems that help you increase revenue, reduce costs and run more efficiently.",
+          "text3": "Discuss your business ",
+          "text4": "See how we work ",
+          "link0": "/free-assessment",
+          "link1": "/how-we-work",
+          "styles": {
+            "p-0": {
+              "text": "#2f2f2a"
+            }
+          }
+        }
+      },
+      {
+        "type": "Section1",
+        "props": {
+          "id": "Section1",
+          "text0": "Where work gets stuck",
+          "text1": "A busy business can still be losing ground.",
+          "text2": "Good leads go quiet.",
+          "text3": "An inquiry sits in the wrong inbox. A quote goes out and nobody follows up.",
+          "text4": "Admin fills the day.",
+          "text5": "Your team copies information into two systems, chases an approval and rebuilds the same report every week.",
+          "text6": "Growth adds complexity.",
+          "text7": "More customers mean more handoffs, more chances for things to go wrong and more decisions landing on your desk.",
+          "styles": {}
+        }
+      },
+      {
+        "type": "Section2",
+        "props": {
+          "id": "Section2",
+          "text0": "More revenue.",
+          "text1": "Less work.",
+          "text2": "Better systems give your business room to grow and make daily work easier for the people doing it.",
+          "text3": "↗",
+          "text4": "Win more of the business you’re already working to attract.",
+          "text5": "↗",
+          "text6": "Reduce costs and cut unnecessary work.",
+          "text7": "↗",
+          "text8": "Free up time for work that needs your team’s judgment.",
+          "text9": "↗",
+          "text10": "Reduce errors, delays and missed handoffs.",
+          "text11": "↗",
+          "text12": "Make the business easier to run, manage and grow.",
+          "styles": {}
+        }
+      },
+      {
+        "type": "Section2",
+        "props": {
+          "id": "outcomes-legacy1",
+          "text0": "More revenue.",
+          "text1": "Less work.",
+          "text2": "Better systems give your business room to grow and make daily work easier for the people doing it.",
+          "text3": "↗",
+          "text4": "Win more of the business you’re already working to attract.",
+          "text5": "↗",
+          "text6": "Reduce costs and cut unnecessary work.",
+          "text7": "↗",
+          "text8": "Free up time for work that needs your team’s judgment.",
+          "text9": "↗",
+          "text10": "Reduce errors, delays and missed handoffs.",
+          "text11": "↗",
+          "text12": "Make the business easier to run, manage and grow.",
+          "styles": {}
+        }
+      },
+      {
+        "type": "Section3",
+        "props": {
+          "id": "Section3",
+          "text0": "We build the systems that keep you moving.",
+          "text1": "We look at how your business works, simplify the process and build what your team needs to keep it moving.",
+          "text2": "Growth systems",
+          "text3": "Reach the right prospects, see what’s in the sales pipeline and follow up on opportunities. Make onboarding easier so customers are more likely to come back.",
+          "text4": "Operational systems",
+          "text5": "Cut repeat admin, connect disconnected tools, and give your team one reliable way to find information, get approvals and see what needs attention.",
+          "text6": "Business Process & Workflow Automation ",
+          "text7": "Improve intake, follow-up and handoffs so good opportunities get a response and your team spends less time on admin.",
+          "text8": "Systems Integration & Modernization ",
+          "text9": "Connect your software, make information easier to find and build custom applications when your business needs them.",
+          "text10": "AI Strategy, Implementation & Adoption ",
+          "text11": "Choose useful applications, build focused tools with clear controls and help your team use them in everyday work.",
+          "link0": "/services/business-process-automation",
+          "link1": "/services/systems-integration",
+          "link2": "/services/ai-implementation",
+          "styles": {}
+        }
+      },
+      {
+        "type": "Section4",
+        "props": {
+          "id": "Section4",
+          "text0": "How we work",
+          "text1": "From bottleneck to working system.",
+          "text2": "We work directly with you and your team, from understanding the problem through rollout, training and measurement.",
+          "text3": "Understand",
+          "text4": "Work alongside your team to see how work gets done, where customers wait and where staff lose time.",
+          "text5": "Identify",
+          "text6": "Find the bottlenecks with the most impact, agree what to tackle and establish how to measure progress.",
+          "text7": "Build",
+          "text8": "Improve the process and build the system around your team, your tools and the decisions people need to make.",
+          "text9": "Implement",
+          "text10": "Test with real scenarios, roll out the system and train the people who will use and maintain it.",
+          "text11": "Improve",
+          "text12": "Review performance with your team, fix what crops up in daily use and decide where it makes sense to go next.",
+          "text13": "See how we work ",
+          "link0": "/how-we-work",
+          "styles": {}
+        }
+      },
+      {
+        "type": "Section6",
+        "props": {
+          "id": "Section6",
+          "text0": "Founder",
+          "text1": "Meet Casey Linden.",
+          "text2": "Casey works with owners and their teams to find where time and opportunities slip away, then builds practical systems to address the causes. He’s based in Example City and works with businesses across Canada.",
+          "text3": "About Example Company ",
+          "link0": "/about",
+          "styles": {}
+        }
+      },
+      {
+        "type": "Section7",
+        "props": {
+          "id": "Section7",
+          "text0": "Common questions.",
+          "text1": "What does Example Company do?",
+          "text2": "We work with your team to find what is holding the business back, then improve the process and build the systems that support it. That can cover sales follow-up, day-to-day operations, software integration, custom development or practical AI.",
+          "text3": "Can we start with one problem?",
+          "text4": "Yes. A focused project can make sense when there is a clear bottleneck. We also work across connected workflows when the cause spans several teams or tools.",
+          "text5": "Can you work with the tools we already use?",
+          "text6": "Yes. We look at the tools and data you have and keep what works. Where there’s a gap, we can connect, adapt or build the system you need.",
+          "text7": "Who owns and maintains what you build?",
+          "text8": "You own your systems and business data. We document what we build, train the people who use it, and discuss any ongoing support separately.",
+          "text9": "Do you work with businesses outside Example City?",
+          "text10": "Yes. Example Company is based in Example City, EX, and works with businesses locally and remotely across Canada.",
+          "text11": "How much does a project cost?",
+          "text12": "The first conversation is free. Project costs depend on the workflow, your tools and the scope of the build. Our pricing page shows published starting points and assessment fees.",
+          "styles": {}
+        }
+      },
+      {
+        "type": "Section8",
+        "props": {
+          "id": "Section8",
+          "text0": "What’s holding your business back?",
+          "text1": "Tell us where work gets stuck or opportunities get missed. We’ll talk through what a useful first step could look like.",
+          "text2": "Discuss your business ",
+          "link0": "/free-assessment",
+          "styles": {}
+        }
+      },
+      {
+        "type": "Section5",
+        "props": {
+          "id": "Section5",
+          "text0": "Our work",
+          "text1": "What better systems look like in practice.",
+          "text2": "The 4-Prompt Project Workflow",
+          "text3": "Explore our published guide to preparing project context, handing work over and resuming it without having to reconstruct the details.",
+          "text4": "Explore our work ",
+          "link0": "/our-work",
+          "styles": {}
+        }
+      }
+    ]
+  }
+}

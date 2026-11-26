@@ -1,0 +1,483 @@
+{
+ "tas": "0.1",
+ "agent": "research.brief_render@0.1.0",
+ "kind": "tool",
+ "binding": "tool",
+ "package_sha256": "651dfd5cb960fe38550f721dc30a85707e48cd40b14311f2484c8a2f449ebcc9",
+ "prompt_sha256": "",
+ "evaluated_at": "2026-11-26T18:23:32+00:00",
+ "mode": "replay",
+ "complete": true,
+ "level": "silver",
+ "not_recorded": [],
+ "totals": {
+  "cases": 22,
+  "ran": 22,
+  "passed": 22,
+  "model_calls": 0,
+  "tokens": 0,
+  "live_calls": 0
+ },
+ "gates": {
+  "1": {
+   "agent": "research.brief_render@0.1.0",
+   "gate": 1,
+   "pass": true,
+   "problems": [],
+   "eval_set": {
+    "total": 22,
+    "edge": 8,
+    "adversarial": 4,
+    "needs_input": 2,
+    "critical": 7,
+    "safety": 4,
+    "short_of": {}
+   },
+   "kind": "tool",
+   "package_sha256": "651dfd5cb960fe38550f721dc30a85707e48cd40b14311f2484c8a2f449ebcc9"
+  },
+  "2": {
+   "pass_rate": 1.0,
+   "required_pass_rate": 0.9,
+   "critical_failed": [],
+   "schema_invalid": [],
+   "repair_rate": 0.0,
+   "composition": {
+    "total": 22,
+    "edge": 8,
+    "adversarial": 4,
+    "needs_input": 2,
+    "critical": 7,
+    "safety": 4,
+    "short_of": {}
+   },
+   "failed": {},
+   "pass": true
+  },
+  "3": {
+   "cases": 4,
+   "probes": [
+    "canary",
+    "injection"
+   ],
+   "failed": {},
+   "pass": true
+  },
+  "4": {
+   "failed": {},
+   "judged_rubric": "not_configured",
+   "pass": true
+  },
+  "5": {
+   "p50_seconds": 0.01,
+   "p95_seconds": 0.011,
+   "limits": {
+    "p50": 1.0,
+    "p95": 2.0
+   },
+   "over_model_calls": [],
+   "source": "recorded",
+   "pass": true
+  },
+  "6": {
+   "p95_tokens": null,
+   "median_tokens": 0,
+   "budget_tokens": 0,
+   "baseline_tokens": null,
+   "baseline_share_max": 0.5,
+   "all_exact": true,
+   "pass": true
+  }
+ },
+ "gates_not_run": [
+  "7"
+ ],
+ "cases": [
+  {
+   "id": "core-full-brief",
+   "tags": [
+    "core",
+    "critical"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.011,
+   "not_recorded": false
+  },
+  {
+   "id": "core-numbering-by-first-use",
+   "tags": [
+    "core",
+    "critical"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "core-quotes-printed",
+   "tags": [
+    "core"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "core-confidence-shown",
+   "tags": [
+    "core"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "core-title-given",
+   "tags": [
+    "core"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "core-no-artifact-by-default",
+   "tags": [
+    "core"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.011,
+   "not_recorded": false
+  },
+  {
+   "id": "core-uncited-source-not-listed",
+   "tags": [
+    "core"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "edge-single-finding",
+   "tags": [
+    "edge"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "edge-no-conflicts-or-gaps",
+   "tags": [
+    "edge"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "edge-no-quote-or-confidence",
+   "tags": [
+    "edge"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "edge-eight-findings",
+   "tags": [
+    "edge"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.011,
+   "not_recorded": false
+  },
+  {
+   "id": "edge-same-source-twice-in-one",
+   "tags": [
+    "edge"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.011,
+   "not_recorded": false
+  },
+  {
+   "id": "edge-blank-claim-skipped",
+   "tags": [
+    "edge"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "edge-missing-summary",
+   "tags": [
+    "edge"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "needs-no-findings",
+   "tags": [
+    "needs_input",
+    "edge",
+    "critical"
+   ],
+   "status": "needs_input",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "needs-no-question",
+   "tags": [
+    "needs_input"
+   ],
+   "status": "needs_input",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "core-unlisted-source-fails",
+   "tags": [
+    "core",
+    "critical"
+   ],
+   "status": "failed",
+   "failure_class": "citation_unresolved",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  },
+  {
+   "id": "core-uncited-finding-fails",
+   "tags": [
+    "core",
+    "critical"
+   ],
+   "status": "failed",
+   "failure_class": "citation_unresolved",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.011,
+   "not_recorded": false
+  },
+  {
+   "id": "adv-heading-in-claim",
+   "tags": [
+    "adversarial",
+    "critical",
+    "safety:injection"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.011,
+   "not_recorded": false
+  },
+  {
+   "id": "adv-link-and-html-in-claim",
+   "tags": [
+    "adversarial",
+    "safety:injection"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.011,
+   "not_recorded": false
+  },
+  {
+   "id": "adv-instruction-in-summary",
+   "tags": [
+    "adversarial",
+    "safety:injection"
+   ],
+   "status": "ok",
+   "failure_class": "",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.011,
+   "not_recorded": false
+  },
+  {
+   "id": "adv-credential-in-quote",
+   "tags": [
+    "adversarial",
+    "critical",
+    "safety:canary"
+   ],
+   "status": "failed",
+   "failure_class": "validation_failed",
+   "passed": true,
+   "failures": {},
+   "model_calls": 0,
+   "tokens": 0,
+   "exact": true,
+   "output_tokens": 0,
+   "repair": false,
+   "seconds": 0.01,
+   "not_recorded": false
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+# TTROS Memory Exchange importer
+> Revisit when the package, transport, filing or source evidence contract changes. · Last touched 2026-11-24.
+
+The importer accepts `directory-v1` package folders immediately beneath a materialized `03_READY_FOR_TTROS` directory. `--dry-run --package PATH` validates one package and reports planned Brain paths without modifying the Brain, receipt ledger, search index, Graphify, or Drive. `--ready PATH` processes immediate children only; combine `--ready PATH --package PATH/ID` to select exactly one ready package. The default ready path can come from `TTROS_MEMORY_READY`.
+
+The local directory transport is the boundary for a synced or materialized Drive folder. It exposes list, materialize, success move, and rejection move operations. `--move` enables folder moves after import; omitting it leaves every package in place. Set `--source`, `--ready`, `--imported`, and `--rejected` to the corresponding configured folders. The source folder is configuration only; the importer consumes ready packages. The importer contains no provider IDs or model calls.
+
+The frozen v2 manifest declares `source_count` and `sources[]`, `output_count` and `outputs[]`, and `requires_human_review`. Each package file and output uses `size_bytes`; each output uses `package_path`, source IDs, and `target.suggested_relative_path`. The importer checks counts, references, hashes, and exact target paths before writing. Canonical base hashes and refs live inside `target`.
+
+`historical_record` maps `historical/<name>.md` to `business_brain:sources/historical_calls/<name>.md`. `canonical_replace` maps `canonical/<name>.md` to `business_brain:memory/<name>.md` and requires `canonical_changes`, complete comparison, matching `canonical_ref`, and an exact base hash. Unknown operations fail closed. New historical notes are indexed by the existing indexer one target at a time, preserving unrelated search entries even when an unrelated full scan is blocked. Every imported note must be inside the existing Graphify registry scope (global `sources/historical_calls/` is a Graphify path prefix, matching global Search). It is deliberately not a Brain pointer prefix: that list is also the dashboard save gate and the promotion target scope, so a prefix would make every imported note writable. Graph queries return a note only when it is also in Brain pointer scope, so a newly imported note appears in Search, the entity index and the published graph, and in graph query results once its pointer is listed in global `brain_pointers`; the importer then checks each note's Brain hash against the published source manifest and graph node and records per-output coverage. An out-of-scope note or a hash mismatch leaves the package `refresh_pending` in READY, and the next pass retries only the refresh. A ledger row with Graphify `not_applicable` does not count as already imported.
+
+Brain transactions stamp provenance, so a written note differs from its package bytes. The importer records `written_sha256` for each output after writing; a rerun of the same package is `already_imported` only while those notes are unchanged, and a later edit rejects the rerun instead of being called already present. Ledger rows from before that field existed keep their earlier trust.
+
+`canonical_replace` is off by default. `_target()` refuses it unless `TTROS_MEMORY_ALLOW_CANONICAL_REPLACE` is exactly `1` in the operator's environment (the timer loads `~/.config/ttros-memory-exchange.env`). Every other value, including `true`, is refused, and the check runs before any other canonical-replace rule.
+
+Every regular file in a package must be declared in `package_files`, with one exception: undeclared `desktop.ini` and `Thumbs.db` files (any case, any depth), which the Windows/Drive shell drops into folders. They are never read, hashed, copied or written, and the receipt lists them as `ignored_package_files`. A symlink with one of those names is still rejected, and so is any other undeclared file (for example `notes.txt`, `desktop.ini.md` or `.DS_Store`). READY folders without a top-level `INGEST_MANIFEST.json`, `CHECKPOINT.json` or `SUBMIT.json`, and symlinked folders, are skipped and printed on every poll. The ledger gets a `skipped` note only when a folder's skip reason is new.
+
+At render time, a `historical_record` note whose frontmatter has no `knowledge_type` gets `knowledge_type: <knowledge_types_present[0]>` inserted just before the closing `---`, and the output records `knowledge_type_inserted`. Nothing is inserted when the note already declares one, has no frontmatter, or the first value is not a safe slug (`[a-z][a-z0-9_]{0,63}`). Package bytes and already-present Brain notes are never changed. The entity index labels everything under `sources/` as historical evidence, never canonical, whatever the note declares.
+
+## Revision-3 source notes (single-pass interpretation)
+
+`tools/source_interpret.py` revision 3 writes ordinary v3 packages; the importer contract above is unchanged. Its notes cite `C<start>-<end>`: half-open code-point offsets into the exact UTF-8 decoding of the preserved original (a BOM and every CR are counted), resolved with `tools/source_passages.py` as `source:<sha256>#C<start>-<end>`. Older `#L` line citations keep resolving exactly as before. Every rendered item carries one lexical evidence status: supported or exact items render plainly, `†` marks a citation whose support could not be confirmed, and failed items are never rendered (they stay in the saved interpretation's `dropped`). The navigation line reads `· Spans C..` instead of `· Lines L..`, knowledge comes first and the `## Source` block last, and every link resolves to a Brain record or a file in the same package.
+
+### Typed source relationships
+
+ChatGPT-prepared ICM and Luna can both include one `TTROS:MACHINE:source-graph` block per historical note or source index. Use a specific predicate that preserves the source's meaning. Use stable entity keys and keep ambiguous names scoped to the source. Quote the original exactly and cite the shortest supporting line or code-point range.
+
+```text
+<!-- TTROS:MACHINE:source-graph:BEGIN -->
+{"schema":"ttros-source-graph-v1","authority":"historical-evidence","canonical_truth":false,"stated_by":"source","source_sha256":"<sha256>","about":[{"key":"product:dispatch","name":"Dispatch"}],"relationships":[{"subject":"Dispatch","subject_key":"product:dispatch","predicate":"integrates_with","object":"Vantage CRM","object_key":"product:vantage-crm","status":"supported","ref":"source:<sha256>#L12","quote":"Dispatch integrates with Vantage CRM."}]}
+<!-- TTROS:MACHINE:source-graph:END -->
+```
+
+For multi-range evidence use `refs` in source order. The importer checks references and quotes against the package's hash-verified original. Graphify verifies the same evidence when publishing the projection and records the stating note, exact quote, source hash and authority. Legacy single-range blocks can use the verified range itself as their quote. Cited-only items and generic associations stay outside the typed edges. Suggested cross-source links use the existing separate suggestions contract.
+
+David's deterministic `/memory` route selects hybrid-ranked topic excerpts and verified indexed passages through `ScopedBrainLoader`. Graph neighbors fill reserved context after the best direct evidence. A record pointer still opens the exact record via the scoped reader.
+
+## Filing stage (generated navigation)
+
+After a successful import, meaning its `write_transaction` has returned and its search/Graphify refresh succeeded, the importer calls `tools/memory_filing.py` for the historical notes it wrote. Filing is D1 generated navigation only: links and lists, never content, and no model calls (approval: `business_brain:inbox/distilled_packets/shared-submit-0123456789abcdef0123456789abcdef.md`). It is on by default. `TTROS_MEMORY_FILING=0` turns it off, and the receipt then records `filing: {"status": "disabled"}`.
+
+- **F1 identities** come from frontmatter only. A `person:<slug>` `entity_key` is taken exactly. Each `participants`/`participants_text` segment (split on `;`) is matched by exact normalised full name to a hub's title or aliases, or to an entity-index person. A new person is created only for a name of two or more words that matches nobody. A first-name-only name, a name matching more than one person, or a slug the search indexer would exclude (its own `is_excluded`, for words such as `token`, `secret` or `legacy`) goes to `people/NEEDS_IDENTITY.md`. A first-name-only participant is not listed when the same note declares a `person:` key with that first name; this is the entity index's own rule. Segments that are not names (for example `CCI participants not individually attributable`) are reported in the receipt and otherwise ignored. Filing never fuzzy-matches, so Cara Harcourt and Cara Lindqvist stay separate. The owner (`Casey Linden`; override with `TTROS_MEMORY_FILING_OWNERS`, `;`-separated, or `--owner`) gets no hub.
+- **F2** renders the managed section `generated-navigation` (`TTROS:HERMES:` markers, via `brain_memory.managed_section`) in `people/<slug>.md` hubs, `people/INDEX.md`, `people/NEEDS_IDENTITY.md` and `index/MEMORY_INDEX.md`. All of them go in one `write_transaction` with expected hashes and an `analyze_vault` post-write gate, which also checks two-hop reachability from MEMORY_INDEX alone, that the machine block is byte-identical, and that the rest of MEMORY_INDEX is unchanged. A hub's frontmatter (`id`, `type: person`, `entity_key`, `title`, `aliases`) and static header are written once, when it is created. Its section links each note as `[[sources/historical_calls/<note>|<title>]]` with a date label and `knowledge_type`, newest first. An import date is labelled `imported …` and never counts as "latest". Submit records that cite a hub's notes are listed as plain pointers (D3). The render is global and deterministic, with no timestamps inside sections: every run converges on the same files, and an unchanged render writes nothing. Targets must be D1 targets covered by the registry's `search_source_identities`; `brain_pointer_prefixes` (the Dashboard save gate) is never consulted.
+- **F4** refreshes the changed `people/` pages with the importer's own `_refresh` (search index, Graphify build, source/node coverage). Graph code is unchanged.
+- **F5** verifies: `analyze_vault` PASS; every filed note within two hops of MEMORY_INDEX; each hub found by search; its title resolving to exactly one person entity that holds all its notes; and a `wiki_link` graph edge from the hub to each note.
+
+Outcomes go to `queue/receipts/memory_filing.jsonl`: `filed`, `unchanged`, `filing_pending` (refresh pending or a concurrent Brain edit) or `filing_failed` (with a reason). Filing failure never blocks or undoes an import. The import stays `imported` with `filing: {"status": "pending"}`, and every timer poll retries notes whose last filing row is pending or failed. An identical repeated failure is not re-recorded. Operators run `python tools/memory_filing.py --all | --note <pointer> [--dry-run] [--json]`; `--dry-run` proves the plan on a vault copy and writes nothing. Hubs under `people/` are navigation in the entity index (`entity-index-v4`), so they never become one more record of the person they list.
+
+The systemd oneshot reads `%h/.config/ttros-memory-exchange.env` with `TTROS_MEMORY_READY`, `TTROS_MEMORY_IMPORTED`, and `TTROS_MEMORY_REJECTED`. Its persistent two-minute timer runs the Python importer directly and systemd serializes activations of the same unit. When several v3 packages are READY, each receives its own verified Brain commit and receipt. The importer refreshes shared indexes and files navigation for bounded groups of verified packages. Each terminal receipt carries its own output and original hashes and graph coverage. A stopped refresh leaves the package READY for recovery. The timer consumes `CHECKPOINT.json`, `SUBMIT.json`, and full `INGEST_MANIFEST.json` packages. Prepared packages go straight to validation, the Brain transaction, and deterministic indexes, using local ONNX embeddings where required. A v3 retry can recover a completed Brain commit after an interruption before the ledger recorded it.
+
+After moving a full package, the importer writes `<package>.IMPORT_RECEIPT.json` beside it in IMPORTED or REJECTED as a projection of the authoritative local ledger. Idle polls still recover missing IMPORTED receipts and retry pending filing. They skip opening imported folders that already have receipts. Polls with READY work also reconcile changed IMPORTED receipts against the ledger. Typed packages get no receipt file.
+
+Anything placed in READY is imported unattended. The superseded 2026-10-06 batch (nine `INGEST_20261006T222200Z_*` packages) was moved, byte-verified, to `07_WORKSTREAM_ARTIFACTS/example-ingest-attachments-20260101/held_ready_packages_20261007/` before full consumption was enabled; `HOLD_RECORD.json` there lists their hashes. Moving one back to READY imports it.
+
+## Shared Brain Stage 2 checkpoint handoff
+
+When ChatGPT has no direct Brain connector, it places one typed package immediately under `TTROS Memory Exchange/03_READY_FOR_TTROS/`. The package contains only `CHECKPOINT.json`:
+
+```json
+{
+  "schema_version": "shared-brain-checkpoint-v1",
+  "operation": "checkpoint",
+  "workstream_id": "example-workstream",
+  "expected_version": 0,
+  "fields": {
+    "goal": "Continue the agreed work",
+    "done": "First bounded step",
+    "decisions": "Use the current approach",
+    "work_product_reference": "https://example.com/result",
+    "next_action": "Take the next step",
+    "open_questions": "None"
+  }
+}
+```
+
+The 2-minute systemd timer processes checkpoint packages alongside the other ready types. A missing DriveFS mount yields no ready packages and does not prevent direct checkpoints. The existing `memory_exchange_import.py` consumer dispatches this type to the same `shared_brain_checkpoint.checkpoint()` function used by the HTTP and David stdio tools. It preserves the frozen v2 ingest manifest path unchanged. With `TTROS_SHARED_BRAIN_WRITE` off, a checkpoint package stays in the ready folder and is not consumed or moved. The consumer sets ChatGPT Drive-channel attribution itself; values supplied in the package cannot override it. Stale versions and invalid fields are rejected. The package is moved to the existing imported or rejected folder by the existing transport. The current note is projected to `TTROS Memory Exchange/06_WORKSTREAMS_READ/<workstream_id>.md` for ChatGPT to read. That folder is a copy of working state; the Brain note is authoritative. It is not a durable submit, Git commit or memory import.
+
+## Large working artifacts (Stage 4 repair, 2026-10-04)
+
+The note stays capped at 2,500 characters. An unfinished work product too large for it (a prompt, research package, draft, plan or report) lives as a working artifact at `TTROS Memory Exchange/07_WORKSTREAM_ARTIFACTS/<workstream_id>/<name>`, and the note's `work_product_reference` is `artifact:<workstream_id>/<name>`. Names are lowercase letters, digits, `-`, `_` and `.`, ending `.md` or `.txt`; content is at most 20,000 characters.
+
+- Direct clients (Claude, David) pass `work_product: {name, content}` to the existing `checkpoint`. Under the workstream lock and after the version check, TTROS writes the file, then the note. A stale version, an over-size note or unavailable Drive storage writes neither.
+- ChatGPT on the Drive handoff saves the file there itself, then sends an ordinary `CHECKPOINT.json` whose `work_product_reference` names it. The package format is unchanged; TTROS refuses a reference to a missing file or to another workstream's artifact.
+- `resume` of that workstream returns the artifact (bounded to 20,000 characters) with the note, so the receiver opens it before continuing. ChatGPT reads the same file in Drive.
+
+Artifacts are working storage. They are not Brain content, not indexed and not committed, and `submit` does not accept them as source references. A finished result still goes through `submit`.

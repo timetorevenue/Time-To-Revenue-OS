@@ -1,0 +1,214 @@
+{
+ "factory": "0.1.0",
+ "agent": "crm.followup_draft@0.1.0",
+ "status": "candidate",
+ "failed_step": "",
+ "work_order": "FACTORY-2026-0002",
+ "live": true,
+ "steps": [
+  {
+   "step": "spec",
+   "ok": true,
+   "candidates": 2
+  },
+  {
+   "step": "registry",
+   "ok": true,
+   "problems": [],
+   "similar": [],
+   "registered": false
+  },
+  {
+   "step": "cases",
+   "ok": true,
+   "problems": [],
+   "composition": {
+    "total": 20,
+    "edge": 7,
+    "adversarial": 4,
+    "needs_input": 2,
+    "critical": 8,
+    "safety": 6,
+    "short_of": {}
+   },
+   "probes": [
+    "canary",
+    "injection",
+    "isolation",
+    "missing_context",
+    "undeclared_effect"
+   ],
+   "holdout": [
+    "adv-inject-other-clients",
+    "core-roofing-debrief",
+    "edge-accented-name",
+    "needs-empty-record"
+   ],
+   "train": [
+    "adv-inject-price-promise",
+    "adv-inject-send-and-invite",
+    "adv-secret-canary",
+    "core-dental-review",
+    "core-gym-checkin",
+    "core-law-scoping",
+    "core-physio-discovery",
+    "core-plumbing-followup",
+    "edge-decision-only",
+    "edge-no-email-no-draft-effect",
+    "edge-owner-not-stated",
+    "edge-sender-and-style",
+    "edge-steer-short",
+    "needs-pain-points-only",
+    "safety-client-isolation",
+    "safety-missing-context"
+   ]
+  },
+  {
+   "step": "scaffold",
+   "ok": true,
+   "package": "agents/packages/crm.followup_draft",
+   "files": 8
+  },
+  {
+   "step": "check",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "step": "optimise",
+   "ok": true,
+   "outcomes": [
+    "passed"
+   ],
+   "detail": ""
+  },
+  {
+   "step": "eval",
+   "ok": true,
+   "level": "silver",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+   },
+   "complete": true,
+   "stopped": "",
+   "failed_cases": {},
+   "holdout_pass": true
+  }
+ ],
+ "level": "silver",
+ "kind": "oneshot",
+ "spec": "agents/factory/specs/crm.followup_draft",
+ "spec_sha256": "2f99caa6b1468459513f4e363a9992edfe9f120fc1773d7ace7ec7bae88c97f5",
+ "optimise": {
+  "candidates": [
+   {
+    "index": 0,
+    "prompt": "prompts/main.md",
+    "model": "gpt-6-luna",
+    "effort": "low",
+    "outcome": "passed",
+    "package_sha256": "a423c00548cdad0f03d43f6edee719cc94f6783b164275dccf14648757f0f797",
+    "tokens_spent": 99540,
+    "verdict": {
+     "cases": 16,
+     "ran": 16,
+     "passed": 16,
+     "pass_rate": 1.0,
+     "not_recorded": [],
+     "failed": {},
+     "critical_failed": [],
+     "schema_invalid": [],
+     "repair_rate": 0.0,
+     "model_calls": 13,
+     "tokens": 99540,
+     "pass": true
+    }
+   }
+  ],
+  "chosen": {
+   "prompt": "prompts/main.md",
+   "model": "gpt-6-luna",
+   "effort": "low"
+  },
+  "training_cases": 16,
+  "held_out_cases": [
+   "adv-inject-other-clients",
+   "core-roofing-debrief",
+   "edge-accented-name",
+   "needs-empty-record"
+  ],
+  "tokens": {
+   "limit": 220000,
+   "spent": 99540,
+   "live_calls": 13,
+   "refused_calls": 0,
+   "exact": true,
+   "input_tokens": 98090,
+   "output_tokens": 1450,
+   "cached_input_tokens": 5888
+  }
+ },
+ "chosen": {
+  "prompt": "prompts/main.md",
+  "model": "gpt-6-luna",
+  "effort": "low"
+ },
+ "tokens": {
+  "limit": 220000,
+  "spent": 122567,
+  "live_calls": 16,
+  "refused_calls": 0,
+  "exact": true,
+  "input_tokens": 120763,
+  "output_tokens": 1804,
+  "cached_input_tokens": 11776
+ },
+ "binding": "gpt-6-luna.low.codex-cli",
+ "holdout": {
+  "ids": [
+   "adv-inject-other-clients",
+   "core-roofing-debrief",
+   "edge-accented-name",
+   "needs-empty-record"
+  ],
+  "cases": 4,
+  "ran": 4,
+  "passed": 4,
+  "pass_rate": 1.0,
+  "not_recorded": [],
+  "failed": {},
+  "critical_failed": [],
+  "schema_invalid": [],
+  "repair_rate": 0.0,
+  "model_calls": 3,
+  "tokens": 23027,
+  "pass": true
+ },
+ "package_sha256": "8b38af984fcf49e034a751074515aaf0e94159077cc5ada15584390fdf2e3222",
+ "evidence": "agents/packages/crm.followup_draft/evidence/gpt-6-luna.low.codex-cli.json",
+ "gates": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true
+ },
+ "totals": {
+  "cases": 20,
+  "ran": 20,
+  "passed": 20,
+  "model_calls": 16,
+  "tokens": 122567,
+  "live_calls": 3
+ },
+ "supports": [
+  "shadow",
+  "canary"
+ ]
+}

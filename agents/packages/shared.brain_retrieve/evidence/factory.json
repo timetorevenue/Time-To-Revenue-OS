@@ -1,0 +1,180 @@
+{
+ "factory": "0.1.0",
+ "agent": "shared.brain_retrieve@0.1.0",
+ "status": "candidate",
+ "failed_step": "",
+ "work_order": "",
+ "live": false,
+ "steps": [
+  {
+   "step": "spec",
+   "ok": true,
+   "candidates": 1
+  },
+  {
+   "step": "registry",
+   "ok": true,
+   "problems": [],
+   "similar": [],
+   "registered": true
+  },
+  {
+   "step": "cases",
+   "ok": true,
+   "problems": [],
+   "composition": {
+    "total": 25,
+    "edge": 9,
+    "adversarial": 5,
+    "needs_input": 2,
+    "critical": 9,
+    "safety": 5,
+    "short_of": {}
+   },
+   "probes": [
+    "canary",
+    "injection",
+    "isolation",
+    "missing_context"
+   ],
+   "holdout": [
+    "adv-secret-in-note",
+    "core-hash-reported",
+    "core-order-kept",
+    "core-two-notes",
+    "edge-twelve-refs"
+   ],
+   "train": [
+    "adv-injection-in-note",
+    "adv-path-escape",
+    "adv-shell-in-ref",
+    "adv-web-url-refused",
+    "core-heading-anchor",
+    "core-one-note",
+    "core-three-notes",
+    "core-tokens-summed",
+    "edge-duplicate-ref",
+    "edge-empty-record",
+    "edge-large-note",
+    "edge-missing-artifact",
+    "edge-one-character",
+    "edge-unicode-note",
+    "edge-with-purpose",
+    "needs-empty-list",
+    "needs-empty-list-with-purpose",
+    "safety-client-isolation",
+    "safety-missing-record",
+    "safety-one-missing-of-two"
+   ]
+  },
+  {
+   "step": "scaffold",
+   "ok": true,
+   "package": "agents/packages/shared.brain_retrieve",
+   "files": 6
+  },
+  {
+   "step": "check",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "step": "eval",
+   "ok": true,
+   "level": "silver",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+   },
+   "complete": true,
+   "stopped": "",
+   "failed_cases": {},
+   "holdout_pass": true
+  }
+ ],
+ "level": "silver",
+ "kind": "tool",
+ "spec": "agents/factory/specs/shared.brain_retrieve",
+ "spec_sha256": "b7bd7ad2c5960d866797f827c8bf04138822f99b457a08bc5b37d1e394c2029c",
+ "optimise": {
+  "candidates": [],
+  "chosen": {},
+  "training_cases": 20,
+  "held_out_cases": [
+   "adv-secret-in-note",
+   "core-hash-reported",
+   "core-order-kept",
+   "core-two-notes",
+   "edge-twelve-refs"
+  ],
+  "tokens": {
+   "limit": 0,
+   "spent": 0,
+   "live_calls": 0,
+   "refused_calls": 0,
+   "exact": true,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cached_input_tokens": 0
+  }
+ },
+ "chosen": {},
+ "tokens": {
+  "limit": 0,
+  "spent": 0,
+  "live_calls": 0,
+  "refused_calls": 0,
+  "exact": true,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cached_input_tokens": 0
+ },
+ "binding": "tool",
+ "holdout": {
+  "ids": [
+   "adv-secret-in-note",
+   "core-hash-reported",
+   "core-order-kept",
+   "core-two-notes",
+   "edge-twelve-refs"
+  ],
+  "cases": 5,
+  "ran": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "not_recorded": [],
+  "failed": {},
+  "critical_failed": [],
+  "schema_invalid": [],
+  "repair_rate": 0.0,
+  "model_calls": 0,
+  "tokens": 0,
+  "pass": true
+ },
+ "package_sha256": "e861c2e705192e64b0d5d9c167f1e570d8158d2fe8387734a764c9c778ffb141",
+ "evidence": "agents/packages/shared.brain_retrieve/evidence/tool.json",
+ "gates": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true
+ },
+ "totals": {
+  "cases": 25,
+  "ran": 25,
+  "passed": 25,
+  "model_calls": 0,
+  "tokens": 0,
+  "live_calls": 0
+ },
+ "supports": [
+  "shadow",
+  "canary"
+ ]
+}

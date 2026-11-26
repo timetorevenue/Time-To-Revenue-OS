@@ -1,0 +1,238 @@
+{
+ "factory": "0.1.0",
+ "agent": "marketing.landing_brief@0.1.0",
+ "status": "candidate",
+ "failed_step": "",
+ "work_order": "AOS-2026-10022",
+ "live": true,
+ "steps": [
+  {
+   "step": "spec",
+   "ok": true,
+   "candidates": 1
+  },
+  {
+   "step": "registry",
+   "ok": true,
+   "problems": [],
+   "similar": [],
+   "registered": false
+  },
+  {
+   "step": "cases",
+   "ok": true,
+   "problems": [],
+   "composition": {
+    "total": 23,
+    "edge": 10,
+    "adversarial": 3,
+    "needs_input": 5,
+    "critical": 4,
+    "safety": 4,
+    "short_of": {}
+   },
+   "probes": [
+    "injection",
+    "isolation",
+    "missing_context",
+    "undeclared_effect"
+   ],
+   "holdout": [
+    "proof-needs-verification",
+    "refuse-two-profiles",
+    "trim-cta"
+   ],
+   "train": [
+    "attribution",
+    "blank-cta",
+    "citations",
+    "gtm-buyer",
+    "lead-with-outcome",
+    "missing-offer",
+    "mobile",
+    "needs-outcome",
+    "needs-visitor-problem",
+    "no-proof",
+    "offer-handoff",
+    "one-action",
+    "refuse-cta-markup",
+    "refuse-effect-field",
+    "scope-denied",
+    "source-unavailable",
+    "specific-problem",
+    "system-buyer",
+    "unselected-icp",
+    "use-selected-channel"
+   ]
+  },
+  {
+   "step": "assessment",
+   "ok": true,
+   "decision": "new"
+  },
+  {
+   "step": "scaffold",
+   "ok": true,
+   "package": "agents/packages/marketing.landing_brief",
+   "files": 5
+  },
+  {
+   "step": "check",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "step": "eval",
+   "ok": true,
+   "level": "silver",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+   },
+   "complete": true,
+   "stopped": "",
+   "failed_cases": {},
+   "holdout_pass": true
+  },
+  {
+   "step": "review",
+   "ok": true,
+   "findings": []
+  }
+ ],
+ "level": "silver",
+ "kind": "tool",
+ "spec": "agents/factory/specs/marketing.landing_brief",
+ "spec_sha256": "c71568c2701f5dcc1979c854939f85e8eeee18cb361b7c05f9c1d9ab313115aa",
+ "connections": {
+  "resolved": {},
+  "missing_required": [],
+  "advisory": true
+ },
+ "engineering": {
+  "base": "779c00e65e7360511a17bfe1d5720782cc34b31f",
+  "input_sha256": "58e79aef96b9e882092c161a28a2a8cf0a7f2bf585cedad432628daf958e9608",
+  "patch_sha256": "9eb02c0c1e40ac3ea08abec9bd899cae1981b6a10ff0908c0e6c253ec4ed49bf",
+  "assessment": {
+   "result": {
+    "decision": "new",
+    "reuse_ref": "",
+    "rationale": "No supplied component owns this output. `agents/packages/website.manager/agent.toml` handles validated Website Studio editing operations, not draft planning briefs, and `agents/packages/shared.planner/agent.toml` plans specialist steps for cross-department requests rather than producing this focused handoff artifact. The LinkedIn components are unrelated; `agents/marketing.card.md` describes broader marketing drafts but not a structured website-planning workflow. The requested brief is planning data only, with no calls and only `brain.read:global`, so it should not be folded into the editing or publishing owners.",
+    "implementation": "Add a dedicated planning TAP that accepts the offer, TTROS audience hypothesis, visitor problem, desired outcome, channel, and CTA label; resolve only scoped website and ICP context through the declared runtime context needs. Return a structured draft brief with mobile and conversion QA checks, identify unverified proof, and explicitly request missing essentials. Keep it isolated from Studio editing and external-action interfaces; preserve the no-edit, no-publish, no-deploy, no-billing, no-send boundary.",
+    "verify": "Add focused golden cases for a complete brief, missing essentials, unverified proof, and unavailable or truncated scoped context. Validate output schema and QA checklist presence; inspect manifest grants/calls to confirm no external-action capability. Run the factory assess/build/verify flow and ensure generated package and registry evidence match the spec."
+   },
+   "invocation_id": "modelport-be8d9fbbde234468b2b7b9246f5bf92e",
+   "session_id": "01a20c7e-9b7c-7601-b1d8-1f8e2ae1b8d0",
+   "usage": {
+    "available": true,
+    "event_count": 1,
+    "input_tokens": 9361,
+    "cached_input_tokens": 0,
+    "output_tokens": 302,
+    "reasoning_output_tokens": 0,
+    "cumulative_tokens": 9663
+   }
+  },
+  "review_input_sha256": "7d1b95afd2b5e0710a289a5a5684cb9d135ee5d990afa024eecd249fc926e3b0",
+  "review": {
+   "result": {
+    "checks": {
+     "architecture": "The tool is isolated and declares read-only context access with no tools or proposed effects.",
+     "efficiency": "Deterministic, single-step handling; no notable efficiency issue.",
+     "duplication": "No material duplication identified.",
+     "maintainability": "Clear small handler and scoped schemas; no material maintainability issue.",
+     "correctness": "No substantiated blocking defect. The executed cases cover missing required fields, invalid refs, multiple profiles, effect fields, and unavailable context; these behaviors align with the schema/runtime contract."
+    },
+    "findings": []
+   },
+   "invocation_id": "modelport-c3920997c66f4d25902ee0ecc207d8ff",
+   "session_id": "01a20c7e-bc0b-7940-a1e6-3f11a777deba",
+   "usage": {
+    "available": true,
+    "event_count": 1,
+    "input_tokens": 16642,
+    "cached_input_tokens": 0,
+    "output_tokens": 117,
+    "reasoning_output_tokens": 0,
+    "cumulative_tokens": 16759
+   }
+  }
+ },
+ "optimise": {
+  "candidates": [],
+  "chosen": {},
+  "training_cases": 20,
+  "held_out_cases": [
+   "proof-needs-verification",
+   "refuse-two-profiles",
+   "trim-cta"
+  ],
+  "tokens": {
+   "limit": 40000,
+   "spent": 9663,
+   "live_calls": 1,
+   "refused_calls": 0,
+   "exact": true,
+   "input_tokens": 9361,
+   "output_tokens": 302,
+   "cached_input_tokens": 0
+  }
+ },
+ "chosen": {},
+ "tokens": {
+  "limit": 40000,
+  "spent": 26422,
+  "live_calls": 2,
+  "refused_calls": 0,
+  "exact": true,
+  "input_tokens": 26003,
+  "output_tokens": 419,
+  "cached_input_tokens": 0
+ },
+ "binding": "tool",
+ "holdout": {
+  "ids": [
+   "proof-needs-verification",
+   "refuse-two-profiles",
+   "trim-cta"
+  ],
+  "cases": 3,
+  "ran": 3,
+  "passed": 3,
+  "pass_rate": 1.0,
+  "not_recorded": [],
+  "failed": {},
+  "critical_failed": [],
+  "schema_invalid": [],
+  "repair_rate": 0.0,
+  "model_calls": 0,
+  "tokens": 0,
+  "pass": true
+ },
+ "package_sha256": "2ca9a093880d9be6f0ae2f7fd6e24d1ebc182437d2dc9532337e03ba01ceb118",
+ "evidence": "agents/packages/marketing.landing_brief/evidence/tool.json",
+ "gates": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true
+ },
+ "totals": {
+  "cases": 23,
+  "ran": 23,
+  "passed": 23,
+  "model_calls": 0,
+  "tokens": 0,
+  "live_calls": 0
+ },
+ "supports": [
+  "shadow",
+  "canary"
+ ]
+}

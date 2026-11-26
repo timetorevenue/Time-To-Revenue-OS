@@ -1,0 +1,183 @@
+{
+ "factory": "0.1.0",
+ "agent": "marketing.post_check@0.1.0",
+ "status": "candidate",
+ "failed_step": "",
+ "work_order": "",
+ "live": false,
+ "steps": [
+  {
+   "step": "spec",
+   "ok": true,
+   "candidates": 1
+  },
+  {
+   "step": "registry",
+   "ok": true,
+   "problems": [],
+   "similar": [],
+   "registered": false
+  },
+  {
+   "step": "cases",
+   "ok": true,
+   "problems": [],
+   "composition": {
+    "total": 27,
+    "edge": 10,
+    "adversarial": 6,
+    "needs_input": 2,
+    "critical": 10,
+    "safety": 3,
+    "short_of": {}
+   },
+   "probes": [
+    "canary",
+    "injection",
+    "isolation"
+   ],
+   "holdout": [
+    "adv-confidential-in-hashtag",
+    "adv-confidential-spaced-case",
+    "core-warn-no-hashtag",
+    "edge-four-hashtags",
+    "edge-one-block",
+    "needs-blank-post"
+   ],
+   "train": [
+    "adv-confidential-name",
+    "adv-confidential-zero-width",
+    "adv-credential-in-post",
+    "adv-instruction-in-post",
+    "core-clean-post",
+    "core-counts",
+    "core-custom-limit",
+    "core-guarantee-claim",
+    "core-hashtags-apart",
+    "core-hundred-percent",
+    "core-other-names-allowed",
+    "core-placeholder-left",
+    "core-warn-hype",
+    "edge-ampersand-not-hashtag",
+    "edge-exactly-at-limit",
+    "edge-long-hook",
+    "edge-malformed-hashtag",
+    "edge-one-over-limit",
+    "edge-over-default-limit",
+    "edge-three-hashtags",
+    "needs-empty-post"
+   ]
+  },
+  {
+   "step": "scaffold",
+   "ok": true,
+   "package": "agents/packages/marketing.post_check",
+   "files": 6
+  },
+  {
+   "step": "check",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "step": "eval",
+   "ok": true,
+   "level": "silver",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+   },
+   "complete": true,
+   "stopped": "",
+   "failed_cases": {},
+   "holdout_pass": true
+  }
+ ],
+ "level": "silver",
+ "kind": "tool",
+ "spec": "agents/factory/specs/marketing.post_check",
+ "spec_sha256": "764f51744ddb3613a736cc648018e34642d4438683537d066741ce0dd6e5ce43",
+ "optimise": {
+  "candidates": [],
+  "chosen": {},
+  "training_cases": 21,
+  "held_out_cases": [
+   "adv-confidential-in-hashtag",
+   "adv-confidential-spaced-case",
+   "core-warn-no-hashtag",
+   "edge-four-hashtags",
+   "edge-one-block",
+   "needs-blank-post"
+  ],
+  "tokens": {
+   "limit": 0,
+   "spent": 0,
+   "live_calls": 0,
+   "refused_calls": 0,
+   "exact": true,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cached_input_tokens": 0
+  }
+ },
+ "chosen": {},
+ "tokens": {
+  "limit": 0,
+  "spent": 0,
+  "live_calls": 0,
+  "refused_calls": 0,
+  "exact": true,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cached_input_tokens": 0
+ },
+ "binding": "tool",
+ "holdout": {
+  "ids": [
+   "adv-confidential-in-hashtag",
+   "adv-confidential-spaced-case",
+   "core-warn-no-hashtag",
+   "edge-four-hashtags",
+   "edge-one-block",
+   "needs-blank-post"
+  ],
+  "cases": 6,
+  "ran": 6,
+  "passed": 6,
+  "pass_rate": 1.0,
+  "not_recorded": [],
+  "failed": {},
+  "critical_failed": [],
+  "schema_invalid": [],
+  "repair_rate": 0.0,
+  "model_calls": 0,
+  "tokens": 0,
+  "pass": true
+ },
+ "package_sha256": "e76ef123e9dd3ef27e48fbe0d90ae5f412d4ee5c328e121b7775f58d12d00072",
+ "evidence": "agents/packages/marketing.post_check/evidence/tool.json",
+ "gates": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true
+ },
+ "totals": {
+  "cases": 27,
+  "ran": 27,
+  "passed": 27,
+  "model_calls": 0,
+  "tokens": 0,
+  "live_calls": 0
+ },
+ "supports": [
+  "shadow",
+  "canary"
+ ]
+}

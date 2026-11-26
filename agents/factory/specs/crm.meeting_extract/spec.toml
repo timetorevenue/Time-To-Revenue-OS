@@ -1,0 +1,53 @@
+# Factory build spec. The package under agents/packages/crm.meeting_extract is generated from this folder:
+# edit here and run `aos-agent.py build crm.meeting_extract`; never edit the package.
+# Revisit: when the agent's contract, prompt or pinned model changes. · Last touched: 2026-11-14.
+[agent]
+name = "crm.meeting_extract"
+version = "0.1.0"
+kind = "oneshot"
+summary = "Extract decisions, action items, pain points and the next step from one meeting's notes, each backed by an exact quote."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[context]
+needs = ["input.evidence_refs"]
+max_tokens = 4000
+
+[capabilities]
+grants = ["brain.read:global"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 12000
+model_calls = 2
+seconds = 90
+max_steps = 1
+
+[compose]
+callable_by = ["crm.*", "shared.planner"]
+calls = []
+
+[factory]
+requirement = "After a client or prospect meeting, turn the notes or transcript into a structured record the CRM and the follow-up draft can be written from. Every item must be backed by words that are in the notes; owners and due dates are never guessed. No tools, no effects, no web access. Called by crm.* plans (meeting follow-up, next best action) and inline by David."
+# The most a build may spend on real model calls. A rebuild of an unchanged spec replays and spends nothing.
+token_budget = 240000
+# Share of the golden cases the optimiser never sees (or tag cases "holdout" to choose them).
+holdout_share = 0.2
+
+source = "blueprint section 7: CRM / Sales specialist crm.meeting_extract; feeds the crm.meeting_followup plan"
+
+# Cheapest first. The first candidate that passes the training cases is pinned. The blueprint guessed
+# Luna-medium for this agent; the search tries Luna-low first and moves up only if it fails.
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "low"
+
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "medium"

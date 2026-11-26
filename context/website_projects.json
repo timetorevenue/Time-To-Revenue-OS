@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "description": "Website projects David and the Dashboard may route a change request to (tools/aos_website.py). Empty on a fresh installation; register a site to use it.",
+  "revisit": "When a site's local checkout is registered.",
+  "projects": {}
+}

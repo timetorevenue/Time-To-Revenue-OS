@@ -1,0 +1,45 @@
+# Factory build spec. The package under agents/packages/@@NAME@@ is generated from this folder:
+# edit here and run `aos-agent.py build @@NAME@@`; never edit the package.
+# Revisit: when the agent's contract, prompt or pinned model changes.
+[agent]
+name = "@@NAME@@"
+version = "0.1.0"
+kind = "oneshot"
+summary = @@SUMMARY@@
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[context]
+needs = ["input.evidence_refs"]
+max_tokens = 4000
+
+[capabilities]
+grants = ["brain.read:global"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 12000
+model_calls = 2
+seconds = 90
+max_steps = 1
+
+[compose]
+callable_by = ["*"]
+calls = []
+
+[factory]
+requirement = @@REQUIREMENT@@
+# The most a build may spend on real model calls. A rebuild of an unchanged spec replays and spends nothing.
+token_budget = 240000
+# Share of the golden cases the optimiser never sees (or tag cases "holdout" to choose them).
+holdout_share = 0.2
+
+# Cheapest first. The first candidate that passes the training cases is pinned.
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "low"

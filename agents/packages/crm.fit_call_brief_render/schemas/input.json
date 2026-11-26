@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "crm.fit_call_brief_render input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["brief", "verification"],
+  "properties": {
+    "brief": {
+      "type": "object",
+      "required": ["prospect", "company", "business_summary", "research", "leak_hypotheses", "question_script", "next_step", "caveats", "sources"]
+    },
+    "verification": {"type": "object", "required": ["verified"], "properties": {"verified": {"const": true}}}
+  }
+}

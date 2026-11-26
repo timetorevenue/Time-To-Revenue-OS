@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sufficient", "missing", "kind", "summary", "entities", "date", "sensitivity", "confidence"],
+  "properties": {
+    "sufficient": {"type": "boolean"},
+    "missing": {"type": "array", "items": {"type": "string"}},
+    "kind": {"type": "string", "enum": ["meeting_notes", "call_transcript", "email", "proposal_or_contract", "procedure", "research_or_article", "financial_record", "marketing_content", "personal_or_unrelated", "other"]},
+    "summary": {"type": "string"},
+    "entities": {"type": "array", "items": {"type": "string"}},
+    "date": {"type": "string"},
+    "sensitivity": {"type": "string", "enum": ["normal", "confidential"]},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+  }
+}

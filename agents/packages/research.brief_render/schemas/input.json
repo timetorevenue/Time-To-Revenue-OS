@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "research.brief_render input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["synthesis"],
+  "properties": {
+    "title": {"type": "string", "maxLength": 160},
+    "synthesis": {
+      "description": "The output of research.synthesise.",
+      "type": "object",
+      "required": ["question", "summary", "findings", "sources"],
+      "properties": {
+        "question": {"type": "string", "maxLength": 400},
+        "summary": {"type": "string", "maxLength": 900},
+        "findings": {
+          "type": "array", "maxItems": 8,
+          "items": {
+            "type": "object", "required": ["claim", "sources"],
+            "properties": {
+              "claim": {"type": "string", "maxLength": 400},
+              "quote": {"type": "string", "maxLength": 500},
+              "confidence": {"enum": ["high", "medium", "low"]},
+              "sources": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        },
+        "conflicts": {"type": "array", "maxItems": 4, "items": {"type": "string", "maxLength": 400}},
+        "gaps": {"type": "array", "maxItems": 5, "items": {"type": "string", "maxLength": 300}},
+        "sources": {"type": "array", "items": {"type": "object", "required": ["ref"], "properties": {"ref": {"type": "string"}}}}
+      }
+    },
+    "artifact_name": {"description": "When given, the brief is written as this job artifact.", "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{0,59}\\.md$"}
+  }
+}

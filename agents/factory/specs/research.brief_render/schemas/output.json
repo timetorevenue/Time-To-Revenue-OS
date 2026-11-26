@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "research.brief_render output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["markdown", "findings", "sources_cited", "artifact"],
+  "properties": {
+    "markdown": {"type": "string", "minLength": 40},
+    "findings": {"type": "integer", "minimum": 1, "maximum": 8},
+    "sources_cited": {"type": "integer", "minimum": 1},
+    "artifact": {"description": "artifact: reference of the filed brief, or empty when none was asked for.", "type": "string"}
+  }
+}

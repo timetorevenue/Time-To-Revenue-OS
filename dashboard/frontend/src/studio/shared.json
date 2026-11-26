@@ -1,0 +1,124 @@
+{
+  "sections": [
+    {
+      "type": "SharedHeader",
+      "label": "Header",
+      "description": "Shared across every page; edits are stored once.",
+      "html": "<section></section>",
+      "texts": {
+        "name": "Glade nectar ne",
+        "logo": "/images/site-logo-dark.svg",
+        "cta": "Delta velvet yonder c",
+        "destination": "/free-assessment",
+        "navigation": "[{\"id\":\"services\",\"label\":\"Services\",\"href\":\"/services\"},{\"id\":\"work\",\"label\":\"Our Work\",\"href\":\"/our-work\"},{\"id\":\"how\",\"label\":\"How We Work\",\"href\":\"/how-we-work\"},{\"id\":\"about\",\"label\":\"About\",\"href\":\"/about\"}]"
+      },
+      "targets": [
+        {
+          "id": "section",
+          "label": "Whole shared element",
+          "tag": "section",
+          "selector": ""
+        },
+        {
+          "id": "logo",
+          "label": "Logo image",
+          "tag": "figure",
+          "selector": ".brand-lockup img"
+        },
+        {
+          "id": "wordmark",
+          "label": "Wordmark",
+          "tag": "p",
+          "selector": ".brand-lockup span"
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation links",
+          "tag": "a",
+          "selector": "nav a"
+        },
+        {
+          "id": "button",
+          "label": "Contact button / link",
+          "tag": "a",
+          "selector": ".header-cta,.footer-contact .editorial-link"
+        },
+        {
+          "id": "copy",
+          "label": "Footer text",
+          "tag": "p",
+          "selector": ".footer-brand p,.footer-label,.footer-contact>a:last-child,.footer-base"
+        }
+      ],
+      "slug": "sharedheader",
+      "originalId": "SharedHeader",
+      "min": 1,
+      "max": 1
+    },
+    {
+      "type": "SharedFooter",
+      "label": "Footer",
+      "description": "Shared across every page; edits are stored once.",
+      "html": "<section></section>",
+      "texts": {
+        "name": "Glade nectar ne",
+        "logo": "/images/site-logo-light.png",
+        "tagline": "Umber fern meadow grove cedar ridge summit heron orchida",
+        "explore": "Yondera",
+        "learn": "Ember umbera",
+        "cta": "Delta velvet yonder c",
+        "destination": "/free-assessment",
+        "email": "hello@core-site.example",
+        "learning": "[{\"id\":\"insights\",\"label\":\"Insights\",\"href\":\"/blog\"},{\"id\":\"tools\",\"label\":\"Tools & Guides\",\"href\":\"/resources\"},{\"id\":\"pricing\",\"label\":\"Pricing & assessments\",\"href\":\"/pricing\"}]",
+        "legal": "[{\"id\":\"privacy\",\"label\":\"Privacy\",\"href\":\"/privacy\"},{\"id\":\"terms\",\"label\":\"Terms\",\"href\":\"/terms\"}]"
+      },
+      "targets": [
+        {
+          "id": "section",
+          "label": "Whole shared element",
+          "tag": "section",
+          "selector": ""
+        },
+        {
+          "id": "logo",
+          "label": "Logo image",
+          "tag": "figure",
+          "selector": ".brand-lockup img"
+        },
+        {
+          "id": "wordmark",
+          "label": "Wordmark",
+          "tag": "p",
+          "selector": ".brand-lockup span"
+        },
+        {
+          "id": "navigation",
+          "label": "Navigation links",
+          "tag": "a",
+          "selector": "nav a"
+        },
+        {
+          "id": "button",
+          "label": "Contact button / link",
+          "tag": "a",
+          "selector": ".header-cta,.footer-contact .editorial-link"
+        },
+        {
+          "id": "copy",
+          "label": "Footer text",
+          "tag": "p",
+          "selector": ".footer-brand p,.footer-label,.footer-contact>a:last-child,.footer-base"
+        }
+      ],
+      "slug": "sharedfooter",
+      "originalId": "SharedFooter",
+      "min": 1,
+      "max": 1
+    }
+  ],
+  "logos": [
+    "/images/site-logo-dark.svg",
+    "/images/site-logo-light.png"
+  ],
+  "comment": "Fields extracted from components/Header.tsx, Footer.tsx, lib/commercial.ts and config.ts at c58e641. Source components remain the renderer. Navigation rows have permanent IDs; the primary list is shared by Header desktop/mobile and Footer Explore."
+}

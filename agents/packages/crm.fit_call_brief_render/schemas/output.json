@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "crm.fit_call_brief_render output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact", "words", "one_page"],
+  "properties": {
+    "artifact": {"type": "string", "pattern": "^artifact:"},
+    "words": {"type": "integer", "minimum": 1},
+    "one_page": {"type": "boolean"}
+  }
+}

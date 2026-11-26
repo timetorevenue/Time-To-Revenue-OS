@@ -1,0 +1,334 @@
+{
+  "skips": [
+    {
+      "match": "tests/test_pdf_branding_workflow.py",
+      "reason": "needs the originating company's brand assets (excluded)"
+    },
+    {
+      "match": "tests/test_linkedin_carousel_workflow.py",
+      "reason": "needs brand assets and a PDF toolchain virtualenv (excluded)"
+    },
+    {
+      "match": "tests/test_business_workflow_pack.py",
+      "reason": "asserts presence of run inputs/examples that are not exported"
+    },
+    {
+      "match": "tests/test_business_workflow_pack_batch2.py",
+      "reason": "asserts presence of run inputs/examples that are not exported"
+    },
+    {
+      "match": "tests/test_outreach_handoff.py",
+      "reason": "needs private prospect handoff data (excluded)"
+    },
+    {
+      "match": "tests/test_prospecting_contracts.py",
+      "reason": "needs private prospect ledger and handoff data (excluded)"
+    },
+    {
+      "match": "tests/test_prospector.py",
+      "reason": "needs private prospect ledger (excluded)"
+    },
+    {
+      "match": "tests/test_rules_authority.py::",
+      "reason": "asserts a private archive path (archive excluded)"
+    },
+    {
+      "match": "tests/test_website_studio.py",
+      "reason": "needs a registered local website checkout (git repository) that is not distributed"
+    },
+    {
+      "match": "tests/test_product_launch.py",
+      "reason": "needs a registered local website checkout (git repository) that is not distributed"
+    },
+    {
+      "match": "tests/test_source_interpret_rev3.py::RenderingTests",
+      "reason": "needs private golden interpretations (excluded)"
+    },
+    {
+      "match": "tests/test_source_interpret_rev3.py::OffsetAddressingTests::test_legacy_line_refs",
+      "reason": "needs private golden interpretations (excluded)"
+    },
+    {
+      "match": "tests/test_new_david_lifecycle.py::test_representative_historical_icm_sources",
+      "reason": "needs private historical Brain samples (excluded)"
+    },
+    {
+      "match": "tests/test_david_general.py::test_files_pdf_immutable_edits_and_attachment_scope",
+      "reason": "needs excluded brand tokens"
+    },
+    {
+      "match": "tests/test_product_launch_blockers.py::test_david_jobs_no_connector_writes_blocks_before_checkout",
+      "reason": "needs a registered local website checkout (git repository)"
+    },
+    {
+      "match": "tests/test_product_launch_blockers.py::test_jobs_authorized_test_connector_executes",
+      "reason": "needs a registered local website checkout (git repository)"
+    },
+    {
+      "match": "tests/test_external_jobs_mcp.py::test_schedule_and_management",
+      "reason": "needs a registered local website checkout (git repository)"
+    },
+    {
+      "match": "tests/test_paid_model_guard.py::test_popen_of_paid_launcher_is_refused_before_spawn[argv1]",
+      "reason": "requires a real installed launcher path on the host"
+    },
+    {
+      "match": "tests/test_david_m1.py::RemovalTests::test_example_dealership_service_files_stay_but_never_reach_david",
+      "reason": "asserts the originating deployment's separate bot workspace (excluded); guard names need generalizing"
+    },
+    {
+      "match": "tests/test_aos_agents_release.py::Safety::test_cross_client_and_example_dealership_context_block",
+      "reason": "asserts the originating deployment's private-client scope name; guard needs generalizing"
+    },
+    {
+      "match": "tests/test_drive_watcher.py::WatcherTests::test_scope_and_size_negative_cases",
+      "reason": "asserts the originating deployment's private-client folder deny list; guard needs generalizing"
+    },
+    {
+      "match": "tests/test_telegram_brain_open.py::BrainOpenTests::test_main_routes_callback",
+      "reason": "requires the install at the default root /opt/ttros-core"
+    },
+    {
+      "match": "tests/test_business_brain_graph.py::BusinessBrainGraphTest::test_real_graphify_markdown_projection",
+      "reason": "requires the Graphify runtime in the operator's pipx location"
+    },
+    {
+      "match": "tests/test_website_studio_migration.py::test_python_and_browser_migrations_agree_on_every_genuine_draft",
+      "reason": "needs the originating deployment's real draft history (excluded)"
+    },
+    {
+      "match": "tests/test_website_studio_stage2.py::test_legacy_drafts_migrate_without_losing_ids_content_styles_or_order",
+      "reason": "needs the originating site's real copy (neutralised in Core)"
+    },
+    {
+      "match": "tests/test_website_studio_stage3.py::test_default_seo_equals_the_original_metadata_and_structured_data",
+      "reason": "compares copy derived from the originating site's real text (neutralised in Core)"
+    },
+    {
+      "match": "tests/test_website_studio_stage3.py::test_seo_follows_visible_service_name_and_description_and_never_the_url",
+      "reason": "compares copy derived from the originating site's real text (neutralised in Core)"
+    },
+    {
+      "match": "tests/test_dashboard_connections.py::test_oidc_state_cookie_pkce_expiry_replay_and_nonce",
+      "reason": "needs the originating site's captured page mirror (not distributed)"
+    },
+    {
+      "match": "tests/test_dashboard_connections.py::test_real_page_draft_stale_proposals_and_tenant_isolation",
+      "reason": "needs the originating site's captured page mirror (not distributed)"
+    },
+    {
+      "match": "tests/test_website_studio_native.py",
+      "reason": "needs private proof exports (excluded)"
+    },
+    {
+      "match": "tests/test_brain_graph_links.py::SuggestedLinkRetrievalTest::test_graph_query_follows_a_suggested_link_and_labels_it",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_brain_graph_links.py::SuggestedLinkRetrievalTest::test_search_rows_carry_links_only_within_their_scope",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_brain_graph_links.py::SuggestedLinkRetrievalTest::test_stale_endpoint_or_other_scope_never_uses_the_link",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_brain_graph_links.py::SuggestedLinkRetrievalTest::test_tampered_target_is_dropped_at_return",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_business_brain_graph.py::BusinessBrainGraphTest::test_dynamic_intake_prefixes_are_published_and_weak_matches_fall_back",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_business_brain_graph.py::BusinessBrainGraphTest::test_stale_and_unavailable_graphs_fall_back_without_targets",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_business_brain_graph.py::BusinessBrainGraphTest::test_two_client_targets_are_filtered_before_return_and_contain_no_bodies",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_business_brain_graph.py::BusinessBrainGraphTest::test_unchanged_build_is_idempotent_and_failure_preserves_publication",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_incremental.py::IncrementalGraphTest::test_duplicate_id_fails_closed_and_leaves_the_published_graph",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_incremental.py::IncrementalGraphTest::test_edit_add_delete_rename_and_id_change_equal_a_full_build",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_incremental.py::IncrementalGraphTest::test_indexed_status_reads_no_note_and_falls_back_to_the_full_scan",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_incremental.py::IncrementalGraphTest::test_nightly_build_records_parity_with_incremental_updates",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_incremental.py::IncrementalGraphTest::test_non_live_graph_without_a_state_db_stays_on_the_full_path",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_incremental.py::IncrementalGraphTest::test_out_of_band_edit_before_the_sweep_is_dropped_at_return",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_incremental.py::IncrementalGraphTest::test_stat_sweep_applies_out_of_band_edits_and_detects_nothing_when_idle",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_incremental.py::IncrementalGraphTest::test_symlink_escape_and_path_traversal_are_never_read",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_incremental.py::IncrementalGraphTest::test_unchanged_content_is_a_no_op_and_revision_moves_only_on_change",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_lexical_scope.py::LexicalScopeTest::test_client_scope_isolation",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_lexical_scope.py::LexicalScopeTest::test_denied_pointer_stays_denied",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_lexical_scope.py::LexicalScopeTest::test_failures_beyond_overscan_fall_back_to_the_original_path",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_lexical_scope.py::LexicalScopeTest::test_flag_default_is_off",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_lexical_scope.py::LexicalScopeTest::test_same_targets_same_order_and_far_fewer_full_checks",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_lexical_scope.py::LexicalScopeTest::test_shadow_comparison_flags_a_sabotaged_new_path",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_lexical_scope.py::LexicalScopeTest::test_shadow_mode_returns_original_and_logs_equal",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_lexical_scope.py::LexicalScopeTest::test_stale_hash_is_caught_on_returned_notes_only",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_graph_lexical_scope.py::LexicalScopeTest::test_symlink_escape_accepted_lexically_rejected_by_full_check_and_refilled",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_import_provenance.py::CaptureProvenanceTests::test_drive_capture_node_records_identity_and_replays_without_a_commit",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_import_provenance.py::OriginalBytesTests::test_the_watcher_stores_the_exact_original_next_to_the_derivative_link",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_ingestion_repair.py::SemanticIsExplicitAndModelFree::test_default_capture_spawns_no_model_process",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_ingestion_repair.py::SemanticIsExplicitAndModelFree::test_supplied_extraction_survives_a_failed_git_transaction_and_is_reused",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_ingestion_repair.py::SemanticIsExplicitAndModelFree::test_supplied_extraction_writes_the_card_with_zero_model_invocations",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_ingestion_repair.py::SourceIntakeTest::test_capture_exact_retrieval_duplicate_zero_model_and_boundaries",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_ingestion_repair.py::SourceIntakeTest::test_capture_trailing_whitespace_source_commits_cleanly_and_preserves_exact_bytes",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_ingestion_repair.py::SourceIntakeTest::test_production_capture_source_feeds_semantic_extraction",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_ingestion_repair.py::SourceIntakeTest::test_semantic_extraction_backfill_writes_card_and_claim_record",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_source_intake.py::SourceIntakeTest::test_capture_exact_retrieval_duplicate_zero_model_and_boundaries",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_source_intake.py::SourceIntakeTest::test_capture_trailing_whitespace_source_commits_cleanly_and_preserves_exact_bytes",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_source_intake.py::SourceIntakeTest::test_production_capture_source_feeds_semantic_extraction",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_source_intake.py::SourceIntakeTest::test_semantic_extraction_backfill_writes_card_and_claim_record",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_source_interpret_rev3.py::ImportedBrainTests::test_graph_projects_entities_and_only_the_evidenced_typed_edge_and_one_hop_returns_the_stating_note",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_source_interpret_rev3.py::ImportedBrainTests::test_incremental_update_keeps_derived_entities_equal_to_a_full_build",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    },
+    {
+      "match": "tests/test_step4_entity_relationships.py::Step4EntityRelationshipTest::test_typed_activity_relationship_and_one_hop_target",
+      "reason": "needs the optional Graphify runtime (not installed)",
+      "unless_exists": "~/.local/share/pipx/venvs/graphifyy/bin/python"
+    }
+  ]
+}

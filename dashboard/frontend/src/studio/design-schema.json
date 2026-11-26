@@ -1,0 +1,557 @@
+{
+  "version": 2,
+  "globalTokens": {
+    "headingFont": {
+      "type": "enum",
+      "label": "Heading font",
+      "default": "Geist",
+      "options": [
+        "Geist",
+        "Inter",
+        "Georgia",
+        "System"
+      ],
+      "group": "Typography"
+    },
+    "bodyFamily": {
+      "type": "enum",
+      "label": "Body family",
+      "default": "Inter",
+      "options": [
+        "Geist",
+        "Inter",
+        "Georgia",
+        "System"
+      ],
+      "group": "Typography"
+    },
+    "primary": {
+      "type": "colour",
+      "label": "Primary",
+      "default": "#111315",
+      "group": "Colours"
+    },
+    "secondary": {
+      "type": "colour",
+      "label": "Secondary surface",
+      "default": "#ece7dc",
+      "group": "Colours"
+    },
+    "accent": {
+      "type": "colour",
+      "label": "Accent",
+      "default": "#b89b63",
+      "group": "Colours"
+    },
+    "background": {
+      "type": "colour",
+      "label": "Background",
+      "default": "#f7f3ea",
+      "group": "Colours"
+    },
+    "text": {
+      "type": "colour",
+      "label": "Text",
+      "default": "#111315",
+      "group": "Colours"
+    },
+    "muted": {
+      "type": "colour",
+      "label": "Muted text",
+      "default": "#57564f",
+      "group": "Colours"
+    },
+    "h1Font": {
+      "type": "enum",
+      "label": "H1 font",
+      "default": "inherit",
+      "options": [
+        "inherit",
+        "Geist",
+        "Inter",
+        "Georgia",
+        "System"
+      ],
+      "group": "H1 text"
+    },
+    "h1Size": {
+      "type": "number",
+      "label": "H1 size (px)",
+      "default": 106,
+      "min": 12,
+      "max": 160,
+      "step": 1,
+      "group": "H1 text"
+    },
+    "h1Weight": {
+      "type": "number",
+      "label": "H1 weight",
+      "default": 570,
+      "min": 100,
+      "max": 900,
+      "step": 10,
+      "group": "H1 text"
+    },
+    "h1LineHeight": {
+      "type": "number",
+      "label": "H1 line height",
+      "default": 0.99,
+      "min": 0.85,
+      "max": 2.4,
+      "step": 0.01,
+      "group": "H1 text"
+    },
+    "h1Tracking": {
+      "type": "number",
+      "label": "H1 tracking (em)",
+      "default": -0.06,
+      "min": -0.1,
+      "max": 0.2,
+      "step": 0.005,
+      "group": "H1 text"
+    },
+    "h2Font": {
+      "type": "enum",
+      "label": "H2 font",
+      "default": "inherit",
+      "options": [
+        "inherit",
+        "Geist",
+        "Inter",
+        "Georgia",
+        "System"
+      ],
+      "group": "H2 text"
+    },
+    "h2Size": {
+      "type": "number",
+      "label": "H2 size (px)",
+      "default": 70,
+      "min": 12,
+      "max": 160,
+      "step": 1,
+      "group": "H2 text"
+    },
+    "h2Weight": {
+      "type": "number",
+      "label": "H2 weight",
+      "default": 570,
+      "min": 100,
+      "max": 900,
+      "step": 10,
+      "group": "H2 text"
+    },
+    "h2LineHeight": {
+      "type": "number",
+      "label": "H2 line height",
+      "default": 1.035,
+      "min": 0.85,
+      "max": 2.4,
+      "step": 0.01,
+      "group": "H2 text"
+    },
+    "h2Tracking": {
+      "type": "number",
+      "label": "H2 tracking (em)",
+      "default": -0.06,
+      "min": -0.1,
+      "max": 0.2,
+      "step": 0.005,
+      "group": "H2 text"
+    },
+    "h3Font": {
+      "type": "enum",
+      "label": "H3 font",
+      "default": "inherit",
+      "options": [
+        "inherit",
+        "Geist",
+        "Inter",
+        "Georgia",
+        "System"
+      ],
+      "group": "H3 text"
+    },
+    "h3Size": {
+      "type": "number",
+      "label": "H3 size (px)",
+      "default": 27,
+      "min": 12,
+      "max": 160,
+      "step": 1,
+      "group": "H3 text"
+    },
+    "h3Weight": {
+      "type": "number",
+      "label": "H3 weight",
+      "default": 570,
+      "min": 100,
+      "max": 900,
+      "step": 10,
+      "group": "H3 text"
+    },
+    "h3LineHeight": {
+      "type": "number",
+      "label": "H3 line height",
+      "default": 1.18,
+      "min": 0.85,
+      "max": 2.4,
+      "step": 0.01,
+      "group": "H3 text"
+    },
+    "h3Tracking": {
+      "type": "number",
+      "label": "H3 tracking (em)",
+      "default": -0.04,
+      "min": -0.1,
+      "max": 0.2,
+      "step": 0.005,
+      "group": "H3 text"
+    },
+    "bodyFont": {
+      "type": "enum",
+      "label": "Body font",
+      "default": "inherit",
+      "options": [
+        "inherit",
+        "Geist",
+        "Inter",
+        "Georgia",
+        "System"
+      ],
+      "group": "Body text"
+    },
+    "bodySize": {
+      "type": "number",
+      "label": "Body size (px)",
+      "default": 16,
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "group": "Body text"
+    },
+    "bodyWeight": {
+      "type": "number",
+      "label": "Body weight",
+      "default": 400,
+      "min": 100,
+      "max": 900,
+      "step": 10,
+      "group": "Body text"
+    },
+    "bodyLineHeight": {
+      "type": "number",
+      "label": "Body line height",
+      "default": 1.65,
+      "min": 0.85,
+      "max": 2.4,
+      "step": 0.01,
+      "group": "Body text"
+    },
+    "bodyTracking": {
+      "type": "number",
+      "label": "Body tracking (em)",
+      "default": -0.005,
+      "min": -0.1,
+      "max": 0.2,
+      "step": 0.005,
+      "group": "Body text"
+    },
+    "buttonFont": {
+      "type": "enum",
+      "label": "Button font",
+      "default": "inherit",
+      "options": [
+        "inherit",
+        "Geist",
+        "Inter",
+        "Georgia",
+        "System"
+      ],
+      "group": "Button text"
+    },
+    "buttonSize": {
+      "type": "number",
+      "label": "Button size (px)",
+      "default": 15,
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "group": "Button text"
+    },
+    "buttonWeight": {
+      "type": "number",
+      "label": "Button weight",
+      "default": 600,
+      "min": 100,
+      "max": 900,
+      "step": 10,
+      "group": "Button text"
+    },
+    "buttonLineHeight": {
+      "type": "number",
+      "label": "Button line height",
+      "default": 1.35,
+      "min": 0.85,
+      "max": 2.4,
+      "step": 0.01,
+      "group": "Button text"
+    },
+    "buttonTracking": {
+      "type": "number",
+      "label": "Button tracking (em)",
+      "default": 0,
+      "min": -0.1,
+      "max": 0.2,
+      "step": 0.005,
+      "group": "Button text"
+    },
+    "buttonRadius": {
+      "type": "number",
+      "label": "Button radius (px)",
+      "default": 3,
+      "min": 0,
+      "max": 80,
+      "step": 1,
+      "group": "Buttons & borders"
+    },
+    "buttonPaddingBlock": {
+      "type": "number",
+      "label": "Button vertical padding",
+      "default": 12,
+      "min": 0,
+      "max": 64,
+      "step": 1,
+      "group": "Buttons & borders"
+    },
+    "buttonPaddingInline": {
+      "type": "number",
+      "label": "Button horizontal padding",
+      "default": 18,
+      "min": 0,
+      "max": 96,
+      "step": 1,
+      "group": "Buttons & borders"
+    },
+    "borderWidth": {
+      "type": "number",
+      "label": "Border width",
+      "default": 1,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "group": "Buttons & borders"
+    },
+    "borderStyle": {
+      "type": "enum",
+      "label": "Border style",
+      "default": "solid",
+      "options": [
+        "none",
+        "solid",
+        "dashed",
+        "dotted"
+      ],
+      "group": "Buttons & borders"
+    },
+    "borderColor": {
+      "type": "colour",
+      "label": "Border colour",
+      "default": "#cfc7b8",
+      "group": "Buttons & borders"
+    },
+    "sectionSpacing": {
+      "type": "number",
+      "label": "Section spacing (px)",
+      "default": 122,
+      "min": 0,
+      "max": 240,
+      "step": 1,
+      "group": "Layout"
+    },
+    "layoutGap": {
+      "type": "number",
+      "label": "Layout gap (px)",
+      "default": 64,
+      "min": 0,
+      "max": 160,
+      "step": 1,
+      "group": "Layout"
+    },
+    "contentWidth": {
+      "type": "number",
+      "label": "Content width (px)",
+      "default": 1248,
+      "min": 320,
+      "max": 1800,
+      "step": 1,
+      "group": "Layout"
+    },
+    "alignment": {
+      "type": "enum",
+      "label": "Text alignment",
+      "default": "left",
+      "options": [
+        "left",
+        "center",
+        "right"
+      ],
+      "group": "Layout"
+    }
+  },
+  "localTokens": {
+    "background": {
+      "type": "colour",
+      "label": "Background",
+      "default": "#f7f3ea",
+      "group": "Appearance"
+    },
+    "text": {
+      "type": "colour",
+      "label": "Text colour",
+      "default": "#111315",
+      "group": "Appearance"
+    },
+    "borderColor": {
+      "type": "colour",
+      "label": "Border colour",
+      "default": "#cfc7b8",
+      "group": "Appearance"
+    },
+    "paddingBlock": {
+      "type": "number",
+      "label": "Vertical padding",
+      "default": 32,
+      "min": 0,
+      "max": 240,
+      "step": 1,
+      "group": "Appearance"
+    },
+    "paddingInline": {
+      "type": "number",
+      "label": "Horizontal padding",
+      "default": 24,
+      "min": 0,
+      "max": 120,
+      "step": 1,
+      "group": "Appearance"
+    },
+    "marginBlock": {
+      "type": "number",
+      "label": "Vertical margin",
+      "default": 0,
+      "min": 0,
+      "max": 160,
+      "step": 1,
+      "group": "Appearance"
+    },
+    "gap": {
+      "type": "number",
+      "label": "Gap",
+      "default": 32,
+      "min": 0,
+      "max": 160,
+      "step": 1,
+      "group": "Appearance"
+    },
+    "radius": {
+      "type": "number",
+      "label": "Corner radius",
+      "default": 3,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "group": "Appearance"
+    },
+    "borderWidth": {
+      "type": "number",
+      "label": "Border width",
+      "default": 1,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "group": "Appearance"
+    },
+    "fontSize": {
+      "type": "number",
+      "label": "Text size (px)",
+      "default": 16,
+      "min": 0,
+      "max": 160,
+      "step": 1,
+      "group": "Appearance"
+    },
+    "fontWeight": {
+      "type": "number",
+      "label": "Text weight",
+      "default": 570,
+      "min": 100,
+      "max": 900,
+      "step": 10,
+      "group": "Appearance"
+    },
+    "alignment": {
+      "type": "enum",
+      "label": "Alignment",
+      "default": "left",
+      "options": [
+        "left",
+        "center",
+        "right"
+      ],
+      "group": "Appearance"
+    },
+    "borderStyle": {
+      "type": "enum",
+      "label": "Border style",
+      "default": "solid",
+      "options": [
+        "none",
+        "solid",
+        "dashed",
+        "dotted"
+      ],
+      "group": "Appearance"
+    },
+    "buttonVariant": {
+      "type": "enum",
+      "label": "Button appearance",
+      "default": "primary",
+      "options": [
+        "primary",
+        "secondary",
+        "outline"
+      ],
+      "group": "Appearance"
+    }
+  },
+  "palettes": {
+    "Example Editorial": {
+      "primary": "#111315",
+      "secondary": "#ece7dc",
+      "accent": "#b89b63",
+      "background": "#f7f3ea",
+      "text": "#111315",
+      "muted": "#57564f",
+      "borderColor": "#cfc7b8"
+    },
+    "Forest": {
+      "primary": "#214c3b",
+      "secondary": "#e2eee6",
+      "accent": "#237a57",
+      "background": "#f5faf6",
+      "text": "#172e23",
+      "muted": "#496457",
+      "borderColor": "#b7cdbf"
+    },
+    "Ocean": {
+      "primary": "#173f67",
+      "secondary": "#e1edf5",
+      "accent": "#0969a5",
+      "background": "#f5f9fc",
+      "text": "#162c40",
+      "muted": "#4d6477",
+      "borderColor": "#bbcfdf"
+    }
+  }
+}

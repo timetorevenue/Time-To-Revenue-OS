@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "crm.followup_draft input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["recipient", "meeting"],
+  "properties": {
+    "recipient": {
+      "type": "object", "additionalProperties": false, "required": ["name"],
+      "properties": {
+        "name": {"type": "string", "minLength": 2, "maxLength": 80},
+        "company": {"type": "string", "maxLength": 120},
+        "email": {"description": "When given, the result proposes a Gmail draft to this address.", "type": "string", "maxLength": 200, "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"}
+      }
+    },
+    "meeting": {
+      "description": "The output of crm.meeting_extract: every decision, action item and next step carries the source it was found in.",
+      "type": "object",
+      "required": ["title", "summary", "decisions", "action_items", "next_step"],
+      "properties": {
+        "title": {"type": "string", "maxLength": 160},
+        "date": {"type": "string", "maxLength": 20},
+        "summary": {"type": "string", "maxLength": 600},
+        "decisions": {"type": "array", "maxItems": 4, "items": {"$ref": "#/$defs/backed"}},
+        "action_items": {
+          "type": "array", "maxItems": 6,
+          "items": {
+            "type": "object", "required": ["task", "sources"],
+            "properties": {
+              "task": {"type": "string", "maxLength": 300}, "owner": {"type": "string", "maxLength": 80},
+              "due": {"type": "string", "maxLength": 80},
+              "sources": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+            }
+          }
+        },
+        "pain_points": {"type": "array", "maxItems": 4, "items": {"$ref": "#/$defs/backed"}},
+        "open_questions": {"type": "array", "maxItems": 3, "items": {"type": "string", "maxLength": 300}},
+        "next_step": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/backed"}]}
+      }
+    },
+    "sender_name": {"type": "string", "minLength": 2, "maxLength": 60},
+    "steer": {"description": "One optional instruction from Casey on length or emphasis. It cannot add facts.", "type": "string", "maxLength": 300},
+    "style_refs": {
+      "description": "Exact Business Brain references to voice or email style notes.",
+      "type": "array", "maxItems": 2, "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^business_brain:[A-Za-z0-9_./#:-]+$"}
+    },
+    "artifact_name": {"description": "When given, the draft is written as this job artifact.", "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{0,59}\\.md$"}
+  },
+  "$defs": {
+    "backed": {
+      "type": "object", "required": ["text", "sources"],
+      "properties": {"text": {"type": "string", "maxLength": 300}, "sources": {"type": "array", "minItems": 1, "items": {"type": "string"}}}
+    }
+  }
+}

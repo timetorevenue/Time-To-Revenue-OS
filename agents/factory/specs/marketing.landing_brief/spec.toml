@@ -1,0 +1,31 @@
+[agent]
+name = "marketing.landing_brief"
+version = "0.1.0"
+kind = "tool"
+summary = "Plan one Example Company landing page from an offer, audience, outcome and primary call to action, with cited positioning and a verification checklist."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[context]
+needs = ["brain:memory/website_and_content.md", "input.evidence_refs"]
+max_tokens = 1600
+
+[capabilities]
+grants = ["brain.read:global"]
+proposes = []
+tools = []
+
+[budget]
+tokens = 0
+model_calls = 0
+seconds = 8
+max_steps = 1
+
+[factory]
+requirement = "Turn one offer, one TTROS audience hypothesis, the visitor's problem, desired outcome, channel and one CTA label into a structured planning brief. Use the scoped website and ICP context, add a mobile and conversion QA checklist, flag unverified proof, and ask for missing essentials. The output is draft planning data for handoff to Website Studio. It must never edit, publish, deploy, bill or send."
+source = "business_brain:memory/website_and_content.md and the selected Ideal Clients record"
+dependencies = ["agents/marketing.card.md", "tools/aos_product_launch.py", "tools/aos_website_manager.py"]
+token_budget = 40000

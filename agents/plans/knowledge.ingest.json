@@ -1,0 +1,36 @@
+{
+  "plan": "knowledge.ingest",
+  "version": "0.1.0",
+  "summary": "Shadow triage of one incoming source: open it, classify it, and propose where it is filed or hold it for review. It writes nothing; the existing ingestion is unchanged.",
+  "source_workflow": "blueprint section 7: Knowledge plan knowledge.ingest; section 10: classification runs in shadow beside ingestion",
+  "input_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["evidence_refs"],
+    "properties": {
+      "title": {"type": "string"},
+      "evidence_refs": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"type": "string"}},
+      "known_entities": {"type": "array", "items": {"type": "object"}}
+    }
+  },
+  "budget": {"tokens": 12000, "model_calls": 2, "seconds": 120},
+  "steps": [
+    {"id": "retrieve", "agent": "shared.brain_retrieve@0.1.0", "input": {"evidence_refs": "$input.evidence_refs"}},
+    {
+      "id": "classify",
+      "agent": "knowledge.source_classify@0.1.0",
+      "needs": ["retrieve"],
+      "input": {"title": "$input.title", "evidence_refs": "$steps.retrieve.output.refs", "known_entities": "$input.known_entities"}
+    },
+    {
+      "id": "propose",
+      "agent": "knowledge.filing_proposal@0.1.0",
+      "needs": ["classify"],
+      "input": {"title": "$input.title", "classification": "$steps.classify.output"}
+    }
+  ],
+  "output": {
+    "classification": "$steps.classify.output",
+    "proposal": "$steps.propose.output"
+  }
+}

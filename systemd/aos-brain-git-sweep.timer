@@ -1,0 +1,12 @@
+# Revisit: when Shared Brain recovery cadence changes. Last touched: 2026-10-03.
+[Unit]
+Description=Retry pending Business Brain commits every two minutes
+
+[Timer]
+OnCalendar=*:0/2
+AccuracySec=5s
+Persistent=true
+Unit=aos-brain-git-sweep.service
+
+[Install]
+WantedBy=timers.target

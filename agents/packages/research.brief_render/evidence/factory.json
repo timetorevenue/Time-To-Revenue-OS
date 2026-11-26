@@ -1,0 +1,175 @@
+{
+ "factory": "0.1.0",
+ "agent": "research.brief_render@0.1.0",
+ "status": "candidate",
+ "failed_step": "",
+ "work_order": "",
+ "live": false,
+ "steps": [
+  {
+   "step": "spec",
+   "ok": true,
+   "candidates": 1
+  },
+  {
+   "step": "registry",
+   "ok": true,
+   "problems": [],
+   "similar": [],
+   "registered": false
+  },
+  {
+   "step": "cases",
+   "ok": true,
+   "problems": [],
+   "composition": {
+    "total": 22,
+    "edge": 8,
+    "adversarial": 4,
+    "needs_input": 2,
+    "critical": 7,
+    "safety": 4,
+    "short_of": {}
+   },
+   "probes": [
+    "canary",
+    "injection"
+   ],
+   "holdout": [
+    "core-full-brief",
+    "core-numbering-by-first-use",
+    "core-uncited-finding-fails",
+    "edge-blank-claim-skipped",
+    "needs-no-question"
+   ],
+   "train": [
+    "adv-credential-in-quote",
+    "adv-heading-in-claim",
+    "adv-instruction-in-summary",
+    "adv-link-and-html-in-claim",
+    "core-confidence-shown",
+    "core-no-artifact-by-default",
+    "core-quotes-printed",
+    "core-title-given",
+    "core-uncited-source-not-listed",
+    "core-unlisted-source-fails",
+    "edge-eight-findings",
+    "edge-missing-summary",
+    "edge-no-conflicts-or-gaps",
+    "edge-no-quote-or-confidence",
+    "edge-same-source-twice-in-one",
+    "edge-single-finding",
+    "needs-no-findings"
+   ]
+  },
+  {
+   "step": "scaffold",
+   "ok": true,
+   "package": "agents/packages/research.brief_render",
+   "files": 6
+  },
+  {
+   "step": "check",
+   "ok": true,
+   "problems": []
+  },
+  {
+   "step": "eval",
+   "ok": true,
+   "level": "silver",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true
+   },
+   "complete": true,
+   "stopped": "",
+   "failed_cases": {},
+   "holdout_pass": true
+  }
+ ],
+ "level": "silver",
+ "kind": "tool",
+ "spec": "agents/factory/specs/research.brief_render",
+ "spec_sha256": "37cdd2658887017ffce8585d3f106601652fc00fcfe88a167193ff6a6c64db82",
+ "optimise": {
+  "candidates": [],
+  "chosen": {},
+  "training_cases": 17,
+  "held_out_cases": [
+   "core-full-brief",
+   "core-numbering-by-first-use",
+   "core-uncited-finding-fails",
+   "edge-blank-claim-skipped",
+   "needs-no-question"
+  ],
+  "tokens": {
+   "limit": 0,
+   "spent": 0,
+   "live_calls": 0,
+   "refused_calls": 0,
+   "exact": true,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cached_input_tokens": 0
+  }
+ },
+ "chosen": {},
+ "tokens": {
+  "limit": 0,
+  "spent": 0,
+  "live_calls": 0,
+  "refused_calls": 0,
+  "exact": true,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cached_input_tokens": 0
+ },
+ "binding": "tool",
+ "holdout": {
+  "ids": [
+   "core-full-brief",
+   "core-numbering-by-first-use",
+   "core-uncited-finding-fails",
+   "edge-blank-claim-skipped",
+   "needs-no-question"
+  ],
+  "cases": 5,
+  "ran": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "not_recorded": [],
+  "failed": {},
+  "critical_failed": [],
+  "schema_invalid": [],
+  "repair_rate": 0.0,
+  "model_calls": 0,
+  "tokens": 0,
+  "pass": true
+ },
+ "package_sha256": "651dfd5cb960fe38550f721dc30a85707e48cd40b14311f2484c8a2f449ebcc9",
+ "evidence": "agents/packages/research.brief_render/evidence/tool.json",
+ "gates": {
+  "1": true,
+  "2": true,
+  "3": true,
+  "4": true,
+  "5": true,
+  "6": true
+ },
+ "totals": {
+  "cases": 22,
+  "ran": 22,
+  "passed": 22,
+  "model_calls": 0,
+  "tokens": 0,
+  "live_calls": 0
+ },
+ "supports": [
+  "shadow",
+  "canary"
+ ]
+}

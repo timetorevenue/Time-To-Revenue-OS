@@ -1,0 +1,44 @@
+{
+  "plan": "research.brief",
+  "version": "0.1.0",
+  "summary": "Research brief on one question from sources already gathered: open the sources, synthesise quoted findings, check citations, render the one-page brief.",
+  "source_workflow": "blueprint section 7: Research plan research.brief",
+  "input_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["question", "evidence_refs"],
+    "properties": {
+      "question": {"type": "string"},
+      "audience": {"type": "string"},
+      "title": {"type": "string"},
+      "evidence_refs": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+    }
+  },
+  "budget": {"tokens": 14000, "model_calls": 2, "seconds": 180},
+  "steps": [
+    {"id": "retrieve", "agent": "shared.brain_retrieve@0.1.0", "input": {"evidence_refs": "$input.evidence_refs"}},
+    {
+      "id": "synthesise",
+      "agent": "research.synthesise@0.1.0",
+      "needs": ["retrieve"],
+      "input": {"question": "$input.question", "audience": "$input.audience", "evidence_refs": "$steps.retrieve.output.refs"}
+    },
+    {
+      "id": "verify",
+      "agent": "shared.cite_verify@0.1.0",
+      "needs": ["retrieve", "synthesise"],
+      "input": {"claim_sets": ["$steps.synthesise.output.findings"], "allowed_refs": "$steps.retrieve.output.refs"}
+    },
+    {
+      "id": "render",
+      "agent": "research.brief_render@0.1.0",
+      "needs": ["synthesise", "verify"],
+      "input": {"title": "$input.title", "synthesis": "$steps.synthesise.output", "artifact_name": "research_brief.md"}
+    }
+  ],
+  "output": {
+    "synthesis": "$steps.synthesise.output",
+    "verification": "$steps.verify.output",
+    "brief": "$steps.render.output"
+  }
+}

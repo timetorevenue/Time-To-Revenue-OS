@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "description": "Non-secret provider configuration. IDs are provisioned outside Codex. Auth configs must be reviewed for the listed read scope before enabling. Runtime permission policy remains the action authority.",
+  "providers": {
+    "vercel": {
+      "label": "Vercel",
+      "toolkit": "vercel",
+      "auth_config_id": null,
+      "read_only_reviewed": false,
+      "permissions": [
+        "deployment.read"
+      ],
+      "setup": "Sign in to Vercel with Continue with Google at https://vercel.com/login. Provision a reviewed Vercel Composio auth config for metadata reads. No Vercel password is needed. No deployment tool is exposed."
+    },
+    "github": {
+      "label": "GitHub website source",
+      "toolkit": "github",
+      "auth_config_id": null,
+      "read_only_reviewed": false,
+      "permissions": [
+        "source.read"
+      ],
+      "setup": "The Example-Org organization currently refuses the existing Composio OAuth app (HTTP 403). An organization owner must approve read access to example-site, or supply an authorized read-only source export of commit 0000000000000000000000000000000000000000. Do not change the existing account from Codex."
+    },
+    "googledrive": {
+      "label": "Google Drive",
+      "toolkit": "googledrive",
+      "auth_config_id": null,
+      "read_only_reviewed": false,
+      "permissions": [
+        "files.read"
+      ],
+      "setup": "Provision a separate, reviewed drive.readonly auth config. Google sign-in does not grant Drive access. Existing registered Studio Drive readers remain available through their current authorized paths."
+    },
+    "gmail": {
+      "label": "Gmail",
+      "toolkit": "gmail",
+      "auth_config_id": null,
+      "read_only_reviewed": false,
+      "permissions": [
+        "mail.read"
+      ],
+      "setup": "Provision a separate, reviewed gmail.readonly auth config. Google sign-in does not grant Gmail access. Existing authorized David mail connectors remain unchanged."
+    }
+  },
+  "website": {
+    "url": "https://www.example.com",
+    "project": "prj_tDmcXcdOvbfW7mw5VMYt6maN4wY7",
+    "deployment": "dpl_De6tgWAJDw34wk7pkFXLwxo1qanW",
+    "source_commit": "0000000000000000000000000000000000000000",
+    "source_branch": "codex/enlarge-site-header",
+    "source_evidence": "Operator supplied Vercel-verified identity; local source object not yet available. Published deployment marker independently verified in Chromium."
+  }
+}

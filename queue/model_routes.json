@@ -1,0 +1,102 @@
+{
+  "version": "0",
+  "description": "Work Queue lane route metadata for receipts and ledgers. Codex is the default workbench (model and effort come from codex_selection below); Claude Code is the alternate. Authority comes only from rules/runtime_permission_policy.md.",
+  "fallback": {
+    "lane": "unassigned",
+    "profile_requested": "default",
+    "provider": "configured externally",
+    "model": "configured externally",
+    "policy": "An unassigned or unknown owner runs on the default workbench (Codex)."
+  },
+  "routes": {
+    "revenue": {
+      "lane": "revenue",
+      "profile_requested": "default",
+      "provider": "configured externally",
+      "model": "configured externally",
+      "policy": "The revenue lane is a work-order shape and card; it runs on the default workbench (Codex)."
+    },
+    "marketing": {
+      "lane": "marketing",
+      "profile_requested": "default",
+      "provider": "configured externally",
+      "model": "configured externally",
+      "policy": "The marketing lane is a work-order shape and card; it runs on the default workbench (Codex)."
+    },
+    "delivery": {
+      "lane": "delivery",
+      "profile_requested": "default",
+      "provider": "configured externally",
+      "model": "configured externally",
+      "policy": "The delivery lane is a work-order shape and card; it runs on the default workbench (Codex)."
+    },
+    "operations": {
+      "lane": "operations",
+      "profile_requested": "default",
+      "provider": "configured externally",
+      "model": "configured externally",
+      "policy": "The operations lane is a work-order shape and card; it runs on the default workbench (Codex)."
+    },
+    "ops": {
+      "lane": "ops",
+      "profile_requested": "default",
+      "provider": "configured externally",
+      "model": "configured externally",
+      "policy": "The ops lane is a work-order shape and card; it runs on the default workbench (Codex)."
+    },
+    "codex": {
+      "lane": "codex",
+      "profile_requested": "default",
+      "provider": "configured externally",
+      "model": "configured externally",
+      "policy": "Codex remains an implementation workbench. Each step launches a fresh ephemeral session with its own 500K fuse on the tier's model and effort.",
+      "codex_selection": {
+        "catalog_check": "codex-cli 0.167.0 `codex debug models` on 2026-11-14 lists gpt-6-luna, gpt-6-sol and gpt-6.1-terra with low/medium/high effort. gpt-6.1-terra is listed for pinned ModelPort agent calls only; the tiers below are unchanged.",
+        "supported_models": [
+          "gpt-6-luna",
+          "gpt-6-sol",
+          "gpt-6.1-terra"
+        ],
+        "tiers": {
+          "simple": {
+            "model": "gpt-6-luna",
+            "reasoning_effort": "low",
+            "use_for": "read-only checks, small edits, short briefs"
+          },
+          "medium": {
+            "model": "gpt-6-sol",
+            "reasoning_effort": "medium",
+            "use_for": "ordinary scoped implementation; the previous fixed default"
+          },
+          "complex": {
+            "model": "gpt-6-sol",
+            "reasoning_effort": "high",
+            "use_for": "risky, cross-cutting, security/ledger/schema work or retries"
+          }
+        }
+      },
+      "codex_accounts": {
+        "note": "Two independently paid ChatGPT subscription accounts, each signed in only in its own Codex home. Sticky: the active account (queue/codex_accounts/active.json) is kept while its five-hour window has more than switch_remaining_percent remaining, no window is exhausted and no provider restriction is set; otherwise the other account becomes active if it qualifies (A -> B -> A). Weekly has no reserve: it blocks only at exhaustion or restriction. Neither -> refuse (quota_unavailable/needs_authentication). Chosen once per new session or job by tools/aos_codex_policy.select_codex_account; never an API key.",
+        "switch_remaining_percent": 20,
+        "recheck_seconds": 60,
+        "accounts": [
+          {
+            "slot": "A",
+            "codex_home": "/home/operator/.codex"
+          },
+          {
+            "slot": "B",
+            "codex_home": "/home/operator/.codex-account-b"
+          }
+        ]
+      }
+    },
+    "claude": {
+      "lane": "claude",
+      "profile_requested": "default",
+      "provider": "configured externally",
+      "model": "configured externally",
+      "policy": "Claude Code remains an implementation workbench. This metadata is stamped for receipts and ledgers only."
+    }
+  }
+}

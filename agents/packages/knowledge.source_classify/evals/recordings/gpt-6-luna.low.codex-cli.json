@@ -1,0 +1,514 @@
+{
+ "0142932b3c259be6fefc45d61a0109dfe893d9d3bc4b946a48f4e0b45ff18ab9": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-10",
+   "entities": [
+    "Tidewater Plumbing",
+    "Marco Silva"
+   ],
+   "kind": "call_transcript",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "A transcript of a conversation about Tidewater Plumbing’s quote turnaround time and weekly quote volume."
+  },
+  "latency_seconds": 4.384,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7904,
+   "event_count": 1,
+   "input_tokens": 7830,
+   "output_tokens": 74,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "09c063e51541e8054a0ab2ef27fb413167074e48067831e7c760825f2d409260": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-08",
+   "entities": [],
+   "kind": "meeting_notes",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "Call notes describe Lakeside Dental testing text reminders to reduce time spent on unanswered recall postcards."
+  },
+  "latency_seconds": 3.222,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7854,
+   "event_count": 1,
+   "input_tokens": 7789,
+   "output_tokens": 65,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "1483f714d52700c24596370eff519f763e1f4ea577e4762e91270948dbdc3d70": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "",
+   "entities": [],
+   "kind": "marketing_content",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "A draft LinkedIn post discusses missed leads caused by delayed callbacks and a clinic’s same-day callback rule."
+  },
+  "latency_seconds": 4.566,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7863,
+   "event_count": 1,
+   "input_tokens": 7802,
+   "output_tokens": 61,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "1a619a30bd481328b954735e8957e25f3afdfce33ec4a0f201416247b9cd90ec": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-03",
+   "entities": [
+    "Harbourline Physio"
+   ],
+   "kind": "financial_record",
+   "missing": [],
+   "sensitivity": "confidential",
+   "sufficient": true,
+   "summary": "An invoice to Harbourline Physio for a callback workflow starter scan, with GST and payment terms."
+  },
+  "latency_seconds": 3.444,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7897,
+   "event_count": 1,
+   "input_tokens": 7822,
+   "output_tokens": 75,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "2300018a55249d3bfefdf251fe0106bb40e5815519261d08fd26932bb71ee8bb": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-06",
+   "entities": [],
+   "kind": "meeting_notes",
+   "missing": [],
+   "sensitivity": "confidential",
+   "sufficient": true,
+   "summary": "Call notes report that about one in ten renewal reminders tracked in a spreadsheet are sent late."
+  },
+  "latency_seconds": 3.637,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7879,
+   "event_count": 1,
+   "input_tokens": 7813,
+   "output_tokens": 66,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "28682eb4808796c910487c363deec6cd6b25927ccd9eb6903611e58dd22d522d": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-05",
+   "entities": [
+    "Tidewater Plumbing"
+   ],
+   "kind": "proposal_or_contract",
+   "missing": [],
+   "sensitivity": "confidential",
+   "sufficient": true,
+   "summary": "A four-week proposal for reviewing Tidewater Plumbing’s bathroom-job quoting workflow, with deliverables, fee, and termination terms."
+  },
+  "latency_seconds": 3.515,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7903,
+   "event_count": 1,
+   "input_tokens": 7824,
+   "output_tokens": 79,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "2cdf6f92cbfe6db1fe6ca73ab87e5cddf39a80c8fb7d5dee1d296e94239ecbcc": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "",
+   "entities": [],
+   "kind": "research_or_article",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "An industry article argues small firms should map tasks before buying automation software and begin with tasks that make people wait."
+  },
+  "latency_seconds": 3.463,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7877,
+   "event_count": 1,
+   "input_tokens": 7814,
+   "output_tokens": 63,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "31206f73c80ace43adf0aecc0fde46f9beb1aab09cef5af57778d3c438318d69": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "",
+   "entities": [
+    "Tidewater Plumbing",
+    "Marco Silva"
+   ],
+   "kind": "meeting_notes",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "Notes from a call about Tidewater Plumbing’s quote turnaround, sharing recent quotes, and building a first template."
+  },
+  "latency_seconds": 4.629,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7849,
+   "event_count": 1,
+   "input_tokens": 7779,
+   "output_tokens": 70,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "335d83dea70eb50e03a2afef66d222918638cd5d823bba957d4a837f7f871e48": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-09",
+   "entities": [
+    "Brightwater Law",
+    "Asha Mehta"
+   ],
+   "kind": "email",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "Email from Asha Mehta of Brightwater Law thanking Casey for a call, attaching an intake form, and asking to begin interviews the week of November 23."
+  },
+  "latency_seconds": 3.794,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7938,
+   "event_count": 1,
+   "input_tokens": 7850,
+   "output_tokens": 88,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "34d139758c0ee810aadeb9cf85958bd48899a0ab6d03a962a356566611e19210": {
+  "detail": "",
+  "json": {
+   "confidence": "low",
+   "date": "",
+   "entities": [],
+   "kind": "other",
+   "missing": [
+    "The template needs meeting details or notes, including title, date, attendees, notes, decisions, or actions."
+   ],
+   "sensitivity": "normal",
+   "sufficient": false,
+   "summary": ""
+  },
+  "latency_seconds": 3.351,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7821,
+   "event_count": 1,
+   "input_tokens": 7760,
+   "output_tokens": 61,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "5d163fca48e417be0d3bf66a4ba86350ca3380caafc7c8e6a5889a51df62ccd2": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-03",
+   "entities": [
+    "Harbourline Physio"
+   ],
+   "kind": "financial_record",
+   "missing": [],
+   "sensitivity": "confidential",
+   "sufficient": true,
+   "summary": "An invoice to Harbourline Physio for a callback workflow scan, with GST, total due, and 14-day payment terms."
+  },
+  "latency_seconds": 3.856,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7928,
+   "event_count": 1,
+   "input_tokens": 7848,
+   "output_tokens": 80,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "73740957b35126688b6dc531c6ca837b702312ffea0f085b0540b6c63805659d": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-12",
+   "entities": [
+    "Harbourline Physio",
+    "Dana Reyes"
+   ],
+   "kind": "meeting_notes",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "Discovery call notes describe Harbourline Physio’s delayed voicemail returns and an agreed starter scan, with Dana to send a missed-call log."
+  },
+  "latency_seconds": 3.838,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7903,
+   "event_count": 1,
+   "input_tokens": 7819,
+   "output_tokens": 84,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "73c281c0ba3960b4ec9c49c08815f865bae81d8bc73b6ecef7454cac18b839e2": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-09",
+   "entities": [
+    "Brightwater Law",
+    "Asha Mehta"
+   ],
+   "kind": "email",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "Email from Asha Mehta of Brightwater Law thanks Casey for a call and asks to start intake interviews the week of November 23."
+  },
+  "latency_seconds": 3.781,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7906,
+   "event_count": 1,
+   "input_tokens": 7823,
+   "output_tokens": 83,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "78f71ee6aa31d47664f4d0ef436e9b77dac78b94079da6ef6618c2dc658dd3eb": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "",
+   "entities": [
+    "Harbourline Physio",
+    "Dana Reyes"
+   ],
+   "kind": "meeting_notes",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "Catch-up notes record that Harbourline Physio’s missed-call log showed 41 unreturned voicemails."
+  },
+  "latency_seconds": 3.935,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7850,
+   "event_count": 1,
+   "input_tokens": 7779,
+   "output_tokens": 71,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "83bdae5818b7b02976269bea43c63c4e11e315c07403f2e0067d4d545f9f4898": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-11",
+   "entities": [
+    "Tidewater Plumbing",
+    "Harbourline Physio"
+   ],
+   "kind": "meeting_notes",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "Notes compare lead-response delays at Tidewater Plumbing and Harbourline Physio."
+  },
+  "latency_seconds": 4.062,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7870,
+   "event_count": 1,
+   "input_tokens": 7797,
+   "output_tokens": 73,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "8b78ac8f0eda0ae21bbbc07e904f288c6496f8fe211422edc2aa4aefe06256ac": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "",
+   "entities": [],
+   "kind": "procedure",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "A recurring starter scan procedure outlining scope confirmation, example collection, step timing, findings documentation, and owner review."
+  },
+  "latency_seconds": 4.709,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7902,
+   "event_count": 1,
+   "input_tokens": 7840,
+   "output_tokens": 62,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "a15e7ffb25cca2b1e1aefd5197911989b380bb19ed67a3a1619970041bd45f4a": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-12",
+   "entities": [
+    "Harbourline Physio",
+    "Dana Reyes"
+   ],
+   "kind": "meeting_notes",
+   "missing": [],
+   "sensitivity": "confidential",
+   "sufficient": true,
+   "summary": "Discovery-call notes about Harbourline Physio’s delayed voicemail returns and an agreed starter scan, with Dana to send a missed-call log."
+  },
+  "latency_seconds": 3.652,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7905,
+   "event_count": 1,
+   "input_tokens": 7820,
+   "output_tokens": 85,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "b72649bde9526a4b86b07e47e44350c071d2538e2120d3f9a8ab9e2ae7a436bb": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "2026-11-12",
+   "entities": [],
+   "kind": "meeting_notes",
+   "missing": [],
+   "sensitivity": "confidential",
+   "sufficient": true,
+   "summary": "Discovery call notes about Harbourline Physio’s delayed voicemail responses and an agreed starter scan."
+  },
+  "latency_seconds": 3.087,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7836,
+   "event_count": 1,
+   "input_tokens": 7769,
+   "output_tokens": 67,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "f721ed34058615ea2d86938d2b41428e2385b68b4e94f101f7c2bdbb53114b91": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "",
+   "entities": [],
+   "kind": "personal_or_unrelated",
+   "missing": [],
+   "sensitivity": "confidential",
+   "sufficient": true,
+   "summary": "A personal reminder lists family errands and household tasks."
+  },
+  "latency_seconds": 2.976,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 6016,
+   "cumulative_tokens": 7831,
+   "event_count": 1,
+   "input_tokens": 7778,
+   "output_tokens": 53,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "f8335d3605c1f5d9835e553dfbe3844eb62c78a221c37afd4afffb39cfff7d76": {
+  "detail": "",
+  "json": {
+   "confidence": "high",
+   "date": "",
+   "entities": [],
+   "kind": "procedure",
+   "missing": [],
+   "sensitivity": "normal",
+   "sufficient": true,
+   "summary": "A recurring starter scan procedure covering workflow scoping, example collection, step timing, findings, and owner review."
+  },
+  "latency_seconds": 6.571,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7885,
+   "event_count": 1,
+   "input_tokens": 7823,
+   "output_tokens": 62,
+   "reasoning_output_tokens": 0
+  }
+ }
+}

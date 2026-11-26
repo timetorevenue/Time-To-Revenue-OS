@@ -1,0 +1,50 @@
+# Factory build spec. The package under agents/packages/shared.planner is generated from this folder:
+# edit here and run `aos-agent.py build shared.planner`; never edit the package.
+# Revisit: when a specialist the planner can use is added, renamed or re-versioned, or the plan shape changes. · Last touched: 2026-11-14.
+[agent]
+name = "shared.planner"
+version = "0.1.0"
+kind = "planner"
+summary = "Turn one request that fits no single department plan into a checked plan of specialist steps, or say what is missing."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[capabilities]
+grants = []
+proposes = []
+tools = []
+
+[budget]
+tokens = 12000
+model_calls = 2
+seconds = 60
+max_steps = 1
+
+[compose]
+callable_by = ["*"]
+calls = []
+
+[factory]
+requirement = "The cross-business coordinator. Called only when a request spans departments or fits no plan file. One call decides which of a fixed list of tasks the request needs and binds each to the records and people David supplied; code then assembles the plan from fixed fragments, so the model never writes plan syntax and cannot name an agent, record or person it was not given. It owns no queue, memory, policy or schedule, runs nothing itself and proposes no effect. The plan it returns is checked and run by the plan runner in the same job."
+token_budget = 300000
+holdout_share = 0.2
+source = "blueprint section 3 (cross-business coordinator) and section 7 (the cross-department example)"
+
+# Cheapest first. The blueprint guessed Terra-medium for planning; the search tries the cheaper pins first.
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "low"
+
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "medium"
+
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6.1-terra"
+effort = "medium"

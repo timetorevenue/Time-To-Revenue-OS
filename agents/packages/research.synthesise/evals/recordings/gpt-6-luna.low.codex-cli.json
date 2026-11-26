@@ -1,0 +1,942 @@
+{
+ "14575fc720c8e26c9684e806e0e4360d20c12ecaf7a646da047aca81f712f0cf": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "In this study, firms that called back within one hour booked the job in 48 percent of cases.",
+     "confidence": "high",
+     "quote": "Firms that called back within one hour booked the job in 48 percent of cases",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In this study, firms that called back after 24 hours booked the job in 11 percent of cases.",
+     "confidence": "high",
+     "quote": "after 24 hours the figure fell to 11 percent",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In the study, 62 percent of callers who reached voicemail did not call again.",
+     "confidence": "high",
+     "quote": "62 percent of callers who reached voicemail did not call again",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The study sample is mostly trades and clinics.",
+     "confidence": "high",
+     "quote": "the sample is mostly trades and clinics",
+     "source_id": "S1"
+    }
+   ],
+   "gaps": [
+    "The source does not identify a precise latest callback time that will keep an individual lead.",
+    "The source does not report callback outcomes for times between one hour and 24 hours."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The study suggests calling back within one hour: firms that did so booked the job in 48 percent of cases, compared with 11 percent after 24 hours. This is evidence from a study of small service firms, mostly trades and clinics, but it does not establish a precise deadline that guarantees keeping a lead."
+  },
+  "latency_seconds": 8.596,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8051,
+   "event_count": 1,
+   "input_tokens": 7744,
+   "output_tokens": 307,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "1a05ed673ab674ed0c94084b8df51cd434a6c2a9a1e7ba5300fa03cbe32e4840": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "One practice owner said hygiene-recall no-shows went from roughly one in eight to one in fifteen over three months after text reminders were tried.",
+     "confidence": "high",
+     "quote": "No-shows went from roughly one in eight to one in fifteen over three months.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The trade article author says text reminders are widely believed to cut no-shows but cites no data.",
+     "confidence": "low",
+     "quote": "text reminders are 'widely believed' to cut no-shows but cites no data.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "The practice owner said two older patients complained about texts.",
+     "confidence": "high",
+     "quote": "two older patients complained about texts.",
+     "source_id": "S1"
+    }
+   ],
+   "gaps": [
+    "The sources do not establish whether the reported change was caused by text reminders.",
+    "They do not show whether the result applies beyond this practice or compare texts with other reminder approaches using data."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "One dental practice owner reports that no-shows for hygiene recalls fell after text reminders were introduced, so these sources suggest texts may reduce them. The evidence is limited to one practice’s account; the trade article offers no data, and the sources do not establish how broadly the result applies."
+  },
+  "latency_seconds": 7.533,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8054,
+   "event_count": 1,
+   "input_tokens": 7782,
+   "output_tokens": 272,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "1a7f3098ed5c0bbb00be13bfc40c5c789c1098755349afafc081664b9118ecd6": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "In the 2025 study, firms that called back within one hour booked the job in 48 percent of cases.",
+     "confidence": "high",
+     "quote": "Firms that called back within one hour booked the job in 48 percent of cases",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In the 2025 study, firms calling back after 24 hours booked the job in 11 percent of cases.",
+     "confidence": "high",
+     "quote": "after 24 hours the figure fell to 11 percent",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In the study, 62 percent of callers who reached voicemail did not call again.",
+     "confidence": "high",
+     "quote": "62 percent of callers who reached voicemail did not call again",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The study sample is mostly trades and clinics.",
+     "confidence": "high",
+     "quote": "the sample is mostly trades and clinics",
+     "source_id": "S1"
+    }
+   ],
+   "gaps": [
+    "The sources do not identify the precise best callback time between within one hour and after 24 hours.",
+    "They do not establish that callback timing alone caused the booking outcomes or that results apply to all small service businesses."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The study suggests calling back within one hour: firms doing so booked the job in 48 percent of cases, compared with 11 percent after 24 hours. This is evidence from a study mostly of trades and clinics, but it does not establish an exact deadline that guarantees keeping a lead."
+  },
+  "latency_seconds": 8.745,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8105,
+   "event_count": 1,
+   "input_tokens": 7790,
+   "output_tokens": 315,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "1e8557687daba6bd1a116d042ca5b6baa7b181a7213e5dafe42724053286c584": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "Vendor A charges 29 dollars per user per month, billed annually.",
+     "confidence": "high",
+     "quote": "29 dollars per user per month, billed annually.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Vendor B charges 149 dollars per month for up to ten users.",
+     "confidence": "high",
+     "quote": "flat 149 dollars per month for up to ten users.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "Vendor A includes text reminders up to 500 messages a month, with further messages costing extra.",
+     "confidence": "high",
+     "quote": "Includes text reminders up to 500 messages a month; further messages cost extra.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Vendor B provides unlimited text reminders.",
+     "confidence": "high",
+     "quote": "Text reminders are unlimited.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "Vendor A has no setup fee.",
+     "confidence": "high",
+     "quote": "No setup fee.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Vendor B applies a one-time setup fee of 300 dollars.",
+     "confidence": "high",
+     "quote": "A one-time setup fee of 300 dollars applies.",
+     "source_id": "S2"
+    }
+   ],
+   "gaps": [],
+   "missing": [],
+   "sufficient": true,
+   "summary": "Vendor A charges 29 dollars per user per month when billed annually, with text reminders capped at 500 messages monthly before extra charges and no setup fee. Vendor B charges 149 dollars per month for up to ten users, provides unlimited text reminders, and has a one-time 300-dollar setup fee; these details are stated directly in the sources."
+  },
+  "latency_seconds": 8.196,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 8089,
+   "event_count": 1,
+   "input_tokens": 7769,
+   "output_tokens": 320,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "27dae61bec8f08fb9b149b3a01002b7842097c667aba082dfcd25060ba8fe581": {
+  "detail": "",
+  "json": {
+   "conflicts": [
+    "S1 reports 41 percent weekly use among firms under fifty staff; S2 reports 58 percent among accounting firms, which are a different population."
+   ],
+   "findings": [
+    {
+     "claim": "In a survey of small businesses with under fifty staff, 41 percent used at least one AI tool weekly.",
+     "confidence": "high",
+     "quote": "41 percent use at least one AI tool weekly.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The most common AI use in the small-business report was drafting emails and documents.",
+     "confidence": "high",
+     "quote": "The most common use is drafting emails and documents.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In a poll of accounting firms, 58 percent used an AI tool weekly, mainly for document summaries.",
+     "confidence": "high",
+     "quote": "58 percent use an AI tool weekly, mainly for document summaries.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "In the small-business report, 9 percent had changed a core process because of AI.",
+     "confidence": "high",
+     "quote": "Only 9 percent have changed a core process because of AI.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Accounting-firm partners named data privacy as the main reason for not going further with AI.",
+     "confidence": "high",
+     "quote": "Partners named data privacy as the main reason for not going further.",
+     "source_id": "S2"
+    }
+   ],
+   "gaps": [
+    "The sources do not establish an overall AI-use rate across all small firms beyond these surveyed groups.",
+    "They do not quantify use by specific tools, other tasks, or how often use occurs beyond weekly adoption.",
+    "They do not describe the reasons small firms outside the accounting-firm poll have not gone further."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The sources indicate that weekly AI use is common in the surveyed small firms, especially for drafting and document summaries. The answer is firm for those specific surveys, but their differing populations mean they do not establish one overall rate for all small firms; they also show limited core-process change in the small-business report."
+  },
+  "latency_seconds": 10.77,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 8193,
+   "event_count": 1,
+   "input_tokens": 7784,
+   "output_tokens": 409,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "3c70298f5be3f21f683699dee8b31e2d281759b505ec2faf1515ebabf39ab4d2": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "One dental practice owner said hygiene-recall no-shows went from roughly one in eight to one in fifteen after trying text reminders in the spring.",
+     "confidence": "high",
+     "quote": "No-shows went from roughly one in eight to one in fifteen over three months.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The trade article's author says text reminders are widely believed to cut no-shows but cites no data.",
+     "confidence": "low",
+     "quote": "text reminders are 'widely believed' to cut no-shows but cites no data.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "The owner said two older patients complained about texts.",
+     "confidence": "high",
+     "quote": "two older patients complained about texts.",
+     "source_id": "S1"
+    }
+   ],
+   "gaps": [
+    "The sources do not show whether the reported change was caused by texts or whether it generalizes to other practices.",
+    "They do not provide controlled or broader data on text reminders for dental hygiene recalls.",
+    "They do not quantify any effect of keeping phone calls for patients over seventy."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "One practice owner reported that text reminders coincided with fewer hygiene-recall no-shows over three months. This is first-hand but limited evidence; the trade article says texts are widely believed to help but provides no data, and the sources do not establish whether the result generalizes."
+  },
+  "latency_seconds": 7.239,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8091,
+   "event_count": 1,
+   "input_tokens": 7803,
+   "output_tokens": 288,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "5661b49a75385a3dea9585e4432f988cb09cd1abca02cca4466397012f284548": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [],
+   "gaps": [],
+   "missing": [
+    "Research or evidence on whether text reminders reduce no-shows for dental hygiene recalls."
+   ],
+   "sufficient": false,
+   "summary": ""
+  },
+  "latency_seconds": 5.063,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 7712,
+   "event_count": 1,
+   "input_tokens": 7663,
+   "output_tokens": 49,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "713d4fe9f8753bc8a411cdc28c54aba7b624a64e0bc0b310e1cc2fb56fd4f26c": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "In the study, firms that called back within one hour booked the job in 48 percent of cases.",
+     "confidence": "high",
+     "quote": "Firms that called back within one hour booked the job in 48 percent of cases",
+     "source_id": "E1"
+    },
+    {
+     "claim": "In the study, firms calling back after 24 hours booked the job in 11 percent of cases.",
+     "confidence": "high",
+     "quote": "after 24 hours the figure fell to 11 percent.",
+     "source_id": "E1"
+    },
+    {
+     "claim": "The study authors note that the sample was mostly trades and clinics.",
+     "confidence": "high",
+     "quote": "the sample is mostly trades and clinics.",
+     "source_id": "E1"
+    },
+    {
+     "claim": "62 percent of callers who reached voicemail did not call again.",
+     "confidence": "high",
+     "quote": "62 percent of callers who reached voicemail did not call again.",
+     "source_id": "E1"
+    }
+   ],
+   "gaps": [
+    "The source does not say that returning a call within one hour guarantees keeping a particular lead.",
+    "It does not report results for callback times between one hour and 24 hours or establish how broadly the findings apply beyond its mostly trades-and-clinics sample."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The study suggests returning missed calls within one hour: firms calling back within that window booked the job in 48 percent of cases, compared with 11 percent after 24 hours. This is evidence from one study, whose sample was mostly trades and clinics; it does not establish a precise deadline that guarantees keeping a lead."
+  },
+  "latency_seconds": 7.995,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8061,
+   "event_count": 1,
+   "input_tokens": 7739,
+   "output_tokens": 322,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "78b508697a4e8b3fe2558cae9547c609cf6d93cb3d749440eece0a78b971b0c7": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "In the study, firms that called back within one hour booked the job in 48 percent of cases.",
+     "confidence": "high",
+     "quote": "Firms that called back within one hour booked the job in 48 percent of cases",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In the study, after 24 hours the booking figure fell to 11 percent.",
+     "confidence": "high",
+     "quote": "after 24 hours the figure fell to 11 percent",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The authors note that the study sample is mostly trades and clinics.",
+     "confidence": "high",
+     "quote": "The authors note the sample is mostly trades and clinics.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In Casey's notes, two of the three firms returned voicemails two or three days late.",
+     "confidence": "high",
+     "quote": "front desks returned voicemails two or three days late in two of the three firms",
+     "source_id": "S2"
+    }
+   ],
+   "gaps": [
+    "The sources do not establish how quickly a callback must happen to guarantee keeping a lead.",
+    "The study does not say whether callers who did not book within 24 hours had already booked elsewhere.",
+    "The study does not report whether its findings generalize beyond trades and clinics."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The study reports better booking results when firms call back within one hour; after 24 hours, the booking rate was lower. This suggests a quick callback matters, but the sources do not establish a precise deadline that guarantees keeping a lead, and the study sample was mostly trades and clinics."
+  },
+  "latency_seconds": 8.094,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 8170,
+   "event_count": 1,
+   "input_tokens": 7840,
+   "output_tokens": 330,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "79f1dc008b7c6a6c002365c27f02ad978e48a224ba55ef3951938b63455df3c2": {
+  "detail": "",
+  "json": {
+   "conflicts": [
+    "S1 reports 48 percent booking for callbacks within one hour and 11 percent after 24 hours; S2 reports no meaningful difference between callbacks within one hour and later the same day."
+   ],
+   "findings": [
+    {
+     "claim": "In the missed-call study, firms that called back within one hour booked the job in 48 percent of cases.",
+     "confidence": "high",
+     "quote": "Firms that called back within one hour booked the job in 48 percent of cases",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In the missed-call study, the booking figure fell to 11 percent after 24 hours.",
+     "confidence": "high",
+     "quote": "after 24 hours the figure fell to 11 percent",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The SME survey found firms that returned calls the same day kept three in four enquiries.",
+     "confidence": "high",
+     "quote": "Firms that returned calls the same day kept three in four enquiries",
+     "source_id": "S2"
+    },
+    {
+     "claim": "The SME survey found no meaningful difference between a callback in one hour and later the same day.",
+     "confidence": "high",
+     "quote": "no meaningful difference between a callback in one hour and a callback later the same day",
+     "source_id": "S2"
+    },
+    {
+     "claim": "In the missed-call study, 62 percent of callers who reached voicemail did not call again.",
+     "confidence": "high",
+     "quote": "62 percent of callers who reached voicemail did not call again",
+     "source_id": "S1"
+    }
+   ],
+   "gaps": [
+    "The sources do not establish a precise callback deadline that ensures a lead is kept.",
+    "S1 says its sample is mostly trades and clinics, while S2 respondents were recruited online and self-reported; neither source establishes how broadly its results apply."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The sources suggest returning a missed call the same day; one study reports better booking outcomes within one hour than after 24 hours, while another found no meaningful difference between one hour and later that day. The evidence does not establish a precise deadline for keeping a lead, and the findings conflict on whether speed within the same day matters."
+  },
+  "latency_seconds": 9.772,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8261,
+   "event_count": 1,
+   "input_tokens": 7834,
+   "output_tokens": 427,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "7ee07cf03a7b202a93dedb136045f36b095ad6e49853639e0ad9aec7c55bae9d": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "In the study, firms that called back within one hour booked the job in 48 percent of cases.",
+     "confidence": "high",
+     "quote": "Firms that called back within one hour booked the job in 48 percent of cases",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In the study, the booking figure fell to 11 percent after 24 hours.",
+     "confidence": "high",
+     "quote": "after 24 hours the figure fell to 11 percent",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The study reports that 62 percent of callers who reached voicemail did not call again.",
+     "confidence": "high",
+     "quote": "62 percent of callers who reached voicemail did not call again",
+     "source_id": "S1"
+    }
+   ],
+   "gaps": [
+    "The study does not establish how quickly a business must call back to ensure it keeps a lead.",
+    "The source does not report booking rates for callback times between one hour and 24 hours.",
+    "The sample is mostly trades and clinics, so applicability to other small service businesses is not established."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The study suggests returning a missed call within one hour is associated with more booked jobs than waiting 24 hours. This is evidence from a sample mostly of trades and clinics, and it does not establish an exact deadline that guarantees keeping a lead."
+  },
+  "latency_seconds": 8.361,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 7680,
+   "cumulative_tokens": 15943,
+   "event_count": 1,
+   "input_tokens": 15642,
+   "output_tokens": 301,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "a92d6b46fae2af5300c1399391dcc27ea135b1593325ba931afe3c357cc06caa": {
+  "detail": "",
+  "json": {
+   "conflicts": [
+    "S1 reports booking in 48 percent of cases for callbacks within one hour and 11 percent after 24 hours; S2 found no meaningful difference between one hour and later the same day."
+   ],
+   "findings": [
+    {
+     "claim": "In a study of 1,200 small service firms, callers who reached voicemail and did not call again made up 62 percent.",
+     "confidence": "high",
+     "quote": "62 percent of callers who reached voicemail did not call again.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Firms that called back within one hour booked the job in 48 percent of cases in the study.",
+     "confidence": "high",
+     "quote": "Firms that called back within one hour booked the job in 48 percent of cases",
+     "source_id": "S1"
+    },
+    {
+     "claim": "After 24 hours, the booking figure in the study fell to 11 percent.",
+     "confidence": "high",
+     "quote": "after 24 hours the figure fell to 11 percent.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In the 2026 survey, firms returning calls the same day kept three in four enquiries.",
+     "confidence": "high",
+     "quote": "Firms that returned calls the same day kept three in four enquiries.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "The 2026 survey found no meaningful difference between a callback in one hour and later the same day.",
+     "confidence": "high",
+     "quote": "no meaningful difference between a callback in one hour and a callback later the same day.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "The missed-call study sample was mostly trades and clinics.",
+     "confidence": "high",
+     "quote": "the sample is mostly trades and clinics.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The survey respondents were recruited online and self-reported.",
+     "confidence": "high",
+     "quote": "Respondents were recruited online and self-reported.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "In Casey's three assessments, two firms returned voicemails two or three days late, and nobody tracked whether callers had booked elsewhere.",
+     "confidence": "high",
+     "quote": "front desks returned voicemails two or three days late in two of the three firms.",
+     "source_id": "S3"
+    }
+   ],
+   "gaps": [
+    "The sources do not establish an exact callback deadline that guarantees keeping a lead.",
+    "They do not track whether the callers who did not call again or received late callbacks booked elsewhere."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The sources suggest returning a missed call the same day; one study reports better booking outcomes within one hour than after 24 hours, while another survey found no meaningful difference between one hour and later that day. The evidence is limited and conflicts on whether speed within the same day matters, so it does not establish a precise cutoff for keeping a lead."
+  },
+  "latency_seconds": 12.074,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8446,
+   "event_count": 1,
+   "input_tokens": 7894,
+   "output_tokens": 552,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "ad2fcabc7ef34baba0bdba7bd0f464f279a705abfd1c3b8977c10ee457707e4d": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [],
+   "gaps": [],
+   "missing": [
+    "A source about missed-call response times and lead retention for small service businesses."
+   ],
+   "sufficient": false,
+   "summary": ""
+  },
+  "latency_seconds": 3.117,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 7748,
+   "event_count": 1,
+   "input_tokens": 7700,
+   "output_tokens": 48,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "b538c95942db23067f3294d8a34852b23b79437e41fd7ed9f6d87a529667d6e5": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "One practice told EXCO that text reminders cut hygiene no-shows, but did not share numbers.",
+     "confidence": "low",
+     "quote": "One practice told us text reminders cut hygiene no-shows; they did not share numbers.",
+     "source_id": "S1"
+    }
+   ],
+   "gaps": [
+    "No numerical results or size of the effect are provided.",
+    "The source does not describe a comparison group, measurement period, or how no-shows were counted.",
+    "The source is limited to one practice and does not establish whether the result generalizes."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "One practice reported that text reminders cut hygiene no-shows, so the source offers a positive but limited indication. The answer is not firm because the practice shared no numbers, and there is no comparative evidence here."
+  },
+  "latency_seconds": 5.802,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7852,
+   "event_count": 1,
+   "input_tokens": 7675,
+   "output_tokens": 177,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "d4c16640c1c1bfa159512b6ef99b740c18c34762fe9f0b6ef86343e528201269": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "Vendor A charges 29 dollars per user per month, billed annually.",
+     "confidence": "high",
+     "quote": "29 dollars per user per month, billed annually",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Vendor A includes text reminders up to 500 messages a month; further messages cost extra.",
+     "confidence": "high",
+     "quote": "Includes text reminders up to 500 messages a month; further messages cost extra.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Vendor A has no setup fee.",
+     "confidence": "high",
+     "quote": "No setup fee.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Vendor B charges a flat 149 dollars per month for up to ten users.",
+     "confidence": "high",
+     "quote": "flat 149 dollars per month for up to ten users",
+     "source_id": "S2"
+    },
+    {
+     "claim": "Vendor B provides unlimited text reminders.",
+     "confidence": "high",
+     "quote": "Text reminders are unlimited.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "Vendor B charges a one-time setup fee of 300 dollars.",
+     "confidence": "high",
+     "quote": "A one-time setup fee of 300 dollars applies.",
+     "source_id": "S2"
+    }
+   ],
+   "gaps": [],
+   "missing": [],
+   "sufficient": true,
+   "summary": "Vendor A charges 29 dollars per user per month, billed annually, and includes up to 500 text reminders monthly; additional messages cost extra, with no setup fee. Vendor B charges 149 dollars per month for up to ten users, includes unlimited text reminders, and has a one-time 300-dollar setup fee. The sources state these terms directly and do not conflict."
+  },
+  "latency_seconds": 8.075,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8133,
+   "event_count": 1,
+   "input_tokens": 7807,
+   "output_tokens": 326,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "dd33ab968988399c5b1978864ccd89246fd2d9ccad2f60126ee579ee64751fce": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "Vendor A charges 29 dollars per user per month, billed annually.",
+     "confidence": "high",
+     "quote": "29 dollars per user per month, billed annually",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Vendor A includes text reminders up to 500 messages a month; further messages cost extra.",
+     "confidence": "high",
+     "quote": "Includes text reminders up to 500 messages a month; further messages cost extra.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Vendor A has no setup fee.",
+     "confidence": "high",
+     "quote": "No setup fee.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Vendor B charges a flat 149 dollars per month for up to ten users.",
+     "confidence": "high",
+     "quote": "flat 149 dollars per month for up to ten users",
+     "source_id": "S2"
+    },
+    {
+     "claim": "Vendor B includes unlimited text reminders.",
+     "confidence": "high",
+     "quote": "Text reminders are unlimited.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "Vendor B charges a one-time setup fee of 300 dollars.",
+     "confidence": "high",
+     "quote": "A one-time setup fee of 300 dollars applies.",
+     "source_id": "S2"
+    }
+   ],
+   "gaps": [],
+   "missing": [],
+   "sufficient": true,
+   "summary": "Vendor A charges 29 dollars per user per month, billed annually, and includes up to 500 text reminders monthly before extra charges; it has no setup fee. Vendor B charges 149 dollars per month for up to ten users, includes unlimited text reminders, and has a one-time 300-dollar setup fee. These details are stated directly in the sources; they describe different pricing structures rather than conflicting claims."
+  },
+  "latency_seconds": 9.853,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 8102,
+   "event_count": 1,
+   "input_tokens": 7769,
+   "output_tokens": 333,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "e3c2eec4ad41dc393c79c8f3eebfb6acfed4fe4853fb8db150892841dd42bc9d": {
+  "detail": "",
+  "json": {
+   "conflicts": [
+    "S1 reports weekly use by 41 percent of firms under fifty staff, while S2 reports 58 percent among accounting firms; the surveyed populations differ."
+   ],
+   "findings": [
+    {
+     "claim": "In a survey of 2,000 firms under fifty staff, 41 percent use at least one AI tool weekly.",
+     "confidence": "high",
+     "quote": "2,000 firms under fifty staff. 41 percent use at least one AI tool weekly.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The most common use in the small-business report is drafting emails and documents.",
+     "confidence": "high",
+     "quote": "The most common use is drafting emails and documents.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "Only 9 percent of firms in the small-business report have changed a core process because of AI.",
+     "confidence": "high",
+     "quote": "Only 9 percent have changed a core process because of AI.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In a poll of 300 accounting firms, 58 percent use an AI tool weekly, mainly for document summaries.",
+     "confidence": "high",
+     "quote": "58 percent use an AI tool weekly, mainly for document summaries.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "Accounting-firm partners named data privacy as the main reason for not going further with AI.",
+     "confidence": "medium",
+     "quote": "Partners named data privacy as the main reason for not going further.",
+     "source_id": "S2"
+    }
+   ],
+   "gaps": [
+    "The sources do not establish AI use among all small firms beyond these surveyed groups.",
+    "They do not describe the full range or frequency of AI uses beyond the examples given."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The sources indicate that weekly AI use is reported by a substantial share of surveyed small firms, with uses including drafting emails and documents and summarizing documents. The evidence is limited to particular surveys, and the adoption figures differ between the general small-business report and the accounting-firm poll."
+  },
+  "latency_seconds": 9.739,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 8195,
+   "event_count": 1,
+   "input_tokens": 7802,
+   "output_tokens": 393,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "f4cd3ff6af76f4972caefbf02a7984b9adf5666da9819c75c4d6f0c1ec59bb01": {
+  "detail": "",
+  "json": {
+   "conflicts": [],
+   "findings": [
+    {
+     "claim": "In the 2026 survey of firms under fifty staff, 9 percent had changed a core process because of AI.",
+     "confidence": "high",
+     "quote": "Only 9 percent have changed a core process because of AI.",
+     "source_id": "S1"
+    }
+   ],
+   "gaps": [
+    "The source gives no definition of “small firms” beyond firms under fifty staff.",
+    "The source does not report when the process changes occurred or how the figure varies among firms."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "In the report’s survey, 9 percent of small firms had changed a core process because of AI. This is a direct figure from one survey; the source does not provide other estimates to compare."
+  },
+  "latency_seconds": 5.238,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 7880,
+   "event_count": 1,
+   "input_tokens": 7720,
+   "output_tokens": 160,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "fbb3384a40db68783aa480fc36378e2dec556d4f80e508e59aa9ab418690b276": {
+  "detail": "",
+  "json": {
+   "conflicts": [
+    "S1 reports jobs booked in 48 percent of cases after callbacks within one hour and 11 percent after 24 hours; S2 says there was no meaningful difference between callbacks within one hour and later the same day."
+   ],
+   "findings": [
+    {
+     "claim": "In the 2025 study, firms that called back within one hour booked the job in 48 percent of cases, compared with 11 percent after 24 hours.",
+     "confidence": "high",
+     "quote": "Firms that called back within one hour booked the job in 48 percent of cases; after 24 hours the figure fell to 11 percent.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "In the 2026 survey, firms that returned calls the same day kept three in four enquiries.",
+     "confidence": "high",
+     "quote": "Firms that returned calls the same day kept three in four enquiries.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "The 2025 study says 62 percent of callers who reached voicemail did not call again.",
+     "confidence": "high",
+     "quote": "62 percent of callers who reached voicemail did not call again.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The 2026 survey found no meaningful difference between a callback in one hour and later the same day.",
+     "confidence": "high",
+     "quote": "no meaningful difference between a callback in one hour and a callback later the same day.",
+     "source_id": "S2"
+    },
+    {
+     "claim": "The 2025 study sample was mostly trades and clinics.",
+     "confidence": "high",
+     "quote": "the sample is mostly trades and clinics.",
+     "source_id": "S1"
+    },
+    {
+     "claim": "The 2026 survey respondents were recruited online and self-reported.",
+     "confidence": "high",
+     "quote": "Respondents were recruited online and self-reported.",
+     "source_id": "S2"
+    }
+   ],
+   "gaps": [
+    "Neither source distinguishes after-hours calls from calls received during business hours.",
+    "Neither source specifies a required or optimal callback deadline for after-hours calls."
+   ],
+   "missing": [],
+   "sufficient": true,
+   "summary": "The sources suggest returning missed calls the same day, with one study reporting stronger booking outcomes for callbacks within one hour than after 24 hours. They do not establish whether after-hours calls should be handled differently; the surveys differ on whether callbacks within one hour outperform later same-day callbacks."
+  },
+  "latency_seconds": 10.69,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 8294,
+   "event_count": 1,
+   "input_tokens": 7837,
+   "output_tokens": 457,
+   "reasoning_output_tokens": 0
+  }
+ }
+}

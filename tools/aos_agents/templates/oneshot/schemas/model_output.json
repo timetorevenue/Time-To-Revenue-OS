@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sufficient", "missing", "answer", "findings"],
+  "properties": {
+    "sufficient": {"type": "boolean"},
+    "missing": {"type": "array", "items": {"type": "string"}},
+    "answer": {"type": "string"},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["claim", "source_ids"],
+        "properties": {"claim": {"type": "string"}, "source_ids": {"type": "array", "items": {"type": "string"}}}
+      }
+    }
+  }
+}

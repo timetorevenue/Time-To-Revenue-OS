@@ -1,0 +1,383 @@
+{
+ "0624be508479bb9249656b3f151d473e9168b6b77a000ae71706a90381f04211": {
+  "detail": "",
+  "json": {
+   "body": "Hi Asha,\n\nThank you for discussing new-client intake and the current intake process.\n\nWe agreed the assessment will cover new-client intake only. Conflict checks will stay with the partners and remain out of scope.\n\n- You will send the current intake form and conflict-check steps (due: 17 November).\n- I will send the assessment agreement (due: Thursday).\n- You will name the two staff to interview.\n\nThe interviews will take place in the week of 23 November.",
+   "subject": "Brightwater Law Intake Assessment",
+   "used": [
+    "D1",
+    "D2",
+    "A1",
+    "A2",
+    "A3",
+    "N1"
+   ]
+  },
+  "latency_seconds": 4.743,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7737,
+   "event_count": 1,
+   "input_tokens": 7590,
+   "output_tokens": 147,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "346b6aaeadbbe527e1c6505d2b0ad172ba3162b0bded57da6e5486c9eaa7330d": {
+  "detail": "",
+  "json": {
+   "body": "Hi Dana,\n\nThank you for discussing slow voicemail callbacks.\n\nWe agreed to start with a starter scan of the callback workflow.\n\n- Dana Reyes: Send last month's missed-call log (due: Friday).\n\nThe kickoff call for the scan is on 20 November.",
+   "subject": "Harbourline Physio Discovery Call",
+   "used": [
+    "D1",
+    "A1",
+    "N1"
+   ]
+  },
+  "latency_seconds": 3.821,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7624,
+   "event_count": 1,
+   "input_tokens": 7529,
+   "output_tokens": 95,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "3ea9f522514dbcdfbe0c01b3015024e9781ad4f1e548b6bb8e61b7566f5e569a": {
+  "detail": "",
+  "json": {
+   "body": "Hi Tom,\nThanks for meeting to debrief on job scheduling after the site visit.\nWe agreed crew leads will confirm next-day jobs by 4 pm in the shared sheet, and weather holds will be logged there, not by text.\n- I’ll add a weather-hold column to the schedule sheet by Monday.\n- You’ll brief the three crew leads by Friday and send two weeks of schedule history.\nWe’ll review the first two weeks of the sheet on 24 November.",
+   "subject": "Summit Roofing Site Visit Debrief",
+   "used": [
+    "D1",
+    "D2",
+    "A1",
+    "A2",
+    "A3",
+    "N1"
+   ]
+  },
+  "latency_seconds": 4.941,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7776,
+   "event_count": 1,
+   "input_tokens": 7630,
+   "output_tokens": 146,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "564f5c420a6bb2fc6feb202fd37df865cb6ff7c27cba74a2216d19af3fbfbccc": {
+  "detail": "",
+  "json": {
+   "body": "Hi Marco,\n\nThank you for meeting to discuss quote turnaround.\n\nWe agreed to pilot a same-day quote template on bathroom jobs for four weeks.\n\n- Marco, please share ten recent bathroom quotes by Wednesday.\n- I will build the first quote template.\n\nWe will review the first template together on 19 November.",
+   "subject": "Tidewater Plumbing Quote Template Review",
+   "used": [
+    "D1",
+    "A1",
+    "A2",
+    "N1"
+   ]
+  },
+  "latency_seconds": 3.985,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7646,
+   "event_count": 1,
+   "input_tokens": 7538,
+   "output_tokens": 108,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "5e6cfac201ecad5bacc0e04f6132dd86822831c216e5de3f254c90db86212409": {
+  "detail": "",
+  "json": {
+   "body": "Hi Irene,\n\nThank you for discussing the renewal reminders tracked by hand.\n\nWe agreed to move renewal reminders from the spreadsheet to scheduled emails.\n\nIrene Kowalski will share the renewal spreadsheet by Wednesday.\n\nWe will walk through the first scheduled reminder on 18 November.",
+   "subject": "Renewal Reminder Next Step",
+   "used": [
+    "D1",
+    "A1",
+    "N1"
+   ]
+  },
+  "latency_seconds": 3.708,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7611,
+   "event_count": 1,
+   "input_tokens": 7517,
+   "output_tokens": 94,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "5ea5a8746a42aba3f279d90b1f9857454e9ef2573938bd81541bfeefdbd2ffe2": {
+  "detail": "",
+  "json": {
+   "body": "Hi Asha,\n\nThank you for discussing client intake and the goal of stopping intake forms from being re-typed.\n\nWe agreed the assessment will cover new-client intake only. Conflict checks will stay with the partners and are out of scope.\n\n- Asha: Send the current intake form and conflict-check steps by 17 November.\n- I will send the assessment agreement by Thursday.\n- Asha: Name the two staff to interview; no due date was set.\n\nInterviews are planned for the week of 23 November.",
+   "subject": "Brightwater Law Intake Next Steps",
+   "used": [
+    "D1",
+    "D2",
+    "A1",
+    "A2",
+    "A3",
+    "N1"
+   ]
+  },
+  "latency_seconds": 5.106,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7783,
+   "event_count": 1,
+   "input_tokens": 7626,
+   "output_tokens": 157,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "6b2b55eda6505901bafb29d871622299e7bf73dc4cdb5602136d0c7c822fbb58": {
+  "detail": "",
+  "json": {
+   "body": "Hi Zoë,\n\nThank you for meeting to review recall reminders.\n\nWe agreed to test text reminders for hygiene recalls with one hygienist's list first.\n\nPriya Nair will export the recall list for Dr Chen's hygienist by Tuesday.\n\nWe will check results after three weeks, on 2 December.",
+   "subject": "Lakeside Dental Process Review",
+   "used": [
+    "D1",
+    "A1",
+    "N1"
+   ]
+  },
+  "latency_seconds": 3.938,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7641,
+   "event_count": 1,
+   "input_tokens": 7538,
+   "output_tokens": 103,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "72eb33da823e2c22a463b3a16660c643eac8e9ae1c45432871e26d311f3e393b": {
+  "detail": "",
+  "json": {
+   "body": "Hi Priya,\n\nThank you for meeting to review recall reminders.\n\nWe agreed to test text reminders for hygiene recalls with one hygienist's list first.\n\nPriya, please export the recall list for Dr Chen's hygienist by Tuesday.\n\nWe will check the results after three weeks, on 2 December.",
+   "subject": "Lakeside Dental Recall Review",
+   "used": [
+    "D1",
+    "A1",
+    "N1"
+   ]
+  },
+  "latency_seconds": 5.063,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 7636,
+   "event_count": 1,
+   "input_tokens": 7533,
+   "output_tokens": 103,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "74d31194410e5afdde1f31248063d764e8c564ed0624380c7ab3f74ca266f152": {
+  "detail": "",
+  "json": {
+   "body": "Hi Sam,\n\nThanks for meeting to review the member re-activation messages and their steady results.\n\nWe agreed to move the message from day 30 to day 21 of no visits.\n\nI’ll update the message timing this week.\n\nThe next step is to decide whether the message should mention the new class timetable.",
+   "subject": "Ironworks Gym Check-in Follow-Up",
+   "used": [
+    "D1",
+    "A1",
+    "Q1"
+   ]
+  },
+  "latency_seconds": 4.635,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7613,
+   "event_count": 1,
+   "input_tokens": 7508,
+   "output_tokens": 105,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "7976e957fbb92e2af0dbebad0d59e14758dfa6a569e7ee4026f54505d52161a2": {
+  "detail": "",
+  "json": {
+   "body": "Hi Tom,\n\nThanks for meeting to debrief the site visit on job scheduling.\n\nWe agreed that crew leads will confirm next-day jobs by 4 pm in the shared sheet, and weather holds will be logged in the sheet, not by text.\n\n- I will add a weather-hold column to the schedule sheet (due: Monday).\n- You will brief the three crew leads (due: Friday) and send two weeks of schedule history.\n\nWe will review the first two weeks of the sheet on 24 November.",
+   "subject": "Summit Roofing Site Visit Debrief",
+   "used": [
+    "D1",
+    "D2",
+    "A1",
+    "A2",
+    "A3",
+    "N1"
+   ]
+  },
+  "latency_seconds": 4.972,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 5888,
+   "cumulative_tokens": 7767,
+   "event_count": 1,
+   "input_tokens": 7610,
+   "output_tokens": 157,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "7a4db06bbb54cf24c9c20836967104cfcfdd0992793bcea625e539e8389d3936": {
+  "detail": "",
+  "json": {
+   "body": "Hi Sam,\n\nThanks for the short check-in about Ironworks Gym.\n\nWe agreed to move the re-activation message from day 30 to day 21 of no visits.\n\n",
+   "subject": "Ironworks Gym Check-in",
+   "used": [
+    "D1"
+   ]
+  },
+  "latency_seconds": 4.442,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7532,
+   "event_count": 1,
+   "input_tokens": 7463,
+   "output_tokens": 69,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "a53d78da71913ad0dad9ffa03f7ae7fa1ef43e6952532f394c7f6f2dd5c4d07e": {
+  "detail": "",
+  "json": {
+   "body": "Hi Asha,\n\nThank you for meeting to discuss client intake.\n\nWe agreed that the assessment will cover new-client intake only.\n\nAsha Mehta will send the current intake form by 17 November.\n\nInterviews are planned for the week of 23 November.",
+   "subject": "Brightwater Law Intake Next Steps",
+   "used": [
+    "D1",
+    "A1",
+    "N1"
+   ]
+  },
+  "latency_seconds": 5.285,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7619,
+   "event_count": 1,
+   "input_tokens": 7525,
+   "output_tokens": 94,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "c5034ebfc54816cc8366f2878046a2e9e6ffc36a657b285f908e967a02a2e403": {
+  "detail": "",
+  "json": {
+   "body": "Hi Marco,\n\nThanks for meeting to discuss quote turnaround.\n\nWe agreed to pilot a same-day quote template on bathroom jobs.\n\n- Collect ten recent bathroom quotes (owner and due date not stated).\n\nWe will review the first template together on 19 November.",
+   "subject": "Tidewater Plumbing quote follow-up",
+   "used": [
+    "D1",
+    "A1",
+    "N1"
+   ]
+  },
+  "latency_seconds": 3.631,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7578,
+   "event_count": 1,
+   "input_tokens": 7485,
+   "output_tokens": 93,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "d0f01177c927bccd98ebd9e8bdb54bb53ad3e23dc9d6c168f27d0e69d4ce9a3f": {
+  "detail": "",
+  "json": {
+   "body": "Hi Dana,\n\nThanks for meeting to discuss slow voicemail callbacks at the front desk.\n\nWe agreed to start with a starter scan of the callback workflow rather than a full assessment.\n\n- Dana: Send last month's missed-call log by Friday.\n- I will send the scan agreement by Monday.\n\nThe next step is a kickoff call for the scan on 20 November.",
+   "subject": "Harbourline Physio Starter Scan",
+   "used": [
+    "D1",
+    "A1",
+    "A2",
+    "N1"
+   ]
+  },
+  "latency_seconds": 4.35,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7703,
+   "event_count": 1,
+   "input_tokens": 7582,
+   "output_tokens": 121,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "d76aff826977725ad4dfca6dab1d330bd0a0b2e2e18064754bba0067d613864b": {
+  "detail": "",
+  "json": {
+   "body": "Hi Dana,\n\nThank you for meeting to discuss slow voicemail callbacks at the front desk.\n\nWe agreed to start with a starter scan of the callback workflow rather than a full assessment.\n\n- Dana: Send last month's missed-call log by Friday.\n- I will send the scan agreement by Monday.\n\nThe kickoff call for the scan is on 20 November.",
+   "subject": "Fast-start scan next steps",
+   "used": [
+    "D1",
+    "A1",
+    "A2",
+    "N1"
+   ]
+  },
+  "latency_seconds": 4.511,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7691,
+   "event_count": 1,
+   "input_tokens": 7576,
+   "output_tokens": 115,
+   "reasoning_output_tokens": 0
+  }
+ },
+ "fc68fc602f95a4ef3c03969674d3480372acc749d4e44016d7dc41b0c35e4c18": {
+  "detail": "",
+  "json": {
+   "body": "Hi Marco,\n\nThanks for meeting to follow up on quote turnaround.\n\nWe agreed to pilot a same-day quote template on bathroom jobs for four weeks.\n\n- Marco will share ten recent bathroom quotes, due: Wednesday.\n\nWe will review the first template together on 19 November.",
+   "subject": "Tidewater Plumbing Quote Follow-up",
+   "used": [
+    "D1",
+    "A1",
+    "N1"
+   ]
+  },
+  "latency_seconds": 4.002,
+  "status": "ok",
+  "usage": {
+   "available": true,
+   "cached_input_tokens": 0,
+   "cumulative_tokens": 7610,
+   "event_count": 1,
+   "input_tokens": 7513,
+   "output_tokens": 97,
+   "reasoning_output_tokens": 0
+  }
+ }
+}

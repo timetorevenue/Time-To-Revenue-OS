@@ -1,0 +1,1579 @@
+{
+ "schema": "ttros.studio.templates/1",
+ "note": "Owner-created page and post templates. Text {{title}} and {{description}} are filled on creation. Ids are assigned in document order (website_studio_pages.py and pages.js). Literal values only.",
+ "landing": {
+  "campaign": {
+   "label": "Campaign landing page",
+   "summary": "Hero with call to action, benefits, how it works with image, questions and a booking band.",
+   "tree": [
+    {
+     "type": "Use",
+     "props": {
+      "name": "Header",
+      "doc": "components/Header.tsx",
+      "use": "kit~header"
+     }
+    },
+    {
+     "type": "El",
+     "props": {
+      "tag": "main",
+      "a": {
+       "id": "main-content"
+      },
+      "kids": [
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "cls": "bg-ivory bg-grid pt-14 pb-20 md:pt-20 md:pb-28",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "div",
+            "cls": "container-site",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "div",
+               "cls": "max-w-3xl",
+               "kids": [
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "p",
+                  "cls": "label-text mb-4",
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Glade nectar ne"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "h1",
+                  "cls": "font-heading font-light text-exec-graphite leading-display tracking-display mb-6",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(36px, 5vw, 60px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "{{title}}"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "p",
+                  "cls": "font-body text-soft-graphite leading-relaxed mb-8 max-w-2xl",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(17px, 1.4vw, 19px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "{{description}}"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "div",
+                  "cls": "flex flex-wrap gap-5 items-center",
+                  "kids": [
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "a",
+                     "a": {
+                      "href": "/free-assessment"
+                     },
+                     "cls": "btn-primary inline-flex items-center gap-2",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Book a free 15-minute fit call"
+                       }
+                      }
+                     ]
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "a",
+                     "a": {
+                      "href": "#how-it-works"
+                     },
+                     "cls": "font-body text-sm text-slate-taupe hover:text-exec-graphite transition-colors",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "See how it works"
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "cls": "section-pad bg-mist-grey/50",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "div",
+            "cls": "container-site",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "p",
+               "cls": "label-text mb-4",
+               "kids": [
+                {
+                 "type": "Txt",
+                 "props": {
+                  "text": "What changes"
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "El",
+              "props": {
+               "tag": "h2",
+               "cls": "font-heading font-light text-exec-graphite leading-heading tracking-heading mb-5",
+               "st": {
+                "d": {
+                 "fontSize": "clamp(26px, 3vw, 40px)"
+                }
+               },
+               "kids": [
+                {
+                 "type": "Txt",
+                 "props": {
+                  "text": "What you get"
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "El",
+              "props": {
+               "tag": "div",
+               "st": {
+                "d": {
+                 "display": "grid",
+                 "gridTemplateColumns": "repeat(3, minmax(0, 1fr))",
+                 "gap": "24px"
+                },
+                "t": {
+                 "gridTemplateColumns": "repeat(2, minmax(0, 1fr))"
+                },
+                "m": {
+                 "gridTemplateColumns": "1fr"
+                }
+               },
+               "kids": [
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "div",
+                  "cls": "border border-warm-stone/60 rounded-xl bg-ivory px-7 py-6",
+                  "kids": [
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "h3",
+                     "cls": "font-heading font-medium text-exec-graphite text-xl mb-3",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Faster response"
+                       }
+                      }
+                     ]
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "p",
+                     "cls": "font-body text-soft-graphite leading-relaxed text-base",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "New inquiries are acknowledged in minutes instead of hours."
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "div",
+                  "cls": "border border-warm-stone/60 rounded-xl bg-ivory px-7 py-6",
+                  "kids": [
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "h3",
+                     "cls": "font-heading font-medium text-exec-graphite text-xl mb-3",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Less manual work"
+                       }
+                      }
+                     ]
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "p",
+                     "cls": "font-body text-soft-graphite leading-relaxed text-base",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Routine follow-up and admin run on their own, reliably."
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "div",
+                  "cls": "border border-warm-stone/60 rounded-xl bg-ivory px-7 py-6",
+                  "kids": [
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "h3",
+                     "cls": "font-heading font-medium text-exec-graphite text-xl mb-3",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Clear next steps"
+                       }
+                      }
+                     ]
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "p",
+                     "cls": "font-body text-soft-graphite leading-relaxed text-base",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "You always know where each lead and task stands."
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "cls": "section-pad bg-ivory",
+         "a": {
+          "id": "how-it-works"
+         },
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "div",
+            "cls": "container-site",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "div",
+               "cls": "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center",
+               "kids": [
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "div",
+                  "kids": [
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "p",
+                     "cls": "label-text mb-4",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "How it works"
+                       }
+                      }
+                     ]
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "h2",
+                     "cls": "font-heading font-light text-exec-graphite leading-heading tracking-heading mb-5",
+                     "st": {
+                      "d": {
+                       "fontSize": "clamp(26px, 3vw, 40px)"
+                      }
+                     },
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Three simple steps"
+                       }
+                      }
+                     ]
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "ol",
+                     "cls": "space-y-4 list-decimal pl-5 font-body text-soft-graphite leading-relaxed",
+                     "kids": [
+                      {
+                       "type": "El",
+                       "props": {
+                        "tag": "li",
+                        "kids": [
+                         {
+                          "type": "Txt",
+                          "props": {
+                           "text": "A short call to understand how work flows today."
+                          }
+                         }
+                        ]
+                       }
+                      },
+                      {
+                       "type": "El",
+                       "props": {
+                        "tag": "li",
+                        "kids": [
+                         {
+                          "type": "Txt",
+                          "props": {
+                           "text": "A written plan with the quickest wins first."
+                          }
+                         }
+                        ]
+                       }
+                      },
+                      {
+                       "type": "El",
+                       "props": {
+                        "tag": "li",
+                        "kids": [
+                         {
+                          "type": "Txt",
+                          "props": {
+                           "text": "We build it with you and hand it over, documented."
+                          }
+                         }
+                        ]
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "figure",
+                  "cls": "rounded-2xl overflow-hidden border border-warm-stone/60 bg-white",
+                  "kids": [
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "img",
+                     "a": {
+                      "src": "/images/site-og.png",
+                      "alt": "Glade nectar ne",
+                      "loading": "lazy",
+                      "width": "1200",
+                      "height": "630"
+                     },
+                     "st": {
+                      "d": {
+                       "width": "100%",
+                       "height": "auto",
+                       "display": "block"
+                      }
+                     }
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "figcaption",
+                     "cls": "font-body text-xs text-slate-taupe px-5 py-3",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Replace this image from the Assets panel."
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "cls": "section-pad bg-ivory",
+         "a": {
+          "id": "questions"
+         },
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "div",
+            "cls": "container-site",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "div",
+               "cls": "max-w-3xl",
+               "kids": [
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "p",
+                  "cls": "label-text mb-4",
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Questions"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "h2",
+                  "cls": "font-heading font-light text-exec-graphite leading-heading tracking-heading mb-5",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(26px, 3vw, 40px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Common questions"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "div",
+                  "cls": "space-y-3",
+                  "kids": [
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "details",
+                     "cls": "border border-warm-stone/60 rounded-xl bg-white/60 px-6 py-4",
+                     "kids": [
+                      {
+                       "type": "El",
+                       "props": {
+                        "tag": "summary",
+                        "cls": "cursor-pointer font-heading font-medium text-exec-graphite",
+                        "kids": [
+                         {
+                          "type": "Txt",
+                          "props": {
+                           "text": "How long does it take?"
+                          }
+                         }
+                        ]
+                       }
+                      },
+                      {
+                       "type": "El",
+                       "props": {
+                        "tag": "p",
+                        "cls": "font-body text-soft-graphite leading-relaxed text-base mt-3",
+                        "kids": [
+                         {
+                          "type": "Txt",
+                          "props": {
+                           "text": "Most engagements start with a short call and a clear written next step within a week."
+                          }
+                         }
+                        ]
+                       }
+                      }
+                     ]
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "details",
+                     "cls": "border border-warm-stone/60 rounded-xl bg-white/60 px-6 py-4",
+                     "kids": [
+                      {
+                       "type": "El",
+                       "props": {
+                        "tag": "summary",
+                        "cls": "cursor-pointer font-heading font-medium text-exec-graphite",
+                        "kids": [
+                         {
+                          "type": "Txt",
+                          "props": {
+                           "text": "Do I need technical staff?"
+                          }
+                         }
+                        ]
+                       }
+                      },
+                      {
+                       "type": "El",
+                       "props": {
+                        "tag": "p",
+                        "cls": "font-body text-soft-graphite leading-relaxed text-base mt-3",
+                        "kids": [
+                         {
+                          "type": "Txt",
+                          "props": {
+                           "text": "No. Everything is explained in plain language and built around the tools you already use."
+                          }
+                         }
+                        ]
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "cls": "section-pad bg-exec-graphite text-ivory",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "div",
+            "cls": "container-site",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "div",
+               "cls": "max-w-2xl",
+               "kids": [
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "h2",
+                  "cls": "font-heading font-light text-ivory leading-heading tracking-heading mb-5",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(26px, 3vw, 40px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Find out where AI can save you time"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "p",
+                  "cls": "font-body text-warm-stone leading-relaxed text-base mb-8",
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "A free 15-minute fit call: we look at one workflow together and tell you honestly whether it is worth automating."
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "a",
+                  "a": {
+                   "href": "/free-assessment"
+                  },
+                  "cls": "btn-gold inline-flex items-center gap-2",
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Book a free 15-minute fit call"
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    },
+    {
+     "type": "Use",
+     "props": {
+      "name": "Footer",
+      "doc": "components/Footer.tsx",
+      "use": "kit~footer"
+     }
+    }
+   ]
+  },
+  "lead-magnet": {
+   "label": "Lead magnet / form",
+   "summary": "Hero with bullets, a Tally form embed and a booking band.",
+   "tree": [
+    {
+     "type": "Use",
+     "props": {
+      "name": "Header",
+      "doc": "components/Header.tsx",
+      "use": "kit~header"
+     }
+    },
+    {
+     "type": "El",
+     "props": {
+      "tag": "main",
+      "a": {
+       "id": "main-content"
+      },
+      "kids": [
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "cls": "bg-ivory bg-grid pt-14 pb-20 md:pt-20 md:pb-28",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "div",
+            "cls": "container-site",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "div",
+               "cls": "max-w-3xl",
+               "kids": [
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "p",
+                  "cls": "label-text mb-4",
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Free resource"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "h1",
+                  "cls": "font-heading font-light text-exec-graphite leading-display tracking-display mb-6",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(36px, 5vw, 60px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "{{title}}"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "p",
+                  "cls": "font-body text-soft-graphite leading-relaxed mb-8 max-w-2xl",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(17px, 1.4vw, 19px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "{{description}}"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "ul",
+                  "cls": "space-y-2 font-body text-soft-graphite leading-relaxed mb-8 list-disc pl-5",
+                  "kids": [
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "li",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Practical, plain-language steps"
+                       }
+                      }
+                     ]
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "li",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Built for service businesses"
+                       }
+                      }
+                     ]
+                    }
+                   },
+                   {
+                    "type": "El",
+                    "props": {
+                     "tag": "li",
+                     "kids": [
+                      {
+                       "type": "Txt",
+                       "props": {
+                        "text": "Takes about 15 minutes to use"
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "cls": "section-pad bg-mist-grey/50",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "div",
+            "cls": "container-site",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "div",
+               "cls": "max-w-2xl",
+               "kids": [
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "h2",
+                  "cls": "font-heading font-light text-exec-graphite leading-heading tracking-heading mb-5",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(26px, 3vw, 40px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Get it now"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "p",
+                  "cls": "font-body text-soft-graphite leading-relaxed text-base mb-6",
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Fill in the form and it arrives in your inbox."
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "iframe",
+                  "a": {
+                   "src": "https://tally.so/embed/",
+                   "title": "Request form",
+                   "loading": "lazy"
+                  },
+                  "st": {
+                   "d": {
+                    "width": "100%",
+                    "minHeight": "480px",
+                    "border": "0"
+                   }
+                  },
+                  "kids": []
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "cls": "section-pad bg-exec-graphite text-ivory",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "div",
+            "cls": "container-site",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "div",
+               "cls": "max-w-2xl",
+               "kids": [
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "h2",
+                  "cls": "font-heading font-light text-ivory leading-heading tracking-heading mb-5",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(26px, 3vw, 40px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Find out where AI can save you time"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "p",
+                  "cls": "font-body text-warm-stone leading-relaxed text-base mb-8",
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "A free 15-minute fit call: we look at one workflow together and tell you honestly whether it is worth automating."
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "a",
+                  "a": {
+                   "href": "/free-assessment"
+                  },
+                  "cls": "btn-gold inline-flex items-center gap-2",
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "Book a free 15-minute fit call"
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    },
+    {
+     "type": "Use",
+     "props": {
+      "name": "Footer",
+      "doc": "components/Footer.tsx",
+      "use": "kit~footer"
+     }
+    }
+   ]
+  },
+  "blank": {
+   "label": "Blank page",
+   "summary": "Header, a title section and the footer.",
+   "tree": [
+    {
+     "type": "Use",
+     "props": {
+      "name": "Header",
+      "doc": "components/Header.tsx",
+      "use": "kit~header"
+     }
+    },
+    {
+     "type": "El",
+     "props": {
+      "tag": "main",
+      "a": {
+       "id": "main-content"
+      },
+      "kids": [
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "cls": "bg-ivory bg-grid pt-14 pb-20 md:pt-20 md:pb-28",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "div",
+            "cls": "container-site",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "div",
+               "cls": "max-w-3xl",
+               "kids": [
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "h1",
+                  "cls": "font-heading font-light text-exec-graphite leading-display tracking-display mb-6",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(36px, 5vw, 60px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "{{title}}"
+                    }
+                   }
+                  ]
+                 }
+                },
+                {
+                 "type": "El",
+                 "props": {
+                  "tag": "p",
+                  "cls": "font-body text-soft-graphite leading-relaxed mb-8 max-w-2xl",
+                  "st": {
+                   "d": {
+                    "fontSize": "clamp(17px, 1.4vw, 19px)"
+                   }
+                  },
+                  "kids": [
+                   {
+                    "type": "Txt",
+                    "props": {
+                     "text": "{{description}}"
+                    }
+                   }
+                  ]
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    },
+    {
+     "type": "Use",
+     "props": {
+      "name": "Footer",
+      "doc": "components/Footer.tsx",
+      "use": "kit~footer"
+     }
+    }
+   ]
+  }
+ },
+ "post": {
+  "article": {
+   "label": "Article",
+   "summary": "Intro, two sections and a call to action.",
+   "tree": [
+    {
+     "type": "El",
+     "props": {
+      "tag": "div",
+      "cls": "space-y-10",
+      "kids": [
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "p",
+            "cls": "font-body text-soft-graphite leading-relaxed mb-5 text-base",
+            "kids": [
+             {
+              "type": "Txt",
+              "props": {
+               "text": "Open with the situation your reader recognises, in one or two sentences."
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "h2",
+            "cls": "font-heading font-semibold text-exec-graphite leading-heading tracking-heading mb-5 scroll-mt-24",
+            "st": {
+             "d": {
+              "fontSize": "clamp(22px, 2.2vw, 30px)"
+             }
+            },
+            "kids": [
+             {
+              "type": "Txt",
+              "props": {
+               "text": "Why this matters"
+              }
+             }
+            ]
+           }
+          },
+          {
+           "type": "El",
+           "props": {
+            "tag": "p",
+            "cls": "font-body text-soft-graphite leading-relaxed mb-5 text-base",
+            "kids": [
+             {
+              "type": "Txt",
+              "props": {
+               "text": "Explain the problem in the reader’s own words and what it costs them each week."
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "El",
+        "props": {
+         "tag": "section",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "h2",
+            "cls": "font-heading font-semibold text-exec-graphite leading-heading tracking-heading mb-5 scroll-mt-24",
+            "st": {
+             "d": {
+              "fontSize": "clamp(22px, 2.2vw, 30px)"
+             }
+            },
+            "kids": [
+             {
+              "type": "Txt",
+              "props": {
+               "text": "What to do next"
+              }
+             }
+            ]
+           }
+          },
+          {
+           "type": "El",
+           "props": {
+            "tag": "ul",
+            "cls": "list-disc pl-6 space-y-2 font-body text-soft-graphite leading-relaxed mb-5",
+            "kids": [
+             {
+              "type": "El",
+              "props": {
+               "tag": "li",
+               "kids": [
+                {
+                 "type": "Txt",
+                 "props": {
+                  "text": "First practical step"
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "El",
+              "props": {
+               "tag": "li",
+               "kids": [
+                {
+                 "type": "Txt",
+                 "props": {
+                  "text": "Second practical step"
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "El",
+              "props": {
+               "tag": "li",
+               "kids": [
+                {
+                 "type": "Txt",
+                 "props": {
+                  "text": "Third practical step"
+                 }
+                }
+               ]
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       },
+       {
+        "type": "El",
+        "props": {
+         "tag": "aside",
+         "cls": "border border-warm-stone/60 rounded-xl bg-mist-grey/40 px-7 py-6",
+         "kids": [
+          {
+           "type": "El",
+           "props": {
+            "tag": "p",
+            "cls": "font-body text-soft-graphite leading-relaxed text-base",
+            "kids": [
+             {
+              "type": "Txt",
+              "props": {
+               "text": "Not sure where to start? "
+              }
+             },
+             {
+              "type": "El",
+              "props": {
+               "tag": "a",
+               "a": {
+                "href": "/free-assessment"
+               },
+               "cls": "text-exec-graphite underline underline-offset-4",
+               "kids": [
+                {
+                 "type": "Txt",
+                 "props": {
+                  "text": "Book a free 15-minute AI fit call"
+                 }
+                }
+               ]
+              }
+             },
+             {
+              "type": "Txt",
+              "props": {
+               "text": "."
+              }
+             }
+            ]
+           }
+          }
+         ]
+        }
+       }
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "blocks": {
+  "button": {
+   "label": "Button link",
+   "tree": {
+    "type": "El",
+    "props": {
+     "tag": "a",
+     "a": {
+      "href": "{{href}}"
+     },
+     "cls": "btn-primary inline-flex items-center gap-2",
+     "kids": [
+      {
+       "type": "Txt",
+       "props": {
+        "text": "{{label}}"
+       }
+      }
+     ]
+    }
+   }
+  },
+  "link": {
+   "label": "Text link",
+   "tree": {
+    "type": "El",
+    "props": {
+     "tag": "a",
+     "a": {
+      "href": "{{href}}"
+     },
+     "cls": "text-exec-graphite underline underline-offset-4",
+     "kids": [
+      {
+       "type": "Txt",
+       "props": {
+        "text": "{{label}}"
+       }
+      }
+     ]
+    }
+   }
+  },
+  "image": {
+   "label": "Image",
+   "tree": {
+    "type": "El",
+    "props": {
+     "tag": "figure",
+     "cls": "my-6",
+     "kids": [
+      {
+       "type": "El",
+       "props": {
+        "tag": "img",
+        "a": {
+         "src": "{{src}}",
+         "alt": "{{alt}}",
+         "loading": "lazy"
+        },
+        "st": {
+         "d": {
+          "width": "100%",
+          "maxWidth": "100%",
+          "height": "auto",
+          "display": "block",
+          "borderRadius": "12px"
+         }
+        }
+       }
+      }
+     ]
+    }
+   }
+  },
+  "youtube": {
+   "label": "Video embed",
+   "tree": {
+    "type": "El",
+    "props": {
+     "tag": "div",
+     "st": {
+      "d": {
+       "position": "relative",
+       "aspectRatio": "16 / 9",
+       "width": "100%"
+      }
+     },
+     "kids": [
+      {
+       "type": "El",
+       "props": {
+        "tag": "iframe",
+        "a": {
+         "src": "{{src}}",
+         "title": "{{title}}",
+         "allow": "accelerometer; encrypted-media; gyroscope; picture-in-picture",
+         "allowFullScreen": true,
+         "loading": "lazy"
+        },
+        "st": {
+         "d": {
+          "position": "absolute",
+          "top": "0",
+          "left": "0",
+          "width": "100%",
+          "height": "100%",
+          "border": "0"
+         }
+        },
+        "kids": []
+       }
+      }
+     ]
+    }
+   }
+  },
+  "video": {
+   "label": "Video file",
+   "tree": {
+    "type": "El",
+    "props": {
+     "tag": "video",
+     "a": {
+      "src": "{{src}}",
+      "poster": "{{poster}}",
+      "title": "{{title}}",
+      "controls": true,
+      "playsInline": true,
+      "preload": "metadata"
+     },
+     "st": {
+      "d": {
+       "width": "100%",
+       "height": "auto",
+       "display": "block",
+       "borderRadius": "12px"
+      }
+     },
+     "kids": []
+    }
+   }
+  },
+  "heading": {
+   "label": "Heading",
+   "tree": {
+    "type": "El",
+    "props": {
+     "tag": "h2",
+     "cls": "font-heading font-light text-exec-graphite leading-heading tracking-heading mb-5",
+     "st": {
+      "d": {
+       "fontSize": "clamp(26px, 3vw, 40px)"
+      }
+     },
+     "kids": [
+      {
+       "type": "Txt",
+       "props": {
+        "text": "{{text}}"
+       }
+      }
+     ]
+    }
+   }
+  },
+  "paragraph": {
+   "label": "Paragraph",
+   "tree": {
+    "type": "El",
+    "props": {
+     "tag": "p",
+     "cls": "font-body text-soft-graphite leading-relaxed text-base mb-5",
+     "kids": [
+      {
+       "type": "Txt",
+       "props": {
+        "text": "{{text}}"
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+}

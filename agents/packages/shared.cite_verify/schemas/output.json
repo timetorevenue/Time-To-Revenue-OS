@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "shared.cite_verify output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verified", "claims_checked", "sources_allowed"],
+  "properties": {
+    "verified": {"const": true},
+    "claims_checked": {"type": "integer", "minimum": 1},
+    "sources_allowed": {"type": "integer", "minimum": 1}
+  }
+}

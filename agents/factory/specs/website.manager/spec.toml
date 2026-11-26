@@ -1,0 +1,58 @@
+# Factory build spec. The package under agents/packages/website.manager is generated from this folder:
+# edit here and run `aos-agent.py build website.manager`; never edit the package.
+# Revisit: when the Studio operation vocabulary, the prompt or the pinned model changes. · Last touched: 2026-11-23.
+[agent]
+name = "website.manager"
+version = "0.1.0"
+kind = "oneshot"
+summary = "Turn one owner request about the selected element of a Website Studio page into validated Studio editing operations."
+author = "Time to Revenue"
+
+[io]
+input_schema = "schemas/input.json"
+output_schema = "schemas/output.json"
+
+[context]
+needs = []
+max_tokens = 6000
+
+[capabilities]
+grants = []
+proposes = []
+tools = []
+
+[budget]
+# One Luna-low call through ModelPort costs ~7,500-7,900 input tokens of which ~6,800 is fixed Codex
+# harness overhead (recorded calls of every registered Luna-low package, 2026-11-15/16); this agent's
+# page context adds ~1,000. 8,000 was below one real call (gate 6 compares p95 with it, and a repair
+# call could never run), so it uses the Factory's standard Luna-low per-case budget. The binding cost
+# gate is unchanged: p95 must stay at or under half the 18,119-token baseline (9,059).
+tokens = 12000
+model_calls = 2
+seconds = 90
+max_steps = 1
+
+[compose]
+callable_by = ["*"]
+calls = []
+
+[factory]
+requirement = "The Website Manager's model route inside the TTROS Website Studio. Requests that the Studio's deterministic rules cannot read (relative sizes, vague design wishes, several changes in one sentence) are turned into the Studio's own operations (set_link, set_style per breakpoint, set_text, set_attr, set_css, set_header) on elements named in the supplied page context only. Code refuses unsafe links, scripts and any send/publish/deploy request before the model is called and checks every operation after it. The result is a proposal the owner previews and accepts; nothing is applied, saved or published here."
+# 21 of the 28 cases reach the model (7 are answered by code first). The build admits a batch only when
+# spent + calls x 12,000 fits, so training needs 16 x 12,000 = 192,000 up front and the held-out 5 need
+# ~5 x 12,000 more on top of ~8,500 real per call; 220,000 is the smallest round budget that completes
+# the evaluation (the same as the other Luna-low packages). Expected real spend: ~21 x 8,500 = ~180,000.
+token_budget = 220000
+holdout_share = 0.2
+source = "artifact:example-site-redesign-20260101/website-manager-architecture-2026-11-22.md (Website Manager panel; Prompt 1)"
+
+# Cheapest first. The first candidate that passes the training cases is pinned.
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "low"
+
+[[factory.candidates]]
+prompt = "prompts/main.md"
+model = "gpt-6-luna"
+effort = "medium"

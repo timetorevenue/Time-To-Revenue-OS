@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "comment": "Shared by sections.js and website_studio_sections.py. Section types are the real website components in homepage.json; these rules only add instance limits, ID slugs and link safety. Revisit when homepage.json or services.json is re-snapshotted or the website's routes change. Last touched: 2026-11-21.",
+  "maxSections": 40,
+  "maxSectionOperations": 20,
+  "idPattern": "^[A-Za-z][A-Za-z0-9-]{1,63}$",
+  "types": {
+    "Section0": {"slug": "hero", "originalId": "Section0", "min": 1, "max": 1, "description": "Headline, two calls to action and the workflow illustration.", "limitReason": "The page keeps exactly one hero: it holds the only H1 and the illustration's SVG IDs."},
+    "Section1": {"slug": "where-work-gets-stuck", "originalId": "Section1", "description": "Problem statement with three pain points."},
+    "Section2": {"slug": "outcomes", "originalId": "Section2", "description": "Outcome list with marked benefits."},
+    "Section3": {"slug": "solutions", "originalId": "Section3", "description": "Three service rows, each linking to a service page."},
+    "Section4": {"slug": "how-we-work", "originalId": "Section4", "description": "Four-step process line and a link to How we work."},
+    "Section5": {"slug": "our-work", "originalId": "Section5", "description": "Proof band linking to case studies."},
+    "Section6": {"slug": "founder", "originalId": "Section6", "description": "Founder introduction with portrait."},
+    "Section7": {"slug": "common-questions", "originalId": "Section7", "max": 1, "description": "Frequently asked questions.", "limitReason": "FAQ structured data must describe one visible FAQ, so the page keeps at most one."},
+    "Section8": {"slug": "contact", "originalId": "Section8", "description": "Closing call to action."},
+    "HeroSignature": {"slug": "hero-signature", "originalId": "HeroSignature", "max": 1, "description": "Positioning line and the Explore what we do link under the hero (website 215679e).", "limitReason": "The hero has one signature line."}
+  },
+  "serviceTypes": [
+    {"slug": "intro", "min": 1, "max": 1, "limitReason": "The page keeps exactly one intro: it holds the only H1 and the service name and description that set the page title, meta description and structured data."},
+    {"slug": "when-this-can-help"},
+    {"slug": "what-we-build"},
+    {"slug": "measure-progress"},
+    {"slug": "contact"},
+    {"slug": "starting-point", "description": "The service’s practical starting point (the Intro’s Where to start anchor)."}
+  ],
+  "serviceTypesComment": "The sections of components/ServicePage.tsx for every service page in pages.json, by permanent INDEX (not position): type names are <typePrefix><index> (services.json). 215679e added index 5 (A practical first step) before Contact (index 4). Labels and descriptions come from the snapshot.",
+  "pageAnchors": ["main-content"],
+  "links": {
+    "maxLength": 500,
+    "https": "^https://[A-Za-z0-9.-]+(:[0-9]{2,5})?(/[A-Za-z0-9._~%!$&'()*+,;=:@/?#-]*)?$",
+    "mailto": "^mailto:[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$",
+    "internal": "^(/[a-z0-9/-]*)?(#[A-Za-z][A-Za-z0-9_-]*)?$",
+    "routes": ["/offers/test-workflow-audit", "/", "/about", "/agentic-management-system", "/ai-business-efficiency-assessment", "/ai-employees", "/ai-fast-start-scan", "/ai-voice-agent-setup", "/ai-workflow-training-bc", "/assessment-qualified", "/blog", "/client-memory-system", "/free-assessment", "/get-guide", "/get-guide/unsubscribe", "/get-guide/verify", "/how-we-work", "/lead-generation-agent", "/notready", "/our-work", "/possiblefit", "/pricing", "/privacy", "/resources", "/services", "/services/ai-implementation", "/services/business-process-automation", "/services/systems-integration", "/inbound-reply-system", "/terms", "/training"],
+    "routePrefixes": ["/blog/", "/resources/"],
+    "slugPattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+    "routesSource": "app/**/page.tsx at website commit 215679e81711553cf572acff71b60f42f2b2181d"
+  }
+}
