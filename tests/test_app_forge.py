@@ -244,7 +244,7 @@ def test_discovery_bounds_queries_and_candidates(root, monkeypatch):
 
 def test_public_read_refuses_private_and_metadata_hosts():
     for url in ("http://127.0.0.1:8010/api", "http://169.254.169.254/latest/meta-data/", "http://localhost/x",
-                "https://user:pw@api.github.com/x"):
+                "https://user:pw@api.example.com/x"):
         with pytest.raises(app_forge.ForgeError) as caught:
             app_forge._get(url)
         assert caught.value.failure_class == "source_unavailable"
