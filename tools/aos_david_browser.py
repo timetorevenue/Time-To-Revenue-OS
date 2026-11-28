@@ -42,6 +42,31 @@ def _filename(value, fallback):
     return safe if safe and safe[0].isalnum() else fallback
 
 
+def sandboxed_chromium(driver, private, seconds=180):
+    """Wrap Playwright's Chromium in bubblewrap with no host network or operator files.
+
+    Returns (wrapper executable, profile directory). Callers own ``private``.
+    """
+    exe = Path(driver.chromium.executable_path)
+    if not exe.is_file():
+        raise CapabilityError("Install the runtime Playwright Chromium revision.")
+    # DevTools control is an inherited pipe. No host network, profile, IPC
+    # socket, credentials, downloads directory or local browser is mounted.
+    sandbox = [shutil.which("timeout"), "--kill-after=2s", f"{int(seconds)}s", shutil.which("bwrap"),
+               "--unshare-all", "--die-with-parent", "--new-session", "--proc", "/proc",
+               "--dev", "/dev", "--tmpfs", "/tmp", "--tmpfs", "/dev/shm"]
+    for path in ("/usr", "/lib", "/lib64", "/etc/fonts", str(exe.parent)):
+        sandbox += ["--ro-bind-try", path, path]
+    profile = Path(private) / "profile"
+    profile.mkdir(mode=0o700)
+    sandbox += ["--tmpfs", str(profile),
+                "--chdir", "/tmp", "--setenv", "HOME", "/tmp", str(exe)]
+    wrapper = Path(private) / "chromium"
+    wrapper.write_text("#!/bin/sh\nexec " + shlex.join(sandbox) + ' "$@"\n')
+    wrapper.chmod(0o700)
+    return wrapper, profile
+
+
 class Browser:
     def __init__(self, files, operator_text, authorize, *, retrieve=fetch):
         self.files = files
@@ -77,23 +102,7 @@ class Browser:
         private = Path(self.scratch.name)
         try:
             self.driver = sync_playwright().start()
-            exe = Path(self.driver.chromium.executable_path)
-            if not exe.is_file():
-                raise CapabilityError("Install the runtime Playwright Chromium revision.")
-            # DevTools control is an inherited pipe. No host network, profile, IPC
-            # socket, credentials, downloads directory or local browser is mounted.
-            sandbox = [shutil.which("timeout"), "--kill-after=2s", "180s", shutil.which("bwrap"),
-                       "--unshare-all", "--die-with-parent", "--new-session", "--proc", "/proc",
-                       "--dev", "/dev", "--tmpfs", "/tmp", "--tmpfs", "/dev/shm"]
-            for path in ("/usr", "/lib", "/lib64", "/etc/fonts", str(exe.parent)):
-                sandbox += ["--ro-bind-try", path, path]
-            profile = private / "profile"
-            profile.mkdir(mode=0o700)
-            sandbox += ["--tmpfs", str(profile),
-                        "--chdir", "/tmp", "--setenv", "HOME", "/tmp", str(exe)]
-            wrapper = private / "chromium"
-            wrapper.write_text("#!/bin/sh\nexec " + shlex.join(sandbox) + ' "$@"\n')
-            wrapper.chmod(0o700)
+            wrapper, profile = sandboxed_chromium(self.driver, private)
             self.context = self.driver.chromium.launch_persistent_context(
                 str(profile), executable_path=str(wrapper), chromium_sandbox=True,
                 headless=True, timeout=7000, viewport={"width": 1200, "height": 800},
