@@ -1,0 +1,42 @@
+{
+ "recipe": "axe-core",
+ "version": 1,
+ "requirement": "Deterministic accessibility diagnostics for website HTML, run locally without a model.",
+ "owner": "websites",
+ "source": {
+  "repository": "dequelabs/axe-core",
+  "tag": "v4.14.1",
+  "commit": "c3f48c6357ceafa6677492091adbf89a72cad527"
+ },
+ "package": {
+  "ecosystem": "npm",
+  "name": "axe-core",
+  "version": "4.14.1",
+  "tarball": "https://registry.npmjs.org/axe-core/-/axe-core-4.14.1.tgz",
+  "integrity": "sha512-FHfa+lmNjQZfJz1q8wKqIDwC6DExcHt/pkjNQb09a3NPjCKg2rhu5qb2S4r76ASyFNNtuFooJpZe37OgudVGtQ==",
+  "max_bytes": 1048576,
+  "runtime_dependencies": []
+ },
+ "files": {
+  "package/axe.min.js": "29348999450cdf2849a8e70b7912fc2da85a849da39c0d0d5394f51d4a9ed95c",
+  "package/LICENSE": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e",
+  "package/LICENSE-3RD-PARTY.txt": "4f8563870d0fca38bbc3e00b6f670cb7fa9f380ba9f26a7f7d1184a6b18b1653"
+ },
+ "engine": "package/axe.min.js",
+ "license": {
+  "spdx": "MPL-2.0",
+  "bundled": ["MIT", "ISC"],
+  "obligations": [
+   "Use the unmodified engine file; keep LICENSE and LICENSE-3RD-PARTY.txt beside it.",
+   "MPL-2.0 is file-level copyleft: distributing a modified axe-core file requires making that file's source available under MPL-2.0.",
+   "The engine is installed into the local runtime cache, not vendored into Git or redistributed."
+  ]
+ },
+ "integration": {
+  "boundary": "tools/website_a11y_audit.py injects the verified engine into David's bubblewrap Chromium sandbox with every network request aborted.",
+  "jobs": {"kind": "website_audit", "action": "accessibility"},
+  "verify": "website_a11y_audit.acceptance",
+  "rollback": "Remove the cache directory and the website_audit executor; no other state depends on it."
+ },
+ "limits": "Automated rules find a subset of WCAG issues. Incomplete results need manual review; a clean scan is not a compliance claim."
+}

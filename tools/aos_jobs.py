@@ -213,7 +213,9 @@ def create(root: Path, *, conversation_id: str, topic: str, request: str, execut
             (executor.get("kind") == "automation_action" and executor.get("automation_origin")) or
             (executor.get("kind") == "lead_magnet" and executor.get("action") == "draft_follow_up") or
             (executor.get("kind") == "reminder" and isinstance(executor.get("schedule"), dict)) or
-            (executor.get("kind") == "website_manager" and executor.get("action") == "interpret")):
+            (executor.get("kind") == "website_manager" and executor.get("action") == "interpret") or
+            (executor.get("kind") == "app_forge" and executor.get("action") in ("discover", "assess", "install", "verify")) or
+            (executor.get("kind") == "website_audit" and executor.get("action") == "accessibility")):
         raise JobError("executor must be an M1 agent, Factory build, website change, Website Manager turn or lead magnet draft spec")
     root = Path(root)
     restrictions = _restrictions(restrictions)
@@ -591,6 +593,8 @@ def release_problem(root: Path, executor: dict) -> str:
         return ""  # deterministic test-only launch adapter
     if executor.get("kind") == "lead_magnet":
         return ""  # deterministic consent-checked draft adapter; no model package
+    if executor.get("kind") in {"app_forge", "website_audit"}:
+        return ""  # deterministic App Forge evidence and pinned-engine audit; no model package
     if executor.get("kind") in {"connection_read", "automation_action"}:
         return ""  # scoped deterministic named read; registry grant checked at execution
     if executor.get("kind") == "website_manager":
@@ -713,6 +717,23 @@ def resume(root: Path, job_id: str, *, conversation_id: str, records: list[dict]
                        "people": [row["name"] for row in added_people], "restrictions": added_restrictions}])
         save(root, job)
         return job
+
+
+def write_job_artifact(root: Path, job_id: str, name: str, text: str) -> dict:
+    """Write one deterministic executor's artifact where verify_artifacts and the Jobs readers expect it."""
+    from aos_agents.runtime import ARTIFACT_NAME_RE, ARTIFACTS_DIR
+
+    if not ARTIFACT_NAME_RE.match(name):
+        raise JobError(f"not a valid artifact name: {name[:80]}")
+    key = storage_key(job_id)
+    relative = (ARTIFACTS_DIR / key / name).as_posix()
+    path = Path(root).resolve() / relative
+    if path.resolve() != path:
+        raise JobError("The Job artifact directory is unavailable.")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    durable_replace_text(path, text)
+    return {"ref": f"artifact:{key}/{name}", "path": relative, "job_id": job_id,
+            "sha256": hashlib.sha256(text.encode("utf-8")).hexdigest()}
 
 
 def verify_artifacts(root: Path, artifacts: list[dict]) -> tuple[list[dict], list[str]]:
@@ -972,7 +993,8 @@ def execute(root: Path, job_id: str, *, modelport: Callable[..., dict] | None = 
         return _execute_reminder(root, job, reminder_send or aos_authority.operator_send)
     from aos_agents import executor
 
-    deterministic_draft = job["executor"].get("kind") in ("lead_magnet", "product_launch", "connection_read", "automation_action")
+    deterministic_draft = job["executor"].get("kind") in ("lead_magnet", "product_launch", "connection_read", "automation_action",
+                                                          "app_forge", "website_audit")
     if codex_account is None and modelport is None and not deterministic_draft:
         from aos_codex_policy import AccountPin
 
@@ -1015,6 +1037,12 @@ def execute(root: Path, job_id: str, *, modelport: Callable[..., dict] | None = 
             elif job['executor']['kind'] == 'connection_read':
                 from ttros_connections import run_connection_job
                 result = run_connection_job(root, job)
+            elif job['executor']['kind'] == 'app_forge':
+                import app_forge
+                result = app_forge.run_job(root, job)
+            elif job['executor']['kind'] == 'website_audit':
+                import website_a11y_audit
+                result = website_a11y_audit.run_job(root, job)
             elif job['executor']['kind'] == 'product_launch':
                 import aos_product_launch
                 result = aos_product_launch.run_job(root, job)

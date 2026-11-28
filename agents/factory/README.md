@@ -1,5 +1,5 @@
 # Agent Factory
-> Revisit: when the Factory steps, the spec layout or the registry change. · Last touched: 2026-11-24.
+> Revisit: when the Factory steps, the spec layout or the registry change. · Last touched: 2026-11-27.
 
 The Factory builds a TAP agent package from a build spec and gates it. It is a CLI
 (`tools/aos-agent.py`) and one work-order template (`queue/templates/factory_build_agent.prompt.md`),
@@ -13,6 +13,7 @@ not a service. It grants no permission; `rules/runtime_permission_policy.md` is 
 | `../registry.lock.json` | Which package content was evaluated, its level, its archive hash and its release state. |
 | `../dist/` | Archives (`<name>-<version>.tar.gz`). Build output, git-ignored, re-created byte-for-byte by `pack`. |
 | `improvements/` | M6: offline, propose-only improvement proposals (`aos-agent.py improve`); see its README. |
+| `app_forge/` | App Forge recipes: pinned external software (source commit, package integrity, file digests, licence obligations) and acceptance fixtures. `tools/app_forge.py discover\|assess\|install\|verify` runs each step as a deterministic Job (kind `app_forge`); evidence states are derived, never approvals. |
 
 ```text
 aos-agent.py assess <name> --requirement TEXT [--dependency PATH]
